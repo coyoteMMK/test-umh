@@ -50,12 +50,12 @@ const { questions } = Astro.props as Props;
   {
     questions.map((item, i) => (
       <section
-        class="mb-8 max-w-lg border py-1.5 px-1.5"
+        class="mb-8 max-w-lg border py-1.5 px-1.5 min-w-lg bg-red-300 shadow-md rounded-lg"
         data-correct={(item.answer - 1).toString()}
       >
         <h2 class="text-xl font-semibold mb-2">Pregunta {i + 1}</h2>
         <p class="mb-4">{item.q}</p>
-        <ul class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+        <ul class="gap-4 flex-col flex">
           {item.a.map((ans, j) => (
             <li class="option" data-index={j.toString()}>
               {ans}
