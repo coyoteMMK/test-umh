@@ -12,74 +12,95 @@ interface Props {
 
 const { questions } = Astro.props as Props;
 ---
+
 <style>
-  .option { 
-    padding: 1rem; 
-    border-radius: .5rem; 
-    background: #f3f4f6; 
-    cursor: pointer; 
-    transition: background .2s; 
+  .option {
+    padding: 1rem;
+    border-radius: 0.5rem;
+    background: #f3f4f6;
+    cursor: pointer;
+    transition: background 0.2s;
   }
-  .option:hover { background: #e5e7eb; }
-  .correct { background: #bbf7d0 !important; }
-  .wrong   { background: #fecaca !important; }
-  #counter { margin-bottom: 2rem; font-size: 1.125rem; }
-  #counter span { font-weight: bold; }
+  .option:hover {
+    background: #e5e7eb;
+  }
+  .correct {
+    background: #bbf7d0 !important;
+  }
+  .wrong {
+    background: #fecaca !important;
+  }
+  #counter {
+    margin-bottom: 2rem;
+    font-size: 1.125rem;
+  }
+  #counter span {
+    font-weight: bold;
+  }
 </style>
 
-<div id="test-root">
-  <!-- 1) Contador de aciertos/errores -->
-  <div id="counter">
-    Correctas: <span id="correct-count">0</span>  
-    Incorrectas: <span id="wrong-count">0</span>
-  </div>
+<!-- 1) Contador de aciertos/errores -->
+<div id="counter" class="fixed">
+  Correctas: <span id="correct-count">0</span>
+  Incorrectas: <span id="wrong-count">0</span>
+</div>
 
+<div id="test-root" class="flex flex-col items-center">
   <!-- 2) Renderizado de preguntas -->
-  {questions.map((item, i) => (
-    <section class="mb-8" data-correct={(item.answer - 1).toString()}>
-      <h2 class="text-xl font-semibold mb-2">Pregunta {i + 1}</h2>
-      <p class="mb-4">{item.q}</p>
-      <ul class="grid grid-cols-1 sm:grid-cols-2 gap-4">
-        {item.a.map((ans, j) => (
-          <li class="option" data-index={j.toString()}>{ans}</li>
-        ))}
-      </ul>
-    </section>
-  ))}
+  {
+    questions.map((item, i) => (
+      <section
+        class="mb-8 max-w-lg border py-1.5 px-1.5"
+        data-correct={(item.answer - 1).toString()}
+      >
+        <h2 class="text-xl font-semibold mb-2">Pregunta {i + 1}</h2>
+        <p class="mb-4">{item.q}</p>
+        <ul class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+          {item.a.map((ans, j) => (
+            <li class="option" data-index={j.toString()}>
+              {ans}
+            </li>
+          ))}
+        </ul>
+      </section>
+    ))
+  }
 </div>
 
 <script type="module">
-// 3) Lógica de contador e interacción
-const root = document.querySelector('#test-root');
-if (root) {
-  let correctCount = 0;
-  let wrongCount = 0;
-  const correctEl = document.querySelector('#correct-count');
-  const wrongEl   = document.querySelector('#wrong-count');
+  // 3) Lógica de contador e interacción
+  const root = document.querySelector("#test-root");
+  if (root) {
+    let correctCount = 0;
+    let wrongCount = 0;
+    const correctEl = document.querySelector("#correct-count");
+    const wrongEl = document.querySelector("#wrong-count");
 
-  root.querySelectorAll('section').forEach(section => {
-    const correctIdx = Number(section.dataset.correct);
-    let answered = false;
+    root.querySelectorAll("section").forEach((section) => {
+      const correctIdx = Number(section.dataset.correct);
+      let answered = false;
 
-    section.querySelectorAll('li').forEach(li => {
-      li.addEventListener('click', () => {
-        if (answered) return;
-        answered = true;
-        const choice = Number(li.dataset.index);
-        if (choice === correctIdx) {
-          li.classList.add('correct');
-          correctCount++;
-          correctEl.textContent = String(correctCount);
-        } else {
-          li.classList.add('wrong');
-          wrongCount++;
-          wrongEl.textContent = String(wrongCount);
-          // opcional: marcar también la correcta
-          const correctLi = section.querySelector(`li[data-index="${correctIdx}"]`);
-          correctLi?.classList.add('correct');
-        }
+      section.querySelectorAll("li").forEach((li) => {
+        li.addEventListener("click", () => {
+          if (answered) return;
+          answered = true;
+          const choice = Number(li.dataset.index);
+          if (choice === correctIdx) {
+            li.classList.add("correct");
+            correctCount++;
+            correctEl.textContent = String(correctCount);
+          } else {
+            li.classList.add("wrong");
+            wrongCount++;
+            wrongEl.textContent = String(wrongCount);
+            // opcional: marcar también la correcta
+            const correctLi = section.querySelector(
+              `li[data-index="${correctIdx}"]`,
+            );
+            correctLi?.classList.add("correct");
+          }
+        });
       });
     });
-  });
-}
+  }
 </script>
