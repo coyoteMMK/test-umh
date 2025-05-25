@@ -3,7 +3,7 @@ import Layout from '../../layouts/Layout.astro';
 import TestRenderer from '../../components/TestRenderer.astro';
 
 export async function getStaticPaths() {
-  const modules = import.meta.glob('../../data/tests/*.json', { eager: true, as: 'json' });
+  const modules = import.meta.glob('../../data/tests/*.json', { eager: true, query: '?json' });
   return Object.keys(modules).map((path) => {
     const slug = (path.split('/').pop() ?? '').replace('.json', '');
     return { params: { slug } };
@@ -17,7 +17,7 @@ type TestData = {
   // add other properties if needed
 };
 
-const allTests = import.meta.glob('../../data/tests/*.json', { eager: true, as: 'json' });
+const allTests = import.meta.glob('../../data/tests/*.json', { eager: true, query: '?json' });
 const slug = Astro.params.slug;
 const data = allTests[`../../data/tests/${slug}.json`] as TestData | undefined;
 

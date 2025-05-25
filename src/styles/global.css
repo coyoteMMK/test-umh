@@ -1,3 +1,9 @@
 @import "tailwindcss";
 
 
+section[data-subject="POO"] li {
+  @apply bg-blue-50 border-blue-400;
+}
+section[data-subject="Redes"] li {
+  @apply bg-green-50 border-green-400;
+}

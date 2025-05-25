@@ -1,23 +1,50 @@
 ---
-import Layout from '../layouts/Layout.astro';
+import Layout from "../layouts/Layout.astro";
 
 // Carga todos los JSON como datos
-const modules = import.meta.glob('../data/tests/*.json', { eager: true, as: 'json' });
-const tests = Object.entries(modules).map(([path, data]) => {
-  const slug = (path.split('/').pop() ?? '').replace('.json','');
-  const typedData = data as { title: string };
-  return { slug, title: typedData.title };
+const modules = import.meta.glob("../data/tests/*.json", {
+  eager: true,
+  query: "?json",
 });
+
+// 1) Transformar en array de tests con slug, título y asignatura
+const tests = Object.entries(modules).map(([path, data]) => {
+  const slug = (path.split("/").pop() ?? "").replace(".json", "");
+  const typedData = data as { title: string };
+  return {
+    slug,
+    title: (data as any).title,
+    subject: (data as any).subject || "Sin asignatura", // No tiene subject
+  };
+});
+
+// 2) Agrupar por asignatura
+const groups = tests.reduce(
+  (acc, test) => {
+    (acc[test.subject] ||= []).push(test);
+    return acc;
+  },
+  {} as Record<string, { slug: string; title: string; subject: string }[]>,
+);
 ---
+
 <Layout>
-  <h1>Lista de Tests</h1>
-  {tests.length > 0 ? (
-    <ul>
-      {tests.map(({ slug, title }) => (
-        <li><a href={`/tests/${slug}/`}>{title}</a></li>
-      ))}
-    </ul>
-  ) : (
-    <p>No hay tests en <code>src/data/tests/</code></p>
-  )}
+  <h1 class="text-3xl font-bold mb-6">Tests por Asignatura</h1>
+
+  {
+    Object.entries(groups).map(([subject, tests]) => (
+      <section class="mb-8" data-subject={subject}>
+        <h2 class="text-2xl font-semibold mb-4">{subject}</h2>
+        <ul class="list-disc list-inside space-y-2">
+          {tests.map(({ slug, title }) => (
+            <li>
+              <a href={`/tests/${slug}/`} class="text-blue-600 hover:underline">
+                {title}
+              </a>
+            </li>
+          ))}
+        </ul>
+      </section>
+    ))
+  }
 </Layout>
