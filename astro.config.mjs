@@ -11,5 +11,5 @@ export default defineConfig({
     plugins: [tailwindcss()]
   },
   site: 'https://coyotemmk.github.io/',
-  base: 'test-umh'
+  base: '/test-umh/'
 });
