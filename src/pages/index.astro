@@ -26,28 +26,37 @@ const groups = tests.reduce(
   },
   {} as Record<string, { slug: string; title: string; subject: string }[]>,
 );
+
+const colorMap = {
+  POO: "yellow",
+  Redes: "sky",
+  Química: "yellow",
+  Historia: "blue",
+  // …
+};
 ---
 
 <Layout>
-  <h1 class="flex flex-col justify-center items-center w-full mx-auto container lg:max-w-4xl md:max-w-xl py-16 md:py-36">Cojunto de tests
+  <h1
+    class="flex flex-col justify-center items-center w-full mx-auto container lg:max-w-4xl md:max-w-xl py-16 md:py-20 text-3xl sm:text-4xl font-bold text-center text-slate-800"
+  >
+    Repositorio de tests UMH
   </h1>
 
   <div class="flex flex-col space-y-10 p-4 container lg:max-w-4xl md:max-w-xl w-full mx-auto">
-  {
-    Object.entries(groups).map(([subject, tests]) => (
-      <section class="bg-white p-6 rounded-xl shadow-lg" >
-        <h2 class="text-2xl font-semibold mb-6 pb-3 border-b-2 text-sky-700 border-sky-500" >Tests de {subject}</h2>
-        <ul class="list-none p-0 m-0 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-5">
-          {tests.map(({ slug, title }) => (
-            <li class="block font-medium py-3 px-4 rounded-lg text-center transition-all duration-300 ease-in-out shadow hover:shadow-md transform hover:-translate-y-0.5 text-white bg-sky-500 hover:bg-sky-600">
-              <a href={`/test-umh/tests/${slug}/`} class="text-blue-600 hover:underline">
-                {title}
-              </a>
-            </li>
-          ))}
-        </ul>
-      </section>
-    ))
-  }
-  </div>
+  {Object.entries(groups).map(([subject, tests]) => (
+    <section data-subject={subject} >
+      <h2 class="text-2xl font-semibold mb-6 pb-3 border-b-2">
+        Tests de {subject}
+      </h2>
+      <ul class="list-none p-0 m-0 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-5">
+        {tests.map(({ slug, title }) => (
+          <li class="block font-medium py-3 px-4 rounded-lg text-center transition-all duration-300 ease-in-out shadow hover:shadow-md transform hover:-translate-y-0.5 text-white">
+            <a href={`/test-umh/tests/${slug}/`}>{title}</a>
+          </li>
+        ))}
+      </ul>
+    </section>
+  ))}
+</div>
 </Layout>
