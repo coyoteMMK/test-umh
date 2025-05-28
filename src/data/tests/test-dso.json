@@ -1,0 +1,238 @@
+{
+  "title": "Test completo de DSO",
+  "career": "Ingeniería Informática",
+  "year": "Cuarto año",
+  "subject": "DSO",
+  "questions": [
+    {
+      "q": "¿Cuántos accesos a disco hace falta para leer el nodo-i del directorio /usr/juegos/asesino en UNIX?",
+      "a": [
+        "8",
+        "7",
+        "5",
+        "Ninguna de las anteriores"
+      ],
+      "answer": 3
+    },
+    {
+      "q": "En un sistema operativo se utiliza una estructura de nodos-i parecida a la Unix. El tamaño de bloque es de 1024 bytes y el tamaño de los punteros a bloques es de 32 bits. El nodo-i  tiene un cierto número de entradas de direccionamiento directo, una de direccionamiento indirecto simple y otra direccionamiento indirecto doble. Sabiendo que el tamaño máximo de un archivo es de 65800 Kbytes, ¿cuántas entradas directas hay en el i-nodo?",
+      "a": [
+        "10",
+        "12",
+        "8",
+        "Ninguna de las anteriores"
+      ],
+      "answer": 2
+    },
+    {
+      "q": "¿Cuál de las siguientes no es una característica propia de las llamadas al sistema?",
+      "a": [
+        "Ofrece un servicio que implementa el S.O",
+        "Durante su ejecución se ejecuta código del S.O",
+        "El proceso que la realiza siempre retiene el uso del procesador hasta que termina.",
+        "El proceso puede quedar bloqueado si la llamada lo exige."
+      ],
+      "answer": 2
+    },
+    {
+      "q": "¿Cuál es la característica hardware más importante para poder implementar un Sistema Operativo Multitarea?",
+      "a": [
+        "Interrupciones procedentes de los dispositivos periféricos.",
+        "Mecanismos hardware de protección de memoria.",
+        "Dos modos de ejecución del procesador, modo usuario y modo privilegiado.",
+        "Mecanismos de DMA para el intercambio de datos con los dispositivos."
+      ],
+      "answer": 2
+    },
+    {
+      "q": "¿Qué carácter debe ser el primero en cada línea de comando de un fichero Makefile?",
+      "a": [
+        "Espacio en blanco",
+        "Almohadilla #",
+        "Tabulador",
+        "El signo dólar $"
+      ],
+      "answer": 2
+    },
+    {
+      "q": "¿Qué hace este comando $ls -l?",
+      "a": [
+        "Obtiene un listado de un directorio",
+        "Obtiene un listado ordenado alfabéticamente",
+        "Genera un error",
+        "Ninguna de las anteriores"
+      ],
+      "answer": 0
+    },
+    {
+      "q": "¿Cómo se llama la interfaz de programación de los sistemas tipo UNIX?",
+      "a": [
+        "Fedora",
+        "Posix",
+        "Win32",
+        "Ninguna de las anteriores"
+      ],
+      "answer": 1
+    },
+    {
+      "q": "¿Cómo recibe el núcleo de un sistema operativo las notificaciones de sucesos de los periféricos?",
+      "a": [
+        "Señales de humo",
+        "Pipes",
+        "Interrupciones",
+        "Ficheros"
+      ],
+      "answer": 2
+    },
+    {
+      "q": "Determine el espacio máximo (en bloques) que puede llegar a ocupar el mapa de bits de los bloques libres en un disco de 80 GB, usando un tamaño de bloque de 4KB y direcciones de bloque de 32 bits.",
+      "a": [
+        "640",
+        "-1",
+        "0",
+        "2"
+      ],
+      "answer": 0
+    },
+    {
+      "q": "En una operación de lectura de un dispositivo utilizando E/S por DMA, la escritura en memoria del proceso que efectúa la operación de los datos leídos del dispositivo es realizada por:",
+      "a": [
+        "La CPU",
+        "La controladora DMA",
+        "La parte mecánica del dispositivo",
+        "Ninguna de las opciones anteriores es correcta"
+      ],
+      "answer": 1
+    },
+    {
+      "q": "Cada entrada en un directorio tipo Unix, tiene dos columnas, una de ellas contiene el nombre del fichero o directorio, ¿Cuál es la otra columna?",
+      "a": [
+        "El número de dispositivo",
+        "El puntero al bloque",
+        "El número de INODO",
+        "Ninguna de las anteriores"
+      ],
+      "answer": 2
+    },
+    {
+      "q": "¿Cuál de los siguientes atributos es heredado de su padre, por un proceso al ser UNIX?",
+      "a": [
+        "PID (process identifier)",
+        "PPID (parent process identifier)",
+        "PGID (process group identifier)",
+        "Ninguno de ellos es heredado por el hijo"
+      ],
+      "answer": 2
+    },
+    {
+      "q": "En un sistema paginado, ¿cuál es el tamaño de un marco si el desplazamiento dentro de la página es de 10 bits?",
+      "a": [
+        "2^32 KB",
+        "64 bits",
+        "64 KB",
+        "4 KB"
+      ],
+      "answer": 3
+    },
+    {
+      "q": "¿Cuánto puede avanzar como máximo el puntero del algoritmo del reloj de reemplazo de páginas durante la selección de una página?",
+      "a": [
+        "Ilimitado",
+        "Una vuelta",
+        "Es un parámetro ajustable por el usuario",
+        "Dos vueltas"
+      ],
+      "answer": 1
+    },
+    {
+      "q": "Sean dos procesos P1 y P2 en FIFO con tiempo de conmutación de 5 ms. Si P1 (20 ms) llega primero y P2 (15 ms) después, ¿cuál es el tiempo de retorno de P1?",
+      "a": [
+        "30 ms",
+        "40 ms",
+        "45 ms",
+        "50 ms"
+      ],
+      "answer": 0
+    },
+    {
+      "q": "El planificador a corto plazo selecciona un proceso...",
+      "a": [
+        "De entre los recién llegados para pasar a la cola de preparados",
+        "De entre los de la cola de preparados para pasar a ejecución",
+        "De entre los suspendidos en memoria principal para pasar a la cola de preparados",
+        "De entre los suspendidos en memoria secundaria para pasar a la cola de preparados"
+      ],
+      "answer": 1
+    },
+    {
+      "q": "En la entrada/salida programada...",
+      "a": [
+        "El procesador solo interviene en la operación al principio y al final de la entrada/salida.",
+        "Se utiliza el mecanismo de las interrupciones para comunicar el fin de la operación.",
+        "El procesador se encarga de realizar la transferencia de datos entre el controlador del dispositivo y la memoria principal.",
+        "Ninguna de las anteriores."
+      ],
+      "answer": 2
+    },
+    {
+      "q": "¿Qué estrategia de asignación de memoria contigua genera más fragmentación externa?",
+      "a": [
+        "Primer ajuste",
+        "Siguiente ajuste",
+        "Mejor ajuste",
+        "Peor ajuste"
+      ],
+      "answer": 3
+    },
+    {
+      "q": "Determine el espacio máximo que puede llegar a ocupar el mapa de bits de los bloques libres en un disco de 40 MB, usando un tamaño de bloque de 2 KB y direcciones de bloque de 16 bits.",
+      "a": [
+        "1",
+        "21",
+        "0",
+        "2"
+      ],
+      "answer": 3
+    },
+    {
+      "q": "Indica cuál de las siguientes afirmaciones es CIERTA:",
+      "a": [
+        "La ENIAC se utilizó por el ejército de los EEUU durante la Primera Guerra Mundial",
+        "John W. Mauchly and J. Presper Eckert diseñaron la arquitectura de la EDVAC",
+        "John W. Mauchly and J. Presper Eckert publicaron el diseño de la arquitectura de la EDVAC",
+        "La ENIAC estaba construida por medio de tubos de vacío y utilizaba lógica decimal"
+      ],
+      "answer": 3
+    },
+    {
+      "q": "En un sistema de gestión de memoria virtual con paginación, ¿cuántos fallos de página se han producido justo después de cargadas las cuatro primeras páginas de memoria?",
+      "a": [
+        "3 fallos de página",
+        "4 fallos de página",
+        "0 fallos de página",
+        "5 fallos de página"
+      ],
+      "answer": 1
+    },
+    {
+      "q": "En la entrada/salida DMA (Acceso Directo a Memoria):",
+      "a": [
+        "El procesador se encarga de realizar la transferencia de datos entre el controlador del dispositivo y la memoria principal",
+        "Se utiliza el mecanismo de las interrupciones para comunicar el fin de la operación",
+        "El procesador sólo interviene en la operación al principio y al final de la entrada/salida.",
+        "Ninguna de las anteriores"
+      ],
+      "answer": 2
+    },
+    {
+      "q": "Dado un espacio lógico de direcciones de 32 páginas de 1 Kbyte y una memoria física de 8 marcos de página, ¿cuántos bits hay en las direcciones físicas?",
+      "a": [
+        "13",
+        "15",
+        "32",
+        "Ninguna de las anteriores"
+      ],
+      "answer": 0
+    }
+  ]
+}

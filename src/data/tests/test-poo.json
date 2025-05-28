@@ -1,0 +1,818 @@
+{
+  "title": "Test completo de POO",
+  "career": "Ingeniería Informática",
+  "year": "Segundo año",
+  "subject": "POO",
+  "questions": [
+    {
+      "q": "¿Qué significa instanciar una clase?",
+      "a": [
+        "Crear la definición de la clase.",
+        "Crear un objeto a partir de una clase",
+        "Crear clases a partir de otras clases.",
+        "Todas las anteriores son correctas."
+      ],
+      "answer": 1
+    },
+    {
+      "q": "A las acciones que se pueden realizar sobre una clase se les denomina…",
+      "a": [
+        "Atributos",
+        "Todas las anteriores son falsas. ",
+        "Variables",
+        "Métodos"
+      ],
+      "answer": 3
+    },
+    {
+      "q": "¿Se puede acceder a una variable de instancia desde un método de clase? ",
+      "a": [
+        "Si es pública sí.",
+        "Depende del tipo de la variable.",
+        "No",
+        "Si"
+      ],
+      "answer": 2
+    },
+    {
+      "q": "¿Cómo se llama la característica de la POO que oculta la implementación que se realiza dentro de una clase?.",
+      "a": [
+        "Encapsulación.",
+        "Persistencia.",
+        "Herencia.",
+        "Recolector de basura."
+      ],
+      "answer": 0
+    },
+    {
+      "q": "En POO a las propiedades de una clase también se les denomina…",
+      "a": [
+        "Atributos",
+        "Métodos",
+        "Variables",
+        "Todas las anteriores son falsas."
+      ],
+      "answer": 0
+    },
+    {
+      "q": "Indica cuál de las siguientes afirmaciones es correcta: ",
+      "a": [
+        "Los atributos de una clase deben tener métodos getter y setter siempre.",
+        "Los métodos pueden devolver información del objeto mediante un valor de retorno.",
+        "Un método de una clase no puede acceder a las variables de instancia privadas.",
+        "Los métodos siempre tienen parámetros para obtener la información de los objetos."
+      ],
+      "answer": 1
+    },
+    {
+      "q": "Indica cuál de las siguientes afirmaciones es correcta:",
+      "a": [
+        "Una variable de clase puede ser modificada sin instanciar un objeto de la clase. ",
+        "Un método de clase puede acceder a cualquier miembro de la clase.",
+        "Para definir un atributo de instancia es necesario utilizar una palabra clave static.",
+        "Un método de clase puede acceder sólo a las variables de clase declaradas como public."
+      ],
+      "answer": 0
+    },
+    {
+      "q": "Indica cuál de las siguientes afirmaciones es correcta: ",
+      "a": [
+        "La interfaz de la clase define lo que hace la clase y como puede usarse pudiendo ver su código.",
+        "Una interfaz nunca tiene implementación de sus métodos.",
+        "Un método abstracto puede tener implementación del mismo para ser reutilizado por las clases hijas.",
+        "Implementar una interfaz no obliga a implementar todos sus métodos."
+      ],
+      "answer": 1
+    },
+    {
+      "q": "Indica cuál de estas afirmaciones es correcta:",
+      "a": [
+        "Una clase es la instanciación de un objeto.",
+        "Una clase tiene siempre al menos un objeto.",
+        "Podemos crear muchos objetos a partir de una clase.",
+        "b y c son ciertas."
+      ],
+      "answer": 2
+    },
+    {
+      "q": "Indica cuál de las siguientes afirmaciones es correcta:",
+      "a": [
+        "Los métodos tienen que tener parámetros, en caso contrario no hacen nada.",
+        "Los métodos pueden modificar los atributos, pero no están obligados a ello.",
+        "En una clase sólo se pueden crear objetos de la misma mediante métodos públicos.",
+        "Los atributos y métodos de una clase pueden tener métodos getter y setter."
+      ],
+      "answer": 1
+    },
+    {
+      "q": "¿Se puede acceder a un método de clase desde un método de instancia? (suponemos que ambos métodos están declarados en la misma clase):",
+      "a": [
+        "No, porque el método de clase accede a atributos de clase y eso no está permitido.",
+        "Si.",
+        "Depende del tipo de método de clase.",
+        "No, en ningún caso."
+      ],
+      "answer": 1
+    },
+    {
+      "q": "¿Se puede acceder a un método estático declarado en una clase base desde una clase derivada?: ",
+      "a": [
+        "No, porque el método estático solo es accesible desde la propia clase.",
+        "No si este accede a variables estáticas privadas de la clase base.",
+        "Depende de la visibilidad del método estático.",
+        "No si este método accede a variables de instancia."
+      ],
+      "answer": 2
+    },
+    {
+      "q": "Indica cuál de estas afirmaciones es correcta:",
+      "a": [
+        "En java, siempre todas las clases hereden de otra.",
+        "La herencia nos permite heredar, pero no reutilizar el código de la clase base.",
+        "La herencia nos permite reutilizar todos los métodos de la clase base, y por tanto realizar llamadas a todos ellos.",
+        "En java, para implementar la herencia hay que utilizar obligatoriamente la palabra extends en la definición de esta."
+      ],
+      "answer": 3
+    },
+    {
+      "q": "Indica cuál de estas afirmaciones es correcta:",
+      "a": [
+        "Los constructores permiten que cada objeto sea preparado adecuadamente en el momento de su creación. ",
+        "El tiempo de vida de una variable define el número de veces que es utilizada en un método.",
+        "Los atributos son funciones que son definidas en la clase.",
+        "Un método privado no puede ser utilizado nunca, precisamente porque es privado."
+      ],
+      "answer": 0
+    },
+    {
+      "q": "Según el temario de la asignatura ¿Qué significa sobrecargar un método? ",
+      "a": [
+        "Editarlo para modificar su comportamiento. ",
+        "Cambiar el nombre dejándolo con la misma funcionalidad.",
+        "Crear un método con el mismo nombre, pero con diferentes argumentos.",
+        "Crear un método en la clase derivada idéntico al de la clase base. "
+      ],
+      "answer": 2
+    },
+    {
+      "q": "Indica cuál de estas afirmaciones es correcta",
+      "a": [
+        "Una interfaz puede implementar alguno de los métodos que declara.",
+        "Una interfaz puede declarar variables de instancia o de clase.",
+        "Cuando una clase implementa una interfaz específica no hace falta que implemente todos los métodos de esa interfaz, sólo los que necesite. ",
+        "Una clase puede implementar más de una interfaz al mismo tiempo."
+      ],
+      "answer": 3
+    },
+    {
+      "q": "Indica cuál de estas afirmaciones es correcta ",
+      "a": [
+        "Si una clase es abstracta, todos los métodos de esta tienen que ser abstractos.",
+        "No podemos crear clases abstractas sin tener métodos abstractos, no tendría sentido.",
+        "Una clase es abstracta si alguno de los métodos es abstracto.",
+        "Una clase abstracta no puede implementan ningún interfaz ya que es abstracta."
+      ],
+      "answer": 2
+    },
+    {
+      "q": "Es posible que los métodos indiquen en su declaración que pueden lanzar una excepción al método que les llama:",
+      "a": [
+        "No pueden hacer tal cosa.",
+        "Pueden hacerlo utilizando la palabra reservada throw.",
+        "Pueden hacerlo utilizando la palabra reservada throws.",
+        "Pueden hacerlo sin utilizar ninguna palabra reservada."
+      ],
+      "answer": 2
+    },
+    {
+      "q": "Indica cuál de estas afirmaciones es correcta en Java: ",
+      "a": [
+        "Los interfaces pueden ser instanciados.",
+        "Las clases abstactas pueden ser instanciadas ya que pueden tener métodos implementados.",
+        "Las clases pueden implementar varias interfaces y extender varias clases.",
+        "Todas las anteriores son falsas. "
+      ],
+      "answer": 3
+    },
+    {
+      "q": "Indica cuál de las siguientes opciones declarará un método en una clase que fuerza a una subclase a implementarlo",
+      "a": [
+        "protected void metodoPI (double d1){}",
+        "abstract public void metodoPI () ; ",
+        "static void metodoPI (double d1) {}",
+        "public native double metodoPI ();"
+      ],
+      "answer": 1
+    },
+    {
+      "q": "Según el temario de la asignatura ¿Qué significa sobrescribir un método?",
+      "a": [
+        "Editarlo para modificar su comportamiento.",
+        "Cambiar el nombre dejándolo con la misma funcionalidad.",
+        "Crear un método con el mismo nombre, pero con diferentes argumentos.",
+        "Crear un método en la clase derivada idéntico al de la clase base."
+      ],
+      "answer": 3
+    },
+    {
+      "q": "Indica cuál de estas afirmaciones es correcta",
+      "a": [
+        "Una superclase es una clase que es implementada por otra.",
+        "Una subclase es una clase que implementa a otra clase.",
+        "La herencia nos permite heredar, pero no reutilizar en un nuevo contexto clases que ya fueron escritas previamente.",
+        "Todas las anteriores son falsas."
+      ],
+      "answer": 3
+    },
+    {
+      "q": "Las clases abstractas…",
+      "a": [
+        "Admiten herencia múltiple.",
+        "Permiten definir atributos.",
+        "Sus métodos solo pueden ser public y abstract.",
+        "Todas las anteriores son falsas."
+      ],
+      "answer": 1
+    },
+    {
+      "q": "Indica cuál de estas afirmaciones es correcta",
+      "a": [
+        "Para definir una variable de instancia es necesario utilizar la palabra reservada static.",
+        "Un método estático puede acceder a cualquier componente (método o variable) no estático de su clase.",
+        "Los métodos estáticos pueden ser sobrescritos.",
+        "Una variable de clase puede ser modificada sin necesidad de haber instanciado objeto alguno de dicha clase."
+      ],
+      "answer": 3
+    },
+    {
+      "q": "Indica cuál de estas afirmaciones es correcta ",
+      "a": [
+        "Los campos se definen dentro de los constructores y de los métodos.",
+        "Los campos se usan para almacenar datos que nunca persisten durante la vida del objeto.",
+        "Los campos tienen un tiempo de vida que perdura después de terminar el objeto.",
+        "La accesibilidad de los campos se extiende a toda clase y por este motivo pueden usarse dentro de cualquier constructor o método de clase en la que estén definidos."
+      ],
+      "answer": 3
+    },
+    {
+      "q": "La presencia de dos o más constructores en una clase se llama:",
+      "a": [
+        "No tiene nombre, solo permite crear más objetos.",
+        "Abstracción.",
+        "Sobrecarga.",
+        "Sobrescritura de constructor ya que está escrito más de una vez."
+      ],
+      "answer": 2
+    },
+    {
+      "q": "¿Qué significa sobrecargar un método?",
+      "a": [
+        "Crear un método igual en la clase derivada que llame al de la clase base.",
+        "Crear un método con el mismo nombre, pero con diferentes argumentos y tipo de retorno.",
+        "Crear un método con el mismo nombre y tipo de retorno, pero con diferentes argumentos.",
+        "Crear un método con el mismo nombre y argumentos, pero con diferente tipo de retorno."
+      ],
+      "answer": 2
+    },
+    {
+      "q": "Indica la respuesta correcta",
+      "a": [
+        "Un bloque try solo puede contener un único catch (más el finally, optativo).",
+        "Un bloque try no puede contener otros try anidados.",
+        "Un bloque catch puede contener varios try (más el finally, optativo).",
+        "Un bloque try puede contener varios catch."
+      ],
+      "answer": 3
+    },
+    {
+      "q": "Indica la respuesta correcta",
+      "a": [
+        "Los interfaces pueden ser instanciados.",
+        "Las clases abstractas no pueden ser instanciadas porque todos los métodos siempre tienen que ser abstractos.",
+        "Las clases pueden implementar interfaces o extender clases, pero no las 2 cosas a la vez.",
+        "Las clases abstractas pueden contener métodos no abstractos."
+      ],
+      "answer": 3
+    },
+    {
+      "q": "¿Qué es redefinir un método?",
+      "a": [
+        "Es el proceso mediante el cual una clase derivada toma un método de la clase base y lo reescribe con la intención de cambiar su comportamiento.",
+        "Es el proceso mediante el cual un método toma un objeto de la clase y lo define de nuevo.",
+        "Es el proceso por el cual pasa una variable mediante la medición de sus atributos.",
+        "Es definir 2 o más veces el mismo método con distintos argumentos en la misma clase."
+      ],
+      "answer": 0
+    },
+    {
+      "q": "¿Qué representa un método?",
+      "a": [
+        "Una acción o comportamiento de un objeto",
+        "Una característica de la clase a la que se puede llamar para crear objetos",
+        "El estado del objeto.",
+        "Ninguna de las anteriores "
+      ],
+      "answer": 0
+    },
+    {
+      "q": "Si la clase Pato es una subclase de la clase Ave. ¿Cuál de los siguientes códigos no compilará? Razona tu respuesta",
+      "a": [
+        "Ave objeto = new Ave();",
+        "Pato objeto = new Ave();",
+        "Pato objeto = new Pato();",
+        "Ave objeto = new Pato();"
+      ],
+      "answer": 1
+    },
+    {
+      "q": "Indica cuál de estas afirmaciones es correcta",
+      "a": [
+        "Ninguna de las anteriores es correcta.",
+        "Una subclase es una clase que implementa a otra clase ",
+        "La herencia nos permite heredar, pero no reutilizar en un nuevo contexto clases que fueron escritas previamente.",
+        "Una clase derivada es aquella de la que se implementan clases."
+      ],
+      "answer": 0
+    },
+    {
+      "q": "Sobre la palabra reservada abstract, indica cuál de estas afirmaciones es correcta",
+      "a": [
+        "Se puede utilizar tanto en clases, métodos y atributos.",
+        "Se puede utilizar en una clase sin que ningún atributo de esta esté definido como abstract.",
+        "Solo se puede utilizar en la clase en el caso de que algún atributo esté definido como abstract.",
+        "No se puede utilizar en la clase."
+      ],
+      "answer": 1
+    },
+    {
+      "q": "Según el temario de la asignatura, ¿qué elementos crees que definen a un objeto?",
+      "a": [
+        "Su cardinalidad y su tipo.",
+        "Sus atributos y sus métodos.",
+        "La forma en que establece comunicación e intercambia mensajes.",
+        "Su variable, su interfaz y los métodos públicos."
+      ],
+      "answer": 1
+    },
+    {
+      "q": "Indica la respuesta correcta",
+      "a": [
+        "Las interfaces pueden tener atributos no estáticos que las clases que las implementen heredarán.",
+        "Las subclases de una clase abstracta deben implementar todos los métodos abstractos o declararse abstractas.",
+        "Las clases pueden implementar interfaces o extender clases, pero no las 2 cosas a la vez.",
+        "Las clases que implementan interfaces pueden implementar solo los métodos abstractos que necesiten de cada una de ellas."
+      ],
+      "answer": 1
+    },
+    {
+      "q": "Es posible que los métodos indiquen en su declaración que pueden lanzar una excepción al método que les llama",
+      "a": [
+        "Ninguna de las anteriores es correcta.",
+        "Pueden hacerlo utilizando la palabra reservada throw.",
+        "Pueden hacerlo utilizando la palabra reservada new.",
+        "Pueden hacerlo siempre que la excepción no la lancemos nosotros directamente."
+      ],
+      "answer": 0
+    },
+    {
+      "q": "Explica con tus propias palabras que es una interfaz.",
+      "a": [
+        "Es como un plano o plantilla que define las características y comportamientos de algo en programación orientada a objetos (POO).",
+        "Es una instancia de una clase.",
+        "Define un conjunto de métodos que una clase debe tener, pero no proporciona la implementación de esos métodos, solo la firma",
+        "Esta característica permite agrupar datos (atributos) y métodos (funciones) que operan sobre esos datos dentro de una misma unidad llamada clase."
+      ],
+      "answer": 2
+    },
+    {
+      "q": "Indica la respuesta falsa:",
+      "a": [
+        "Un atributo final es una constante.",
+        "Cuando heredamos un método y lo sobrescribimos en la clase hija, podemos cambiar su visibilidad de public a private.",
+        "Por defecto desde un constructor de una clase hija se llama al constructor sin argumentos de la clase Padre",
+        "Un método final no se puede sobrescribir"
+      ],
+      "answer": 1
+    },
+    {
+      "q": "Indica cuál de estas afirmaciones es verdadera en Java:",
+      "a": [
+        "Los interfaces pueden ser instanciados.",
+        "Las clases abstactas pueden ser instanciadas ya que pueden tener métodos implementados.",
+        "Las clases pueden implementar varias interfaces y extender varias clases.",
+        "Todas las anteriores son falsas"
+      ],
+      "answer": 3
+    },
+    {
+      "q": "Indica la respuesta correcta",
+      "a": [
+        "Un atributo de clase solo puede ser accedido desde métodos de instancia.",
+        "Un atributo de clase puede ser accedido desde cualquier método.",
+        "Un atributo de clase solo puede ser accedido desde métodos de clase.",
+        "Un atributo de instancia puede ser accedido desde cualquier método."
+      ],
+      "answer": 1
+    },
+    {
+      "q": "Indica cuál de estas afirmaciones es verdadera en Java:",
+      "a": [
+        "Los interfaces no pueden ser instanciados.",
+        "Las clases abstractas pueden ser instanciadas ya que pueden tener métodos implementados.",
+        "Las clases solo pueden implementar una interfaz y heredar de una clase.",
+        "Todas las anteriores son verdaderas."
+      ],
+      "answer": 0
+    },
+    {
+      "q": "Indica cuál de estas afirmaciones es verdadera en Java: ",
+      "a": [
+        "Los interfaces solo pueden ser instanciados por quienes los implementan.",
+        "No puede haber una clase abstracta si al menos no tiene un método abstracto.",
+        "Las clases pueden heredar de más de una clase.",
+        "Todas las anteriores son falsas."
+      ],
+      "answer": 1
+    },
+    {
+      "q": "Indica cuál de estas afirmaciones es verdadera en Java:",
+      "a": [
+        "Los interfaces si pueden ser instanciados por las clases que los heredan.",
+        "En una clase no puede haber 2 métodos con el mismo nombre.",
+        "Las clases solo pueden implementar una interfaz y heredar de una clase.",
+        "Todas las anteriores son falsas."
+      ],
+      "answer": 3
+    },
+    {
+      "q": "Indica cuál de estas afirmaciones es verdadera en Java:",
+      "a": [
+        "Un objeto puede estar referenciado por una o más variables.",
+        "Una clase puede tener un constructor privado.",
+        "Un objeto puede dejar de estar referenciado en alguna parte del código.",
+        "Todas las anteriores son verdaderas."
+      ],
+      "answer": 3
+    },
+    {
+      "q": "Indica cuál de estas afirmaciones es verdadera en Java:",
+      "a": [
+        "No existe un recolector de basura.",
+        "No existe un constructor por defecto.",
+        "No se puede heredar de más de una clase.",
+        "No se puede implementar más de un interfaz"
+      ],
+      "answer": 2
+    },
+    {
+      "q": "Indica cuál de estas afirmaciones es verdadera en Java:",
+      "a": [
+        "No puede haber 2 objetos iguales.",
+        "Un objeto puede estar referenciado una o más veces.",
+        "Una clase solo puede ser instanciada una vez.",
+        "Todas las anteriores son verdaderas."
+      ],
+      "answer": 1
+    },
+    {
+      "q": "Se puede sobrecargar un método variando los parámetros de entrada.",
+      "a": [
+        "Verdadero",
+        "Falso",
+        "-",
+        "-"
+      ],
+      "answer": 0
+    },
+    {
+      "q": "Se puede sobrecargar un método variando el tipo de retorno de éste sin variar los parámetros de entrada.",
+      "a": [
+        "Verdadero",
+        "Falso",
+        "-",
+        "-"
+      ],
+      "answer": 1
+    },
+    {
+      "q": "Un método puede ser sobrecargado en la misma clase o en una subclase utilizando los mismos parámetros.",
+      "a": [
+        "Verdadero",
+        "Falso",
+        "-",
+        "-"
+      ],
+      "answer": 1
+    },
+    {
+      "q": "Los atributos también pueden ser sobrecargados.",
+      "a": [
+        "Verdadero",
+        "Falso",
+        "-",
+        "-"
+      ],
+      "answer": 1
+    },
+    {
+      "q": "Los métodos de clase no pueden ser sobrecargados.",
+      "a": [
+        "Verdadero",
+        "Falso",
+        "-",
+        "-"
+      ],
+      "answer": 1
+    },
+    {
+      "q": "Un atributo de clase solo puede ser accedido desde métodos de clase.",
+      "a": [
+        "Verdadero",
+        "Falso",
+        "-",
+        "-"
+      ],
+      "answer": 1
+    },
+    {
+      "q": "Dada una clase abstracta, si creamos un objeto de esa clase sólo podremos usar los métodos que no estén definidos como abstractos porque los métodos abstractos no tienen implementación.",
+      "a": [
+        "Verdadero",
+        "Falso",
+        "-",
+        "-"
+      ],
+      "answer": 1
+    },
+    {
+      "q": "Una clase derivada sólo puede acceder a un método privado de la superclase si y sólo si ambas están definidas en el mismo fichero.",
+      "a": [
+        "Verdadero",
+        "Falso",
+        "-",
+        "-"
+      ],
+      "answer": 1
+    },
+    {
+      "q": "Si dentro de un método de una clase se declara un atributo público este puede ser accedido desde cualquier método de la clase.",
+      "a": [
+        "Verdadero",
+        "Falso",
+        "-",
+        "-"
+      ],
+      "answer": 1
+    },
+    {
+      "q": "Una clase no puede tener 2 métodos con el mismo nombre.",
+      "a": [
+        "Verdadero",
+        "Falso",
+        "-",
+        "-"
+      ],
+      "answer": 1
+    },
+    {
+      "q": "Instanciar un objeto de una clase es declarar una variable de esa clase.",
+      "a": [
+        "Verdadero",
+        "Falso",
+        "-",
+        "-"
+      ],
+      "answer": 1
+    },
+    {
+      "q": "La palabra reservada throws sirve para lanzar nuevas excepciones",
+      "a": [
+        "Verdadero",
+        "Falso",
+        "-",
+        "-"
+      ],
+      "answer": 1
+    },
+    {
+      "q": "Un atributo private solo puede ser accedido por métodos private.",
+      "a": [
+        "Verdadero",
+        "Falso",
+        "-",
+        "-"
+      ],
+      "answer": 1
+    },
+    {
+      "q": "No es posible tener constructores private.",
+      "a": [
+        "Verdadero",
+        "Falso",
+        "-",
+        "-"
+      ],
+      "answer": 1
+    },
+    {
+      "q": "Una variable static indica que no se puede modificar su valor.",
+      "a": [
+        "Verdadero",
+        "Falso",
+        "-",
+        "-"
+      ],
+      "answer": 1
+    },
+    {
+      "q": "Una clase no puede tener 2 métodos con el mismo nombre.",
+      "a": [
+        "Verdadero",
+        "Falso",
+        "-",
+        "-"
+      ],
+      "answer": 1
+    },
+    {
+      "q": "Podemos utilizar el operador = para crear nuevos objetos a partir de otros.",
+      "a": [
+        "Verdadero",
+        "Falso",
+        "-",
+        "-"
+      ],
+      "answer": 1
+    },
+    {
+      "q": "No pueden existir clases abstractas sin métodos abstractos.",
+      "a": [
+        "Verdadero",
+        "Falso",
+        "-",
+        "-"
+      ],
+      "answer": 1
+    },
+    {
+      "q": "Una clase derivada no puede ser a su vez clase base de otra clase.",
+      "a": [
+        "Verdadero",
+        "Falso",
+        "-",
+        "-"
+      ],
+      "answer": 1
+    },
+    {
+      "q": "Un atributo de instancia solo puede ser accedido desde métodos de instancia.",
+      "a": [
+        "Verdadero",
+        "Falso",
+        "-",
+        "-"
+      ],
+      "answer": 1
+    },
+    {
+      "q": "Dada una clase abstracta, si creamos un objeto de esa clase sólo podremos usar los métodos que no estén definidos como abstractos porque los métodos abstractos no tienen implementación.",
+      "a": [
+        "Verdadero",
+        "Falso",
+        "-",
+        "-"
+      ],
+      "answer": 1
+    },
+    {
+      "q": "Una subclase sólo puede acceder a un método privado de la superclase si y sólo si ambas están definidas en el mismo fichero.",
+      "a": [
+        "Verdadero",
+        "Falso",
+        "-",
+        "-"
+      ],
+      "answer": 1
+    },
+    {
+      "q": "Un método de clase puede acceder a métodos de instancia.",
+      "a": [
+        "Verdadero",
+        "Falso",
+        "-",
+        "-"
+      ],
+      "answer": 1
+    },
+    {
+      "q": "Un atributo de clase no puede ser accedido desde métodos de instancia.",
+      "a": [
+        "Verdadero",
+        "Falso",
+        "-",
+        "-"
+      ],
+      "answer": 1
+    },
+    {
+      "q": "Un método público de la clase base no puede ser sobrecargado en la clase hija.",
+      "a": [
+        "Verdadero",
+        "Falso",
+        "-",
+        "-"
+      ],
+      "answer": 1
+    },
+    {
+      "q": "Un método privado de la clase base puede ser accedido por la clase derivada por heredarlo.",
+      "a": [
+        "Verdadero",
+        "Falso",
+        "-",
+        "-"
+      ],
+      "answer": 1
+    },
+    {
+      "q": "Una clase abstracta no puede ser heredada.",
+      "a": [
+        "Verdadero",
+        "Falso",
+        "-",
+        "-"
+      ],
+      "answer": 1
+    },
+    {
+      "q": "Un método de clase únicamente puede acceder a atributos de clase.",
+      "a": [
+        "Verdadero",
+        "Falso",
+        "-",
+        "-"
+      ],
+      "answer": 0
+    },
+    {
+      "q": "Una clase abstracta debe tener todos los métodos definidos como abstractos.",
+      "a": [
+        "Verdadero",
+        "Falso",
+        "-",
+        "-"
+      ],
+      "answer": 1
+    },
+    {
+      "q": "Una clase solo puede tener un constructor.",
+      "a": [
+        "Verdadero",
+        "Falso",
+        "-",
+        "-"
+      ],
+      "answer": 1
+    },
+    {
+      "q": "No podemos utilizar el operador == para comparar objetos.",
+      "a": [
+        "Verdadero",
+        "Falso",
+        "-",
+        "-"
+      ],
+      "answer": 0
+    },
+    {
+      "q": "Declarar una variable de una clase es instanciar un objeto.",
+      "a": [
+        "Verdadero",
+        "Falso",
+        "-",
+        "-"
+      ],
+      "answer": 1
+    },
+    {
+      "q": "Un atributo de clase solo puede ser accedido desde métodos de clase.",
+      "a": [
+        "Verdadero",
+        "Falso",
+        "-",
+        "-"
+      ],
+      "answer": 1
+    },
+    {
+      "q": "Un objeto puede ser referenciado por muchas variables a la vez.",
+      "a": [
+        "Verdadero",
+        "Falso",
+        "-",
+        "-"
+      ],
+      "answer": 0
+    }
+  ]
+}

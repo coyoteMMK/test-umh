@@ -1,0 +1,60 @@
+---
+import Layout from "../../layouts/Layout.astro";
+
+// ✅ Esta importación se usa para el render (fuera de getStaticPaths)
+const modules = import.meta.glob("../../data/tests/*.json", {
+  eager: true,
+  query: "?json",
+});
+
+// ✅ Esta función se ejecuta en build. Debe tener su propia importación.
+export async function getStaticPaths() {
+  const internalModules = import.meta.glob("../../data/tests/*.json", {
+    eager: true,
+    query: "?json",
+  });
+
+  const paths = [];
+
+  for (const mod of Object.values(internalModules)) {
+    const subject = (mod as any).subject;
+    if (subject) {
+      paths.push({
+        params: { slug: encodeURIComponent(subject) },
+      });
+    }
+  }
+
+  return paths;
+}
+
+const slug = decodeURIComponent(Astro.params.slug);
+
+// Usamos la importación global para renderizar
+const allTests = Object.entries(modules)
+  .map(([path, data]) => ({
+    slug: (path.split("/").pop() ?? "").replace(".json", ""),
+    ...data as any,
+  }))
+  .filter((test) => test.subject === slug);
+---
+
+<Layout>
+  <h1 class="text-2xl font-bold mb-6">Tests de {slug}</h1>
+
+  {allTests.length === 0 ? (
+    <p>No hay tests disponibles para esta asignatura.</p>
+  ) : (
+    <ul class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
+      {allTests.map(({ slug, title }) => (
+        <li class="bg-blue-600 text-white p-4 rounded shadow hover:shadow-lg transition">
+          <a href={`/test-umh/tests/${slug}/`}>{title}</a>
+        </li>
+      ))}
+    </ul>
+  )}
+
+  <p class="mt-6">
+    <a href="/test-umh/" class="text-sm text-gray-600 hover:underline">← Volver al índice</a>
+  </p>
+</Layout>
