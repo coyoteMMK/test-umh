@@ -1,3 +1,41 @@
 @import "tailwindcss";
 
+/* global.css */
+
+/* Estilos base para sección */
+section[data-subject] {
+  @apply bg-white p-6 rounded-xl shadow-lg;
+}
+
+/* H2 dinámicos */
+section[data-subject="POO"] h2 {
+  @apply text-red-500 border-red-500;
+}
+section[data-subject="Redes"] h2 {
+  @apply text-green-500 border-green-500;
+}
+section[data-subject="Química"] h2 {
+  @apply text-yellow-500 border-yellow-500;
+}
+section[data-subject="Historia"] h2 {
+  @apply text-blue-500 border-blue-500;
+}
+/* … más asignaturas … */
+
+/* LI dinámicos */
+section[data-subject="POO"] li {
+  @apply bg-red-500 hover:bg-red-600;
+}
+section[data-subject="Redes"] li {
+  @apply bg-green-500 hover:bg-green-600;
+}
+section[data-subject="Química"] li {
+  @apply bg-yellow-500 hover:bg-yellow-600;
+}
+section[data-subject="Historia"] li {
+  @apply bg-blue-500 hover:bg-blue-600;
+}
+/* … más asignaturas … */
+
+
 
