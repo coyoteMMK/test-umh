@@ -1,64 +1,58 @@
 ---
 import Layout from "../layouts/Layout.astro";
 
-// Cargar todos los tests JSON
+// Cargar todos los tests JSON desde data/tests
 const modules = import.meta.glob("../data/tests/*.json", {
   eager: true,
   query: "?json",
 });
 
-// Crear jerarquía: carrera → año → asignatura → tests
+// Construir jerarquía: carrera → año → asignatura → tests
 const hierarchy = {} as Record<
-  string, // carrera
+  string,
   Record<
-    string, // año
-    Record<
-      string, // asignatura
-      { slug: string; title: string }[]
-    >
+    string,
+    Record<string, { slug: string; title: string }[]>
   >
 >;
 
 for (const [path, data] of Object.entries(modules)) {
   const slug = (path.split("/").pop() ?? "").replace(".json", "");
-  const typedData = data as { title: string };
-  return {
-    slug,
-    title: (data as any).title,
-    subject: (data as any).subject || "Sin asignatura", // No tiene subject
-  };
-});
+  const { title, career = "Sin carrera", year = "Sin año", subject = "Sin asignatura" } = data as any;
 
-// 2) Agrupar por asignatura
-const groups = tests.reduce(
-  (acc, test) => {
-    (acc[test.subject] ||= []).push(test);
-    return acc;
-  },
-  {} as Record<string, { slug: string; title: string; subject: string }[]>,
-);
+  if (!hierarchy[career]) hierarchy[career] = {};
+  if (!hierarchy[career][year]) hierarchy[career][year] = {};
+  if (!hierarchy[career][year][subject]) hierarchy[career][year][subject] = [];
+
+  hierarchy[career][year][subject].push({ slug, title });
+}
 ---
 
 <Layout>
-  <h1 class="flex flex-col justify-center items-center w-full mx-auto container lg:max-w-4xl md:max-w-xl py-16 md:py-36">Cojunto de tests
-  </h1>
+  <h1 class="text-3xl font-bold text-center py-10">Repositorio de Tests UMH</h1>
 
-  <div class="flex flex-col space-y-10 p-4 container lg:max-w-4xl md:max-w-xl w-full mx-auto">
-  {
-    Object.entries(groups).map(([subject, tests]) => (
-      <section class="bg-white p-6 rounded-xl shadow-lg" >
-        <h2 class="text-2xl font-semibold mb-6 pb-3 border-b-2 text-sky-700 border-sky-500" >Tests de {subject}</h2>
-        <ul class="list-none p-0 m-0 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-5">
-          {tests.map(({ slug, title }) => (
-            <li class="block font-medium py-3 px-4 rounded-lg text-center transition-all duration-300 ease-in-out shadow hover:shadow-md transform hover:-translate-y-0.5 text-white bg-sky-500 hover:bg-sky-600">
-              <a href={`/test-umh/tests/${slug}/`} class="text-blue-600 hover:underline">
-                {title}
-              </a>
-            </li>
-          ))}
-        </ul>
+  <div class="container mx-auto px-4 space-y-10">
+    {Object.entries(hierarchy).map(([career, years]) => (
+      <section>
+        <h2 class="text-2xl font-semibold mb-4 border-b pb-2">{career}</h2>
+        {Object.entries(years).map(([year, subjects]) => (
+          <div class="mb-6">
+            <h3 class="text-xl font-medium mb-2">{year}</h3>
+            <ul class="list-disc ml-6 space-y-1">
+              {Object.entries(subjects).map(([subject]) => (
+                <li>
+                  <a
+                    class="text-blue-600 hover:underline"
+                    href={`/test-umh/asignaturas/${encodeURIComponent(subject)}/`}
+                  >
+                    {subject}
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </div>
+        ))}
       </section>
-    ))
-  }
+    ))}
   </div>
 </Layout>
