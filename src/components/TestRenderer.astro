@@ -13,62 +13,67 @@ interface Props {
 const { questions } = Astro.props as Props;
 ---
 
-<style>
-  .option {
-    padding: 1rem;
-    border-radius: 0.5rem;
-    background: #f3f4f6;
-    cursor: pointer;
-    transition: background 0.2s;
-  }
-  .option:hover {
-    background: #e5e7eb;
-  }
-  .correct {
-    background: #bbf7d0 !important;
-  }
-  .wrong {
-    background: #fecaca !important;
-  }
-  #counter {
-    margin-bottom: 2rem;
-    font-size: 1.125rem;
-  }
-  #counter span {
-    font-weight: bold;
-  }
-</style>
-
-<!-- 1) Contador de aciertos/errores -->
-<div id="counter" class="fixed">
-  Correctas: <span id="correct-count">0</span>
-  Incorrectas: <span id="wrong-count">0</span>
+<!-- Contador de aciertos y errores -->
+<div
+  id="counter"
+  class="fixed top-4 left-4 z-50
+    text-sm sm:text-base
+    bg-white/80 shadow-md px-2 py-1 rounded-lg font-sans
+    flex flex-col items-center gap-1"
+>
+  <div class="text-green-700">
+    ✔️ <span id="correct-count" class="hidden sm:inline">Correctas: </span><span
+      id="correct-num">0</span
+    >
+  </div>
+  <div class="text-red-700">
+    ❌ <span id="wrong-count" class="hidden sm:inline">Incorrectas: </span><span
+      id="wrong-num">0</span
+    >
+  </div>
 </div>
 
-<div id="test-root" class="flex flex-col items-center">
-  <!-- 2) Renderizado de preguntas -->
+<!-- Contenedor de todas las preguntas -->
+<div id="test-root" class="flex flex-col items-center mt-2 px-4 md:px-0">
   {
     questions.map((item, i) => (
       <section
-        class="mb-8 max-w-lg border py-1.5 px-1.5 min-w-lg bg-white shadow-md rounded-lg"
+        class=" w-full max-w-2xl mb-6 px-4 py-3 bg-white shadow-xl border-4 border-black rounded-lg text-sm sm:text-base "
         data-correct={(item.answer - 1).toString()}
       >
-        <h2 class="text-xl font-semibold mb-2">Pregunta {i + 1}</h2>
-        <p class="mb-4">{item.q}</p>
-        <ul class="gap-4 flex-col flex">
-          {item.a.map((ans, j) => (
-            <li class="option" data-index={j.toString()}>
-              {ans}
-            </li>
-          ))}
+        <h2 class="text-lg sm:text-2xl font-bold text-center mb-3">{item.q}</h2>
+
+        <ul class="flex flex-col gap-4 list-none p-0">
+          {item.a.map((ans, j) => {
+            const emojis = ["🗿", "💣", "🌵", "🌻"];
+            return (
+              <li
+                class="option p-3 sm:p-4 rounded-md bg-gray-100 hover:bg-gray-200 cursor-pointer transition-colors flex items-start gap-2"
+                data-index={j.toString()}
+              >
+                <span>{emojis[j % emojis.length]}</span>
+                <span>{ans}</span>
+              </li>
+            );
+          })}
         </ul>
       </section>
     ))
   }
 </div>
 
+<!-- Colores aplicados dinámicamente -->
+<style>
+  .correct {
+    background-color: #bbf7d0 !important; /* Tailwind: bg-green-100 */
+  }
+  .wrong {
+    background-color: #fecaca !important; /* Tailwind: bg-red-200 */
+  }
+</style>
+
+<!-- Script de interacción -->
 <script type="module">
-  // 3) Lógica de contador e interacción
   const root = document.querySelector("#test-root");
   if (root) {
     let correctCount = 0;
@@ -93,7 +98,6 @@ const { questions } = Astro.props as Props;
             li.classList.add("wrong");
             wrongCount++;
             wrongEl.textContent = String(wrongCount);
-            // opcional: marcar también la correcta
             const correctLi = section.querySelector(
               `li[data-index="${correctIdx}"]`,
             );

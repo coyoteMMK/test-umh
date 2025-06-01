@@ -10,6 +10,8 @@
   },
   "dependencies": {
     "@astrojs/react": "^4.3.0",
+    "@fontsource-variable/dynapuff": "^5.2.5",
+    "@fontsource/ibm-plex-mono": "^5.2.5",
     "@tailwindcss/vite": "^4.1.7",
     "astro": "^5.8.0",
     "react": "^19.1.0",
