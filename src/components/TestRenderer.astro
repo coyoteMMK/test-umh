@@ -45,10 +45,10 @@ const { questions } = Astro.props as Props;
 
         <ul class="flex flex-col gap-4 list-none p-0">
           {item.a.map((ans, j) => {
-            const emojis = ["🗿", "💣", "🌵", "🌻"];
+            const emojis = ["😎", "👾", "👽", "👹"];
             return (
               <li
-                class="option p-3 sm:p-4 rounded-md bg-gray-100 hover:bg-gray-200 cursor-pointer transition-colors flex items-start gap-2"
+                class="option mx-4 p-3 sm:p-4 rounded-md bg-gray-100 hover:bg-gray-300 cursor-pointer transition-colors flex items-start gap-2"
                 data-index={j.toString()}
               >
                 <span>{emojis[j % emojis.length]}</span>

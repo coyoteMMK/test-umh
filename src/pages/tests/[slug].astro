@@ -27,11 +27,6 @@ if (!data) {
 ---
 <Layout>
   <h1 class="text-3xl font-bold text-center py-10">{data.title}</h1>
-
   <!-- client:load para que React se cargue en el cliente -->
   <TestRenderer questions={data.questions} />
-
-  <p class="mt-6">
-    <a href="/" class="text-sm text-gray-600 hover:underline">← Volver al índice</a>
-  </p>
 </Layout>
