@@ -1,13 +1,11 @@
 ---
 import Layout from "../layouts/Layout.astro";
 
-// Cargar todos los tests JSON
 const modules = import.meta.glob("../data/tests/*.json", {
   eager: true,
   query: "?json",
 });
 
-// Jerarquía: carrera → año → asignatura → tests[]
 const hierarchy = {} as Record<
   string,
   Record<string, Record<string, { slug: string; title: string }[]>>
@@ -29,7 +27,6 @@ for (const [path, data] of Object.entries(modules)) {
   hierarchy[career][year][subject].push({ slug, title });
 }
 
-// Orden personalizado de los años
 const orderedYears = [
   "Primer año",
   "Segundo año",
@@ -41,39 +38,39 @@ const orderedYears = [
 ---
 
 <Layout>
-  <h1 class="text-3xl font-bold text-center py-10">Repositorio de Tests UMH</h1>
+  <h1 class="text-4xl sm:text-5xl font-bold text-center py-10 ">
+    🧪 Repositorio de Tests UMH
+  </h1>
 
-  <div class="container mx-auto max-w-5xl p-4 sm:p-6 lg:p-8">
+  <div class="container mx-auto max-w-5xl p-4 sm:p-6 lg:p-8 ">
     {
       Object.entries(hierarchy).map(([career, years]) => (
-        <section class="mb-8">
-          <h2 class="text-5xl font-semibold mb-4 border-b pb-2">{career}</h2>
-          <div class="mx-10 grid grid-cols-1 sm:grid-cols-2 gap-4">
+        <section class="mb-10">
+          <h2 class="text-3xl sm:text-4xl font-bold mb-6 border-b-4 border-black pb-2">{career}</h2>
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
             {orderedYears
               .filter((year) => year in years)
               .map((year, yearIndex) => {
                 const id = `${career.replace(/\s+/g, "_")}_year_${yearIndex}`;
                 const toggleCode = `
-        const panel = document.getElementById('${id}');
-        if (panel.classList.contains('max-h-0')) {
-          panel.classList.remove('max-h-0');
-          panel.classList.add('max-h-96');
-        } else {
-          panel.classList.remove('max-h-96');
-          panel.classList.add('max-h-0');
-        }
-      `;
+                  const panel = document.getElementById('${id}');
+                  if (panel.classList.contains('max-h-0')) {
+                    panel.classList.remove('max-h-0');
+                    panel.classList.add('max-h-96');
+                  } else {
+                    panel.classList.remove('max-h-96');
+                    panel.classList.add('max-h-0');
+                  }
+                `;
                 return (
                   <div class="w-full">
                     <button
-                      class="w-full flex items-center justify-between border border-gray-300 rounded-t-lg px-4 py-2  bg-white hover:bg-gray-50 transition"
+                      class="w-full flex items-center justify-between border-4 border-black rounded-t-lg px-4 py-3 bg-white hover:bg-gray-300 shadow transition"
                       onclick={toggleCode}
                     >
-                      <span class="text-blue-700 text-lg font-medium">
-                        {year}
-                      </span>
+                      <span class="text-lg font-semibold">{year}</span>
                       <svg
-                        class="w-4 h-4 text-gray-500 transition-transform duration-300"
+                        class="w-5 h-5 text-black transition-transform duration-300"
                         fill="none"
                         stroke="currentColor"
                         stroke-width="2"
@@ -88,21 +85,21 @@ const orderedYears = [
                     </button>
                     <div
                       id={id}
-                      class="transition-all duration-500 ease-in-out overflow-hidden max-h-0 "
+                      class="transition-all duration-500 ease-in-out overflow-hidden max-h-0"
                     >
-                       <div class="bg-gray-300 rounded-b-lg shadow-inner px-4 py-4">
-                      <ul class="list-disc pl-6">
-                        {Object.entries(years[year]).map(([subject]) => (
-                          <li>
-                            <a
-                              class="text-blue-600 hover:underline"
-                              href={`/test-umh/asignaturas/${encodeURIComponent(subject)}/`}
-                            >
-                              {subject}
-                            </a>
-                          </li>
-                        ))}
-                      </ul>
+                      <div class="bg-white border-4 border-t-0 border-black rounded-b-lg px-5 py-4 shadow-inner">
+                        <ul class="grid grid-cols-1 sm:grid-cols-2 gap-x-4 gap-y-2 list-disc pl-6">
+                          {Object.entries(years[year]).map(([subject]) => (
+                            <li>
+                              <a
+                                class="text-blue-700 hover:underline"
+                                href={`/test-umh/asignaturas/${encodeURIComponent(subject)}/`}
+                              >
+                                {subject}
+                              </a>
+                            </li>
+                          ))}
+                        </ul>
                       </div>
                     </div>
                   </div>
