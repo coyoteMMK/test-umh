@@ -10,35 +10,15 @@ interface Props {
   questions: Question[];
 }
 
-let questions = Astro.props.questions;
-
-// Fisher-Yates shuffle algorithm
-function shuffle<T>(array: T[]): T[] {
-  let arr = [...array];
-  for (let i = arr.length - 1; i > 0; i--) {
-    const j = Math.floor(Math.random() * (i + 1));
-    [arr[i], arr[j]] = [arr[j], arr[i]];
-  }
-  return arr;
-}
-
-// 1. Reordenar respuestas dentro de cada pregunta
-questions = questions.map((q) => {
-  const shuffledAnswers = shuffle([...q.a]);
-  const correctText = q.a[q.answer - 1];
-  const newIndex = shuffledAnswers.indexOf(correctText);
-  return {
-    ...q,
-    a: shuffledAnswers,
-    answer: newIndex + 1,
-  };
-});
-
-// 2. Reordenar preguntas
-questions = shuffle([...questions]);
+const { questions } = Astro.props as Props;
 ---
 
-<!-- Contador de aciertos y errores -->
+<!-- Embed preguntas en JSON -->
+<script type="application/json" id="questions-data">
+  {JSON.stringify(questions)}
+</script>
+
+<!-- Contador -->
 <div
   id="counter"
   class="fixed top-10 left-4 z-50
@@ -47,89 +27,110 @@ questions = shuffle([...questions]);
     flex flex-col items-center gap-1"
 >
   <div class="text-green-700">
-    ✔️ <span id="correct-count" class="hidden sm:inline">Correctas: </span><span
-      id="correct-num">0</span
-    >
+    ✔️ <span id="correct-count" class="hidden sm:inline">Correctas: </span><span id="correct-num">0</span>
   </div>
   <div class="text-red-700">
-    ❌ <span id="wrong-count" class="hidden sm:inline">Incorrectas: </span><span
-      id="wrong-num">0</span
-    >
+    ❌ <span id="wrong-count" class="hidden sm:inline">Incorrectas: </span><span id="wrong-num">0</span>
   </div>
 </div>
 
-<!-- Contenedor de todas las preguntas -->
-<div id="test-root" class="flex flex-col items-center mt-2 px-4 md:px-0">
-  {
-    questions.map((item, i) => (
-      <section
-        class=" w-full max-w-2xl mb-6 px-4 py-3 bg-white shadow-xl border-4 border-black rounded-lg text-sm sm:text-base "
-        data-correct={(item.answer - 1).toString()}
-      >
-        <h2 class="text-lg sm:text-2xl font-bold text-center mb-3">{item.q}</h2>
+<!-- Contenedor donde se renderiza dinámicamente -->
+<div id="test-root" class="flex flex-col items-center mt-2 px-4 md:px-0 font-mono"></div>
 
-        <ul class="flex flex-col gap-4 list-none p-0">
-          {item.a.map((ans, j) => {
-            const emojis = ["😎", "👾", "👽", "👹"];
-            return (
-              <li
-                class="option mx-4 p-3 sm:p-4 rounded-md bg-gray-100 hover:bg-gray-300 cursor-pointer transition-colors flex items-start gap-2"
-                data-index={j.toString()}
-              >
-                <span>{emojis[j % emojis.length]}</span>
-                <span>{ans}</span>
-              </li>
-            );
-          })}
-        </ul>
-      </section>
-    ))
-  }
-</div>
-
-<!-- Colores aplicados dinámicamente -->
+<!-- Estilos de feedback -->
 <style>
   .correct {
-    background-color: #3eff4e !important; /* Tailwind: bg-green-100 */
+    background-color: #3eff4e !important;
   }
   .wrong {
-    background-color: #fd5b5b !important; /* Tailwind: bg-red-200 */
+    background-color: #fd5b5b !important;
   }
 </style>
 
-<!-- Script de interacción -->
+<!-- Script JS: aleatoriza y renderiza -->
 <script type="module">
-  const root = document.querySelector("#test-root");
-  if (root) {
-    let correctCount = 0;
-    let wrongCount = 0;
-    const correctEl = document.querySelector("#correct-num");
-    const wrongEl = document.querySelector("#wrong-num");
-
-    root.querySelectorAll("section").forEach((section) => {
-      const correctIdx = Number(section.dataset.correct);
-      let answered = false;
-
-      section.querySelectorAll("li").forEach((li) => {
-        li.addEventListener("click", () => {
-          if (answered) return;
-          answered = true;
-          const choice = Number(li.dataset.index);
-          if (choice === correctIdx) {
-            li.classList.add("correct");
-            correctCount++;
-            correctEl.textContent = String(correctCount);
-          } else {
-            li.classList.add("wrong");
-            wrongCount++;
-            wrongEl.textContent = String(wrongCount);
-            const correctLi = section.querySelector(
-              `li[data-index="${correctIdx}"]`,
-            );
-            correctLi?.classList.add("correct");
-          }
-        });
-      });
-    });
+  function shuffle(array) {
+    const arr = [...array];
+    for (let i = arr.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      [arr[i], arr[j]] = [arr[j], arr[i]];
+    }
+    return arr;
   }
+
+  const rawData = document.querySelector("#questions-data")?.textContent;
+  const testRoot = document.getElementById("test-root");
+  const correctEl = document.querySelector("#correct-num");
+  const wrongEl = document.querySelector("#wrong-num");
+
+  if (!rawData || !testRoot) throw new Error("No se encontraron los datos.");
+
+  let questions = JSON.parse(rawData);
+  let correctCount = 0;
+  let wrongCount = 0;
+
+  questions = shuffle(questions).map((q) => {
+    const shuffled = shuffle([...q.a]);
+    const correctText = q.a[q.answer - 1];
+    const newIndex = shuffled.indexOf(correctText);
+    return {
+      ...q,
+      a: shuffled,
+      answer: newIndex + 1,
+    };
+  });
+
+  const emojis = ["😎", "👾", "👽", "👹"];
+
+  questions.forEach((q, i) => {
+    const section = document.createElement("section");
+    section.className =
+      "w-full max-w-2xl mb-6 px-4 py-3 bg-white shadow-xl border-4 border-black rounded-lg text-sm sm:text-base";
+    section.dataset.correct = (q.answer - 1).toString();
+
+    const title = document.createElement("h2");
+    title.className = "text-lg sm:text-2xl font-bold text-center mb-3";
+    title.textContent = `Pregunta ${i + 1}: ${q.q}`;
+    section.appendChild(title);
+
+    const ul = document.createElement("ul");
+    ul.className = "flex flex-col gap-4 list-none p-0";
+
+    q.a.forEach((ans, j) => {
+      const li = document.createElement("li");
+      li.className =
+        "option mx-4 p-3 sm:p-4 rounded-md bg-gray-100 hover:bg-gray-300 cursor-pointer transition-colors flex items-start gap-2";
+      li.dataset.index = j.toString();
+
+      const emoji = document.createElement("span");
+      emoji.textContent = emojis[j % emojis.length];
+
+      const text = document.createElement("span");
+      text.textContent = ans;
+
+      li.appendChild(emoji);
+      li.appendChild(text);
+
+      li.addEventListener("click", () => {
+        if (section.dataset.answered === "true") return;
+        section.dataset.answered = "true";
+        const choice = Number(li.dataset.index);
+        const correctIdx = Number(section.dataset.correct);
+        if (choice === correctIdx) {
+          li.classList.add("correct");
+          correctEl.textContent = String(++correctCount);
+        } else {
+          li.classList.add("wrong");
+          wrongEl.textContent = String(++wrongCount);
+          const correctLi = ul.querySelector(`li[data-index="${correctIdx}"]`);
+          correctLi?.classList.add("correct");
+        }
+      });
+
+      ul.appendChild(li);
+    });
+
+    section.appendChild(ul);
+    testRoot.appendChild(section);
+  });
 </script>
