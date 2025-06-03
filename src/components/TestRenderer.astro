@@ -10,34 +10,8 @@ interface Props {
   questions: Question[];
 }
 
-let questions = Astro.props.questions;
-
-// Fisher-Yates shuffle algorithm
-function shuffle<T>(array: T[]): T[] {
-  let arr = [...array];
-  for (let i = arr.length - 1; i > 0; i--) {
-    const j = Math.floor(Math.random() * (i + 1));
-    [arr[i], arr[j]] = [arr[j], arr[i]];
-  }
-  return arr;
-}
-
-// 1. Reordenar respuestas dentro de cada pregunta
-questions = questions.map((q) => {
-  const shuffledAnswers = shuffle([...q.a]);
-  const correctText = q.a[q.answer - 1];
-  const newIndex = shuffledAnswers.indexOf(correctText);
-  return {
-    ...q,
-    a: shuffledAnswers,
-    answer: newIndex + 1,
-  };
-});
-
-// 2. Reordenar preguntas
-questions = shuffle([...questions]);
+const questions = Astro.props.questions;
 ---
-
 <!-- Contador de aciertos y errores -->
 <div
   id="counter"
@@ -64,7 +38,7 @@ questions = shuffle([...questions]);
     questions.map((item, i) => (
       <section
         class=" w-full max-w-2xl mb-6 px-4 py-3 bg-white shadow-xl border-4 border-black rounded-lg text-sm sm:text-base "
-        data-correct={(item.answer - 1).toString()}
+        data-question-index={i}
       >
         <h2 class="text-lg sm:text-2xl font-bold text-center mb-3">{item.q}</h2>
 
@@ -87,49 +61,103 @@ questions = shuffle([...questions]);
   }
 </div>
 
-<!-- Colores aplicados dinámicamente -->
 <style>
   .correct {
-    background-color: #3eff4e !important; /* Tailwind: bg-green-100 */
+    background-color: #3eff4e !important;
   }
   .wrong {
-    background-color: #fd5b5b !important; /* Tailwind: bg-red-200 */
+    background-color: #fd5b5b !important;
   }
 </style>
 
-<!-- Script de interacción -->
 <script type="module">
+  // Fisher-Yates shuffle
+  function shuffle(array) {
+    let arr = [...array];
+    for (let i = arr.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      [arr[i], arr[j]] = [arr[j], arr[i]];
+    }
+    return arr;
+  }
+
+  // Obtener datos originales desde el HTML
+  const rawQuestions = Array.from(document.querySelectorAll("#test-root > section")).map(section => {
+    const q = section.querySelector("h2").textContent;
+    const a = Array.from(section.querySelectorAll("li span:last-child")).map(span => span.textContent);
+    // Buscar cuál es la respuesta correcta original (asumimos la primera es la correcta)
+    return { q, a, answer: 1 };
+  });
+
+  // Mezclar preguntas
+  let questions = shuffle(rawQuestions).map(q => {
+    // Mezclar respuestas
+    const shuffledAnswers = shuffle(q.a);
+    const correctText = q.a[q.answer - 1];
+    const newIndex = shuffledAnswers.indexOf(correctText);
+    return {
+      ...q,
+      a: shuffledAnswers,
+      answer: newIndex + 1,
+    };
+  });
+
+  // Renderizar preguntas mezcladas
   const root = document.querySelector("#test-root");
   if (root) {
-    let correctCount = 0;
-    let wrongCount = 0;
-    const correctEl = document.querySelector("#correct-num");
-    const wrongEl = document.querySelector("#wrong-num");
+    root.innerHTML = questions.map((item, i) => `
+      <section
+        class="w-full max-w-2xl mb-6 px-4 py-3 bg-white shadow-xl border-4 border-black rounded-lg text-sm sm:text-base"
+        data-correct="${item.answer - 1}"
+      >
+        <h2 class="text-lg sm:text-2xl font-bold text-center mb-3">${item.q}</h2>
+        <ul class="flex flex-col gap-4 list-none p-0">
+          ${item.a.map((ans, j) => {
+            const emojis = ["😎", "👾", "👽", "👹"];
+            return `
+              <li
+                class="option mx-4 p-3 sm:p-4 rounded-md bg-gray-100 hover:bg-gray-300 cursor-pointer transition-colors flex items-start gap-2"
+                data-index="${j}"
+              >
+                <span>${emojis[j % emojis.length]}</span>
+                <span>${ans}</span>
+              </li>
+            `;
+          }).join("")}
+        </ul>
+      </section>
+    `).join("");
+  }
 
-    root.querySelectorAll("section").forEach((section) => {
-      const correctIdx = Number(section.dataset.correct);
-      let answered = false;
+  // Lógica de interacción (igual que antes)
+  let correctCount = 0;
+  let wrongCount = 0;
+  const correctEl = document.querySelector("#correct-num");
+  const wrongEl = document.querySelector("#wrong-num");
 
-      section.querySelectorAll("li").forEach((li) => {
-        li.addEventListener("click", () => {
-          if (answered) return;
-          answered = true;
-          const choice = Number(li.dataset.index);
-          if (choice === correctIdx) {
-            li.classList.add("correct");
-            correctCount++;
-            correctEl.textContent = String(correctCount);
-          } else {
-            li.classList.add("wrong");
-            wrongCount++;
-            wrongEl.textContent = String(wrongCount);
-            const correctLi = section.querySelector(
-              `li[data-index="${correctIdx}"]`,
-            );
-            correctLi?.classList.add("correct");
-          }
-        });
+  document.querySelectorAll("#test-root > section").forEach((section) => {
+    const correctIdx = Number(section.dataset.correct);
+    let answered = false;
+
+    section.querySelectorAll("li").forEach((li) => {
+      li.addEventListener("click", () => {
+        if (answered) return;
+        answered = true;
+        const choice = Number(li.dataset.index);
+        if (choice === correctIdx) {
+          li.classList.add("correct");
+          correctCount++;
+          correctEl.textContent = String(correctCount);
+        } else {
+          li.classList.add("wrong");
+          wrongCount++;
+          wrongEl.textContent = String(wrongCount);
+          const correctLi = section.querySelector(
+            `li[data-index="${correctIdx}"]`,
+          );
+          correctLi?.classList.add("correct");
+        }
       });
     });
-  }
+  });
 </script>
