@@ -61,15 +61,6 @@ const questions = Astro.props.questions;
   }
 </div>
 
-<style>
-  .correct {
-    background-color: #3eff4e !important;
-  }
-  .wrong {
-    background-color: #fd5b5b !important;
-  }
-</style>
-
 <script type="module">
   // Fisher-Yates shuffle
   function shuffle(array) {
@@ -81,17 +72,30 @@ const questions = Astro.props.questions;
     return arr;
   }
 
+  // Inyectar estilos para .correct y .wrong si no existen
+  if (!document.getElementById('dynamic-quiz-styles')) {
+    const style = document.createElement('style');
+    style.id = 'dynamic-quiz-styles';
+    style.textContent = `
+      .correct {
+        background-color: #3eff4e !important;
+      }
+      .wrong {
+        background-color: #fd5b5b !important;
+      }
+    `;
+    document.head.appendChild(style);
+  }
+
   // Obtener datos originales desde el HTML
   const rawQuestions = Array.from(document.querySelectorAll("#test-root > section")).map(section => {
     const q = section.querySelector("h2").textContent;
     const a = Array.from(section.querySelectorAll("li span:last-child")).map(span => span.textContent);
-    // Buscar cuál es la respuesta correcta original (asumimos la primera es la correcta)
     return { q, a, answer: 1 };
   });
 
   // Mezclar preguntas
   let questions = shuffle(rawQuestions).map(q => {
-    // Mezclar respuestas
     const shuffledAnswers = shuffle(q.a);
     const correctText = q.a[q.answer - 1];
     const newIndex = shuffledAnswers.indexOf(correctText);
