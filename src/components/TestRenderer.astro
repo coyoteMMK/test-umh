@@ -10,21 +10,15 @@ interface Props {
   questions: Question[];
 }
 
-<script type="application/json" id="questions-data">
-  {JSON.stringify(questions)}
-</script>
-
-<div id="test-root"></div>
-
 const { questions } = Astro.props as Props;
 ---
 
-<!-- Embed preguntas en JSON -->
+<!-- JSON de preguntas incrustado para el script -->
 <script type="application/json" id="questions-data">
   {JSON.stringify(questions)}
 </script>
 
-<!-- Contador -->
+<!-- Contador de aciertos / errores -->
 <div
   id="counter"
   class="fixed top-10 left-4 z-50
@@ -33,17 +27,17 @@ const { questions } = Astro.props as Props;
     flex flex-col items-center gap-1"
 >
   <div class="text-green-700">
-    ✔️ <span id="correct-count" class="hidden sm:inline">Correctas: </span><span id="correct-num">0</span>
+    ✔️ <span class="hidden sm:inline">Correctas: </span><span id="correct-num">0</span>
   </div>
   <div class="text-red-700">
-    ❌ <span id="wrong-count" class="hidden sm:inline">Incorrectas: </span><span id="wrong-num">0</span>
+    ❌ <span class="hidden sm:inline">Incorrectas: </span><span id="wrong-num">0</span>
   </div>
 </div>
 
-<!-- Contenedor donde se renderiza dinámicamente -->
+<!-- Contenedor para renderizado dinámico -->
 <div id="test-root" class="flex flex-col items-center mt-2 px-4 md:px-0 font-mono"></div>
 
-<!-- Estilos de feedback -->
+<!-- Estilos para respuestas -->
 <style>
   .correct {
     background-color: #3eff4e !important;
@@ -53,7 +47,7 @@ const { questions } = Astro.props as Props;
   }
 </style>
 
-<!-- Script JS: aleatoriza y renderiza -->
+<!-- Script de renderizado y lógica -->
 <script type="module">
   function shuffle(array) {
     const arr = [...array];
@@ -69,12 +63,16 @@ const { questions } = Astro.props as Props;
   const correctEl = document.querySelector("#correct-num");
   const wrongEl = document.querySelector("#wrong-num");
 
-  if (!rawData || !testRoot) throw new Error("No se encontraron los datos.");
+  if (!rawData || !testRoot) {
+    console.error("No se encontraron las preguntas o el contenedor.");
+    throw new Error("Datos faltantes.");
+  }
 
   let questions = JSON.parse(rawData);
   let correctCount = 0;
   let wrongCount = 0;
 
+  // Aleatorizar preguntas y respuestas
   questions = shuffle(questions).map((q) => {
     const shuffled = shuffle([...q.a]);
     const correctText = q.a[q.answer - 1];
