@@ -1,0 +1,218 @@
+{
+  "title": "Test 3 Amador",
+  "career": "Ingeniería Informática",
+  "year": "Cuarto año",
+  "subject": "Redes 2",
+  "questions": [
+    {
+      "q": "La sobrecarga en NAT permite el uso simultáneo de una única dirección pública de clase C de \"hasta\":",
+      "a": ["Ninguna de las anteriores", "253 hosts internos", "1024 hosts internos", "65,536 hosts internos"],
+      "answer": 4
+    },
+    {
+      "q": "Indica la afirmación errónea respecto al protocolo \"TCP\":",
+      "a": ["Asignación de puertos puede ser estática o dinámica", "Los puertos TCP y UDP tienen rangos distintos", "Se puede utilizar el mismo puerto para TCP y UDP en el mismo momento", "Al igual que UDP utilizará el mecanismo de puertos"],
+      "answer": 2
+    },
+    {
+      "q": "En la estimación del RTT, indica la fórmula \"utilizada\":",
+      "a": ["RTT_estimado = (1-alfa)*RTT_estimado + alfa*RTT_medido", "Ninguna de las anteriores", "RTT_estimado = alfa*RTT_medido", "RTT_estimado = (1+alfa)*RTT_estimado - alfa*RTT_medido"],
+      "answer": 1
+    },
+    {
+      "q": "Indica el número de puerto para el protocolo DNS en escucha en un \"servidor\":",
+      "a": ["Ninguna de las anteriores", "UDP 53", "TCP 53", "TCP 7"],
+      "answer": 2
+    },
+    {
+      "q": "Respecto al formato de trama de UDP, indica la afirmación \"errónea\":",
+      "a": ["Los puertos de origen y destino son obligatorios", "La longitud incluye todo el mensaje", "Los mensajes UDP se dividen en dos \"partes\": cabecera y campo de datos", "El checksum es opcional. Cuando no se emplea se pone a cero"],
+      "answer": 1
+    },
+    {
+      "q": "Respecto al protocolo TCP indica la afirmación \"errónea\":",
+      "a": ["TCP utiliza el mecanismo de puertos", "TCP ofrece un protocolo de transporte pero sin proporcionar fiabilidad", "Proporciona un servicio orientado a la conexión, fiable y ordenado", "Ninguno de los protocolos IPv4, IPv6 o UDP proporcionan fiabilidad en la comunicación de datos"],
+      "answer": 2
+    },
+    {
+      "q": "El campo en la cabecera de TCP que gestiona el control de flujo en TCP se \"denomina\":",
+      "a": ["RcvBuffer", "CongWin", "RcvWindow", "Ninguna de las anteriores"],
+      "answer": 3
+    },
+    {
+      "q": "En UDP, el responsable de la corrección de los errores \"es\":",
+      "a": ["El nivel de transporte", "El nivel de aplicación", "El nivel de red", "TCP"],
+      "answer": 2
+    },
+    {
+      "q": "El bit activado en el campo código cuando se requiere el establecimiento de conexión \"es\":",
+      "a": ["ACK", "SYN", "PUSH", "URG"],
+      "answer": 2
+    },
+    {
+      "q": "Respecto al temporizador en una conexión TCP, indica la afirmación \"errónea\":",
+      "a": ["Debe ser un valor mayor que RTT", "Si se elige un Timeout demasiado corto tendríamos Timeouts prematuros", "Como el RTT es estable a lo largo de una conexión TCP, este parámetro se define en el establecimiento de la conexión", "Si se elige un Timeout demasiado largo tendríamos una lenta reacción a los segmentos perdidos"],
+      "answer": 3
+    },
+    {
+      "q": "En TCP, el flujo de datos es tratado como una secuencia \"de\":",
+      "a": ["bits", "bytes", "Ninguna de las anteriores", "segmentos"],
+      "answer": 2
+    },
+    {
+      "q": "Cuando un servidor web recibe una petición de dirección que no localiza, devuelve el \"código\":",
+      "a": ["505", "200", "400", "404"],
+      "answer": 4
+    },
+    {
+      "q": "Si deseamos crear un dominio DNS de tipo alias, lo haremos mediante un registro de \"tipo\":",
+      "a": ["CNAME", "A", "MX", "Ninguna de las anteriores"],
+      "answer": 1
+    },
+    {
+      "q": "Si necesitamos enviar información binaria en un correo (no ASCII), necesitamos hacer uso \"de\":",
+      "a": ["Ninguna de las anteriores", "PGP", "MIME", "IMAP"],
+      "answer": 3
+    },
+    {
+      "q": "La utilización de direcciones IPs dinámicas mediante DHCP implica la actualización de la base de datos del \"servidor\":",
+      "a": ["Correo", "Ninguna de las anteriores", "DNS", "Web"],
+      "answer": 3
+    },
+    {
+      "q": "La forma de especificar un objeto o un recurso en Internet se \"denomina\":",
+      "a": ["Ninguna de las anteriores", "URL", "WWW", "LINK"],
+      "answer": 2
+    },
+    {
+      "q": "Tanto el protocolo Telnet, y SMTP entre otros utilizan el formato de codificación \"denominado\":",
+      "a": ["Ninguna de las anteriores", "UTF-8", "NVT", "ASCII-8"],
+      "answer": 3
+    },
+    {
+      "q": "Respecto a FTP, indica la afirmación \"errónea\":",
+      "a": ["Permite un acceso interactivo mediante un conjunto de comandos", "Define un sistema de autenticación y autorización", "Utiliza el puerto 21 de UTP", "Soluciona los problemas de transferencias y gestión de archivos entre distintas plataformas."],
+      "answer": 3
+    },
+    {
+      "q": "Indica el nombre de la primera aplicación que permitía charlas interactivas \"multiusuario\":",
+      "a": ["Ninguna de las anteriores", "GOPHER", "IRC", "TALK"],
+      "answer": 3
+    },
+    {
+      "q": "Indica cual de los siguientes NO es un protocolo para la asignación dinámica de direcciones \"IP\":",
+      "a": ["RARP", "BOOTP", "DHCP", "DNS"],
+      "answer": 4
+    },
+    {
+      "q": "En el protocolo DHCP, el primer mensaje que manda el cliente DHCP \"es\":",
+      "a": ["Ninguna de las anteriores", "DHCPOFFER", "DHCPDISCOVER", "DHCPREQUEST"],
+      "answer": 3
+    },
+    {
+      "q": "La dirección de bucle local en IPv6 \"es\":",
+      "a": ["::\"127\":1", "Ninguna de las anteriores", "::1", "\"127\""],
+      "answer": 3
+    },
+    {
+      "q": "Indica cual de las siguientes no ha sido una motivación para el desarrollo de \"IPv6\":",
+      "a": ["Todas son razones que han motivado la aparición de IPv6", "Tablas de encaminamiento cada vez más grandes en IPv4", "Asignación de direcciones no coordinada de IPv4", "Escasez de direcciones"],
+      "answer": 1
+    },
+    {
+      "q": "El ámbito relacionado con intranets y redes privadas \"es\":",
+      "a": ["global", "Ninguna de las anteriores", "de sitio", "de enlace"],
+      "answer": 3
+    },
+    {
+      "q": "Indica cual de los siguientes campos ha sido eliminado de la cabecera \"IPv6\":",
+      "a": ["TTL", "IP origen", "Versión", "Offset"],
+      "answer": 4
+    },
+    {
+      "q": "En la terminología NAT, las direcciones que son sujetas a la traducción se \"denominan\":",
+      "a": ["Ninguna de las anteriores", "Direcciones Dinámicas", "Direcciones Externas", "Direcciones Interiores"],
+      "answer": 4
+    },
+    {
+      "q": "Las direcciones de IPv6 que se utilizan dentro de un mismo enlace o red local para gestión de la propia red se \"denominan\":",
+      "a": ["Local de Enlace", "Globales", "Local de Sitio", "De bucle interno"],
+      "answer": 1
+    },
+    {
+      "q": "Dentro de NAT, la traducción que permite la sobrecarga de direcciones internas globales hace uso \"de\":",
+      "a": ["Ninguna de las anteriores", "NAT Estática", "PAT", "NAT Dinámica"],
+      "answer": 3
+    },
+    {
+      "q": "Indica cual de los siguientes no es un ámbito válido para direcciones de \"IPv6\":",
+      "a": ["AnyCast", "Unicast", "Multicast", "BroadCast"],
+      "answer": 4
+    },
+    {
+      "q": "Respecto a las características de IPv6, indica la afirmación \"errónea\":",
+      "a": ["La cabecera es más pequeña en tamaño que IPv4", "Utiliza un sistema de encaminamiento jerárquico", "Permite un formato más flexible de cabecera", "Establece un control de ámbitos"],
+      "answer": 1
+    },
+    {
+      "q": "Indica la afirmación errónea de UDP",
+      "a": [
+        "Permite comunicaciones broadcast/multicast",
+        "Protocolo complejo porque necesita almacenar el estado en emisor y receptor",
+        "Tamaño de cabecera reducido",
+        "No hay establecimiento de conexión (sin retardo adicional)"
+      ],
+      "answer": 2
+    },
+    {
+      "q": "Los puertos son un mecanismo para",
+      "a": [
+        "Diferenciar aplicaciones de red dentro de una misma máquina",
+        "Diferencias diferentes interfaces en un host",
+        "Ninguna de las anteriores",
+        "Diferenciar direcciones IP"
+      ],
+      "answer": 1
+    },
+    {
+      "q": " La conexión TCP es",
+      "a": [
+        "full duplex",
+        "semi duplex",
+        "Ninguna de las anteriores",
+        "half duplex"
+      ],
+      "answer": 1
+    },
+    {
+      "q": "El servicio que permite el acceso limitado a la LAN interna desde el exterior mediante el uso de puertos se \"denomina\":",
+      "a": [
+        "Ninguna de las anteriores",
+        "Port Forwarding",
+        "Port Filtering",
+        "Port Switching"
+      ],
+      "answer": 2
+    },
+    {
+      "q": "El ámbito del protocolo de transporte es:",
+      "a": [
+        "host origen-host destino",
+        "Ninguna de las anteriores",
+        "router a router",
+        "host-router"
+      ],
+      "answer": 1
+    },
+    {
+      "q": "Dentro del servicio de correo de internet, el protocolo utilizado para gestionar el correo entrante de otros MTA's se denomina:",
+      "a": [
+        "POP3",
+        "HTTP",
+        "NEWS",
+        "SMTP"
+      ],
+      "answer": 4
+    }
+  ]
+}
