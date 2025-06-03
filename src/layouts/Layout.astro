@@ -2,16 +2,25 @@
 import '../styles/global.css';
 // Supports weights 400-700
 import '@fontsource-variable/dynapuff';
+
+interface Props {
+  title: string;
+  description: string;
+}
+
+//Se cogen las del index.astro
+const { description, title } = Astro.props;
 ---
 
 <!doctype html>
 <html lang="en">
 	<head>
 		<meta charset="UTF-8" />
+ <meta name="description" content={description} />
 		<meta name="viewport" content="width=device-width" />
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="generator" content={Astro.generator} />
-		<title>Astro Basics</title>
+		<title>{title}</title>
 	</head>
 	<body class="bg-gray-100 text-gray-900">
 		<slot />
