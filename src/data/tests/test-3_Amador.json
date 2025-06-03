@@ -2,7 +2,7 @@
   "title": "Test 3 Amador",
   "career": "Ingeniería Informática",
   "year": "Cuarto año",
-  "subject": "Redes 2",
+  "subject": "Redes_2",
   "questions": [
     {
       "q": "La sobrecarga en NAT permite el uso simultáneo de una única dirección pública de clase C de \"hasta\":",
