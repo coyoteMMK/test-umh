@@ -3,7 +3,7 @@
 interface Question {
   q: string;
   a: string[];
-  answer: number; // 1-based
+  answer: number;
 }
 
 interface Props {
@@ -13,12 +13,12 @@ interface Props {
 const { questions } = Astro.props as Props;
 ---
 
-<!-- JSON de preguntas incrustado para el script -->
+<!-- Inyectar preguntas como JSON sin formato (¡clave para evitar errores!) -->
 <script type="application/json" id="questions-data">
   {JSON.stringify(questions)}
 </script>
 
-<!-- Contador de aciertos / errores -->
+<!-- Contador -->
 <div
   id="counter"
   class="fixed top-10 left-4 z-50
@@ -34,7 +34,7 @@ const { questions } = Astro.props as Props;
   </div>
 </div>
 
-<!-- Contenedor para renderizado dinámico -->
+<!-- Contenedor donde se renderizan dinámicamente las preguntas -->
 <div id="test-root" class="flex flex-col items-center mt-2 px-4 md:px-0 font-mono"></div>
 
 <!-- Estilos para respuestas -->
@@ -47,7 +47,7 @@ const { questions } = Astro.props as Props;
   }
 </style>
 
-<!-- Script de renderizado y lógica -->
+<!-- Script de aleatorización y renderizado -->
 <script type="module">
   function shuffle(array) {
     const arr = [...array];
@@ -59,16 +59,24 @@ const { questions } = Astro.props as Props;
   }
 
   const rawData = document.querySelector("#questions-data")?.textContent;
-  const testRoot = document.getElementById("test-root");
+  const container = document.getElementById("test-root");
   const correctEl = document.querySelector("#correct-num");
   const wrongEl = document.querySelector("#wrong-num");
 
-  if (!rawData || !testRoot) {
-    console.error("No se encontraron las preguntas o el contenedor.");
-    throw new Error("Datos faltantes.");
+  if (!rawData || !container) {
+    console.error("No se encontraron datos válidos.");
+    throw new Error("Falta JSON o contenedor.");
   }
 
-  let questions = JSON.parse(rawData);
+  let questions;
+  try {
+    questions = JSON.parse(rawData);
+  } catch (e) {
+    console.error("❌ Error al parsear JSON:", e.message);
+    console.log("Contenido crudo:", rawData);
+    throw e;
+  }
+
   let correctCount = 0;
   let wrongCount = 0;
 
@@ -135,6 +143,6 @@ const { questions } = Astro.props as Props;
     });
 
     section.appendChild(ul);
-    testRoot.appendChild(section);
+    container.appendChild(section);
   });
 </script>
