@@ -1,8 +1,8 @@
 {
-  "title": "Test completo de POO",
+  "title": "Test de prueba",
   "career": "Ingeniería Informática",
   "year": "Segundo año",
-  "subject": "POO",
+  "subject": "Prueba",
   "questions": [
     {
       "q": "¿Qué significa instanciar una clase?",
