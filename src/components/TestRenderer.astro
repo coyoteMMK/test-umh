@@ -10,6 +10,12 @@ interface Props {
   questions: Question[];
 }
 
+<script type="application/json" id="questions-data">
+  {JSON.stringify(questions)}
+</script>
+
+<div id="test-root"></div>
+
 const { questions } = Astro.props as Props;
 ---
 
