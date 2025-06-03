@@ -3,7 +3,7 @@
 interface Question {
   q: string;
   a: string[];
-  answer: number;
+  answer: number; // 1-based
 }
 
 interface Props {
@@ -14,16 +14,9 @@ const { questions } = Astro.props as Props;
 const json = JSON.stringify(questions);
 ---
 
-<!-- Inyectar el JSON correctamente en una sola línea usando JS -->
-<script is:inline>
-  const rawJson = `{json}`;
-  document.addEventListener("DOMContentLoaded", () => {
-    const el = document.createElement("script");
-    el.id = "questions-data";
-    el.type = "application/json";
-    el.textContent = rawJson;
-    document.body.appendChild(el);
-  });
+<!-- JSON embebido de forma segura y compatible -->
+<script type="application/json" id="questions-data" is:inline>
+  {json}
 </script>
 
 <!-- Contador -->
@@ -35,17 +28,17 @@ const json = JSON.stringify(questions);
     flex flex-col items-center gap-1"
 >
   <div class="text-green-700">
-    ✔️ <span id="correct-count" class="hidden sm:inline">Correctas: </span><span id="correct-num">0</span>
+    ✔️ <span class="hidden sm:inline">Correctas: </span><span id="correct-num">0</span>
   </div>
   <div class="text-red-700">
-    ❌ <span id="wrong-count" class="hidden sm:inline">Incorrectas: </span><span id="wrong-num">0</span>
+    ❌ <span class="hidden sm:inline">Incorrectas: </span><span id="wrong-num">0</span>
   </div>
 </div>
 
-<!-- Contenedor para renderizado -->
+<!-- Contenedor para las preguntas -->
 <div id="test-root" class="flex flex-col items-center mt-2 px-4 md:px-0 font-mono"></div>
 
-<!-- Estilos para aciertos/errores -->
+<!-- Estilos -->
 <style>
   .correct {
     background-color: #3eff4e !important;
@@ -55,16 +48,18 @@ const json = JSON.stringify(questions);
   }
 </style>
 
-<!-- Script de aleatorización y renderizado -->
+<!-- Script principal -->
 <script type="module">
-  const rawData = () => {
-    const el = document.querySelector("#questions-data");
-    return el?.textContent || "[]";
-  };
+  const dataEl = document.querySelector("#questions-data");
+  const rawData = dataEl?.textContent;
+  const root = document.querySelector("#test-root");
+  const correctEl = document.querySelector("#correct-num");
+  const wrongEl = document.querySelector("#wrong-num");
 
-  const root = document.getElementById("test-root");
-  const correctEl = document.getElementById("correct-num");
-  const wrongEl = document.getElementById("wrong-num");
+  if (!rawData || !root) {
+    console.error("❌ No se encontró el JSON o el contenedor");
+    throw new Error("Falta el JSON de preguntas");
+  }
 
   function shuffle(arr) {
     const a = [...arr];
@@ -77,19 +72,20 @@ const json = JSON.stringify(questions);
 
   let questions;
   try {
-    questions = JSON.parse(rawData());
+    questions = JSON.parse(rawData);
   } catch (e) {
-    console.error("Error al parsear preguntas:", e);
-    questions = [];
+    console.error("❌ Error al parsear JSON:", e.message);
+    throw e;
   }
 
+  // Aleatorizar preguntas y respuestas
   questions = shuffle(questions).map((q) => {
     const shuffled = shuffle([...q.a]);
-    const correct = q.a[q.answer - 1];
+    const correctText = q.a[q.answer - 1];
     return {
       ...q,
       a: shuffled,
-      answer: shuffled.indexOf(correct) + 1,
+      answer: shuffled.indexOf(correctText) + 1,
     };
   });
 
@@ -128,8 +124,10 @@ const json = JSON.stringify(questions);
       li.addEventListener("click", () => {
         if (section.dataset.answered === "true") return;
         section.dataset.answered = "true";
+
         const choice = Number(li.dataset.index);
         const correctIdx = Number(section.dataset.correct);
+
         if (choice === correctIdx) {
           li.classList.add("correct");
           correctEl.textContent = String(++correctCount);
