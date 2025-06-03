@@ -1,0 +1,343 @@
+{
+  "title": "Test 1 Dani",
+  "career": "Ingeniería Informática",
+  "year": "Cuarto año",
+  "subject": "Redes_2",
+  "questions": [
+    {
+      "q": "El Par Trenzado se usa para frecuencias",
+      "a": ["Superiores a UHF", "Inferiores a UHF", "Inferiores a ELF", "Superiores a VHF"],
+      "answer": 2
+    },
+    {
+      "q": "Las redes de comunicaciones de fibra que se están extendiendo en las ciudades se clasifican como redes:",
+      "a": ["WAN", "Ninguna de las anteriores", "LAN", "MAN"],
+      "answer": 4
+    },
+    {
+      "q": "Respecto al switch, indica la afirmación errónea:",
+      "a": [
+        "Un Switch/Puente expande el Dominio de Difusión",
+        "Los conmutadores Fragment Free esperan a recibir los primeros 1500 bytes para evitar retransmisión de colisiones",
+        "En un switch, si no conoce el puerto de destino, realiza inundación",
+        "Un Switch/Puente segmenta el Dominio de Colisión"
+      ],
+      "answer": 2
+    },
+    {
+      "q": "El medio de transmisión recomendado para FasthEthernet es:",
+      "a": ["UTP Categoría 5E y 6", "UTP Categoría 4", "UTP Categoría 3", "Ninguna de las anteriores"],
+      "answer": 4
+    },
+    {
+      "q": "En ethernet clásica, para la detección de colisiones, indica la afirmación errónea:",
+      "a": [
+        "Si aumentamos el ancho de banda, tendríamos que aumentar la longitud de la trama y/o aumentar la longitud del medio de transmisión",
+        "Si aumentamos el ancho de banda, tendríamos que aumentar la longitud de la trama y/o reducir la longitud del medio de transmisión",
+        "Todas son erróneas (menos ésta)",
+        "Si aumentamos el ancho de banda, tendríamos que reducir la longitud de la trama y/o reducir la longitud del medio de transmisión"
+      ],
+      "answer": 4
+    },
+    {
+      "q": "Definiremos un dominio de colisión como ....",
+      "a": [
+        "Ninguna de las anteriores",
+        "el área de una red, formada por computadoras y dispositivos de red que se puede alcanzar enviando una trama multicast.",
+        "un segmento físico de una red de computadores donde es posible que las tramas puedan 'colisionar' con otras.",
+        "el área de una red, formada por computadoras y dispositivos de red que se puede alcanzar enviando una trama broadcast"
+      ],
+      "answer": 3
+    },
+    {
+      "q": "Indica cuál de las siguientes direcciones pertenece a una direccion de IPv4 privada:",
+      "a": ["Todas son dirección públicas", "172.31.22.13", "172.15.25.1", "152.32.12.0"],
+      "answer": 2
+    },
+    {
+      "q": "La longitud máxima de 10Gigabit Ethernet con UTP de categoria 5 es:",
+      "a": ["15m", "100m", "Ninguna de las anteriores", "20m"],
+      "answer": 2
+    },
+    {
+      "q": "Para una aplicación de Gigabit Ethernet es recomendable y mínimo utilizar",
+      "a": ["UTP-Cat 6", "UTP-Cat 5E", "UTP-Cat 3", "UTP-Cat 5"],
+      "answer": 2
+    },
+    {
+      "q": "Un hub proporciona un ancho de banda de , por ejemplo 100Mbps,",
+      "a": ["Exclusivo", "Compartido", "Ninguna de las anteriores", "Dedicado"],
+      "answer": 2
+    },
+    {
+      "q": "Indica el número de bits de host de una dirección IPv4 de clase A",
+      "a": ["16", "32", "8", "24"],
+      "answer": 3
+    },
+    {
+      "q": "El modo de funcionamiento de un switch más utilizado en redes corporativas que implmentan siempre el control de errores es:",
+      "a": ["Cut-Through", "Ninguna de las anteriores", "Store-and-Forward", "Adaptative Cut-Through"],
+      "answer": 3
+    },
+    {
+      "q": "En Ethernet Clásico, el cableado que difiere en cuanto a topología física del resto es:",
+      "a": ["100BASE-T", "10BASE2", "10BASE5", "10BASE-T"],
+      "answer": 4
+    },
+    {
+      "q": "El campo en IPv4 que indica la posición del fragmento dentro del datagrama original se denomina",
+      "a": ["Offset", "ID", "Ninguna de las anteriores", "MF"],
+      "answer": 1
+    },
+    {
+      "q": "Un hub tiene...",
+      "a": ["Topología lógica en estrella y física en bus", "Topología física en estrella y lógica en bus", "Ninguna de las anteriores", "Topología física y lógica en bus"],
+      "answer": 2
+    },
+    {
+      "q": "Indica el número de bits de host de una dirección IPv4 de clase B",
+      "a": ["8", "24", "16", "32"],
+      "answer": 3
+    },
+    {
+      "q": "Definiremos un dominio de colisión como ....",
+      "a": [
+        "el área de una red, formada por repetidores que se puede alcanzar enviando una trama broadcast.",
+        "el área de una red, formada por computadoras y dispositivos de red que se puede alcanzar enviando una trama broadcast",
+        "el área de una red, formada por computadoras y dispositivos de red que se puede alcanzar enviando una trama multicast.",
+        "Ninguna de las anteriores"
+      ],
+      "answer": 4
+    },
+    {
+      "q": "El modo de funcionamiento de un switch más utilizado en que redes exigen un retardo muy bajo a pesar de provocar retransmisión de colisiones es:",
+      "a": ["Adaptative Cut-Through", "Cut-Through", "Store-and-Forward", "Ninguna de las anteriores"],
+      "answer": 2
+    },
+    {
+      "q": "Indica cual de los siguientes NO es uno de los principios definidos para la creación del modelo OSI:",
+      "a": [
+        "Cada capa debe realizar una(s) función(es) bien definida(s).",
+        "La función de cada capa se debe elegir con la intención de definir protocolos estandarizados internacionalmente.",
+        "Los límites de las capas se deben elegir a fin de minimizar el flujo de información a través de las interfaces.",
+        "La cantidad de capas debe ser suficientemente pequeña para no tener que agrupar funciones distintas en la misma capa y lo bastante grande para que la arquitectura no se vuelva inmanejable."
+      ],
+      "answer": 4
+    },
+    {
+      "q": "El protocolo SONET es un ejemplo de protocolo aplicado a redes:",
+      "a": ["WAN", "PAN", "LAN", "MAN"],
+      "answer": 1
+    },
+    {
+      "q": "El repetidor es considerado un dispositivo de nivel",
+      "a": [
+        "Red",
+        "LLC",
+        "Control de Acceso al Medio",
+        "Ninguna de las anteriores"
+      ],
+      "answer": 4
+    },
+    {
+      "q": "El numero de direcciones de red de clase aproximadamente B es:",
+      "a": [
+        "126",
+        "65536",
+        "16384",
+        "Ninguna de las anteriores"
+      ],
+      "answer": 3
+    },
+    {
+      "q": "La longitud máxima del segmento en FastEthernet con par trenzado es",
+      "a": [
+        "100m",
+        "500m",
+        "200m",
+        "Ninguna de las anteriores"
+      ],
+      "answer": 1
+    },
+    {
+      "q": "Los protocolos ATM o SONET son ejemplos de protocolos enfocados en redes de tipo:",
+      "a": [
+        "Ninguna de las anteriores",
+        "MAN",
+        "LAN",
+        "PAN"
+      ],
+      "answer": 1
+    },
+    {
+      "q": "En los protocolos CSMA/CD se define un estado adicional frente a los protocolos ALOHA, indica cual es:",
+      "a": [
+        "Recepción",
+        "Transmisión",
+        "Ninguna de las anteriores",
+        "Espera"
+      ],
+      "answer": 3
+    },
+    {
+      "q": "Indica cual de los siguientes protocolos LAN es libre de colisiones",
+      "a": [
+        "10BASE2",
+        "10BASET",
+        "Todos son protocolos con colisiones",
+        "10BASE5"
+      ],
+      "answer": 3
+    },
+    {
+      "q": "Respecto a Gigabit Ethernet, indica la afirmación errónea:",
+      "a": [
+        "Modifica el formato de trama, aumentando el tamaño máximo",
+        "Aumenta diez veces el rendimiento de Fast Ethernet.",
+        "Usa el mismo esquema de direccionamiento de 48 bits que ya está en uso",
+        "Fue aprobada por el IEEE en 1998 bajo el nombre 802.3z."
+      ],
+      "answer": 1
+    },
+    {
+      "q": "El tipo de Switch que espera a recibir los primeros 64 bytes para evitar la retransmisión de colisiones se denomina:",
+      "a": [
+        "Ninguna de las anteriores",
+        "FragmentFree",
+        "Store-and-Forward",
+        "Cut-Through"
+      ],
+      "answer": 2
+    },
+    {
+      "q": "Indica cual de los siguientes está identificado como un protocolo de Red",
+      "a": [
+        "X.25",
+        "LAPB",
+        "TCP",
+        "Ninguno de los anteriores"
+      ],
+      "answer": 3
+    },
+    {
+      "q": "En enlaces de difusión con medio compartido, indica cual de los siguientes NO es un supuesto clave para la utilización del canal:",
+      "a": [
+        "Tráfico dependiente entre las estaciones",
+        "Colisiones observables",
+        "Supuesto de canal único.",
+        "Tiempo continuo o ranurado"
+      ],
+      "answer": 1
+    },
+    {
+      "q": "Definiremos un dominio de difusión como ....",
+      "a": [
+        "el área de una red, formada por computadoras y dispositivos de red que se puede alcanzar enviando una trama broadcast",
+        "Ninguna de las anteriores",
+        "un segmento físico de una red de computadores donde es posible que las tramas puedan 'colisionar' con otras.",
+        "el área de una red, formada por computadoras y dispositivos de red que se puede alcanzar enviando una trama multicast."
+      ],
+      "answer": 4
+    },
+    {
+      "q": "Un switch proporciona un ancho de banda de , por ejemplo 100Mbps,",
+      "a": [
+        "Compartido",
+        "Dedicado",
+        "Mínimo",
+        "Ninguna de las anteriores"
+      ],
+      "answer": 1
+    },
+    {
+      "q": "El protocolo IP es un ejemplo de",
+      "a": [
+        "Conmutación de paquetes en modo Datagrama",
+        "Conmutación de circuitos en modo Datagrama",
+        "Conmutación de paquetes en modo Circuito Virtual",
+        "Ninguna de las anteriores"
+      ],
+      "answer": 1
+    },
+    {
+      "q": "El protocolo que permite obtener la dirección lógica a partir de la dirección física se denomina :",
+      "a": [
+        "Ninguna de las anteriores",
+        "ARP",
+        "RARP",
+        "DHCP"
+      ],
+      "answer": 2
+    },
+    {
+      "q": "El tiempo en el que una estación no puede garantizar que no ha sufrido colisión en su transmisión se denomina:",
+      "a": [
+        "Intervalo de control",
+        "Intervalo de compresión",
+        "Ninguna de las anteriores",
+        "Intervalo de contienda"
+      ],
+      "answer": 4
+    },
+    {
+      "q": "Indica cual de los siguientes protocolos tiene un comportamiento mejor en términos de throughput (paquetes/seg.) ante el aumento de tráfico:",
+      "a": [
+        "1-persistente CSMA",
+        "ALOHA",
+        "ALOHA ranurado",
+        "0.5-persistente CSMA"
+      ],
+      "answer": 4
+    },
+    {
+      "q": "Si la estacion A con IP 126.25.25.23/23 realiza un ping a B con IP 126.25.24.1/23...",
+      "a": [
+        "Ninguna de las anteriores",
+        "Sería entrega directa",
+        "No se puede enviar el datagrama por ser una IP de destino errónea",
+        "Sería entrega indirecta, por lo que se enviaría al Router"
+      ],
+      "answer": 2
+    },
+    {
+      "q": "De forma general, las redes más pequeñas localizadas en una misma área geográfica tienden a utilizar:",
+      "a": [
+        "Enlaces en anillo",
+        "Enlaces de difusión",
+        "Enlaces de punto a punto",
+        "Ninguna de las anteriores"
+      ],
+      "answer": 2
+    },
+    {
+      "q": "Las redes telefónicas son un ejemplo de:",
+      "a": [
+        "Ninguna de las anteriores",
+        "Conmutación de circuitos en modo datagrama",
+        "Conmutación de paquetes en modo Circuito Virtual",
+        "Conmutación de circuitos"
+      ],
+      "answer": 4
+    },
+    {
+      "q": "El protocolo de enrutamiento que permite más popular de tipo classless basado en vector distancias es:",
+      "a": [
+        "Ninguna de las anteriores",
+        "OSPF",
+        "RIPv2",
+        "RIPv1"
+      ],
+      "answer": 3
+    },
+    {
+      "q": "Un hub proporciona un ancho de banda de , por ejemplo 100Mbps,",
+      "a": [
+        "Compartido",
+        "Dedicado",
+        "Exclusivo",
+        "Ninguna de las anteriores"
+      ],
+      "answer": 1
+    }
+  ]
+}

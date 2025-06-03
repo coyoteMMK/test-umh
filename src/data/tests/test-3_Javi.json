@@ -1,0 +1,357 @@
+{
+  "title": "Test 3 Javi",
+  "career": "Ingeniería Informática",
+  "year": "Cuarto año",
+  "subject": "Redes_2",
+  "questions": [
+    {
+      "q": "La longitud de la cabecera básica de IPv6 es",
+      "a": [
+        "10 palabras de 32 bits",
+        "Ninguna de las anteriores",
+        "5 palabras de 32 bits",
+        "20 bytes"
+      ],
+      "answer": 1
+    },
+    {
+      "q": "Respecto al protocolo TCP indica la afirmación errónea:",
+      "a": [
+        "TCP ofrece un protocolo de transporte pero sin proporcionar fiabilidad",
+        "Proporciona un servicio orientado a la conexión, fiable y ordenado",
+        "Ninguno de los protocolos IPv4, IPv6 o UDP fiabilidad en la comunicación de datos",
+        "TCP utiliza el mecanismo de puertos."
+      ],
+      "answer": 1
+    },
+    {
+      "q": "En el formato de un segmento TCP, indica la afirmación errónea:",
+      "a": [
+        "Puerto fuente y puerto destino identifican a las aplicaciones, en los dos extremos de la conexión",
+        "Número de reconocimiento indica cuál es el siguiente octeto de datos que se espera recibir",
+        "Número de secuencia identifica la secuencia del primer octeto de datos del segmento en el flujo de datos del emisor.",
+        "La longitud de la cabecera (longC) se expresa en bytes"
+      ],
+      "answer": 4
+    },
+    {
+      "q": "Los puertos son un mecanismo para",
+      "a": [
+        "Diferenciar aplicaciones de red dentro de una misma máquina",
+        "Diferencias diferentes interfaces en un host",
+        "Ninguna de las anteriores",
+        "Diferenciar direcciones IP"
+      ],
+      "answer": 1
+    },
+    {
+      "q": "En los números de secuencia y reconocimiento de un segmento TCP, indica la afirmación errónea:",
+      "a": [
+        "Un reconocimiento de un byte posterior reconoce todos los bytes anteriores",
+        "El número de secuencia de envío se corresponde con el número de secuencia del primer octeto en el campo de datos del segmento",
+        "Todas son correctas"
+      ],
+      "answer": 3
+    },
+    {
+      "q": "El campo en la cabecera de TCP que gestiona el control de flujo en TCP se denomina:",
+      "a": [
+        "RcvWindow",
+        "Ninguna de las anteriores",
+        "CongWin",
+        "RcvBuffer"
+      ],
+      "answer": 1
+    },
+    {
+      "q": "En el control de congestión de TCP, indica la afirmación errónea:",
+      "a": [
+        "La congestión aparece por una sobrecarga en los nodos de conmutación (ej. routers) de una red",
+        "El estándar actual recomienda dos técnicas, relacionadas y fáciles de implementar: Go back N (vuelta atrás) y retransmisión selectiva",
+        "La congestión provoca un incremento en las retransmisiones, que no hacen más que agravar la situación",
+        "TCP puede ayudar a solucionar la congestión, reduciendo la inyección de segmentos en la red"
+      ],
+      "answer": 2
+    },
+    {
+      "q": "En la estimación del RTT, indica la fórmula utilizada",
+      "a": [
+        "RTT_estimado = alfa*RTT_medido",
+        "RTT_estimado = (1+alfa)*RTT_estimado + alfa*RTT_medido",
+        "RTT_estimado = (1+alfa)*RTT_estimado - alfa*RTT_medido",
+        "Ninguna de las anteriores"
+      ],
+      "answer": 2
+    },
+    {
+      "q": "Indica la afirmación errónea de UDP",
+      "a": [
+        "Permite comunicaciones broadcast/multicast",
+        "Protocolo complejo porque necesita almacenar el estado en emisor y receptor",
+        "Tamaño de cabecera reducido",
+        "No hay establecimiento de conexión (sin retardo adicional)"
+      ],
+      "answer": 2
+    },
+    {
+      "q": "En una conexión TCP, ante una llegada en orden de un segmento, donde no hay huecos y todo está previamente reconocido",
+      "a": [
+        "ACK retrasado. Espera 500ms al siguiente segmento. Si no se genera, envía ACK",
+        "Enviar inmediatamente un ACK acumulativo.",
+        "Envió inmediato de un ACK, si el segmento comienza en la parte baja del hueco",
+        "Envió de un ACK duplicado, indicando el número de secuencia esperado"
+      ],
+      "answer": 1
+    },
+    {
+      "q": "El bit activado en el campo código cuando se requiere el establecimiento de conexión es:",
+      "a": [
+        "PUSH",
+        "ACK",
+        "URG",
+        "SYN"
+      ],
+      "answer": 4
+    },
+    {
+      "q": "Si deseamos crear un dominio DNS de tipo alias , lo haremos mediante un registro de tipo",
+      "a": [
+        "MX",
+        "CNAME",
+        "Ninguna de las anteriores",
+        "A"
+      ],
+      "answer": 2
+    },
+    {
+      "q": "Indica el nombre de la primera aplicación que permitía charlas interactivas multiusuario.",
+      "a": [
+        "GOPHER",
+        "Ninguna de las anteriores",
+        "IRC",
+        "TALK"
+      ],
+      "answer": 3
+    },
+    {
+      "q": "En un servidor DNS, indica cómo se denomina el tipo de solicitud más eficiente de los vistos:",
+      "a": [
+        "Solicitud recursiva",
+        "Solicitud iterativa",
+        "Solicitud Directa",
+        "Ninguna de las anteriores"
+      ],
+      "answer": 2
+    },
+    {
+      "q": "En el protocolo DHCP, el primer mensaje que manda el cliente DHCP es:",
+      "a": [
+        "DHCPOFFER",
+        "DHCPREQUEST",
+        "Ninguna de las anteriores",
+        "DHCPDISCOVER"
+      ],
+      "answer": 4
+    },
+    {
+      "q": "Respecto a FTP, indica la afirmación errónea:",
+      "a": [
+        "Utiliza el puerto 21 de UTP",
+        "Define un sistema de autenticación y autorización",
+        "Soluciona los problemas de transferencias y gestión de ficheros entre distintas plataformas.",
+        "Permite un acceso interactivo mediante un conjunto de comandos"
+      ],
+      "answer": 1
+    },
+    {
+      "q": "La utilización de direcciones IPs dinámicas mediante DHCP implica la actualización de la base de datos del servidor:",
+      "a": [
+        "DNS",
+        "Ninguna de las anteriores",
+        "Correo",
+        "Web"
+      ],
+      "answer": 1
+    },
+    {
+      "q": "Cuando un servidor web recibe una petición de dirección que no localiza, devuelve el código:",
+      "a": [
+        "400",
+        "200",
+        "404",
+        "505"
+      ],
+      "answer": 3
+    },
+    {
+      "q": "Si necesitamos enviar información binaria en un correo (no ASCII), necesitamos hacer uso de:",
+      "a": [
+        "PGP",
+        "Ninguna de las anteriores",
+        "IMAP",
+        "MIME"
+      ],
+      "answer": 4
+    },
+    {
+      "q": "Tanto el protocolo Telnet, y SMTP entre otros utilizan el formato de codificación denominado:",
+      "a": [
+        "UTF-8",
+        "NVT",
+        "Ninguna de las anteriores",
+        "ASCII-8"
+      ],
+      "answer": 2
+    },
+    {
+      "q": "Indica qué tipo de Información DNS recoge la dirección IP de ese dominio:",
+      "a": [
+        "PTR",
+        "IP",
+        "A",
+        "CNAME"
+      ],
+      "answer": 3
+    },
+    {
+      "q": "La sobrecarga en NAT permite el uso simultáneo de una única dirección pública de clase C de hasta:",
+      "a": [
+        "65,536 hosts internos",
+        "Ninguna de las anteriores",
+        "253 hosts internos",
+        "1024 hosts internos"
+      ],
+      "answer": 1
+    },
+    {
+      "q": "Indica cual de los siguientes no es un ámbito válido para direcciones de IPv6",
+      "a": [
+        "AnyCast",
+        "Unicast",
+        "Multicast",
+        "BroadCast"
+      ],
+      "answer": 4
+    },
+    {
+      "q": "Respecto a IPv6 indica la afirmación errónea",
+      "a": [
+        "Se pueden realizar abreviaturas en la dirección de 128 bits",
+        "El número de campos en la cabecera fija es mayor",
+        "La cabecera de extensión de encriptación no aparece en IPv4",
+        "El orden de las cabeceras de extensión es fijo"
+      ],
+      "answer": 2
+    },
+    {
+      "q": "Respecto a las características de IPv6, indica la afirmación errónea:",
+      "a": [
+        "Establece un control de ámbitos",
+        "Permite un formato más flexible de cabecera",
+        "Utiliza un sistema de encaminamiento jerárquico",
+        "La cabecera es más pequeña en tamaño que IPv4"
+      ],
+      "answer": 4
+    },
+    {
+      "q": "El servicio que permite el acceso limitado a la LAN interna desde el exterior mediante el uso de puertos se denomina:",
+      "a": [
+        "Ninguna de las anteriores",
+        "Port Forwarding",
+        "Port Filtering",
+        "Port Switching"
+      ],
+      "answer": 2
+    },
+    {
+      "q": "Indica cual de los siguientes campos ha sido eliminado de la cabecera fija en IPv6",
+      "a": [
+        "Offset",
+        "TTL",
+        "Versión",
+        "IP origen"
+      ],
+      "answer": 1
+    },
+    {
+      "q": "La dirección de bucle local en IPv6 es",
+      "a": [
+        "Ninguna de las anteriores",
+        "::127:1",
+        "::1",
+        "127:1"
+      ],
+      "answer": 3
+    },
+    {
+      "q": "Las direcciones de IPv6 que se utilizan dentro de un mismo enlace o red local para gestión de la propia red se denominan",
+      "a": [
+        "Local de Enlace",
+        "Globales",
+        "Local de Sitio",
+        "De bucle interno"
+      ],
+      "answer": 1
+    },
+    {
+      "q": "El estándar que define el rango de direcciones privadas es:",
+      "a": [
+        "Ninguna de las anteriores",
+        "RFC 2321",
+        "RFC 1918",
+        "RFC 1221"
+      ],
+      "answer": 3
+    },
+    {
+      "q": "Respecto al formato de trama de UDP, indica la afirmación errónea:",
+      "a": [
+        "Los puertos de origen y destino son obligatorios",
+        "La longitud incluye todo el mensaje",
+        "Los mensajes UDP se dividen en dos partes: cabecera y campo de datos",
+        "El checksum es opcional. Cuando no se emplea se pone a cero"
+      ],
+      "answer": 1
+    },
+    {
+      "q": "La conexión TCP es",
+      "a": [
+        "Ninguna de las anteriores",
+        "semi duplex",
+        "full duplex",
+        "half duplex"
+      ],
+      "answer": 3
+    },
+    {
+      "q": "Respecto a las características de IPv6, indica la afirmación errónea:",
+      "a": [
+        "Utiliza un sistema de encaminamiento jerárquico",
+        "Permite un formato más flexible de cabecera",
+        "Establece un control de ámbitos",
+        "La cabecera es mas pequeña en tamaño que IPv4"
+      ],
+      "answer": 4
+    },
+    {
+      "q": "Respecto a las generalidades de NAT, indica la afirmación errónea",
+      "a": [
+        "Conjunta a NAT, es decir, se definieron simultáneamente",
+        "Ninguna de la anteriores",
+        "Anterior a la definición de NAT",
+        "Posterior a NAT"
+      ],
+      "answer": 3
+    },
+    {
+      "q": "Indica cual de las siguientes no ha sido una motivación para el desarrollo de IPv6:",
+      "a": [
+        "Todas son razones que han motivado la aparición de IPv6",
+        "Tablas de encaminamiento cada vez más grandes en IPv4",
+        "Asignación de direcciones no coordinada de IPv4",
+        "Escasez de direcciones"
+      ],
+      "answer": 1
+    }
+  ]
+}

@@ -1,0 +1,408 @@
+{
+  "title": "Test 1 Javi",
+  "career": "Ingeniería Informática",
+  "year": "Cuarto año",
+  "subject": "Redes_2",
+  "questions": [
+    {
+      "q": "El protocolo X25 es un ejemplo de protocolo de nivel ...",
+      "a": [
+        "Físico",
+        "Transporte",
+        "Enlace",
+        "Ninguna de las anteriores"
+      ],
+      "answer": 4
+    },
+    {
+      "q": "Indica cual de los siguientes protocolos LAN es libre de colisiones",
+      "a": [
+        "10BASET",
+        "Todos son protocolos con colisiones",
+        "10BASE2",
+        "10BASE5"
+      ],
+      "answer": 2
+    },
+    {
+      "q": "Indica cual de los siguientes protocolos tiene un comportamiento mejor en términos de throughput (paquetes/seg.) ante el aumento de tráfico:",
+      "a": [
+        "ALOHA ranurado",
+        "0.5-persistente CSMA",
+        "1-persistente CSMA",
+        "ALOHA"
+      ],
+      "answer": 2
+    },
+    {
+      "q": "Definiremos un dominio de colisión como ....",
+      "a": [
+        "El área de una red, formada por computadoras y dispositivos de red que se puede alcanzar enviando una trama multicast.",
+        "Ninguna de las anteriores",
+        "El área de una red, formada por computadoras y dispositivos de red que se puede alcanzar enviando una trama broadcast",
+        "Un segmento físico de una red de computadores donde es posible que las tramas puedan 'colisionar' con otras."
+      ],
+      "answer": 4
+    },
+    {
+      "q": "El protocolo Ethernet clásico con par trenzado se conoce también como:",
+      "a": [
+        "100BASE-T",
+        "Ninguna de las anteriores",
+        "10BASE5",
+        "10BASE-T"
+      ],
+      "answer": 4
+    },
+    {
+      "q": "Los protocolos ATM o SONET son ejemplos de protocolos enfocados en redes de tipo:",
+      "a": [
+        "MAN",
+        "Ninguna de las anteriores",
+        "LAN",
+        "PAN"
+      ],
+      "answer": 2
+    },
+    {
+      "q": "El Par Trenzado se usa para frecuencias",
+      "a": [
+        "Superiores a UHF",
+        "Inferiores a ELF",
+        "Inferiores a UHF",
+        "Superiores a VHF"
+      ],
+      "answer": 3
+    },
+    {
+      "q": "Indica cuál de las siguientes direcciones pertenece a una dirección de IPv4 privada:",
+      "a": [
+        "Todas son dirección públicas",
+        "172.17.22.13",
+        "127.0.0.1",
+        "152.32.12.0"
+      ],
+      "answer": 2
+    },
+    {
+      "q": "El protocolo que permite obtener la dirección física a partir de la dirección lógica se denomina:",
+      "a": [
+        "DHCP",
+        "Ninguna de las anteriores",
+        "RARP",
+        "ARP"
+      ],
+      "answer": 4
+    },
+    {
+      "q": "La longitud máxima del segmento en FastEthernet con par trenzado es",
+      "a": [
+        "100m",
+        "Ninguna de las anteriores",
+        "200m",
+        "500m"
+      ],
+      "answer": 1
+    },
+    {
+      "q": "Respecto a Gigabit Ethernet, indica la afirmación errónea:",
+      "a": [
+        "Fue aprobada por el IEEE en 1998 bajo el nombre 802.3z.",
+        "Usa el mismo esquema de direccionamiento de 48 bits que ya está en uso",
+        "Aumenta diez veces el rendimiento de Fast Ethernet.",
+        "Modifica el formato de trama, aumentando el tamaño máximo"
+      ],
+      "answer": 4
+    },
+    {
+      "q": "El protocolo IP es un ejemplo de",
+      "a": [
+        "Conmutación de paquetes en modo Circuito Virtual",
+        "Ninguna de las anteriores",
+        "Conmutación de circuitos en modo Datagrama",
+        "Conmutación de paquetes en modo Datagrama"
+      ],
+      "answer": 4
+    },
+    {
+      "q": "Las redes telefónicas son un ejemplo de:",
+      "a": [
+        "Conmutación de circuitos",
+        "Conmutación de paquetes en modo Circuito Virtual",
+        "Conmutación de circuitos en modo Datagrama",
+        "Ninguna de las anteriores"
+      ],
+      "answer": 1
+    },
+    {
+      "q": "El protocolo de enrutamiento más popular de tipo classless basado en vector distancias es:",
+      "a": [
+        "Ninguna de las anteriores",
+        "RIPv2",
+        "RIPv1",
+        "OSPF"
+      ],
+      "answer": 2
+    },
+    {
+      "q": "Respecto al switch, indica la afirmación errónea:",
+      "a": [
+        "Los conmutadores Fragment Free esperan a recibir los primeros 1500 bytes para evitar retransmisión de colisiones",
+        "En un switch, si no conoce el puerto de destino, realiza inundación",
+        "Un Switch/Puente expande el Dominio de Difusión",
+        "Un Switch/Puente segmenta el Dominio de Colisión"
+      ],
+      "answer": 1
+    },
+    {
+      "q": "Indica cual de los siguientes NO es uno de los principios definidos para la creación del modelo OSI:",
+      "a": [
+        "Los límites de las capas se deben elegir a fin de minimizar el flujo de información a través de las interfaces.",
+        "Cada capa debe realizar una(s) función(es) bien definida(s).",
+        "La cantidad de capas debe ser suficientemente pequeña para no tener que agrupar funciones distintas en la misma capa y lo bastante grande para que la arquitectura no se vuelva inmanejable.",
+        "La función de cada capa se debe elegir con la intención de definir protocolos estandarizados internacionalmente."
+      ],
+      "answer": 3
+    },
+    {
+      "q": "Un hub tiene...",
+      "a": [
+        "Topología lógica en estrella y física en bus",
+        "Topología física y lógica en bus",
+        "Topología física en estrella y lógica en bus",
+        "Ninguna de las anteriores"
+      ],
+      "answer": 3
+    },
+    {
+      "q": "Indica cuál de las siguientes direcciones pertenece a una dirección de IPv4 privada:",
+      "a": [
+        "152.32.12.0",
+        "Todas son dirección públicas",
+        "172.15.25.1",
+        "172.31.22.13"
+      ],
+      "answer": 4
+    },
+    {
+      "q": "La gran mayoría de redes de comunicaciones de datos utilizan:",
+      "a": [
+        "Conmutación de circuitos en modo datagrama",
+        "Conmutación de paquetes",
+        "Conmutación de circuitos en modo Circuito Virtual",
+        "Ninguna de las anteriores"
+      ],
+      "answer": 2
+    },
+    {
+      "q": "Un hub proporciona un ancho de banda de , por ejemplo 100Mbps,",
+      "a": [
+        "Ninguna de las anteriores",
+        "Dedicado",
+        "Compartido",
+        "Exclusivo"
+      ],
+      "answer": 3
+    },
+    {
+      "q": "En el modelo TCP/IP para LAN, indica cual es el nuevo nivel definido con respecto a OSI:",
+      "a": [
+        "Ninguna de las anteriores",
+        "Acceso al medio",
+        "Transporte",
+        "Enlace de datos"
+      ],
+      "answer": 2
+    },
+    {
+      "q": "Un switch proporciona un ancho de banda de , por ejemplo 100Mbps,",
+      "a": [
+        "Compartido",
+        "Mínimo",
+        "Dedicado",
+        "Ninguna de las anteriores"
+      ],
+      "answer": 3
+    },
+    {
+      "q": "El campo en IPv4 que indica la posición del fragmento dentro del datagrama original se denomina",
+      "a": [
+        "MF",
+        "ID",
+        "Long. Total",
+        "Ninguna de las anteriores"
+      ],
+      "answer": 4
+    },
+    {
+      "q": "En enlaces de difusión con medio compartido, indica cual de los siguientes NO es un supuesto clave para la utilización del canal:",
+      "a": [
+        "Colisiones observables",
+        "Tráfico dependiente entre las estaciones",
+        "Supuesto de canal único.",
+        "Tiempo continuo o ranurado"
+      ],
+      "answer": 2
+    },
+    {
+      "q": "De las siguientes topologías, indica cual de ellas es más sensible al cuello de botella:",
+      "a": [
+        "Mixta",
+        "Anillo",
+        "Estrella",
+        "Malla"
+      ],
+      "answer": 3
+    },
+    {
+      "q": "El modo de funcionamiento de un switch más utilizado en que redes exigen un retardo muy bajo a pesar de provocar retransmisión de colisiones es:",
+      "a": [
+        "Store-and-Forward",
+        "Ninguna de las anteriores",
+        "Cut-Through",
+        "Adaptative Cut-Through"
+      ],
+      "answer": 3
+    },
+    {
+      "q": "El repetidor es considerado un dispositivo de nivel",
+      "a": [
+        "LLC",
+        "Control de Acceso al Medio",
+        "Ninguna de las anteriores",
+        "Red"
+      ],
+      "answer": 3
+    },
+    {
+      "q": "Definiremos un dominio de difusión como ....",
+      "a": [
+        "El área de una red, formada por computadoras y dispositivos de red que se puede alcanzar enviando una trama multicast.",
+        "Un segmento físico de una red de computadores donde es posible que las tramas puedan 'colisionar' con otras.",
+        "Ninguna de las anteriores",
+        "El área de una red, formada por computadoras y dispositivos de red que se puede alcanzar enviando una trama broadcast"
+      ],
+      "answer": 4
+    },
+    {
+      "q": "Si la estación A con IP 126.25.25.23/23 realiza un ping a B con IP 126.25.26.1/23...",
+      "a": [
+        "No se puede enviar el datagrama por ser una IP de destino errónea",
+        "Ninguna de las anteriores",
+        "Sería entrega directa",
+        "Sería entrega indirecta, por lo que se enviaría al Router"
+      ],
+      "answer": 3
+    },
+    {
+      "q": "De forma general, las redes más pequeñas localizadas en una misma área geográfica tienden a utilizar:",
+      "a": [
+        "Enlaces de difusión",
+        "Enlaces en anillo",
+        "Enlaces de punto a punto",
+        "Ninguna de las anteriores"
+      ],
+      "answer": 1
+    },
+    {
+      "q": "El protocolo X25 es un ejemplo de protocolo de nivel ...",
+      "a": [
+        "Transporte",
+        "Enlace",
+        "Físico",
+        "Red"
+      ],
+      "answer": 4
+    },
+    {
+      "q": "Para una aplicación de Gigabit Ethernet es recomendable y mínimo utilizar",
+      "a": [
+        "UTP-Cat 5E",
+        "UTP-Cat 3",
+        "UTP-Cat 6",
+        "UTP-Cat 5"
+      ],
+      "answer": 1
+    },
+    {
+      "q": "Un protocolo libre de colisiones que utiliza la misma topología y nivel físico que FastEthernet es:",
+      "a": [
+        "Token Ring",
+        "Ninguna de las anteriores",
+        "Token Bus",
+        "FDDI"
+      ],
+      "answer": 3
+    },
+    {
+      "q": "Definiremos un dominio de difusión como ....",
+      "a": [
+        "el área de una red, formada por computadoras y dispositivos de red que se puede alcanzar enviando una trama multicast.",
+        "un segmento físico de una red de computadores donde es posible que las tramas puedan colisionar con otras.",
+        "Ninguna de las anteriores",
+        "el área de una red, formada por computadoras y dispositivos de red que se puede alcanzar enviando una trama broadcast"
+      ],
+      "answer": 2
+    },
+    {
+      "q": "El tiempo en el que una estación no puede garantizar que no ha sufrido colisión en su transmisión se denomina:",
+      "a": [
+        "Intervalo de compresión",
+        "Intervalo de contienda",
+        "Ninguna de las anteriores",
+        "Intervalo de control"
+      ],
+      "answer": 2
+    },
+    {
+      "q": "El campo en IPv4 que indica la posición del fragmento dentro del datagrama original se denomina",
+      "a": [
+        "Offset",
+        "Ninguna de las anteriores",
+        "ID",
+        "MF"
+      ],
+      "answer": 1
+    },
+    {
+      "q": "El tipo de Switch que espera a recibir los primeros 64 bytes para evitar la retransmisión de colisiones se denomina:",
+      "a": [
+        "Store-and-Forward",
+        "FragmentFree ",
+        "Cut-Through",
+        "Ninguna de las anteriores"
+      ],
+      "answer": 2
+    },
+    {
+      "q": "De las siguientes topologías, indica cual de ellas es mas robusta frente a la caída de enlaces:",
+      "a": [
+        "Bus",
+        "Malla",
+        "Estrella",
+        "Anillo"
+      ],
+      "answer": 2
+    },
+    {
+      "q": "El repetidor es considerado un dispositivo de nivel",
+      "a": [
+        "Control de Acceso al Medio",
+        "Red",
+        "Ninguna de las anteriores",
+        "Físico"
+      ],
+      "answer": 4
+    },
+    {
+      "q": "Indica cual de los siguientes está identificado como un protocolo de Red",
+      "a": [
+        "Ninguno de los anteriores",
+        "TCP",
+        "X.25",
+        "LAPB"
+      ],
+      "answer": 3
+    }
+  ]
+}
