@@ -1,0 +1,238 @@
+{
+  "title": "Test 3 Santos",
+  "career": "Ingeniería Informática",
+  "year": "Cuarto año",
+  "subject": "Redes_2",
+  "questions": [
+    {
+      "q": "La dirección de bucle local en IPv6 es:",
+      "a": ["::127:1", "127::1", "Ninguna de las anteriores", "::1"],
+      "answer": 4
+    },
+    {
+      "q": "Indica la afirmación errónea respecto al protocolo TCP:",
+      "a": [
+        "Se puede utilizar el mismo puerto para TCP y UDP en el mismo momento",
+        "Al igual que UDP utilizará el mecanismo de puertos",
+        "Asignación de puertos puede ser estática o dinámica",
+        "Los puertos TCP y UDP tienen rangos distintos"
+      ],
+      "answer": 4
+    },
+    {
+      "q": "En TCP, el flujo de datos es tratado como una secuencia de:",
+      "a": ["Ninguna de las anteriores", "bits", "bytes", "segmentos"],
+      "answer": 3
+    },
+    {
+      "q": "El bit activado en el campo código cuando se requiere el establecimiento de conexión es:",
+      "a": ["SYN", "ACK", "PUSH", "URG"],
+      "answer": 1
+    },
+    {
+      "q": "En el control de congestión de TCP, indica la afirmación errónea:",
+      "a": [
+        "TCP puede ayudar a solucionar la congestión, reduciendo la inyección de segmentos en la red.",
+        "El estándar actual recomienda dos técnicas, relacionadas y fáciles de implementar: Go back N (vuelta atrás) y retransmisión selectiva",
+        "La congestión aparece por una sobrecarga en los nodos de conmutación (ej. routers) de una red",
+        "La congestión provoca un incremento en las retransmisiones, que no hacen más que agravar la situación"
+      ],
+      "answer": 2
+    },
+    {
+      "q": "Respecto al temporizador en una conexión TCP, indica la afirmación errónea:",
+      "a": [
+        "Debe ser un valor mayor que RTT",
+        "Si se elige un Timeout demasiado largo tendríamos una lenta reacción a los segmentos perdidos",
+        "Como el RTT es estable a lo largo de una conexión TCP, este parámetro se define en el establecimiento de la conexión",
+        "Si se elige un Timeout demasiado corto tendríamos Timeouts prematuros"
+      ],
+      "answer": 3
+    },
+    {
+      "q": "El campo en la cabecera de TCP que gestiona el control de flujo en TCP se denomina:",
+      "a": ["RcvBuffer", "CongWin", "RcvWindow", "Ninguna de las anteriores"],
+      "answer": 3
+    },
+    {
+      "q": "En los números de secuencia y reconocimiento de un segmento TCP, indica la afirmación errónea:",
+      "a": [
+        "Un reconocimiento de un byte posterior reconoce todos los bytes anteriores",
+        "El número de secuencia de envío se corresponde con el número de secuencia del primer octeto en el campo de datos del segmento",
+        "Todas son correctas",
+        "El número de secuencia de envío se corresponde con el número de secuencia del primer octeto en el campo de datos del segmento"
+      ],
+      "answer": 3
+    },
+    {
+      "q": "En la estimación del RTT, indica la fórmula utilizada:",
+      "a": [
+        "RTT_estimado = alfa*RTT_medido",
+        "RTT_estimado = (1-alfa)*RTT_estimado + alfa*RTT_medido",
+        "Ninguna de las anteriores",
+        "RTT_estimado = (1+alfa)*RTT_estimado - alfa*RTT_medido"
+      ],
+      "answer": 2
+    },
+    {
+      "q": "Respecto al protocolo TCP indica la afirmación errónea:",
+      "a": [
+        "Proporciona un servicio orientado a la conexión, fiable y ordenado",
+        "TCP ofrece un protocolo de transporte pero sin proporcionar fiabilidad",
+        "TCP utiliza el mecanismo de puertos.",
+        "Ninguno de los protocolos IPv4, IPv6 o UDP proporciona fiabilidad en la comunicación de datos"
+      ],
+      "answer": 2
+    },
+    {
+      "q": "El ámbito del protocolo de transporte es:",
+      "a": ["host origen-host destino", "Ninguna de las anteriores", "router a router", "host-router"],
+      "answer": 1
+    },
+    {
+      "q": "Cuando un servidor web recibe una petición de dirección que no localiza, devuelve el código:",
+      "a": ["505", "400", "200", "404"],
+      "answer": 4
+    },
+    {
+      "q": "Si necesitamos enviar información binaria en un correo (no ASCII), necesitamos hacer uso de:",
+      "a": ["MIME", "IMAP", "PGP", "Ninguna de las anteriores"],
+      "answer": 1
+    },
+    {
+      "q": "La utilización de direcciones IPs dinámicas mediante DHCP implica la actualización de la base de datos del servidor:",
+      "a": ["Web", "Correo", "Ninguna de las anteriores", "DNS"],
+      "answer": 4
+    },
+    {
+      "q": "En un servidor DNS, indica cómo se denomina el tipo de solicitud más eficiente de los vistos:",
+      "a": ["Solicitud Directa", "Ninguna de las anteriores", "Solicitud recursiva", "Solicitud iterativa"],
+      "answer": 4
+    },
+    {
+      "q": "Tanto el protocolo Telnet, y SMTP entre otros utilizan el formato de codificación denominado:",
+      "a": ["ASCII-8", "Ninguna de las anteriores", "NVT", "UTF-8"],
+      "answer": 3
+    },
+    {
+      "q": "Indica qué tipo de Información DNS recoge la dirección IP de ese dominio:",
+      "a": ["A", "CNAME", "IP", "PTR"],
+      "answer": 1
+    },
+    {
+      "q": "Dentro del servicio de correo de internet, el protocolo utilizado para gestionar el correo entrante de otros MTA's se denomina:",
+      "a": ["POP3", "HTTP", "NEWS", "SMTP"],
+      "answer": 4
+    },
+    {
+      "q": "Indica cuál de los siguientes NO es un protocolo para la asignación dinámica de direcciones IP:",
+      "a": ["BOOTP", "DHCP", "RARP", "DNS"],
+      "answer": 4
+    },
+    {
+      "q": "La forma de especificar un objeto o un recurso en Internet se denomina:",
+      "a": ["Ninguna de las anteriores", "LINK", "URL", "WWW"],
+      "answer": 3
+    },
+    {
+      "q": "En el protocolo DHCP, el primer mensaje que manda el cliente DHCP es:",
+      "a": ["DHCPOFFER", "DHCPDISCOVER", "DHCPREQUEST", "Ninguna de las anteriores"],
+      "answer": 2
+    },
+    {
+      "q": "Indica cuál de los siguientes campos ha sido eliminado de la cabecera fija en IPv6:",
+      "a": ["Versión", "IP origen", "Offset", "TTL"],
+      "answer": 3
+    },
+    {
+      "q": "En la terminología NAT, las direcciones que son sujetas a la traducción se denominan.",
+      "a": ["Direcciones Interiores", "Direcciones Dinámicas", "Direcciones Externas", "Ninguna de las anteriores"],
+      "answer": 1
+    },
+    {
+      "q": "Respecto a IPv6 indica la afirmación errónea:",
+      "a": ["Se pueden realizar abreviaturas en la dirección de 128 bits", "El número de campos en la cabecera fija es mayor", "El orden de las cabeceras de extensión es fijo", "La cabecera de extensión de encriptación no aparece en IPv4"],
+      "answer": 2
+    },
+    {
+      "q": "Respecto a las características de IPv6, indica la afirmación errónea:",
+      "a": ["Utiliza un sistema de encaminamiento jerárquico", "Permite un formato más flexible de cabecera", "Establece un control de ámbitos", "La cabecera es mas pequeña en tamaño que IPv4"],
+      "answer": 4
+    },
+    {
+      "q": "El ámbito relacionado con intranets y redes privadas es",
+      "a": ["global", "Ninguna de las anteriores", "de sitio", "de enlace"],
+      "answer": 3
+    },
+    {
+      "q": "Indica cuál de los siguientes no es un ámbito válido para direcciones de IPv6",
+      "a": ["Multicast", "BroadCast", "AnyCast", "Unicast"],
+      "answer": 2
+    },
+    {
+      "q": "La longitud de la cabecera básica de IPv6 es",
+      "a": ["20 bytes", "10 palabras de 32 bits", "Ninguna de las anteriores", "5 palabras de 32 bits"],
+      "answer": 2
+    },
+    {
+      "q": "Dentro de NAT, la traducción que permite la sobrecarga de direcciones internas globales hace uso de:",
+      "a": ["NAT Dinámica", "Ninguna de las anteriores", "NAT Estatica", "PAT"],
+      "answer": 4
+    },
+    {
+      "q": "Respecto a las generalidades de NAT, indica la afirmación errónea",
+      "a": ["Conjunta a NAT, es decir, se definieron simultáneamente", "Ninguna de la anteriores", "Anterior a la definición de NAT", "Posterior a NAT"],
+      "answer": 3
+    },
+    {
+      "q": "En el formato de un segmento TCP, indica la afirmación errónea:",
+      "a": [
+        "Puerto fuente y puerto destino identifican a las aplicaciones, en los dos extremos de la conexión",
+        "La longitud de la cabecera (longC) se expresa en bytes",
+        "Número de secuencia identifica la secuencia del primer octeto de datos del segmento en el flujo de datos del emisor.",
+        "Número de reconocimiento indica cuál es el siguiente octeto de datos que se espera recibir"
+      ],
+      "answer": 2
+    },
+    {
+      "q": "En una conexión TCP, ante una llegada en orden de un segmento, donde no hay huecos y todo está previamente reconocido",
+      "a": [
+        "ACK retrasado. Espera 500ms al siguiente segmento. Si no se genera, envía ACK",
+        "Enviar inmediatamente un ACK acumulativo.",
+        "Envió inmediato de un ACK, si el segmento comienza en la parte baja del hueco",
+        "Envió de un ACK duplicado, indicando el número de secuencia esperado"
+      ],
+      "answer": 1
+    },
+    {
+      "q": "El estándar que define el rango de direcciones privadas es:",
+      "a": [
+        "Ninguna de las anteriores",
+        "RFC 2321",
+        "RFC 1221",
+        "RFC 1918"
+      ],
+      "answer": 4
+    },
+    {
+      "q": "Indica el número de puerto para el protocolo DNS en escucha en un servidor:",
+      "a": [
+        "Ninguna de las anteriores",
+        "UDP 53",
+        "TCP 53",
+        "TCP 7"
+      ],
+      "answer": 2
+    },
+    {
+      "q": "En UDP, el responsable de la corrección de los errores es:",
+      "a": [
+        "El nivel de transporte",
+        "El nivel de aplicación",
+        "El nivel de red",
+        "TCP"
+      ],
+      "answer": 2
+    }
+  ]
+}

@@ -1,0 +1,268 @@
+{
+  "title": "Test 2 Santos",
+  "career": "Ingeniería Informática",
+  "year": "Cuarto año",
+  "subject": "Redes_2",
+  "questions": [
+    {
+      "q": "Los switches que incorporan la tecnología StackWise son de tipo:",
+      "a": ["Modular", "StackWise", "Fijo", "Apilable"],
+      "answer": 2
+    },
+    {
+      "q": "Indica cuál de las siguientes no es una característica de los switches de capa de acceso:",
+      "a": ["Fast/Gigabit Ethernet", "Agregado de enlaces", "Seguridad de puerto", "WLAN"],
+      "answer": 4
+    },
+    {
+      "q": "Aquellos switches con características y opciones limitadas por el modelo se denominan:",
+      "a": ["Switches de configuración fija", "Switches de configuración original", "Ninguna de las anteriores", "Switches de configuración modular"],
+      "answer": 1
+    },
+    {
+      "q": "Cuando se permite que se combinen los enlaces de puerto de switches múltiples a fin de lograr un rendimiento superior entre los switches, se denomina:",
+      "a": ["Ninguna de las anteriores", "Redundancia", "Agregado de ancho de banda", "Diámetro de la red"],
+      "answer": 3
+    },
+    {
+      "q": "Respecto a las redes convergentes, indica la afirmación errónea:",
+      "a": ["En el futuro, la totalidad de las redes serán convergentes.", "Los costos de red asociados con la convergencia eran altos.", "Las redes convergentes permiten la integración con centralitas PBX y grandes switches telefónicos.", "La convergencia es el proceso de combinación de las comunicaciones con voz y video en una red de datos."],
+      "answer": 2
+    },
+    {
+      "q": "Dispositivos como un Punto de Acceso o un teléfono IP, es recomendable conectarlos a un switch con tecnología:",
+      "a": ["IPv6", "NAT", "Ninguna de las anteriores", "EoF"],
+      "answer": 3
+    },
+    {
+      "q": "Indica cuál de los siguientes no es un beneficio obtenido directamente del uso de redes jerárquicas:",
+      "a": ["Escalabilidad", "Seguridad", "Rendimiento", "Ninguna de las anteriores"],
+      "answer": 4
+    },
+    {
+      "q": "La red debe detectar los problemas existentes y activar los dispositivos de backup de forma automática. Dentro de los mecanismos de nivel 2, se utiliza:",
+      "a": ["VLANs", "Ninguna de las anteriores", "Depuración VTP", "Direccionamiento IP"],
+      "answer": 2
+    },
+    {
+      "q": "Cuando el tráfico de la red no puede ingresar ni salir del puerto, sin incluir las tramas de unidad de datos del protocolo de puentes (BPDU) utilizadas por STP para evitar bucles, el puerto se considera:",
+      "a": ["Ninguna de las anteriores", "Apagado", "Activo", "Aprendizaje"],
+      "answer": 1
+    },
+    {
+      "q": "El árbol de expansión de menor coste es:",
+      "a": ["Aquel cuyo camino más largo tiene el menor coste.", "Aquel cuyo camino más largo tiene el mayor coste.", "Aquel que proporciona menor coste total.", "Ninguna de las anteriores"],
+      "answer": 3
+    },
+    {
+      "q": "El estado inicial de todos los puertos cuando se inicia el switch es:",
+      "a": ["Envío", "Aprendizaje", "Ninguna de las anteriores", "Apagado"],
+      "answer": 3
+    },
+    {
+      "q": "El STA designa un único switch como puente raíz y lo utiliza como punto de referencia para todos los cálculos de rutas. Dicho puente raíz se elige a partir de:",
+      "a": ["Siempre en función de su MAC", "Si pertenece a la capa de núcleo", "La elección es aleatoria", "Ninguna de las anteriores"],
+      "answer": 4
+    },
+    {
+      "q": "El tiempo de envío de las actualizaciones STP se denomina:",
+      "a": ["Retardo de envío", "Antigüedad máxima", "Ninguna de las anteriores", "Tiempo de saludo"],
+      "answer": 4
+    },
+    {
+      "q": "El tiempo que transcurre el protocolo STP de pasar del estado de bloqueo a escucha se denomina:",
+      "a": ["Retardo de envío", "Tiempo de saludo", "Antigüedad máxima", "Ninguna de las anteriores"],
+      "answer": 1
+    },
+    {
+      "q": "En los pasos de convergencia STP, indica cuál es el primer paso a realizar:",
+      "a": ["Elegir un puente raíz", "Ninguna de las anteriores", "Elegir los puertos designados y no designados", "Elegir los puertos raíz"],
+      "answer": 1
+    },
+    {
+      "q": "En STP, los puertos configurados en estado de bloqueo se denominan:",
+      "a": ["Puertos no designados", "Puertos bloqueados", "Puertos raíz", "Puertos designados"],
+      "answer": 1
+    },
+    {
+      "q": "Respecto a las funciones de los puertos en STP, indique la afirmación errónea:",
+      "a": ["El puerto no designado es aquel puerto de switch que está bloqueado", "El puerto designado existe en los puentes raíz y en los que no son raíz", "El puente raíz es elegido para la instancia de spanning-tree", "Todos los puentes tienen al menos un puerto raíz"],
+      "answer": 4
+    },
+    {
+      "q": "Respecto al algoritmo STA utilizado en STP, indica la afirmación errónea:",
+      "a": ["El STA designa un único switch como puente raíz y lo utiliza como punto de referencia para todos los cálculos de rutas", "El STA considera los costos tanto de la ruta como del puerto cuando determina la ruta que debe permanecer desbloqueada", "Todos los switches que comparten STP intercambian tramas de BPDU para determinar el switch que posee el menor ID de puente (BID)", "Todos los switches (menos los switches en modo transparente) utilizan el STA para determinar los puertos que deben bloquearse"],
+      "answer": 4
+    },
+    {
+      "q": "Selecciona el protocolo introducido por IEEE que permite una rápida convergencia de STP:",
+      "a": ["FSTP", "Ninguna de las anteriores", "RSTP", "RTP"],
+      "answer": 3
+    },
+    {
+      "q": "Ante la presencia de VLANs, los dominios de broadcasts:",
+      "a": ["Ninguna de las anteriores", "Se solapan", "Se expanden", "Se unifican"],
+      "answer": 1
+    },
+    {
+      "q": "El ID por defecto en un switch de la VLAN nativa es:",
+      "a": ["Ninguna de las Anteriores", "99", "150", "1"],
+      "answer": 4
+    },
+    {
+      "q": "En una red conmutada sin existencia de VLAN's...",
+      "a": ["Tenemos un único dominio de difusión", "Ninguna de las anteriores", "Tenemos un único dominio de colisión y múltiples dominios de difusión", "Tenemos varios dominios de colisión y difusión"],
+      "answer": 1
+    },
+    {
+      "q": "Existen diversos tipos de VLAN pero aquella que exige características especiales de retardo y ancho de banda garantizado es:",
+      "a": ["VLAN nativa", "VLAN predeterminada", "VLAN de datos", "VLAN de voz"],
+      "answer": 4
+    },
+    {
+      "q": "Indica cuál de los siguientes no es un beneficio de las VLAN:",
+      "a": ["Mitigación de la tormenta de difusión", "Aumento de costos", "Administración de aplicación o de proyectos más simples", "Seguridad"],
+      "answer": 2
+    },
+    {
+      "q": "Para la comunicación intra VLAN es necesaria la presencia de ...",
+      "a": ["Un switch de capa 3 o un router", "Únicamente un router", "Ninguna entidad de nivel 3, únicamente una red conmutada", "Ninguna de las anteriores"],
+      "answer": 3
+    },
+    {
+      "q": "Si la asignación de la VLAN de un puerto se realiza por la MAC del dispositivo conectado a dicho puerto, nos encontramos ante un modo de pertenencia de ...",
+      "a": ["VLAN física", "VLAN estática", "VLAN dinámica", "Ninguna de las anteriores"],
+      "answer": 3
+    },
+    {
+      "q": "Si queremos configurar una identidad IP al switch, deberemos configurarle un:",
+      "a": ["IPS", "PCI", "Ninguna de las anteriores", "VID"],
+      "answer": 3
+    },
+    {
+      "q": "A medida que aumenta el tamaño de las redes:",
+      "a": ["La gestión de la VLAN se hace más sencilla y fácil", "Ninguna de las anteriores", "No afecta el tamaño a la gestión de VLAN", "La gestión de la VLAN se hace más compleja y costosa"],
+      "answer": 4
+    },
+    {
+      "q": "Dentro de los pasos recomendados en la configuración de un cliente VTP, indique cuál de los siguientes no es un paso de configuración de un cliente:",
+      "a": ["Configurar enlaces troncales", "Todos son pasos de configuración de un cliente VTP", "Configurar las VLAN y puertos troncales", "Configurar puertos de acceso"],
+      "answer": 3
+    },
+    {
+      "q": "El conmutador que reenvía publicaciones VTP pero que no utiliza la configuración de VTP se denomina:",
+      "a": ["Ninguna de las anteriores", "Cliente VTP", "Servidor VTP", "VTP Transparente"],
+      "answer": 4
+    },
+    {
+      "q": "Indica cuál de los siguientes no es un beneficio de VTP:",
+      "a": [
+        "Configuración de enlace troncal dinámico cuando las VLAN se agregan a la red",
+        "Consistencia en la configuración VLAN",
+        "Seguimiento y monitorización",
+        "Todos son beneficios de VTP"
+      ],
+      "answer": 4
+    },
+    {
+      "q": "Indica la afirmación errónea de VTP:",
+      "a": [
+        "Permite a un administrador de red configurar un switch de modo que propagará las configuraciones de la VLAN hacia los otros switches en la red",
+        "El servidor del VTP distribuye y sincroniza la información de la VLAN a todos los switches de la red conmutada",
+        "Permite al administrador de red realizar cambios en un switch que está configurado como servidor del VTP",
+        "El VTP guarda las configuraciones de la VLAN en la base de datos de la VLAN denominada vlan.dat"
+      ],
+      "answer": 2
+    },
+    {
+      "q": "La capacidad principal y diferenciadora de un switch de capa 3 es la de ....",
+      "a": [
+        "Distinguir la VLAN a la que pertenece cada paquete recibido en sus enlaces troncales",
+        "Dividir los dominios de colisión",
+        "Ninguna de las anteriores",
+        "Conmutar paquetes entre diferentes puertos troncales"
+      ],
+      "answer": 3
+    },
+    {
+      "q": "Respecto a las publicaciones de subconjunto de VTP indica la afirmación errónea:",
+      "a": [
+        "Se envía inmediatamente cuando hay un cambio en el servidor o en alguno de los switches clientes",
+        "Todas son ciertas",
+        "Se envía automáticamente cada 5 minutos",
+        "Contiene el nombre de dominio del VTP, el número actual de revisión y otros detalles de la configuración del VTP"
+      ],
+      "answer": 3
+    },
+    {
+      "q": "Todos los puertos de un switch se convierten en miembros de la VLAN ______ después del arranque inicial:",
+      "a": [
+        "Predeterminada",
+        "Nativa",
+        "De usuario",
+        "De datos"
+      ],
+      "answer": 1
+    },
+    {
+      "q": "En el enrutamiento entre VLAN definido como tradicional necesitaremos tantos interfaces en el Router como ...",
+      "a": [
+        "Direcciones IP tengamos utilizadas en todos los dispositivos de red",
+        "Ninguna de las anteriores",
+        "Un sólo interfaz conectado al switch",
+        "Puertos tenga el switch al que está conectado"
+      ],
+      "answer": 2
+    },
+    {
+      "q": "Indique cuál de las siguientes clasificaciones de redes, se adapta mejor a las redes de instituciones o empresas:",
+      "a": [
+        "LAN",
+        "WAN",
+        "MAN",
+        "Ninguna de las anteriores"
+      ],
+      "answer": 1
+    },
+    {
+      "q": "La creación de subinterfaces permite el enrutamiento entre VLAN denominado:",
+      "a": [
+        "Subnetting",
+        "Enrutamiento por subinterfaz",
+        "Ninguna de las anteriores",
+        "Enrutamiento entre VLAN del router on-a-stick"
+      ],
+      "answer": 4
+    },
+    {
+      "q": "Para determinar el número total necesario de switches de las tres capas debemos primero determinar el número de switches necesarios en la capa de ....",
+      "a": [
+        "Ninguna de las anteriores",
+        "Núcleo",
+        "Distribución",
+        "Acceso"
+      ],
+      "answer": 4
+    },
+    {
+      "q": "Un agregado de ancho de banda...",
+      "a": [
+        "Permite que se combinen los enlaces de puerto de los switches múltiples a fin de lograr un rendimiento superior entre los switches.",
+        "Permite utilizar interfaces simples a fin de lograr un rendimiento superior entre los switches.",
+        "Permite que se combinen dos switches para trabajar como un sólo witch a n de lograr un rendimiento superior entre los switches.",
+        "Ninguna de las anteriores"
+      ],
+      "answer": 1
+    },
+    {
+      "q": "Respecto a la densidad de puerto  de un switch, indica la afirmación errónea.",
+      "a": [
+        "Las altas densidades de puerto permiten un mejor uso del espacio y de la energía cuando la fuente de ambos es limitada",
+        "Todas las a rmaciones son correctas",
+        "Los switches modulares pueden admitir densidades de puerto muy altas mediante el agregado de tarjetas de línea de puerto de switch múltiples",
+        "Es el número de puertos disponibles en un sólo switch"
+      ],
+      "answer": 2
+    }
+  ]
+}
