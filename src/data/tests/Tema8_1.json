@@ -1,0 +1,308 @@
+{
+  "title": "Tema8_1",
+  "career": "Ingeniería Informática",
+  "year": "Cuarto año",
+  "subject": "Redes_2",
+  "questions": [
+    {
+      "q": "¿Qué característica describe a cada VLAN en una red conmutada?",
+      "a": [
+      "Son parte del mismo dominio de difusión.",
+      "Pueden comunicarse directamente entre sí sin un dispositivo de Capa 3.",
+      "Están asociadas a una red IP diferente.",
+      "Requieren un Switch de Capa 2 para realizar el enrutamiento entre ellas."
+      ],
+      "answer": 3
+      },
+      {
+      "q": "¿Qué dispositivo es necesario para permitir la comunicación entre estaciones ubicadas en diferentes VLANs?",
+      "a": [
+      "Otro Switch",
+      "Un Router",
+      "Un Hub",
+      "Un Repetidor"
+      ],
+      "answer": 2
+      },
+      {
+      "q": "En el enrutamiento Inter-VLAN tradicional, ¿cuántas interfaces físicas del Router se conectan normalmente al Switch si hay N VLANs que necesitan enrutamiento?",
+      "a": [
+      "1",
+      "N",
+      "N+1",
+      "2N"
+      ],
+      "answer": 2
+      },
+      {
+      "q": "Cuando se configura el enrutamiento Inter-VLAN tradicional en el Switch, ¿cómo se configura el puerto del Switch conectado a un host que pertenece a una VLAN específica?",
+      "a": [
+      "Como puerto troncal (trunk).",
+      "Como puerto de acceso asignado a esa VLAN.",
+      "Como puerto enrutado (routed port).",
+      "Como parte de un EtherChannel."
+      ],
+      "answer": 2
+      },
+      {
+      "q": "Según las fuentes, en el enrutamiento Inter-VLAN tradicional, ¿se realizan configuraciones de VLAN directamente en el Router?",
+      "a": [
+      "Sí, siempre.",
+      "No, el Router solo maneja las direcciones IP de cada red/VLAN.",
+      "Solo para la VLAN nativa.",
+      "Solo para los enlaces troncales."
+      ],
+      "answer": 2
+      },
+      {
+      "q": "¿Cuál es una limitación importante del enrutamiento Inter-VLAN tradicional mencionada en las fuentes?",
+      "a": [
+      "La complejidad de la configuración del Switch.",
+      "El alto coste de los Routers.",
+      "El requisito de una interfaz física del Router por cada VLAN a enrutar.",
+      "La limitación del número de VLANs que un Switch puede soportar."
+      ],
+      "answer": 3
+      },
+      {
+      "q": "¿Cuál es la principal motivación para implementar el enrutamiento Inter-VLAN mediante 'Router on a Stick'?",
+      "a": [
+      "Aumentar la seguridad entre VLANs.",
+      "Mejorar la velocidad del enrutamiento.",
+      "Superar la limitación de interfaces físicas en el Router del método tradicional.",
+      "Eliminar la necesidad de configurar VLANs en el Switch."
+      ],
+      "answer": 3
+      },
+      {
+      "q": "¿Qué son las subinterfaces en el contexto de 'Router on a Stick'?",
+      "a": [
+      "Interfaces físicas adicionales del Router.",
+      "Interfaces virtuales basadas en hardware.",
+      "Interfaces virtuales basadas en software asignadas a una interfaz física.",
+      "Puertos del Switch configurados para enrutamiento."
+      ],
+      "answer": 3
+      },
+      {
+      "q": "¿Cuál es la sintaxis típica utilizada para nombrar una subinterfaz?",
+      "a": [
+      "fa0/0-10",
+      "fa0.0.10",
+      "fa0/0:10",
+      "fa0/0.10"
+      ],
+      "answer": 4
+      },
+      {
+      "q": "¿Qué tipo de enlace se configura entre el Switch y el Router cuando se utiliza el método 'Router on a Stick'?",
+      "a": [
+      "Un enlace de acceso para una VLAN.",
+      "Un enlace troncal (trunk) utilizando 802.1Q.",
+      "Un enlace enrutado (Layer 3).",
+      "Múltiples enlaces de acceso, uno por cada VLAN."
+      ],
+      "answer": 2
+      },
+      {
+      "q": "¿Qué protocolo de encapsulación se configura en las subinterfaces del Router para 'Router on a Stick'?",
+      "a": [
+      "ISL",
+      "STP",
+      "802.1Q",
+      "VTP"
+      ],
+      "answer": 3
+      },
+      {
+      "q": "Según las fuentes, ¿qué ventaja presenta el uso de subinterfaces frente a interfaces físicas para el enrutamiento Inter-VLAN?",
+      "a": [
+      "Mayor ancho de banda dedicado por VLAN.",
+      "Procesamiento del enrutamiento en hardware.",
+      "Configuración del cableado menos compleja.",
+      "Mayor coste de implementación."
+      ],
+      "answer": 3
+      },
+      {
+      "q": "Según las fuentes, ¿qué desventaja presenta el uso de subinterfaces frente a interfaces físicas para el enrutamiento Inter-VLAN?",
+      "a": [
+      "El número de VLANs que se pueden configurar es limitado.",
+      "Existe contención (compartición) del ancho de banda del enlace físico.",
+      "La configuración en el Router es más simple.",
+      "No es necesario configurar enlaces troncales."
+      ],
+      "answer": 2
+      },
+      {
+      "q": "¿Cuál es una de las motivaciones clave para la aparición de los Switchs Multicapa (MLS) para el enrutamiento Inter-VLAN?",
+      "a": [
+      "Reducir la densidad de puertos de los dispositivos.",
+      "Que el enrutamiento Inter-VLAN se realice por software para mayor flexibilidad.",
+      "Proporcionar una alternativa más rápida al Router para el tráfico interno entre VLANs.",
+      "Eliminar la necesidad de configurar direcciones IP."
+      ],
+      "answer": 3
+      },
+      {
+      "q": "¿Qué característica importante define la forma en que un Switch Multicapa (MLS) realiza el enrutamiento/conmutación entre VLANs?",
+      "a": [
+      "Utiliza exclusivamente procesamiento por software.",
+      "Requiere siempre un Router externo para cualquier tipo de enrutamiento.",
+      "El proceso se realiza por hardware en lugar de software.",
+      "Solo puede enrutar entre dos VLANs a la vez."
+      ],
+      "answer": 3
+      },
+      {
+      "q": "¿Qué significa SVI (Switch Virtual Interface) en el contexto de un Switch Multicapa?",
+      "a": [
+      "Una interfaz física del Switch utilizada para conectar hosts.",
+      "Una interfaz usada únicamente para la gestión remota del Switch.",
+      "Una interfaz virtual definida en el equipo y asociada a una VLAN concreta, a la que se le asigna una IP.",
+      "Una interfaz de loopback utilizada para probar la conectividad."
+      ],
+      "answer": 3
+      },
+      {
+      "q": "¿Para qué se utiliza principalmente la configuración de una SVI en un Switch Multicapa?",
+      "a": [
+      "Para asignar un puerto físico a una VLAN de acceso.",
+      "Para crear un enlace troncal entre Switches.",
+      "Para dotar de una dirección IP a una VLAN y permitir que el MLS enrute para esa red.",
+      "Para configurar parámetros de seguridad de Capa 2."
+      ],
+      "answer": 3
+      },
+      {
+      "q": "¿Qué comando se utiliza típicamente en un Switch Multicapa para habilitar la funcionalidad de enrutamiento IP?",
+      "a": [
+      "router ospf 1",
+      "ip routing",
+      "switchport mode routed",
+      "enable secret"
+      ],
+      "answer": 2
+      },
+      {
+      "q": "En la configuración de un Switch Multicapa, ¿cómo se configura la interfaz física que conecta al Router externo?",
+      "a": [
+      "Como puerto troncal (trunk).",
+      "Como puerto de acceso.",
+      "Como puerto enrutado (deshabilitando 'switchport').",
+      "Como una SVI."
+      ],
+      "answer": 3
+      },
+      {
+      "q": "Según las fuentes, en una red jerárquica que utiliza Switchs Multicapa, ¿en qué capa de la jerarquía debería realizarse el enrutamiento Inter-VLAN?",
+      "a": [
+      "En la capa de Acceso.",
+      "En la capa de Distribución.",
+      "En la capa de Núcleo.",
+      "En el Router externo."
+      ],
+      "answer": 2
+      },
+      {
+      "q": "En una red jerárquica con Switchs Multicapa, ¿cuál es el rol principal del Router?",
+      "a": [
+      "Realizar el enrutamiento entre todas las VLANs internas.",
+      "Proporcionar servicios de Capa 2 a los Switchs de Acceso.",
+      "Gestionar la base de datos de VLANs (VTP).",
+      "Encaminar el tráfico hacia redes externas (como Internet)."
+      ],
+      "answer": 4
+      },
+      {
+      "q": "¿Cuál de los siguientes es un beneficio de usar Switchs Multicapa en redes jerárquicas?",
+      "a": [
+      "Aumento del número de dominios de difusión.",
+      "El enrutamiento entre LANs y VLANs se realiza de forma más rápida.",
+      "Simplificación de la configuración del Spanning Tree Protocol (STP).",
+      "La necesidad de Routers en el Núcleo se elimina por completo."
+      ],
+      "answer": 2
+      },
+      {
+      "q": "En el diagrama de enrutamiento Inter-VLAN tradicional [1], ¿cuál es la dirección IP configurada en la interfaz del Router (R1) conectada a la red VLAN 10?",
+      "a": [
+      "172.17.10.21",
+      "172.17.10.1",
+      "172.17.10.0/24",
+      "172.17.20.1"
+      ],
+      "answer": 2
+      },
+      {
+      "q": "Observando el diagrama del 'Router on a Stick' [2], ¿cuál es la red IP asociada a la VLAN 20?",
+      "a": [
+      "172.17.10.0 / 24",
+      "172.17.20.0 / 24",
+      "172.17.30.0 / 24",
+      "172.17.20.1 / 24"
+      ],
+      "answer": 2
+      },
+      {
+      "q": "En la configuración de un Switch Multicapa, ¿qué comando se utiliza en la interfaz física conectada al Router externo para que funcione a Nivel 3 en lugar de Nivel 2?",
+      "a": [
+      "switchport mode access",
+      "switchport mode trunk",
+      "no switchport",
+      "shutdown"
+      ],
+      "answer": 3
+      },
+      {
+      "q": "En la tabla de encaminamiento del 'Router on a Stick' mostrada [3], ¿qué subinterfaz se utiliza para enrutar el tráfico destinado a la red 172.17.30.0/24?",
+      "a": [
+      "F0/0.10",
+      "F0/0.20",
+      "F0/0.30",
+      "F0/1"
+      ],
+      "answer": 3
+      },
+      {
+      "q": "¿Qué especifica el comando `encapsulation dot1Q 10` configurado en una subinterfaz de Router?",
+      "a": [
+      "Asigna la subinterfaz a la VLAN 10 y define el tipo de encapsulación.",
+      "Establece la dirección IP para la VLAN 10.",
+      "Habilita el enrutamiento para la VLAN 10.",
+      "Crea un enlace troncal que solo transporta tráfico de la VLAN 10."
+      ],
+      "answer": 1
+      },
+      {
+      "q": "¿Cuál de los siguientes temas se menciona en la sección 'Repaso' como tratado en lecciones anteriores?",
+      "a": [
+      "Protocolos de enrutamiento dinámico como OSPF.",
+      "Seguridad en redes inalámbricas.",
+      "Introducción a las Redes Jerárquicas.",
+      "Configuración de firewalls."
+      ],
+      "answer": 3
+      },
+      {
+      "q": "Según las fuentes, si un host en una VLAN (por ejemplo, Host_A) necesita comunicarse con un host en una VLAN diferente (por ejemplo, 172.17.30.22), ¿a dónde debe enviar el paquete inicialmente?",
+      "a": [
+      "Directamente al host de destino.",
+      "A su puerta de enlace predeterminada (el Router).",
+      "Al Switch de acceso.",
+      "Una difusión (broadcast) a todas las VLANs."
+      ],
+      "answer": 2
+      },
+      {
+      "q": "¿Qué dispositivo, según las fuentes, está más enfocado a la interconexión con otras redes externas que al tráfico interno entre VLANs?",
+      "a": [
+      "Un Switch de Capa 2.",
+      "Un Switch Multicapa.",
+      "Un Router.",
+      "Un concentrador (Hub)."
+      ],
+      "answer": 3
+      }
+  ]
+}

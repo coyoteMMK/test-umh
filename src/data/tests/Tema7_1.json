@@ -1,0 +1,308 @@
+{
+  "title": "Tema7_1",
+  "career": "Ingeniería Informática",
+  "year": "Cuarto año",
+  "subject": "Redes_2",
+  "questions": [
+    {
+      "q": "¿Cuál es el propósito principal del Protocolo VTP?",
+      "a": [
+        "Enrutar tráfico entre VLANs",
+        "Asignar direcciones IP dinámicamente",
+        "Distribuir y sincronizar la información de la VLAN a los switches habilitados por VTP",
+        "Detectar bucles en la red"
+      ],
+      "answer": 3
+    },
+    {
+      "q": "¿Cuál de los siguientes NO es un beneficio mencionado de VTP?",
+      "a": [
+        "Consistencia en la configuración VLAN",
+        "Reducción del tráfico de difusión (broadcast)",
+        "Informes dinámicos en una red",
+        "Configuración de enlace troncal dinámico cuando las VLAN se agregan"
+      ],
+      "answer": 2
+    },
+    {
+      "q": "¿Qué componente de VTP se refiere a la agrupación lógica de uno o más switches conmutados que comparten la misma base de datos de VLAN de VTP?",
+      "a": [
+        "Modo VTP",
+        "Publicación VTP",
+        "Dominio VTP",
+        "Depuración VTP"
+      ],
+      "answer": 3
+    },
+    {
+      "q": "¿En qué modo VTP un switch puede crear, modificar y eliminar VLANs, y anuncia la configuración de VLAN a otros switches en el mismo dominio VTP?",
+      "a": [
+        "Cliente",
+        "Transparente",
+        "Servidor",
+        "Proxy"
+      ],
+      "answer": 3
+    },
+    {
+      "q": "¿En qué modo VTP un switch no participa en VTP, no anuncia sus VLANs ni sincroniza las de otros switches, pero reenvía publicaciones VTP que recibe por sus puertos troncales?",
+      "a": [
+        "Cliente",
+        "Transparente",
+        "Servidor",
+        "Depuración"
+      ],
+      "answer": 2
+    },
+    {
+      "q": "¿En qué modo VTP un switch recibe actualizaciones de VLAN de un servidor VTP y no puede crear, modificar o eliminar VLANs localmente?",
+      "a": [
+        "Cliente",
+        "Transparente",
+        "Servidor",
+        "Primario"
+      ],
+      "answer": 1
+    },
+    {
+      "q": "¿Qué valor identifica una trama VTP en el campo DSAP/LSAP y en el campo de control de la trama 802.2?",
+      "a": [
+        "0x00",
+        "0x42",
+        "0xAA",
+        "0x8100"
+      ],
+      "answer": 2
+    },
+    {
+      "q": "¿Cuál es el campo clave en la trama VTP que indica el tipo de mensaje VTP (resumen, subconjunto, petición, etc.)?",
+      "a": [
+        "Versión",
+        "Dominio de Administración VTP",
+        "Tipo de Mensaje",
+        "Número de Secuencia de Revisión"
+      ],
+      "answer": 3
+    },
+    {
+      "q": "¿Qué identificador se utiliza para determinar si una publicación VTP es más reciente que la configuración actual en un switch?",
+      "a": [
+        "Checksum",
+        "Número de Secuencia de Revisión",
+        "Nombre de Dominio VTP",
+        "ID de VLAN"
+      ],
+      "answer": 2
+    },
+    {
+      "q": "¿Qué tipo de publicación VTP incluye el nombre del dominio VTP, el número de revisión de configuración actual y un valor de checksum?",
+      "a": [
+        "Publicación de Subconjunto",
+        "Publicación de Resumen",
+        "Publicación de Petición",
+        "Publicación de Detalles"
+      ],
+      "answer": 2
+    },
+    {
+      "q": "¿Qué tipo de publicación VTP contiene la información detallada de la lista de VLANs activas, incluyendo los IDs de VLAN y los nombres de las VLANs?",
+      "a": [
+        "Publicación de Resumen",
+        "Publicación de Subconjunto",
+        "Publicación de Petición",
+        "Publicación de Dominio"
+      ],
+      "answer": 2
+    },
+    {
+      "q": "¿Qué tipo de publicación VTP se envía cuando un switch cliente VTP necesita información de configuración de VLAN?",
+      "a": [
+        "Publicación de Resumen",
+        "Publicación de Subconjunto",
+        "Publicación de Petición",
+        "Publicación de Anuncio"
+      ],
+      "answer": 3
+    },
+    {
+      "q": "¿Cómo responde un switch servidor VTP o transparente a una publicación de petición VTP?",
+      "a": [
+        "Ignora la petición",
+        "Envía una publicación de Resumen y luego una o más publicaciones de Subconjunto",
+        "Solo envía una publicación de Resumen",
+        "Responde con otra publicación de Petición"
+      ],
+      "answer": 2
+    },
+    {
+      "q": "¿Qué campo en la publicación de resumen VTP se utiliza para verificar la validez de la publicación y la consistencia de la configuración del dominio?",
+      "a": [
+        "Número de Secuencia de Revisión",
+        "Nombre del Dominio VTP",
+        "Código de Seguridad VTP",
+        "Checksum"
+      ],
+      "answer": 4
+    },
+    {
+      "q": "Si un switch recibe una publicación VTP con un número de secuencia de revisión más alto que el suyo, ¿qué acción toma si está en modo Cliente o Servidor?",
+      "a": [
+        "Descarta la publicación",
+        "Actualiza su configuración de VLAN con la información recibida",
+        "Pasa al modo Transparente",
+        "Envía una publicación de petición"
+      ],
+      "answer": 2
+    },
+    {
+      "q": "¿Qué sucede si un switch recibe una publicación VTP con un número de secuencia de revisión igual o menor que el suyo?",
+      "a": [
+        "Actualiza su configuración de VLAN",
+        "Descarta la publicación (a menos que sea una petición)",
+        "Envía su propia configuración a los demás",
+        "Incrementa su número de secuencia de revisión"
+      ],
+      "answer": 2
+    },
+    {
+      "q": "¿Qué ocurre con las configuraciones de VLAN en un switch en modo Transparente VTP?",
+      "a": [
+        "Las aprende de otros switches VTP",
+        "Las sincroniza con el servidor VTP",
+        "Las mantiene localmente y no las comparte ni las aprende de otros",
+        "No puede tener configuraciones de VLAN"
+      ],
+      "answer": 3
+    },
+    {
+      "q": "¿Puede un switch en modo Transparente VTP reenviar publicaciones VTP que recibe?",
+      "a": [
+        "No, las descarta",
+        "Sí, si el nombre del dominio VTP coincide",
+        "Sí, independientemente del nombre del dominio VTP",
+        "Sí, pero solo las publicaciones de resumen"
+      ],
+      "answer": 3
+    },
+    {
+      "q": "¿Cuál es el estado inicial de un switch Cisco Catalyst con respecto a VTP cuando arranca por primera vez?",
+      "a": [
+        "Modo Servidor, sin dominio VTP configurado",
+        "Modo Cliente, dominio 'cisco'",
+        "Modo Transparente, sin dominio",
+        "Modo Servidor, dominio 'cisco'"
+      ],
+      "answer": 1
+    },
+    {
+      "q": "¿Qué sucede cuando se configura un nombre de dominio VTP en un switch que no tenía uno previamente?",
+      "a": [
+        "El número de revisión se mantiene en 0",
+        "El número de revisión se establece en 1",
+        "El switch pasa automáticamente a modo Servidor",
+        "El switch descarta todas sus VLANs existentes"
+      ],
+      "answer": 2
+    },
+    {
+      "q": "¿Si dos switches tienen configurado el mismo nombre de dominio VTP pero diferentes contraseñas, ¿podrán sincronizar su información de VLAN?",
+      "a": [
+        "Sí, la contraseña no afecta la sincronización",
+        "Sí, si los números de revisión coinciden",
+        "No, la contraseña debe ser la misma para la comunicación VTP",
+        "Solo si uno está en modo servidor y el otro en modo cliente"
+      ],
+      "answer": 3
+    },
+    {
+      "q": "¿Qué comando se utiliza en el modo de configuración global para establecer el nombre de dominio VTP?",
+      "a": [
+        "vtp mode server",
+        "vtp domain <nombre>",
+        "vtp password <contraseña>",
+        "show vtp status"
+      ],
+      "answer": 2
+    },
+    {
+      "q": "¿Qué comando se utiliza para establecer la contraseña VTP?",
+      "a": [
+        "vtp mode transparent",
+        "vtp domain <nombre>",
+        "vtp password <contraseña>",
+        "vtp version 2"
+      ],
+      "answer": 3
+    },
+    {
+      "q": "¿Qué comando se utiliza para cambiar el modo VTP de un switch?",
+      "a": [
+        "vtp mode <modo>",
+        "vtp domain <nombre>",
+        "vtp password <contraseña>",
+        "show vtp status"
+      ],
+      "answer": 1
+    },
+    {
+      "q": "¿Qué información muestra principalmente el comando 'show vtp status'?",
+      "a": [
+        "La lista de VLANs configuradas",
+        "El estado operativo de los puertos",
+        "El número de secuencia de revisión, el modo VTP y el nombre del dominio VTP",
+        "Las direcciones MAC aprendidas"
+      ],
+      "answer": 3
+    },
+    {
+      "q": "¿En qué modo VTP se ignoran las publicaciones VTP recibidas y no se envían publicaciones propias, ni siquiera se reenvían?",
+      "a": [
+        "Cliente",
+        "Servidor",
+        "Apagado (Off)",
+        "Transparente"
+      ],
+      "answer": 3
+    },
+    {
+      "q": "¿Cuál es el principal riesgo al añadir un switch nuevo o usado a una red con VTP activo sin verificar su configuración previa?",
+      "a": [
+        "Puede no recibir las configuraciones de VLAN",
+        "Puede introducir un número de revisión de configuración más alto y sobrescribir la configuración existente",
+        "Puede causar un bucle de enrutamiento",
+        "Puede consumir todo el ancho de banda del enlace troncal"
+      ],
+      "answer": 2
+    },
+    {
+      "q": "¿Qué práctica se recomienda antes de conectar un switch nuevo o usado a una red VTP?",
+      "a": [
+        "Configurarlo inmediatamente en modo Servidor",
+        "Establecer una contraseña VTP diferente a la de la red",
+        "Cambiar su número de secuencia de revisión a un valor muy alto",
+        "Configurarlo en modo Transparente o Apagado temporalmente, o borrar su archivo vlan.dat"
+      ],
+      "answer": 4
+    },
+    {
+      "q": "¿Qué comando se puede usar para eliminar el archivo vlan.dat en la memoria flash de un switch?",
+      "a": [
+        "erase startup-config",
+        "delete vlan.dat",
+        "format flash:",
+        "write erase"
+      ],
+      "answer": 2
+    },
+    {
+      "q": "¿Qué tipo de puerto se necesita para que los switches intercambien información VTP?",
+      "a": [
+        "Puerto de acceso",
+        "Puerto de administración",
+        "Puerto de consola",
+        "Puerto de enlace troncal (trunk)"
+      ],
+      "answer": 4
+    }
+  ]
+}

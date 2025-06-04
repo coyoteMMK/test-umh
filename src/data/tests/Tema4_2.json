@@ -1,0 +1,308 @@
+{
+  "title": "Tema4_2",
+  "career": "Ingeniería Informática",
+  "year": "Cuarto año",
+  "subject": "Redes_2",
+  "questions": [
+    {
+      "q": "¿Cuál es el objetivo principal de aprender sobre el enrutamiento inter-VLAN en este tema?",
+      "a": [
+        "Simplificar la administración de VLANs con VTP.",
+        "Limitar el ámbito de los dominios de broadcast.",
+        "Permitir la comunicación entre dispositivos en VLANs separadas.",
+        "Diseñar redes jerárquicas más eficientes."
+      ],
+      "answer": 3
+    },
+    {
+      "q": "¿Qué modelo de diseño de red se considera más exitoso para construir LANs de pequeñas o medianas empresas?",
+      "a": [
+        "Modelo de red plana.",
+        "Modelo de malla completa.",
+        "Modelo de red jerárquica.",
+        "Modelo de núcleo colapsado."
+      ],
+      "answer": 3
+    },
+    {
+      "q": "¿Cuáles son las tres capas del modelo de diseño de red jerárquico típico?",
+      "a": [
+        "Núcleo, Acceso, Borde.",
+        "Acceso, Distribución, Núcleo.",
+        "LAN, WAN, MAN.",
+        "Servicio, Transporte, Aplicación."
+      ],
+      "answer": 2
+    },
+    {
+      "q": "¿Qué capa de la red jerárquica interactúa directamente con dispositivos finales como PCs, impresoras y teléfonos IP?",
+      "a": [
+        "Capa Núcleo.",
+        "Capa de Distribución.",
+        "Capa de Acceso.",
+        "Capa de Borde."
+      ],
+      "answer": 3
+    },
+    {
+      "q": "¿Cuál es el propósito principal de la capa de acceso?",
+      "a": [
+        "Controlar el flujo de tráfico de la red con políticas.",
+        "Agregar datos recibidos de los switches de distribución.",
+        "Proporcionar un medio de conexión para los dispositivos a la red y controlar su comunicación.",
+        "Ser la backbone de alta velocidad de la internetwork."
+      ],
+      "answer": 3
+    },
+    {
+      "q": "¿Qué capa agrega los datos de los switches de la capa de acceso antes de enviarlos a la capa núcleo?",
+      "a": [
+        "Capa Núcleo.",
+        "Capa de Distribución.",
+        "Capa de Acceso.",
+        "Capa de Servicio."
+      ],
+      "answer": 2
+    },
+    {
+      "q": "¿Qué capa controla el flujo de tráfico de la red mediante políticas y traza los dominios de broadcast al enrutar entre VLANs?",
+      "a": [
+        "Capa Núcleo.",
+        "Capa de Acceso.",
+        "Capa de Servicio.",
+        "Capa de Distribución."
+      ],
+      "answer": 4
+    },
+    {
+      "q": "¿Cómo se describe la capa núcleo del diseño jerárquico?",
+      "a": [
+        "La capa donde se conectan los dispositivos finales.",
+        "La capa que agrega el tráfico de los switches de acceso.",
+        "La backbone de alta velocidad de la internetwork.",
+        "La capa donde se aplican las políticas de seguridad."
+      ],
+      "answer": 3
+    },
+    {
+      "q": "¿Por qué es importante que el núcleo (capa núcleo) sea sumamente disponible y redundante?",
+      "a": [
+        "Para permitir que los dispositivos finales se conecten directamente.",
+        "Porque es esencial para la interconectividad entre los dispositivos de la capa de distribución.",
+        "Para controlar el flujo de tráfico con políticas.",
+        "Para agregar el tráfico de la capa de acceso."
+      ],
+      "answer": 2
+    },
+    {
+      "q": "¿Qué significa el modelo de 'núcleo colapsado' en redes jerárquicas?",
+      "a": [
+        "Combinar la capa de acceso y la de distribución.",
+        "Eliminar la capa núcleo por completo.",
+        "Combinar la capa de distribución y la capa núcleo en una sola capa.",
+        "Usar solo una capa para toda la red."
+      ],
+      "answer": 3
+    },
+    {
+      "q": "¿Cuál es un beneficio clave del diseño de red jerárquico en cuanto al crecimiento de la red?",
+      "a": [
+        "Reducción del costo del cableado.",
+        "Mayor número de dispositivos finales por switch.",
+        "Escalabilidad facilitada por la modularidad del diseño.",
+        "Eliminación de la necesidad de VLANs."
+      ],
+      "answer": 3
+    },
+    {
+      "q": "¿Cómo se logra la redundancia de ruta en las capas de distribución y núcleo en una red jerárquica?",
+      "a": [
+        "Conectando cada switch a un único switch de la capa superior.",
+        "Duplicando solo los dispositivos finales.",
+        "Conectando switches de una capa a dos o más switches diferentes de la siguiente capa.",
+        "Implementando mallas completas en la capa de acceso."
+      ],
+      "answer": 3
+    },
+    {
+      "q": "¿En qué capa la redundancia suele estar limitada para los dispositivos de nodo final?",
+      "a": [
+        "Capa Núcleo.",
+        "Capa de Distribución.",
+        "Capa de Acceso.",
+        "Capa de Servicio."
+      ],
+      "answer": 3
+    },
+    {
+      "q": "¿Cómo mejora el rendimiento la comunicación en una red jerárquica?",
+      "a": [
+        "Forzando todo el tráfico a través de la capa de acceso.",
+        "Evitando la transmisión de datos a través de switches intermediarios de bajo rendimiento.",
+        "Limitando el ancho de banda disponible en cada capa.",
+        "Realizando todo el enrutamiento en la capa de acceso."
+      ],
+      "answer": 2
+    },
+    {
+      "q": "¿Qué característica de seguridad se puede configurar en los switches de la capa de acceso para controlar qué dispositivos se conectan?",
+      "a": [
+        "Políticas de enrutamiento avanzadas.",
+        "Opciones de seguridad del puerto.",
+        "Firewalls integrados.",
+        "Agregado de enlaces (EtherChannel)."
+      ],
+      "answer": 2
+    },
+    {
+      "q": "¿Dónde se suelen aplicar las políticas de control de acceso más avanzadas que definen qué protocolos de comunicación se permiten?",
+      "a": [
+        "Capa de Acceso.",
+        "Dispositivos finales.",
+        "Capa de Distribución.",
+        "Capa Núcleo."
+      ],
+      "answer": 3
+    },
+    {
+      "q": "¿Por qué la facilidad de administración es una ventaja de las redes jerárquicas?",
+      "a": [
+        "Cada capa tiene funciones específicas y consistentes.",
+        "Requieren menos dispositivos en total.",
+        "No necesitan documentación de configuración.",
+        "Solo se requiere un único switch para toda la red."
+      ],
+      "answer": 1
+    },
+    {
+      "q": "¿Cómo facilita el mantenimiento la naturaleza modular de las redes jerárquicas?",
+      "a": [
+        "Requiere switches de alto rendimiento en todas las capas.",
+        "Son más complejas de administrar a medida que crecen.",
+        "Hace que sean fáciles de mantener y escalar.",
+        "Elimina la necesidad de reemplazar equipos antiguos."
+      ],
+      "answer": 3
+    },
+    {
+      "q": "Según el texto, ¿qué es el 'diámetro de la red' en el diseño jerárquico?",
+      "a": [
+        "La distancia geográfica máxima cubierta por la red.",
+        "La cantidad total de ancho de banda disponible.",
+        "El número de dispositivos que un paquete debe cruzar para alcanzar su destino.",
+        "El número de cables utilizados en la red."
+      ],
+      "answer": 3
+    },
+    {
+      "q": "¿Cuál es la práctica de considerar los requisitos de ancho de banda específicos de cada parte de la jerarquía y agregar enlaces entre switches?",
+      "a": [
+        "Redundancia.",
+        "Análisis de comunidades de usuarios.",
+        "Agregado de ancho de banda / Agregado de enlaces.",
+        "Segmentación de VLANs."
+      ],
+      "answer": 3
+    },
+    {
+      "q": "¿Cómo se llama la tecnología de Cisco para el agregado de enlaces que permite combinar múltiples enlaces de Ethernet?",
+      "a": [
+        "StackWise.",
+        "VTP.",
+        "EtherChannel.",
+        "PoE."
+      ],
+      "answer": 3
+    },
+    {
+      "q": "¿Qué es la 'convergencia' en el contexto de redes?",
+      "a": [
+        "La combinación de la capa de distribución y núcleo.",
+        "El proceso de combinar comunicaciones de voz, video y datos en una sola red.",
+        "El uso de switches de configuración fija.",
+        "El análisis del tráfico cliente-servidor."
+      ],
+      "answer": 2
+    },
+    {
+      "q": "Según el texto, ¿cuál es una ventaja de tener una red convergente en lugar de redes separadas para voz, video y datos?",
+      "a": [
+        "Mayor complejidad de administración.",
+        "Costos de implementación y administración más altos.",
+        "Solo se necesita administrar una infraestructura.",
+        "No se necesita equipo de red especializado."
+      ],
+      "answer": 3
+    },
+    {
+      "q": "¿Qué permite la tecnología PoE (Power over Ethernet)?",
+      "a": [
+        "Combinar múltiples enlaces físicos de Ethernet.",
+        "Suministrar energía a un dispositivo a través del cableado de Ethernet existente.",
+        "Apilar switches para que operen como uno solo.",
+        "Procesar datos en la Capa 3 del modelo OSI."
+      ],
+      "answer": 2
+    },
+    {
+      "q": "¿Qué implica el 'Análisis de las comunidades de usuarios'?",
+      "a": [
+        "Determinar el número total de dispositivos en la red.",
+        "Identificar grupos de usuarios y su influencia en el rendimiento de la red y el flujo de tráfico.",
+        "Medir la velocidad de reenvío de los switches.",
+        "Documentar la interconexión física de los switches."
+      ],
+      "answer": 2
+    },
+    {
+      "q": "¿Por qué la ubicación de los recursos (servidores, almacenamiento) es importante en el diseño de red según el análisis de comunidades de usuarios?",
+      "a": [
+        "No afecta el rendimiento de la red.",
+        "Para reducir el diámetro de la red y el impacto del tráfico en el resto de la red.",
+        "Para facilitar la administración remota.",
+        "Solo es relevante en redes planas."
+      ],
+      "answer": 2
+    },
+    {
+      "q": "¿Qué es un 'diagrama de topología'?",
+      "a": [
+        "Un análisis del tráfico de red por aplicación.",
+        "Una representación gráfica de la infraestructura de una red que muestra la interconexión de dispositivos.",
+        "Un modelo de las capas jerárquicas de la red.",
+        "Una lista de todos los dispositivos y sus direcciones IP."
+      ],
+      "answer": 2
+    },
+    {
+      "q": "¿Qué define la 'densidad del puerto' de un switch?",
+      "a": [
+        "La velocidad máxima de transmisión de datos de sus puertos.",
+        "El número de dispositivos que pueden conectarse a él.",
+        "El número de puertos disponibles en un solo switch.",
+        "La cantidad de energía que consume el switch."
+      ],
+      "answer": 3
+    },
+    {
+      "q": "¿Qué son los 'switches de configuración fija'?",
+      "a": [
+        "Switches cuyas características y opciones no se pueden agregar después de la compra.",
+        "Switches que se pueden interconectar con un cable especial para alto rendimiento.",
+        "Switches que vienen con chasis de diferentes tamaños para tarjetas de línea modulares.",
+        "Switches que operan principalmente en la Capa 3 del modelo OSI."
+      ],
+      "answer": 1
+    },
+    {
+      "q": "¿Qué tipo de switch ofrece más flexibilidad en su configuración mediante el uso de tarjetas de línea?",
+      "a": [
+        "Switch de configuración fija.",
+        "Switch apilable.",
+        "Switch modular.",
+        "Switch de Capa 2."
+      ],
+      "answer": 3
+    }
+  ]
+}

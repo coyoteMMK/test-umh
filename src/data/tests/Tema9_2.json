@@ -1,0 +1,308 @@
+{
+  "title": "Tema9_2",
+  "career": "Ingeniería Informática",
+  "year": "Cuarto año",
+  "subject": "Redes_2",
+  "questions": [
+    {
+      "q": "¿Cuál es el servicio principal ofrecido por NNTP (Network News Transfer Protocol), según la fuente?",
+      "a": [
+      "Transferencia de ficheros seguros.",
+      "Acceso a terminales remotos.",
+      "Distribución de noticias a nivel mundial.",
+      "Gestión de bases de datos distribuidas."
+      ],
+      "answer": 3
+      },
+      {
+      "q": "¿Cómo se organizan las noticias dentro del servicio NNTP?",
+      "a": [
+      "En carpetas personales.",
+      "Por etiquetas temáticas.",
+      "En grupos de noticias con organización jerárquica.",
+      "Mediante un sistema de canales numéricos."
+      ],
+      "answer": 3
+      },
+      {
+      "q": "¿Qué similitud se menciona entre el nombre de un grupo de noticias NNTP y el nombre de un host?",
+      "a": [
+      "Ambos son asignados dinámicamente.",
+      "Ambos siguen una organización jerárquica separada por puntos.",
+      "Ambos tienen una longitud máxima de 255 caracteres.",
+      "Ninguna, son completamente diferentes."
+      ],
+      "answer": 2
+      },
+      {
+      "q": "¿Qué formato se describe que tiene una noticia dentro del sistema NNTP?",
+      "a": [
+      "Formato binario propietario.",
+      "Formato de documento HTML.",
+      "Formato similar a un mensaje de correo electrónico (RFC 822).",
+      "Un formato XML específico para noticias."
+      ],
+      "answer": 3
+      },
+      {
+      "q": "¿Cuáles son los dos mecanismos de distribución de noticias mencionados para NNTP?",
+      "a": [
+      "Unicast y Broadcast.",
+      "Síncrono y Asíncrono.",
+      "Directa (listas de correo) y Distribuida.",
+      "Centralizada y Descentralizada."
+      ],
+      "answer": 3
+      },
+      {
+      "q": "En el mecanismo de distribución 'Distribuida' de NNTP, ¿cuál es el rol principal del 'newsfeed server'?",
+      "a": [
+      "Almacenar todas las noticias existentes globalmente.",
+      "Actuar como el cliente que lee las noticias.",
+      "Proporcionar noticias a un servidor local para sincronizar los grupos.",
+      "Generar nuevas noticias automáticamente."
+      ],
+      "answer": 3
+      },
+      {
+      "q": "¿Qué protocolo de transporte y puerto bien conocido utiliza el servicio NNTP?",
+      "a": [
+      "UDP, Puerto 119.",
+      "TCP, Puerto 80.",
+      "TCP, Puerto 119.",
+      "TCP, Puerto 25."
+      ],
+      "answer": 3
+      },
+      {
+      "q": "¿Cómo se describe el formato de comandos y respuestas del protocolo de aplicación NNTP?",
+      "a": [
+      "Están codificados en formato binario.",
+      "Utilizan un formato propietario similar a Gopher.",
+      "Son similares a los usados en SMTP, codificados en ASCII-7 (NVT).",
+      "Se basan en mensajes XML."
+      ],
+      "answer": 3
+      },
+      {
+      "q": "¿Cuáles son los dos tipos principales de respuestas que puede enviar un servidor NNTP?",
+      "a": [
+      "Respuestas de Petición y de Aceptación.",
+      "Respuestas Cifradas y en Texto Plano.",
+      "Respuestas de Estado y de Texto.",
+      "Respuestas de Error y de Confirmación."
+      ],
+      "answer": 3
+      },
+      {
+      "q": "En NNTP, ¿qué secuencia de caracteres se utiliza para indicar el final de una respuesta de texto multi-línea?",
+      "a": [
+      "Una línea en blanco.",
+      "La secuencia <CR><LF><“.”><CR><LF>.",
+      "Un número de fin de mensaje.",
+      "El comando 'END'."
+      ],
+      "answer": 2
+      },
+      {
+      "q": "¿Cuál es el propósito del comando NNTP 'POST'?",
+      "a": [
+      "Solicitar la lista de grupos de noticias.",
+      "Enviar un nuevo artículo a un grupo de noticias.",
+      "Descargar un artículo específico.",
+      "Abandonar la sesión NNTP."
+      ],
+      "answer": 2
+      },
+      {
+      "q": "¿Cuál es el RFC que define la versión 1.1 del protocolo HTTP?",
+      "a": [
+      "RFC 822.",
+      "RFC 1945.",
+      "RFC 2068.",
+      "RFC 977."
+      ],
+      "answer": 3
+      },
+      {
+      "q": "¿Qué característica del protocolo HTTP implica que el servidor no mantiene información sobre las interacciones o el estado previo con un cliente?",
+      "a": [
+      "Usa transporte UDP.",
+      "Es un servicio 'stateless'.",
+      "Requiere conexiones persistentes.",
+      "Se basa en autenticación en cada petición."
+      ],
+      "answer": 2
+      },
+      {
+      "q": "En un mensaje de petición HTTP, ¿cómo se señala el final de las líneas de cabecera antes del posible cuerpo del mensaje?",
+      "a": [
+      "Con una línea que solo contiene un punto.",
+      "Mediante un campo de cabecera 'Content-Length: 0'.",
+      "Añadiendo un CR+LF adicional (una línea en blanco).",
+      "Con la palabra clave 'END-HEADERS'."
+      ],
+      "answer": 3
+      },
+      {
+      "q": "¿Qué información contiene la primera línea de un mensaje de respuesta HTTP?",
+      "a": [
+      "La versión del protocolo HTTP, un código de estado y un texto asociado.",
+      "El nombre del servidor y la fecha.",
+      "La dirección IP del cliente solicitante.",
+      "La lista de objetos solicitados."
+      ],
+      "answer": 1
+      },
+      {
+      "q": "¿Qué código de estado HTTP indica que el mensaje de petición enviado por el cliente era erróneo y el servidor no lo entiende?",
+      "a": [
+      "200 OK.",
+      "301 Moved Permanently.",
+      "400 Bad Request.",
+      "404 Not Found."
+      ],
+      "answer": 3
+      },
+      {
+      "q": "¿Qué código de estado HTTP indica que el documento solicitado no fue encontrado en el servidor?",
+      "a": [
+      "200 OK.",
+      "301 Moved Permanently.",
+      "403 Forbidden.",
+      "404 Not Found."
+      ],
+      "answer": 4
+      },
+      {
+      "q": "¿Qué método HTTP se utiliza típicamente para solicitar un documento o recurso específico al servidor?",
+      "a": [
+      "POST.",
+      "PUT.",
+      "GET.",
+      "DELETE."
+      ],
+      "answer": 3
+      },
+      {
+      "q": "¿Cuál es la diferencia fundamental entre las conexiones HTTP no-persistentes (HTTP/1.0) y persistentes (HTTP/1.1 por defecto)?",
+      "a": [
+      "Las no-persistentes usan UDP, las persistentes usan TCP.",
+      "Las no-persistentes usan una conexión TCP por objeto, las persistentes usan una única conexión TCP para varios objetos.",
+      "Las no-persistentes requieren autenticación en cada petición, las persistentes solo al inicio.",
+      "Las no-persistentes no cierran la conexión, las persistentes sí."
+      ],
+      "answer": 2
+      },
+      {
+      "q": "¿Cuál es una ventaja mencionada del uso de conexiones HTTP persistentes?",
+      "a": [
+      "Mayor seguridad inherente.",
+      "Menos viajes de ida y vuelta (RTTs) y el efecto del 'slow start' de TCP queda restringido.",
+      "Permite la transferencia de archivos de cualquier tamaño.",
+      "Simplifica la implementación del servidor."
+      ],
+      "answer": 2
+      },
+      {
+      "q": "Dado que HTTP es 'stateless', ¿cómo maneja la autenticación de usuarios para acceder a documentos restringidos?",
+      "a": [
+      "La autenticación se realiza en la capa de transporte.",
+      "El servidor mantiene una sesión activa para cada cliente autenticado.",
+      "El cliente debe incluir la información de autenticación en la cabecera de cada petición.",
+      "Se utiliza un protocolo de autenticación separado antes de HTTP."
+      ],
+      "answer": 3
+      },
+      {
+      "q": "Cuando un servidor HTTP requiere autenticación y un cliente la solicita sin proporcionar credenciales, ¿cómo responde el servidor?",
+      "a": [
+      "Con un código de estado 200 OK y una página HTML con un formulario de login.",
+      "Con un código de estado 404 Not Found.",
+      "Con un mensaje de respuesta que incluye el código 401 y una cabecera 'WWW-authenticate:'.",
+      "Cerrando la conexión TCP inmediatamente."
+      ],
+      "answer": 3
+      },
+      {
+      "q": "¿Cuál es el propósito principal de las 'cookies' en HTTP, según la fuente?",
+      "a": [
+      "Cifrar los mensajes entre cliente y servidor.",
+      "Permitir al servidor recordar el estado, preferencias o interacciones previas de un cliente.",
+      "Acelerar la transferencia de datos mediante compresión.",
+      "Realizar un seguimiento de la ubicación geográfica del usuario."
+      ],
+      "answer": 2
+      },
+      {
+      "q": "¿Cómo envía un servidor HTTP una 'cookie' a un cliente?",
+      "a": [
+      "En el cuerpo del mensaje de respuesta.",
+      "En una línea de cabecera 'Set-cookie:' dentro del mensaje de respuesta.",
+      "Mediante un comando específico del protocolo TCP.",
+      "A través de un mensaje UDP separado."
+      ],
+      "answer": 2
+      },
+      {
+      "q": "¿Cuál es el objetivo de la función 'Get' condicional (Conditional GET) en HTTP?",
+      "a": [
+      "Permitir al cliente descargar solo una parte de un documento.",
+      "No enviar un objeto si el cliente ya tiene una copia actualizada en su caché.",
+      "Garantizar la integridad de los datos descargados.",
+      "Solicitar objetos solo si se cumplen ciertas condiciones de red."
+      ],
+      "answer": 2
+      },
+      {
+      "q": "Si un cliente utiliza 'Conditional GET' y el servidor determina que la copia del objeto en caché del cliente está actualizada, ¿qué código de estado HTTP envía típicamente el servidor en su respuesta?",
+      "a": [
+      "200 OK.",
+      "304 Not Modified.",
+      "404 Not Found.",
+      "500 Internal Server Error."
+      ],
+      "answer": 2
+      },
+      {
+      "q": "¿Qué son las 'Caches Web' o 'Servidores proxy', según la fuente?",
+      "a": [
+      "Servidores que autentican a los usuarios antes de acceder a Internet.",
+      "Servidores que cifran todo el tráfico Web para mayor seguridad.",
+      "Servidores configurados para interceptar peticiones del cliente y servir objetos almacenados localmente si están disponibles.",
+      "Servidores que traducen direcciones IP a nombres de dominio."
+      ],
+      "answer": 3
+      },
+      {
+      "q": "¿Cuál es una ventaja clave de usar Caches Web (Servidores proxy)?",
+      "a": [
+      "Eliminar por completo el uso del servidor de origen.",
+      "Garantizar que todos los datos transferidos estén cifrados.",
+      "Reducir el tiempo de respuesta para el cliente y el tráfico en el enlace de acceso a Internet.",
+      "Permitir que los servidores web sean 'stateful'."
+      ],
+      "answer": 3
+      },
+      {
+      "q": "¿Qué aplicación se describe como un sistema que permite compartir directorios (discos) entre distintos hosts en una red?",
+      "a": [
+      "X.500.",
+      "NFS (Network File System).",
+      "BOOTP.",
+      "SNMP."
+      ],
+      "answer": 2
+      },
+      {
+      "q": "¿Qué aplicación permite a un programa ejecutarse en un host remoto ('cliente X-window') y mostrar su interfaz gráfico en el host local ('servidor X-window')?",
+      "a": [
+      "TALK.",
+      "IRC.",
+      "X-Window.",
+      "TELNET."
+      ],
+      "answer": 3
+      }
+  ]
+}

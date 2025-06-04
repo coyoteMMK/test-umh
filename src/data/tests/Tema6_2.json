@@ -1,0 +1,308 @@
+{
+  "title": "Tema6_2",
+  "career": "Ingeniería Informática",
+  "year": "Cuarto año",
+  "subject": "Redes_2",
+  "questions": [
+    {
+      "q": "¿Qué tecnología, además de las VLAN y los enlaces troncales, se menciona como útil para compartir la información de la VLAN a través de múltiples switches y simplificar la administración?",
+      "a": [
+        "CDP",
+        "VTP",
+        "SNMP",
+        "ARP"
+      ],
+      "answer": 2
+    },
+    {
+      "q": "Según el texto, ¿cuál es la pregunta clave que surge una vez que se tiene una red con muchas y diferentes VLAN?",
+      "a": [
+        "¿Cómo se configuran los puertos de acceso?",
+        "¿Cómo se permite la comunicación entre dispositivos en VLAN separadas?",
+        "¿Cómo se asignan direcciones IP a las VLAN?",
+        "¿Cómo se integra VTP con el enrutamiento?"
+      ],
+      "answer": 2
+    },
+    {
+      "q": "Implementar tecnología de VLAN permite que una red soporte de manera más flexible las metas comerciales porque impacta directamente en:",
+      "a": [
+        "La cantidad de cables físicos necesarios",
+        "La productividad del usuario y la adaptabilidad de la red",
+        "La complejidad de la configuración inicial",
+        "La dependencia de routers de capa 3"
+      ],
+      "answer": 2
+    },
+    {
+      "q": "Además de la seguridad, la reducción de costos y la mitigación de tormentas de broadcast, ¿cuál es otro beneficio principal de utilizar VLANs?",
+      "a": [
+        "Mayor velocidad en los enlaces troncales",
+        "Eliminación completa del tráfico de broadcast",
+        "Mejor rendimiento y mayor eficiencia del personal de TI",
+        "Simplificación de los protocolos de enrutamiento dinámico"
+      ],
+      "answer": 3
+    },
+    {
+      "q": "Las VLAN de rango normal se utilizan típicamente en redes de:",
+      "a": [
+        "Grandes proveedores de servicios",
+        "Empresas globales de gran tamaño",
+        "Pequeños y medianos negocios y empresas",
+        "Laboratorios de investigación exclusivamente"
+      ],
+      "answer": 3
+    },
+    {
+      "q": "¿Cuál de los siguientes IDs de VLAN está reservado para VLANs Token Ring y FDDI en el rango normal?",
+      "a": [
+        "1",
+        "1001",
+        "1002 a 1005",
+        "4094"
+      ],
+      "answer": 3
+    },
+    {
+      "q": "¿Dónde se almacenan las configuraciones de las VLAN de rango normal?",
+      "a": [
+        "En la memoria RAM del switch",
+        "En el archivo de configuración en ejecución",
+        "En la memoria NVRAM del switch",
+        "Dentro de un archivo de datos de la VLAN denominado vlan.dat en la memoria flash"
+      ],
+      "answer": 4
+    },
+    {
+      "q": "¿Qué característica distintiva tienen las VLAN de rango extendido en comparación con las de rango normal, además de su ID?",
+      "a": [
+        "Admiten más características de VLAN",
+        "Son administradas por VTP",
+        "Permiten ampliar infraestructuras a más clientes por proveedores de servicios",
+        "Se crean automáticamente y no se pueden eliminar"
+      ],
+      "answer": 3
+    },
+    {
+      "q": "¿Dónde se guardan las configuraciones de las VLAN de rango extendido?",
+      "a": [
+        "En el archivo vlan.dat",
+        "En la memoria flash",
+        "En el archivo de configuración en ejecución",
+        "Son gestionadas centralmente por VTP"
+      ],
+      "answer": 3
+    },
+    {
+      "q": "Según el texto, ¿cuál es la forma fundamental de implementar VLANs hoy en día?",
+      "a": [
+        "VLAN basada en protocolo",
+        "VLAN basada en dirección MAC",
+        "VLAN basada en subred",
+        "VLAN basada en puerto"
+      ],
+      "answer": 4
+    },
+    {
+      "q": "Una VLAN configurada para enviar solo tráfico de datos generado por el usuario se denomina:",
+      "a": [
+        "VLAN de Administración",
+        "VLAN Nativa",
+        "VLAN de Voz",
+        "VLAN de Datos (o VLAN de usuario)"
+      ],
+      "answer": 4
+    },
+    {
+      "q": "En los switches Cisco, ¿cuál es la VLAN predeterminada a la que todos los puertos se convierten en miembros después del arranque inicial?",
+      "a": [
+        "VLAN 1",
+        "VLAN 99",
+        "VLAN 1002",
+        "La primera VLAN creada manualmente"
+      ],
+      "answer": 1
+    },
+    {
+      "q": "¿Qué tipo de tráfico de control de Capa 2 se asocia siempre con la VLAN 1 en un switch Cisco?",
+      "a": [
+        "Tráfico de datos de usuario y de administración",
+        "Tráfico de VoIP y de video",
+        "Tráfico CDP y de spanning tree protocol",
+        "Tráfico de VTP y de enlace troncal"
+      ],
+      "answer": 3
+    },
+    {
+      "q": "¿A qué se asigna una VLAN nativa?",
+      "a": [
+        "A un puerto de acceso 802.1Q",
+        "A un puerto de enlace troncal 802.1Q",
+        "A un puerto configurado para tráfico de voz",
+        "A la SVI del switch"
+      ],
+      "answer": 2
+    },
+    {
+      "q": "En un puerto de enlace troncal 802.1Q, ¿dónde coloca el puerto el tráfico que no llega de una VLAN (tráfico no etiquetado)?",
+      "a": [
+        "Lo descarta",
+        "En la VLAN predeterminada (VLAN 1)",
+        "En la VLAN de administración",
+        "En la VLAN nativa"
+      ],
+      "answer": 4
+    },
+    {
+      "q": "¿Cuál es el propósito principal de una VLAN de administración?",
+      "a": [
+        "Permitir que el tráfico de datos de usuario tenga prioridad",
+        "Acceder a las capacidades de administración de un switch",
+        "Transportar tráfico no etiquetado a través de un enlace troncal",
+        "Aislar el tráfico de broadcast de Layer 2"
+      ],
+      "answer": 2
+    },
+    {
+      "q": "Para acceder a las capacidades de administración de un switch a través de una VLAN de administración, ¿qué se le debe asignar?",
+      "a": [
+        "Un puerto de acceso",
+        "Un enlace troncal 802.1Q",
+        "Una dirección IP y una máscara de subred",
+        "Un servidor VMPS"
+      ],
+      "answer": 3
+    },
+    {
+      "q": "¿Por qué la VLAN 1 podría ser una mala opción como VLAN de administración?",
+      "a": [
+        "No se le puede asignar una dirección IP",
+        "El tráfico de control de Capa 2 siempre está asociado a ella",
+        "Es la VLAN predeterminada, accesible por cualquier puerto después del arranque",
+        "No admite el enrutamiento inter-VLAN"
+      ],
+      "answer": 3
+    },
+    {
+      "q": "¿Qué tipo de tráfico de red requiere ancho de banda garantizado, prioridad de transmisión, capacidad para ser enrutado en áreas congestionadas y menos de 150 ms de demora?",
+      "a": [
+        "Tráfico de datos de usuario",
+        "Tráfico de administración",
+        "Tráfico de VoIP",
+        "Tráfico de video"
+      ],
+      "answer": 3
+    },
+    {
+      "q": "Según el texto, un teléfono IP de Cisco contiene un switch integrado con cuántos puertos?",
+      "a": [
+        "Dos",
+        "Tres",
+        "Cuatro",
+        "Cinco"
+      ],
+      "answer": 2
+    },
+    {
+      "q": "En la configuración de una VLAN de voz con un teléfono IP de Cisco conectado a un switch, ¿qué puerto del switch se configura para que esté en 'modo de voz'?",
+      "a": [
+        "El puerto que se conecta a la PC",
+        "El puerto de enlace troncal",
+        "El puerto que se conecta al teléfono IP de Cisco",
+        "El puerto de administración"
+      ],
+      "answer": 3
+    },
+    {
+      "q": "¿Qué hace un teléfono IP de Cisco cuando un switch le indica que envíe tráfico de voz?",
+      "a": [
+        "Envía el tráfico de voz sin etiquetar",
+        "Etiqueta las tramas de voz con el ID de la VLAN de voz",
+        "Descarta el tráfico de voz que no tiene prioridad",
+        "Envía el tráfico de voz a través de la VLAN de datos"
+      ],
+      "answer": 2
+    },
+    {
+      "q": "Cuando se configura un puerto de switch con una VLAN de voz, ¿cómo funciona el enlace entre el switch y el teléfono IP?",
+      "a": [
+        "Como un puerto de acceso que solo envía tráfico de voz",
+        "Como un puerto de acceso que solo envía tráfico de datos",
+        "Como un enlace troncal para enviar tráfico de voz etiquetado y datos no etiquetados",
+        "Como un enlace de administración dedicado"
+      ],
+      "answer": 3
+    },
+    {
+      "q": "¿Qué son los puertos de switch según el texto?",
+      "a": [
+        "Interfaces de Capa 3 que manejan enrutamiento",
+        "Interfaces de Capa 2 asociadas con un puerto físico",
+        "Dispositivos que manejan tráfico solo en una VLAN",
+        "Interfaces lógicas configuradas para una VLAN específica (SVIs)"
+      ],
+      "answer": 2
+    },
+    {
+      "q": "¿Qué tipo de membresía de puerto de VLAN se configura manualmente, típicamente usando CLI?",
+      "a": [
+        "VLAN dinámica",
+        "VLAN de voz",
+        "VLAN estática",
+        "VLAN nativa"
+      ],
+      "answer": 3
+    },
+    {
+      "q": "¿Qué es un Servidor de Política de Membresía de VLAN (VMPS) utilizado para configurar en redes de producción no tan ampliamente?",
+      "a": [
+        "VLAN estáticas",
+        "VLAN de voz",
+        "VLAN nativas",
+        "VLAN dinámicas"
+      ],
+      "answer": 4
+    },
+    {
+      "q": "¿Qué le sucede a una trama de broadcast desde un host en una VLAN en particular cuando se implementan VLANs en un switch?",
+      "a": [
+        "Se envía a todos los dispositivos en toda la red",
+        "Se limita a los dispositivos presentes en esa misma VLAN",
+        "Se envía solo a la VLAN predeterminada",
+        "Se descarta automáticamente para evitar tormentas"
+      ],
+      "answer": 2
+    },
+    {
+      "q": "¿Qué tecnología permite a un switch de Capa 3 enrutar transmisiones entre VLANs?",
+      "a": [
+        "VTP",
+        "VMPS",
+        "802.1Q",
+        "SVI (Interfaz Virtual del Switch)"
+      ],
+      "answer": 4
+    },
+    {
+      "q": "En el contexto del etiquetado de trama 802.1Q, ¿qué valor hexadecimal identifica el campo EtherType como un valor de ID de protocolo de etiqueta (TPID)?",
+      "a": [
+        "0x0800",
+        "0x0806",
+        "0x8100",
+        "0xFFFF"
+      ],
+      "answer": 3
+    },
+    {
+      "q": "Según el texto, ¿cuántos bits contiene el campo ID de la VLAN (VID) en el campo de información de control de etiqueta 802.1Q, lo que permite hasta 4096 IDs de VLAN?",
+      "a": [
+        "3 bits",
+        "1 bit",
+        "12 bits",
+        "16 bits"
+      ],
+      "answer": 3
+    }
+  ]
+}

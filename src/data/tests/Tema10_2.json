@@ -1,0 +1,308 @@
+{
+  "title": "Tema10_2",
+  "career": "Ingeniería Informática",
+  "year": "Cuarto año",
+  "subject": "Redes_2",
+  "questions": [
+    {
+      "q": "Según RFC 1918, ¿cuál es el rango de direcciones asignado con el prefijo /8?",
+      "a": [
+      "172.16.0.0 - 172.31.255.255",
+      "192.168.0.0 - 192.168.255.255",
+      "10.0.0.0 - 10.255.255.255",
+      "169.254.0.0 - 169.254.255.255"
+      ],
+      "answer": 3
+      },
+      {
+      "q": "Según RFC 1918, ¿cuál es el rango de direcciones asignado con el prefijo /12?",
+      "a": [
+      "10.0.0.0 - 10.255.255.255",
+      "172.16.0.0 - 172.31.255.255",
+      "192.168.0.0 - 192.168.255.255",
+      "100.64.0.0 - 100.127.255.255"
+      ],
+      "answer": 2
+      },
+      {
+      "q": "En la traducción NAT Dinámico, las direcciones internas globales se seleccionan de:",
+      "a": [
+      "Un mapeo uno a uno preconfigurado estáticamente",
+      "Un rango o 'pool' de direcciones definido",
+      "La misma dirección IP pública utilizada para todos los hosts",
+      "Ninguna de las anteriores"
+      ],
+      "answer": 2
+      },
+      {
+      "q": "¿Qué campos específicos modifica PAT (Port Address Translation) además de la dirección IP de origen para permitir que múltiples hosts compartan una IP pública?",
+      "a": [
+      "Solo la dirección IP de destino",
+      "Los puertos origen TCP/UDP",
+      "Los puertos destino TCP/UDP",
+      "Las direcciones MAC de origen y destino"
+      ],
+      "answer": 2
+      },
+      {
+      "q": "Según la fuente, ¿aproximadamente cuántos hosts internos puede posibilitar PAT que usen una única dirección pública?",
+      "a": [
+      "Hasta 256 hosts",
+      "Hasta 1024 hosts",
+      "Hasta 65,536 hosts",
+      "Un número ilimitado de hosts"
+      ],
+      "answer": 3
+      },
+      {
+      "q": "¿Cuál es el propósito principal del 'Port Forwarding'?",
+      "a": [
+      "Bloquear todo el tráfico entrante desde Internet",
+      "Permitir acceso limitado a la LAN interna desde el exterior",
+      "Traducir direcciones IP privadas a privadas",
+      "Asignar dinámicamente direcciones IP a hosts internos"
+      ],
+      "answer": 2
+      },
+      {
+      "q": "En el Port Forwarding, ¿qué puerto de destino externo se asocia típicamente con los servicios web?",
+      "a": [
+      "Puerto 20",
+      "Puerto 25",
+      "Puerto 80",
+      "Puerto 443"
+      ],
+      "answer": 3
+      },
+      {
+      "q": "En el Port Forwarding, ¿qué puerto de destino externo se asocia típicamente con los servidores FTP según la fuente?",
+      "a": [
+      "Puerto 20",
+      "Puerto 21",
+      "Puerto 23",
+      "Puerto 25"
+      ],
+      "answer": 1
+      },
+      {
+      "q": "En el Port Forwarding, ¿qué puerto de destino externo se asocia típicamente con los servidores de correo electrónico (SMTP)?",
+      "a": [
+      "Puerto 20",
+      "Puerto 25",
+      "Puerto 53",
+      "Puerto 110"
+      ],
+      "answer": 2
+      },
+      {
+      "q": "Según la fuente, NAT se puede utilizar para resolver problemas de direccionamiento cuando:",
+      "a": [
+      "Las direcciones IP internas son demasiado largas",
+      "Se necesita cifrar el tráfico de la red interna",
+      "Las direcciones internas se superponen con direcciones de la red externa",
+      "Se desea aumentar la velocidad de conexión a Internet"
+      ],
+      "answer": 3
+      },
+      {
+      "q": "¿Cuál de los siguientes es un documento RFC relacionado con NAT mencionado en la fuente?",
+      "a": [
+      "RFC 791: Internet Protocol",
+      "RFC 1918: Address Allocation for Private Internets",
+      "RFC 826: Ethernet Address Resolution Protocol",
+      "RFC 793: Transmission Control Protocol"
+      ],
+      "answer": 2
+      },
+      {
+      "q": "¿Cómo soporta IPv6 el tráfico multimedia y con distintos niveles de prioridad?",
+      "a": [
+      "Mediante un campo Checksum mejorado",
+      "Definiendo clases de servicio en la cabecera principal",
+      "Permitiendo definir flujos de tráfico con Etiqueta de flujo/prioridad",
+      "Utilizando direcciones Anycast exclusivamente"
+      ],
+      "answer": 3
+      },
+      {
+      "q": "Según la fuente, ¿qué mecanismos de seguridad se integran en IPv6?",
+      "a": [
+      "Solo firewalls a nivel de aplicación",
+      "Autentificación (MD5) y cifrado (DES)",
+      "Exclusivamente VPNs basadas en software",
+      "Ninguno, la seguridad es tarea de capas superiores"
+      ],
+      "answer": 2
+      },
+      {
+      "q": "En la notación de direcciones IPv6, ¿cómo se indica siempre la separación entre el prefijo (red) y el sufijo (host)?",
+      "a": [
+      "Se deduce de la propia dirección (como en IPv4 con clases)",
+      "Utilizando un delimitador especial como '-' o '_'",
+      "Siempre hay que indicar la longitud del prefijo (máscara de red)",
+      "No existe separación, ya que no hay prefijos en IPv6"
+      ],
+      "answer": 3
+      },
+      {
+      "q": "¿Cuál es la representación comprimida de la dirección IPv6 FF05:0:0:0:0:0:0:B3?",
+      "a": [
+      "FF05.0.B3",
+      "FF05::B3",
+      "FF05::0:B3",
+      "FF05:B3"
+      ],
+      "answer": 2
+      },
+      {
+      "q": "¿Cuántas veces puede aparecer el símbolo '::' para comprimir ceros consecutivos en una única dirección IPv6?",
+      "a": [
+      "Cero veces",
+      "Solo una vez",
+      "Hasta dos veces",
+      "Depende de la cantidad de ceros a comprimir"
+      ],
+      "answer": 2
+      },
+      {
+      "q": "Según la fuente, ¿qué representa la notación ::128.10.2.1 en IPv6?",
+      "a": [
+      "La dirección de bucle local",
+      "Una dirección no especificada",
+      "Una dirección de sitio local",
+      "Una dirección de compatibilidad con IPv4"
+      ],
+      "answer": 4
+      },
+      {
+      "q": "¿Qué campo importante presente en la cabecera de IPv4 fue eliminado en la cabecera principal de IPv6?",
+      "a": [
+      "Source Address",
+      "Destination Address",
+      "Checksum",
+      "Hop Limit (TTL en IPv4)"
+      ],
+      "answer": 3
+      },
+      {
+      "q": "En IPv6, la funcionalidad del Checksum, que fue eliminada de la cabecera principal, ¿dónde se delega?",
+      "a": [
+      "Al nivel de aplicación",
+      "Al nivel de transporte",
+      "Al nivel de enlace",
+      "Se elimina por completo"
+      ],
+      "answer": 3
+      },
+      {
+      "q": "¿Dónde se realiza la fragmentación de datagramas en IPv6?",
+      "a": [
+      "En cualquier router intermedio que detecte un MTU menor",
+      "Solo en el host de origen",
+      "Solo en el host de destino",
+      "La fragmentación no es posible en IPv6"
+      ],
+      "answer": 2
+      },
+      {
+      "q": "¿Cuál es el propósito del campo 'Siguiente Cabecera' (Next Header) en la cabecera IPv6?",
+      "a": [
+      "Indicar la longitud total del datagrama",
+      "Especificar la versión del protocolo",
+      "Indicar el tipo de cabecera que sigue a la actual",
+      "Contener el Checksum del datagrama"
+      ],
+      "answer": 3
+      },
+      {
+      "q": "¿Qué Cabecera de Extensión de IPv6 está diseñada para ser examinada por TODOS los nodos intermedios en la ruta?",
+      "a": [
+      "Cabecera de Fragmentación",
+      "Cabecera de Opciones Salto a Salto (Hop-by-Hop Options)",
+      "Cabecera de Encaminamiento (Routing)",
+      "Cabecera de Autenticación"
+      ],
+      "answer": 2
+      },
+      {
+      "q": "¿Qué Cabecera de Extensión de IPv6 está diseñada para ser examinada ÚNICAMENTE por los nodos finales (origen y destino)?",
+      "a": [
+      "Cabecera de Opciones para Destinatario",
+      "Cabecera de Encaminamiento",
+      "Cabecera de Fragmentación",
+      "Cabecera Salto a Salto"
+      ],
+      "answer": 1
+      },
+      {
+      "q": "¿Qué Cabecera de Extensión de IPv6 permite al host de origen especificar una lista de routers por los que el datagrama debe pasar obligatoriamente?",
+      "a": [
+      "Cabecera de Opciones Salto a Salto",
+      "Cabecera de Fragmentación",
+      "Cabecera de Encaminamiento",
+      "Cabecera de Autenticación"
+      ],
+      "answer": 3
+      },
+      {
+      "q": "En las Cabeceras de Autenticación/Encriptación (IPsec) de IPv6, ¿qué modo asegura (encripta/autentica) la carga de datos del datagrama (PDU de transporte)?",
+      "a": [
+      "Modo Túnel",
+      "Modo Transporte",
+      "Modo Híbrido",
+      "Modo Fragmentación"
+      ],
+      "answer": 2
+      },
+      {
+      "q": "¿Cuál es el ámbito de las direcciones IPv6 Unicast locales de Sitio (Site-Local)?",
+      "a": [
+      "Global (Internet)",
+      "Local de enlace (Link-local)",
+      "Dentro de una organización o sitio local (Intranet)",
+      "Solo para bucle local (loopback)"
+      ],
+      "answer": 3
+      },
+      {
+      "q": "¿Cuál es la dirección IPv6 de bucle local (loopback)?",
+      "a": [
+      "::",
+      "::1",
+      "FF02::1",
+      "FE80::1"
+      ],
+      "answer": 2
+      },
+      {
+      "q": "En las direcciones Multicast IPv6, ¿qué significa FF02::1?",
+      "a": [
+      "Todos los routers locales de enlace",
+      "Todos los nodos locales de enlace",
+      "Todos los nodos locales de sitio",
+      "Todos los routers locales de sitio"
+      ],
+      "answer": 2
+      },
+      {
+      "q": "Además de ICMP, ICMPv6 combina las funcionalidades de qué otros protocolos de IPv4?",
+      "a": [
+      "TCP y UDP",
+      "DNS y DHCP",
+      "IGMP y ARP",
+      "RIP y OSPF"
+      ],
+      "answer": 3
+      },
+      {
+      "q": "Dentro de ICMPv6, ¿qué funcionalidad gestiona la comunicación nodo a nodo dentro de un mismo enlace (similar a ARP en IPv4)?",
+      "a": [
+      "MLD (Multicast Listener Discovery)",
+      "ND (Neighbor Discovery)",
+      "PMTU (Path Maximum Transfer Unit)",
+      "DHCPv6 (Dynamic Host Configuration Protocol version 6)"
+      ],
+      "answer": 2
+      }
+  ]
+}

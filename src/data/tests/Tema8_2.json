@@ -1,0 +1,308 @@
+{
+  "title": "Tema8_2",
+  "career": "Ingeniería Informática",
+  "year": "Cuarto año",
+  "subject": "Redes_2",
+  "questions": [
+    {
+      "q": "Según la sección 'Repaso' del Tema 8, ¿cuál de los siguientes temas se menciona como tratado en lecciones anteriores?",
+      "a": [
+      "Protocolos de redundancia de primer salto (FHRP)",
+      "Introducción a las Redes Jerárquicas",
+      "Configuración de NAT",
+      "Seguridad en puertos de Switch"
+      ],
+      "answer": 2
+      },
+      {
+      "q": "En el contexto de redes conmutadas con VLANs, ¿qué afirmación sobre el comportamiento de las VLANs es correcta según las fuentes?",
+      "a": [
+      "Las estaciones en diferentes VLANs pueden comunicarse directamente sin un router.",
+      "Cada VLAN es un dominio de colisión distinto.",
+      "Cada VLAN está asociada a una red IP diferente.",
+      "Un switch de Capa 2 puede enrutar tráfico entre diferentes VLANs."
+      ],
+      "answer": 3
+      },
+      {
+      "q": "En el enrutamiento Inter-VLAN tradicional, si un host en la VLAN 10 necesita comunicarse con un host en la VLAN 30, ¿cuál es el rol del Router?",
+      "a": [
+      "Actúa como un switch de capa 2 para reenviar la trama.",
+      "Reenvía la trama directamente entre los hosts.",
+      "Encamina el paquete entre las redes IP asociadas a cada VLAN.",
+      "Bloquea la comunicación por defecto."
+      ],
+      "answer": 3
+      },
+      {
+      "q": "En el diagrama de enrutamiento Inter-VLAN tradicional, ¿qué tipo de puerto se configura en el Switch (S1) para conectar a los hosts A, B y C?",
+      "a": [
+      "Puerto troncal (trunk).",
+      "Puerto de acceso.",
+      "Puerto enrutado (Layer 3).",
+      "Puerto de gestión."
+      ],
+      "answer": 2
+      },
+      {
+      "q": "Según las fuentes, ¿cuál es una limitación física importante del enrutamiento Inter-VLAN tradicional?",
+      "a": [
+      "El Switch solo puede soportar un número limitado de VLANs.",
+      "El Router requiere una interfaz física separada por cada VLAN a enrutar.",
+      "La velocidad de enrutamiento es muy baja.",
+      "No se pueden configurar direcciones IP en el Router."
+      ],
+      "answer": 2
+      },
+      {
+      "q": "¿Cuál es la dirección IP asignada a la interfaz FastEthernet 0/1 del Router R1 en el diagrama de Enrutamiento Inter-VLAN tradicional?",
+      "a": [
+      "172.17.10.1",
+      "172.17.20.1",
+      "172.17.30.1",
+      "No tiene dirección IP."
+      ],
+      "answer": 2
+      },
+      {
+      "q": "¿Qué comando se utiliza en la configuración del Switch para asignar una interfaz física a una VLAN específica en el método tradicional?",
+      "a": [
+      "switchport mode trunk",
+      "switchport access vlan [ID_VLAN]",
+      "interface vlan [ID_VLAN]",
+      "no switchport"
+      ],
+      "answer": 2
+      },
+      {
+      "q": "¿Qué comando se utiliza en la configuración del Router para asignar una dirección IP y máscara a una interfaz física en el método tradicional?",
+      "a": [
+      "interface [tipo/número].[subinterfaz]",
+      "ip address [dirección_IP] [máscara]",
+      "encapsulation dot1Q [ID_VLAN]",
+      "no shutdown"
+      ],
+      "answer": 2
+      },
+      {
+      "q": "En el método 'Router on a Stick', ¿cuál es la principal motivación para usar subinterfaces en lugar de interfaces físicas separadas por cada VLAN?",
+      "a": [
+      "Aumentar el rendimiento de enrutamiento.",
+      "Permitir que el Switch realice el enrutamiento.",
+      "Superar la limitación física del número de interfaces en el Router.",
+      "Simplificar la configuración de las direcciones IP."
+      ],
+      "answer": 3
+      },
+      {
+      "q": "¿Qué son las subinterfaces según la definición proporcionada en las fuentes?",
+      "a": [
+      "Interfaces físicas adicionales instaladas en el Router.",
+      "Interfaces virtuales basadas en software asignadas a interfaces físicas.",
+      "Puertos de Switch configurados para operar en Capa 3.",
+      "Interfaces utilizadas únicamente para la gestión remota."
+      ],
+      "answer": 2
+      },
+      {
+      "q": "¿Cuál es el formato de sintaxis típico para nombrar una subinterfaz, basado en el ejemplo f0/0.10?",
+      "a": [
+      "nombre_interfaz-ID_VLAN",
+      "nombre_interfaz_ID_VLAN",
+      "nombre_interfaz/ID_VLAN",
+      "nombre_interfaz.ID_VLAN"
+      ],
+      "answer": 4
+      },
+      {
+      "q": "¿Se habilita una subinterfaz por defecto al crearla?",
+      "a": [
+      "Sí, siempre.",
+      "No, por defecto se encuentra deshabilitada.",
+      "Depende del modelo de Router.",
+      "Solo si se le asigna una dirección IP."
+      ],
+      "answer": 2
+      },
+      {
+      "q": "Según las fuentes, ¿qué tipo de enlace se establece entre el Switch y el Router al usar 'Router on a Stick'?",
+      "a": [
+      "Un enlace de acceso.",
+      "Un enlace troncal (trunk).",
+      "Un enlace de consola.",
+      "Múltiples enlaces de acceso, uno por VLAN."
+      ],
+      "answer": 2
+      },
+      {
+      "q": "¿Qué protocolo se configura en las subinterfaces del Router para permitir el paso de tráfico etiquetado de diferentes VLANs?",
+      "a": [
+      "STP",
+      "VTP",
+      "802.1Q",
+      "CDP"
+      ],
+      "answer": 3
+      },
+      {
+      "q": "¿Cuál es una desventaja mencionada al usar subinterfaces ('Router on a Stick') en comparación con el enrutamiento tradicional con interfaces físicas separadas?",
+      "a": [
+      "Es más costoso.",
+      "Existe contención (compartición) del ancho de banda del enlace físico.",
+      "No es posible si el número de VLANs es alto.",
+      "La configuración del cableado es más compleja."
+      ],
+      "answer": 2
+      },
+      {
+      "q": "¿Qué comando se utiliza en el Switch para configurar el puerto que se conecta al Router en el método 'Router on a Stick'?",
+      "a": [
+      "switchport mode access vlan [ID_VLAN]",
+      "switchport mode trunk",
+      "interface vlan [ID_VLAN]",
+      "no switchport"
+      ],
+      "answer": 2
+      },
+      {
+      "q": "¿Qué comando se utiliza en la configuración de una subinterfaz de Router para especificar la VLAN a la que pertenece y el tipo de encapsulación?",
+      "a": [
+      "ip address [dirección_IP] [máscara]",
+      "no shutdown",
+      "encapsulation dot1Q [ID_VLAN]",
+      "interface [tipo/número]"
+      ],
+      "answer": 3
+      },
+      {
+      "q": "¿Cuál es una de las principales motivaciones para usar un Switch Multicapa (MLS) para el enrutamiento Inter-VLAN?",
+      "a": [
+      "Centralizar la administración de VLANs con VTP.",
+      "Permitir que el enrutamiento se realice por hardware para mayor velocidad.",
+      "Reducir la necesidad de configurar direcciones IP.",
+      "Aumentar el número de dominios de colisión."
+      ],
+      "answer": 2
+      },
+      {
+      "q": "¿Qué velocidades de puerto son típicas en conmutación para los Switchs Multicapa según las fuentes?",
+      "a": [
+      "10 Mbps",
+      "100M, 1G o 10Gbps",
+      "56 Kbps",
+      "Solo 1 Gbps"
+      ],
+      "answer": 2
+      },
+      {
+      "q": "¿Qué es una SVI (Switch Virtual Interface) en un Switch Multicapa?",
+      "a": [
+      "Una interfaz física utilizada para enlaces troncales.",
+      "Una interfaz virtual asociada a una VLAN a la que se asigna una dirección IP.",
+      "Una interfaz de gestión remota exclusivamente.",
+      "Una interfaz utilizada para EtherChannel."
+      ],
+      "answer": 2
+      },
+      {
+      "q": "¿Para qué se utiliza principalmente una SVI en un Switch Multicapa?",
+      "a": [
+      "Para permitir que los hosts se conecten a esa VLAN.",
+      "Para definir el puerto de acceso a una VLAN.",
+      "Para dotar de una dirección IP a una VLAN y permitir que el MLS enrute para esa red.",
+      "Para configurar protocolos de Capa 2 como STP."
+      ],
+      "answer": 3
+      },
+      {
+      "q": "¿Qué comando esencial se debe habilitar en un Switch Multicapa para que pueda realizar enrutamiento IP?",
+      "a": [
+      "switchport mode routed",
+      "vlan database",
+      "ip routing",
+      "router ospf 1"
+      ],
+      "answer": 3
+      },
+      {
+      "q": "En un Switch Multicapa, ¿cómo se configura una interfaz física que se desea que funcione a Nivel 3 (enrutada) en lugar de Nivel 2 (conmutada)?",
+      "a": [
+      "switchport mode access",
+      "switchport mode trunk",
+      "interface vlan [ID_VLAN]",
+      "no switchport"
+      ],
+      "answer": 4
+      },
+      {
+      "q": "En el diagrama de configuración de Switch MultiLayer, ¿cuál es la dirección IP asignada a la SVI para la VLAN 30?",
+      "a": [
+      "172.17.10.1",
+      "172.17.20.1",
+      "172.17.30.1",
+      "192.168.1.2"
+      ],
+      "answer": 3
+      },
+      {
+      "q": "En la configuración de un Switch Multicapa, ¿qué comando se utiliza para configurar la ruta por defecto (gateway of last resort) hacia una red externa a través de un Router?",
+      "a": [
+      "ip default-gateway [dirección_IP]",
+      "ip route 0.0.0.0 0.0.0.0 [siguiente_salto]",
+      "default-information originate",
+      "router ospf 1"
+      ],
+      "answer": 2
+      },
+      {
+      "q": "En una red jerárquica con Switchs Multicapa, ¿en qué capa de la jerarquía se recomienda realizar el enrutamiento Inter-VLAN según las fuentes?",
+      "a": [
+      "Capa de Acceso.",
+      "Capa de Distribución.",
+      "Capa de Núcleo.",
+      "En el Router de Borde (Edge)."
+      ],
+      "answer": 2
+      },
+      {
+      "q": "Según las fuentes, ¿cuál es el propósito principal de los Routers en el núcleo (Core) de una red jerárquica que utiliza Switchs Multicapa en la capa de Distribución para Inter-VLAN?",
+      "a": [
+      "Realizar el enrutamiento de todo el tráfico Inter-VLAN.",
+      "Gestionar la base de datos VTP.",
+      "Encaminar el tráfico hacia redes externas (como Internet).",
+      "Proveer conectividad de Capa 2 a la capa de Distribución."
+      ],
+      "answer": 3
+      },
+      {
+      "q": "¿Cuál de los siguientes es un beneficio de usar MLS en redes jerárquicas para el enrutamiento Inter-VLAN?",
+      "a": [
+      "Aumenta la necesidad de Routers en el núcleo para el tráfico interno.",
+      "El enrutamiento entre LANs y VLANs se realiza de forma más rápida.",
+      "Elimina la necesidad de usar STP para evitar bucles.",
+      "Simplifica la configuración de los enlaces troncales."
+      ],
+      "answer": 2
+      },
+      {
+      "q": "Según la sección de Resumen, ¿qué protocolo para la administración de VLANs se menciona como tratado?",
+      "a": [
+      "CDP",
+      "LLDP",
+      "VTP",
+      "HSRP"
+      ],
+      "answer": 3
+      },
+      {
+      "q": "Además del Enrutamiento tradicional y 'Router on a Stick', ¿cuál es la tercera solución para el enrutamiento Inter-VLAN mencionada en el resumen del tema?",
+      "a": [
+      "Enrutamiento estático.",
+      "Switch MultiCapa (MLS).",
+      "Agregación de enlaces (EtherChannel).",
+      "Configuración de ACLs."
+      ],
+      "answer": 2
+    }
+  ]
+}

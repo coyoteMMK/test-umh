@@ -1,0 +1,308 @@
+{
+  "title": "Tema3_2",
+  "career": "Ingeniería Informática",
+  "year": "Cuarto año",
+  "subject": "Redes_2",
+  "questions": [
+    {
+      "q": "Según el texto, ¿cuánto tiempo se asocia a la información obtenida y almacenada en la caché ARP?",
+      "a": [
+        "Es permanente, no tiene límite de tiempo.",
+        "Un tiempo de vida limitado (caché ARP).",
+        "Depende exclusivamente del sistema operativo.",
+        "El mismo tiempo que el TTL del paquete IP."
+      ],
+      "answer": 2
+    },
+    {
+      "q": "¿Cómo pueden otros sistemas (B, D) beneficiarse de una consulta ARP ajena (por ejemplo, de A hacia C)?",
+      "a": [
+        "No pueden beneficiarse, las consultas ARP son privadas.",
+        "Actualizando su propia caché ARP con la información vista.",
+        "Redirigiendo la respuesta ARP hacia ellos.",
+        "Solicitando la misma información al router."
+      ],
+      "answer": 2
+    },
+    {
+      "q": "¿Qué especifica el campo 'Tipo de protocolo' en el formato del paquete ARP?",
+      "a": [
+        "El tipo de hardware de la red física.",
+        "El tipo de operación ARP (solicitud o respuesta).",
+        "El protocolo de nivel superior que se está mapeando (ej. IP).",
+        "La longitud de las direcciones hardware."
+      ],
+      "answer": 3
+    },
+    {
+      "q": "Según la fuente, ¿qué valor se especifica en el campo 'Tipo de hardware' del formato ARP para Ethernet?",
+      "a": [
+        "0x0800",
+        "1",
+        "6",
+        "48"
+      ],
+      "answer": 2
+    },
+    {
+      "q": "¿Qué valores posibles tiene el 'campo operación' en el formato de paquete ARP/RARP para indicar una Solicitud ARP?",
+      "a": [
+        "1",
+        "2",
+        "3",
+        "4"
+      ],
+      "answer": 1
+    },
+    {
+      "q": "¿En qué unidad de medida se expresa la 'Longitud de la cabecera' ('longc') en el formato de un datagrama IP?",
+      "a": [
+        "Octetos.",
+        "Bytes.",
+        "Palabras de 32 bits.",
+        "Kilobytes."
+      ],
+      "answer": 3
+    },
+    {
+      "q": "¿En qué unidad de medida se expresa la 'Longitud total del datagrama' en el formato de un datagrama IP?",
+      "a": [
+        "Octetos.",
+        "Palabras de 32 bits.",
+        "Bytes.",
+        "Segmentos."
+      ],
+      "answer": 1
+    },
+    {
+      "q": "¿Qué representan los bits 0, 1 y 2 del campo 'Tipo de servicio' en la cabecera IP?",
+      "a": [
+        "Prioridad del datagrama.",
+        "Bajo retardo.",
+        "Alta velocidad.",
+        "Elevada fiabilidad."
+      ],
+      "answer": 1
+    },
+    {
+      "q": "¿Qué indica el bit 3 del campo 'Tipo de servicio' en la cabecera IP?",
+      "a": [
+        "Alta velocidad.",
+        "Prioridad del datagrama.",
+        "Elevada fiabilidad.",
+        "Bajo retardo."
+      ],
+      "answer": 4
+    },
+    {
+      "q": "¿Qué indica el bit 5 del campo 'Tipo de servicio' en la cabecera IP?",
+      "a": [
+        "Prioridad del datagrama.",
+        "Bajo retardo.",
+        "Alta velocidad.",
+        "Elevada fiabilidad."
+      ],
+      "answer": 4
+    },
+    {
+      "q": "¿Qué parte del datagrama IP cubre el cálculo del campo 'Checksum'?",
+      "a": [
+        "Sólo la cabecera.",
+        "La cabecera y los datos.",
+        "Sólo los datos.",
+        "Los campos de dirección origen y destino."
+      ],
+      "answer": 1
+    },
+    {
+      "q": "¿Qué tipo de aritmética se utiliza para calcular el Checksum de la cabecera IP?",
+      "a": [
+        "Aritmética binaria simple.",
+        "Aritmética de punto flotante.",
+        "Aritmética de complemento a dos.",
+        "Aritmética de complemento a uno."
+      ],
+      "answer": 4
+    },
+    {
+      "q": "¿Cuál es uno de los propósitos principales mencionados para incluir el campo 'Opciones' en la cabecera IP?",
+      "a": [
+        "Establecer la longitud total del datagrama.",
+        "Verificación del funcionamiento de la red.",
+        "Indicar el protocolo de nivel superior.",
+        "Especificar la versión de IP."
+      ],
+      "answer": 2
+    },
+    {
+      "q": "Cuando un datagrama IP es fragmentado, ¿qué campo de la cabecera se copia a todos los fragmentos y permite identificarlos como parte del mismo datagrama original?",
+      "a": [
+        "Tiempo de vida (TTL).",
+        "Identificación.",
+        "Desplazamiento del fragmento.",
+        "Longitud total."
+      ],
+      "answer": 2
+    },
+    {
+      "q": "¿En qué unidades se indica el 'Desplazamiento del fragmento' en la cabecera de un fragmento IP?",
+      "a": [
+        "Bytes.",
+        "Octetos.",
+        "Palabras de 32 bits.",
+        "Múltiplos de 8 bytes."
+      ],
+      "answer": 4
+    },
+    {
+      "q": "¿Qué indica el bit 'More Fragments (MF)' en la cabecera de un fragmento IP?",
+      "a": [
+        "El fragmento no puede ser fragmentado.",
+        "Este es el último fragmento de la serie.",
+        "El fragmento no es el último de la serie.",
+        "El datagrama original sufrió colisiones."
+      ],
+      "answer": 3
+    },
+    {
+      "q": "¿Qué indica el bit 'Do Not Fragment (DF)' en la cabecera de un fragmento IP?",
+      "a": [
+        "El fragmento no es el último de la serie.",
+        "Este es el último fragmento de la serie.",
+        "El datagrama no puede ser fragmentado.",
+        "El datagrama debe ser duplicado."
+      ],
+      "answer": 3
+    },
+    {
+      "q": "¿Dónde se realiza el reensamblado de los fragmentos de un datagrama IP?",
+      "a": [
+        "En el primer router que encuentra los fragmentos.",
+        "En cada router intermedio.",
+        "Sólo en el destino.",
+        "En el origen y en el destino."
+      ],
+      "answer": 3
+    },
+    {
+      "q": "¿Qué ocurre si no llegan todos los fragmentos de un datagrama antes de que venza el temporizador en el destino?",
+      "a": [
+        "Se reensambla parcialmente el datagrama.",
+        "El destino solicita la retransmisión de los fragmentos faltantes.",
+        "Los fragmentos ya recibidos se descartan.",
+        "El datagrama se reenvía automáticamente a otro destino."
+      ],
+      "answer": 3
+    },
+    {
+      "q": "¿En qué situación dos hosts IP pueden comunicarse directamente mediante tramas, sin pasar por un router?",
+      "a": [
+        "Siempre que tengan direcciones IP válidas.",
+        "Si comparten la misma red IP.",
+        "Si utilizan el mismo protocolo de transporte.",
+        "Si están conectados al mismo Switch pero en diferentes VLANs."
+      ],
+      "answer": 2
+    },
+    {
+      "q": "En un 'Diálogo Indirecto' entre dos hosts IP que están en redes diferentes (A hacia C pasando por R1), ¿cuál es la dirección MAC de destino de la trama Ethernet enviada por el host origen (A)?",
+      "a": [
+        "La dirección MAC del host destino (C).",
+        "La dirección MAC del router (R1) por el que debe salir.",
+        "Una dirección MAC de difusión (broadcast).",
+        "La dirección MAC del host origen (A)."
+      ],
+      "answer": 2
+    },
+    {
+      "q": "¿Para qué es útil una 'Ruta por defecto' (Default Route) en una tabla de encaminamiento?",
+      "a": [
+        "Para enviar tráfico a hosts específicos por seguridad.",
+        "Para encaminar paquetes a redes de Clase A, B o C de forma separada.",
+        "Cuando la conexión al resto de la internet es única.",
+        "Para forzar que todo el tráfico pase por un Switch específico."
+      ],
+      "answer": 3
+    },
+    {
+      "q": "¿Qué propósitos cumplen las 'Rutas específicas para algunos hosts determinados' en una tabla de encaminamiento?",
+      "a": [
+        "Optimizar el rendimiento general de la red.",
+        "Facilitar el reensamblado de fragmentos IP.",
+        "Responder a propósitos de control y seguridad.",
+        "Determinar la Máscara de Red de subredes variables."
+      ],
+      "answer": 3
+    },
+    {
+      "q": "¿Qué protocolo, listado en la fuente, es un ejemplo de protocolo de encaminamiento de tipo 'vector de distancias'?",
+      "a": [
+        "OSPF.",
+        "ARP.",
+        "RIP.",
+        "TCP."
+      ],
+      "answer": 3
+    },
+    {
+      "q": "¿Qué protocolo, listado en la fuente, es un ejemplo de protocolo de encaminamiento de tipo 'estado del enlace'?",
+      "a": [
+        "RIP.",
+        "IP.",
+        "OSPF.",
+        "UDP."
+      ],
+      "answer": 3
+    },
+    {
+      "q": "¿Cuál fue uno de los problemas del direccionamiento tradicional con clases (A, B) que llevó a proponer técnicas como Subnetting y CIDR?",
+      "a": [
+        "La incompatibilidad con las direcciones MAC.",
+        "El uso eficiente de las direcciones IP disponibles.",
+        "La necesidad de tablas de encaminamiento excesivamente pequeñas en los routers.",
+        "El uso ineficiente de las direcciones, ya que no es habitual conectar tantos hosts a una misma red local como permitían las clases A/B."
+      ],
+      "answer": 4
+    },
+    {
+      "q": "¿Qué problema causó el crecimiento exponencial de Internet para los routers, según la fuente?",
+      "a": [
+        "Aumento de las colisiones de tramas.",
+        "Requerir tablas de encaminamiento excesivamente grandes.",
+        "Disminución del número de dominios de difusión.",
+        "Necesidad de usar Hubs en lugar de Switches."
+      ],
+      "answer": 2
+    },
+    {
+      "q": "¿Cuál es la finalidad principal de la técnica 'Subnetting'?",
+      "a": [
+        "Amplificar la señal física de la red.",
+        "Traducir protocolos entre redes heterogéneas.",
+        "Fragmentar una red IP en subredes lógicas.",
+        "Obtener la dirección IP a partir de la dirección MAC."
+      ],
+      "answer": 3
+    },
+    {
+      "q": "¿Qué elemento se utiliza en Subnetting para fragmentar una red IP en subredes sin modificar las direcciones IP de los hosts?",
+      "a": [
+        "Gateways.",
+        "Repetidores.",
+        "Máscaras de red.",
+        "El campo TTL."
+      ],
+      "answer": 3
+    },
+    {
+      "q": "¿Cómo contribuye CIDR (Classless Inter-Domain Routing) a aliviar el problema de las tablas de encaminamiento grandes en los routers?",
+      "a": [
+        "Elimina la necesidad de encaminamiento.",
+        "Permite reducir el tamaño de las tablas de encaminamiento.",
+        "Expande los dominios de colisión.",
+        "Obliga a usar únicamente rutas por defecto."
+      ],
+      "answer": 2
+    }
+  ]
+}

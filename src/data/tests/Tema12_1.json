@@ -1,0 +1,308 @@
+{
+  "title": "Tema12_1",
+  "career": "Ingeniería Informática",
+  "year": "Cuarto año",
+  "subject": "Redes_2",
+  "questions": [
+    {
+      "q": "¿Cuál es una de las principales características de un sistema de Cableado Estructurado según la motivación presentada?",
+      "a": [
+        "Está fuertemente ligado a una aplicación específica",
+        "Es común y a la vez independiente de las aplicaciones",
+        "No requiere documentación detallada",
+        "Su proyección es a corto plazo (menos de 5 años)"
+      ],
+      "answer": 2
+    },
+    {
+      "q": "¿Cuál de los siguientes NO es un objetivo clave de un sistema de Cableado Estructurado?",
+      "a": [
+        "Funcionalidad",
+        "Escalabilidad",
+        "Rigidez ante nuevas tecnologías",
+        "Manejabilidad"
+      ],
+      "answer": 3
+    },
+    {
+      "q": "El objetivo de 'Escalabilidad' en Cableado Estructurado implica que el sistema debe permitir:",
+      "a": [
+        "Integrar únicamente tecnologías existentes",
+        "Un crecimiento limitado a los equipos iniciales",
+        "El crecimiento sin grandes modificaciones",
+        "La sustitución completa del cableado cada pocos años"
+      ],
+      "answer": 3
+    },
+    {
+      "q": "¿Qué norma ANSI/EIA/TIA es la principal referencia para las topologías, distancias máximas, rendimiento de componentes y conectores en Cableado Estructurado?",
+      "a": [
+        "EIA/TIA 569",
+        "EIA/TIA 606",
+        "ANSI/EIA/TIA-568A",
+        "EIA/TIA 607"
+      ],
+      "answer": 3
+    },
+    {
+      "q": "¿La norma EIA/TIA 569 se enfoca en?",
+      "a": [
+        "La administración de la infraestructura",
+        "Las rutas y espacios para cables en una edificación",
+        "La conexión a tierra",
+        "El rendimiento de los componentes"
+      ],
+      "answer": 2
+    },
+    {
+      "q": "¿Qué norma está relacionada con la administración de la infraestructura de telecomunicaciones en edificios comerciales?",
+      "a": [
+        "EIA/TIA 568A",
+        "EIA/TIA 569",
+        "EIA/TIA 606",
+        "EIA/TIA 607"
+      ],
+      "answer": 3
+    },
+    {
+      "q": "El estándar ISO 11801 también es conocido como:",
+      "a": [
+        "La norma TIA/EIA 568A para fibra óptica",
+        "Las normas EIA/TIA para cableado estructurado",
+        "El modelo OSI",
+        "La norma para cuartos de telecomunicaciones"
+      ],
+      "answer": 2
+    },
+    {
+      "q": "¿Cuál de los siguientes NO es un elemento listado como parte de un sistema de Cableado Estructurado?",
+      "a": [
+        "Área de Trabajo",
+        "Cableado Vertical",
+        "Servidores de Aplicación",
+        "Closet de Telecomunicaciones"
+      ],
+      "answer": 3
+    },
+    {
+      "q": "¿El Área de Trabajo está compuesta por?",
+      "a": [
+        "Solo los equipos de trabajo (computadoras, teléfonos)",
+        "Las salidas de Telecomunicaciones, equipos de trabajo y cables de conexión (Patch Cords)",
+        "Únicamente los Patch Panels y los equipos electrónicos",
+        "El cableado vertical y la acometida del edificio"
+      ],
+      "answer": 2
+    },
+    {
+      "q": "¿Cuál es la configuración recomendada de salidas de telecomunicaciones por puesto de trabajo en el Área de Trabajo?",
+      "a": [
+        "Una salida de conexión de 4 hilos (RJ11)",
+        "Dos salidas de conexión de 8 hilos (tipo RJ45)",
+        "Una salida eléctrica y una de datos",
+        "Depende del tipo de equipo conectado"
+      ],
+      "answer": 2
+    },
+    {
+      "q": "¿Cuál es la longitud máxima recomendada para el cable (Patch Cord) que conecta el equipo (computador, teléfono) a la salida de telecomunicaciones en el Área de Trabajo?",
+      "a": [
+        "10 metros",
+        "5 metros",
+        "3 metros",
+        "90 metros"
+      ],
+      "answer": 3
+    },
+    {
+      "q": "¿En qué tipo de conector termina el cable del área de trabajo (Patch Cord) en ambos extremos?",
+      "a": [
+        "Conector BNC",
+        "Conector ST (fibra óptica)",
+        "Conector RJ45",
+        "Conector RJ11"
+      ],
+      "answer": 3
+    },
+    {
+      "q": "¿Cómo se denomina a la porción del sistema de cableado que se extiende desde los lugares de trabajo a los gabinetes de telecomunicaciones (Rack)?",
+      "a": [
+        "Cableado Vertical",
+        "Cableado de Backbone",
+        "Acometida",
+        "Cableado Horizontal"
+      ],
+      "answer": 4
+    },
+    {
+      "q": "¿Cuál es la topología característica del Cableado Horizontal?",
+      "a": [
+        "Topología en Bus",
+        "Topología en Anillo",
+        "Topología en Estrella",
+        "Topología en Malla"
+      ],
+      "answer": 3
+    },
+    {
+      "q": "¿Cuál es la distancia máxima establecida por norma para el cableado horizontal, desde la salida de telecomunicaciones hasta el Patch Panel en el Rack?",
+      "a": [
+        "100 metros",
+        "90 metros",
+        "80 metros",
+        "30 metros"
+      ],
+      "answer": 2
+    },
+    {
+      "q": "¿Cuál de los siguientes medios físicos es reconocido por la norma 568-A para cableado estructurado?",
+      "a": [
+        "Cable Coaxial",
+        "Cable UTP, Cable STP y Fibra Óptica",
+        "Cable de Cinta (Ribbon Cable)",
+        "Cable de alimentación eléctrica"
+      ],
+      "answer": 2
+    },
+    {
+      "q": "¿Según la fuente, qué categoría de cable UTP soporta hasta 10 Mbps y se utiliza en redes 10BaseT?",
+      "a": [
+        "Categoría 1",
+        "Categoría 2",
+        "Categoría 3",
+        "Categoría 4"
+      ],
+      "answer": 3
+    },
+    {
+      "q": "¿Qué categoría de cable UTP, según la fuente, soporta hasta 16 Mbps y se utiliza en redes Token Ring?",
+      "a": [
+        "Categoría 3",
+        "Categoría 4",
+        "Categoría 5",
+        "Categoría 5E"
+      ],
+      "answer": 2
+    },
+    {
+      "q": "¿Qué categoría de cable UTP es especificada para transmitir datos a velocidades de hasta 100 Mbps, como en 100BaseT?",
+      "a": [
+        "Categoría 4",
+        "Categoría 5",
+        "Categoría 5E",
+        "Categoría 6"
+      ],
+      "answer": 2
+    },
+    {
+      "q": "¿Las categorías de cable UTP 5E y 6 son mencionadas por soportar velocidades de red como?",
+      "a": [
+        "10 Mbps Ethernet",
+        "16 Mbps Token Ring",
+        "100 Mbps Fast Ethernet",
+        "1 Gbps Ethernet y ATM"
+      ],
+      "answer": 4
+    },
+    {
+      "q": "¿Cuál es el conector único permitido para UTP de 100 ohm y 8 conductores en el cableado horizontal?",
+      "a": [
+        "Conector BNC",
+        "Conector SC (fibra óptica)",
+        "Jack modular de 8 posiciones (RJ45)",
+        "Conector RJ11"
+      ],
+      "answer": 3
+    },
+    {
+      "q": "¿Qué componentes se utilizan para la unión de cables y la conexión de equipos al sistema de cableado?",
+      "a": [
+        "Adaptadores",
+        "Protecciones Eléctricas",
+        "Conectores PLUG y JACKS",
+        "Equipos Electrónicos de Transmisión"
+      ],
+      "answer": 3
+    },
+    {
+      "q": "¿Qué elementos modifican la función física de los conectores o jacks, realizando acoples eléctricos pasivos o uniones de cables de diferentes características?",
+      "a": [
+        "Patch Panels",
+        "Adaptadores",
+        "Conectores",
+        "Equipos Electrónicos"
+      ],
+      "answer": 2
+    },
+    {
+      "q": "¿Cuál es el propósito de los 'Equipos Electrónicos de Transmisión' en el Cableado Estructurado?",
+      "a": [
+        "Realizar la conexión física entre cables",
+        "Prevenir el daño por sobretensiones",
+        "Reformatear, convertir o restaurar una señal para mejorar o extender la distancia de transmisión",
+        "Identificar y etiquetar los cables"
+      ],
+      "answer": 3
+    },
+    {
+      "q": "¿Qué elementos en un sistema de cableado estructurado previenen el daño producido por conexiones eléctricas anormales, incluyendo descargas atmosféricas?",
+      "a": [
+        "Adaptadores",
+        "Equipos Electrónicos",
+        "Protecciones Eléctricas",
+        "Patch Panels"
+      ],
+      "answer": 3
+    },
+    {
+      "q": "¿Cuál es la función principal del Closet de Telecomunicaciones?",
+      "a": [
+        "Albergar servidores de aplicaciones",
+        "Servir como punto de acceso a internet del edificio",
+        "Concentrar los puntos del área de trabajo y terminar el cableado horizontal",
+        "Gestionar el suministro eléctrico principal del edificio"
+      ],
+      "answer": 3
+    },
+    {
+      "q": "¿Cuál es el ancho mínimo recomendado para la puerta de un Closet de Telecomunicaciones?",
+      "a": [
+        "60 cm",
+        "75 cm",
+        "91 cm",
+        "120 cm"
+      ],
+      "answer": 3
+    },
+    {
+      "q": "¿Cuál es la temperatura ambiente recomendada para un Cuarto de Equipos o Closet de Telecomunicaciones?",
+      "a": [
+        "10 - 15 °C",
+        "18 - 24 °C",
+        "25 - 30 °C",
+        "30 - 35 °C"
+      ],
+      "answer": 2
+    },
+    {
+      "q": "¿Qué dispositivo de interconexión permite conectar los tendidos de cableado horizontal con otros dispositivos de networking como hubs y repetidores, a través de conexiones cruzadas?",
+      "a": [
+        "Jack modular",
+        "Patch Panel",
+        "Switch",
+        "Adaptador"
+      ],
+      "answer": 2
+    },
+    {
+      "q": "¿Cuál es el propósito principal de un Rack en un sistema de Cableado Estructurado?",
+      "a": [
+        "Proteger los cables de daños físicos",
+        "Almacenar herramientas de instalación",
+        "Instalar de forma organizada el Patch Panel y equipos activos",
+        "Servir como punto de consolidación para cables horizontales"
+      ],
+      "answer": 3
+    }
+  ]
+}

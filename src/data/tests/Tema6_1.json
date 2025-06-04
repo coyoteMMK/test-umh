@@ -1,0 +1,308 @@
+{
+  "title": "Tema6_1",
+  "career": "Ingeniería Informática",
+  "year": "Cuarto año",
+  "subject": "Redes_2",
+  "questions": [
+    {
+      "q": "¿Qué permite la segmentación de una red LAN mediante VLANs además de mejorar el rendimiento y la seguridad?",
+      "a": [
+        "Aumentar el dominio de colisión",
+        "Simplificar la administración de las VLANs a través de múltiples switches usando VTP",
+        "Eliminar la necesidad de routers",
+        "Reducir la cantidad total de dispositivos en la red"
+      ],
+      "answer": 2
+    },
+    {
+      "q": "El enrutamiento inter-VLAN se utiliza para permitir la comunicación entre:",
+      "a": [
+        "Dispositivos en el mismo dominio de broadcast",
+        "Dispositivos en VLANs separadas",
+        "Switches de Capa 2 únicamente",
+        "Dispositivos conectados al mismo puerto de switch"
+      ],
+      "answer": 2
+    },
+    {
+      "q": "Las VLANs permiten agrupar dispositivos de red de manera lógica basándose en:",
+      "a": [
+        "Su ubicación física en el edificio",
+        "El tipo de cable de red utilizado",
+        "Equipos de proyectos, funciones o departamentos, sin tener en cuenta su ubicación geográfica",
+        "Su dirección IP única"
+      ],
+      "answer": 3
+    },
+    {
+      "q": "¿Cuál de los siguientes es un beneficio principal de utilizar VLANs?",
+      "a": [
+        "Aumento de las tormentas de broadcast",
+        "Complicación de la administración de red",
+        "Reducción de costo por un uso más eficiente de enlaces y ancho de banda existentes",
+        "Disminución de la seguridad de la red"
+      ],
+      "answer": 3
+    },
+    {
+      "q": "Dividir una red en VLANs ayuda a mitigar las tormentas de broadcast al:",
+      "a": [
+        "Aumentar la cantidad de dispositivos que pueden participar en ellas",
+        "Impedir que se propaguen a toda la red",
+        "Convertir el tráfico de broadcast en unicast",
+        "Deshabilitar la función de broadcast en los switches"
+      ],
+      "answer": 2
+    },
+    {
+      "q": "Las VLANs facilitan el manejo de la red por parte del personal de TI debido a que:",
+      "a": [
+        "Se requieren más configuraciones manuales por switch",
+        "Los usuarios con requerimientos similares comparten la misma VLAN",
+        "Eliminan la necesidad de asignar direcciones IP",
+        "El tráfico de control ya no está asociado a una VLAN específica"
+      ],
+      "answer": 2
+    },
+    {
+      "q": "Las VLANs de rango normal se identifican mediante un ID de VLAN entre:",
+      "a": [
+        "1006 y 4094",
+        "1 y 1001",
+        "1 y 1005",
+        "1000 y 2000"
+      ],
+      "answer": 3
+    },
+    {
+      "q": "Las VLANs de rango extendido, utilizadas por proveedores de servicios o grandes empresas, se identifican mediante un ID de VLAN entre:",
+      "a": [
+        "1 y 1005",
+        "1006 y 4094",
+        "1 y 4094",
+        "2000 y 3000"
+      ],
+      "answer": 2
+    },
+    {
+      "q": "¿Dónde se almacenan las configuraciones de las VLANs de rango normal?",
+      "a": [
+        "En el archivo de configuración en ejecución",
+        "En un servidor TFTP",
+        "Dentro de un archivo de datos de la VLAN, denominado vlan.dat, en la memoria flash",
+        "En la memoria RAM del switch"
+      ],
+      "answer": 3
+    },
+    {
+      "q": "¿Cuál de los siguientes tipos de VLAN es configurado para enviar solo tráfico de datos generado por el usuario?",
+      "a": [
+        "VLAN Predeterminada",
+        "VLAN Nativa",
+        "VLAN de Administración",
+        "VLAN de Datos"
+      ],
+      "answer": 4
+    },
+    {
+      "q": "Después del arranque inicial de un switch Cisco, ¿a qué VLAN se convierten en miembros todos los puertos de switch por defecto?",
+      "a": [
+        "La última VLAN creada",
+        "La VLAN de Administración",
+        "La VLAN Predeterminada (VLAN 1)",
+        "Ninguna VLAN hasta que se configuren manualmente"
+      ],
+      "answer": 3
+    },
+    {
+      "q": "¿Qué tipo de tráfico de control de Capa 2 siempre se asociará con la VLAN 1 en switches Cisco?",
+      "a": [
+        "Tráfico HTTP y Telnet",
+        "Tráfico FTP y TFTP",
+        "CDP y tráfico del protocolo Spanning Tree",
+        "Tráfico SNMP y SSH"
+      ],
+      "answer": 3
+    },
+    {
+      "q": "Una VLAN nativa está asignada a un puerto troncal 802.1Q para manejar principalmente:",
+      "a": [
+        "Tráfico de voz etiquetado",
+        "Tráfico de datos con alta prioridad",
+        "Tráfico de control de Capa 3",
+        "Tráfico que no llega de una VLAN (tráfico no etiquetado)"
+      ],
+      "answer": 4
+    },
+    {
+      "q": "Según el estándar IEEE 802.1Q, ¿por qué se establecen las VLANs nativas?",
+      "a": [
+        "Para mejorar la seguridad al cifrar el tráfico",
+        "Para aumentar el ancho de banda disponible en el enlace troncal",
+        "Para mantener la compatibilidad retrospectiva con el tráfico no etiquetado común en LAN antiguas",
+        "Para priorizar automáticamente el tráfico de voz"
+      ],
+      "answer": 3
+    },
+    {
+      "q": "Una optimización de seguridad común es utilizar una VLAN diferente a la VLAN 1 como:",
+      "a": [
+        "VLAN de Datos y VLAN de Voz",
+        "VLAN Predeterminada y VLAN Nativa",
+        "Solo la VLAN Predeterminada",
+        "Solo la VLAN Nativa"
+      ],
+      "answer": 2
+    },
+    {
+      "q": "Una VLAN de administración es una VLAN configurada para:",
+      "a": [
+        "Enviar únicamente tráfico de broadcast",
+        "Manejar el tráfico de video en tiempo real",
+        "Acceder a las capacidades de administración de un switch",
+        "Bloquear todo el tráfico no deseado"
+      ],
+      "answer": 3
+    },
+    {
+      "q": "¿Qué se asigna a una VLAN de administración para permitir el acceso a las capacidades de gestión del switch?",
+      "a": [
+        "Una dirección MAC única",
+        "Un ID de VLAN de rango extendido",
+        "Una dirección IP y una máscara de subred",
+        "Un puerto de switch dedicado en modo de acceso"
+      ],
+      "answer": 3
+    },
+    {
+      "q": "¿Cuál de los siguientes requisitos es crucial para el tráfico de Voz sobre IP (VoIP)?",
+      "a": [
+        "Demora máxima de 500 milisegundos",
+        "Ancho de banda no garantizado",
+        "Prioridad de la transmisión sobre otros tipos de tráfico de red",
+        "Incapacidad para ser enrutado en áreas congestionadas"
+      ],
+      "answer": 3
+    },
+    {
+      "q": "Según el texto, un requisito de demora para el tráfico de VoIP a través de la red es:",
+      "a": [
+        "Menos de 50 ms",
+        "Exactamente 100 ms",
+        "Menos de 150 ms",
+        "Más de 200 ms"
+      ],
+      "answer": 3
+    },
+    {
+      "q": "¿Qué contiene un teléfono IP de Cisco según la descripción?",
+      "a": [
+        "Un router integrado de un puerto",
+        "Un switch integrado de tres puertos 10/100",
+        "Un concentrador USB",
+        "Un servidor DHCP"
+      ],
+      "answer": 2
+    },
+    {
+      "q": "Cuando un switch y un teléfono IP de Cisco están conectados y el puerto del switch está en modo de voz, el enlace funciona como:",
+      "a": [
+        "Un enlace de acceso solo para tráfico de voz",
+        "Un enlace troncal que envía tráfico de voz etiquetado y tráfico de datos no etiquetado",
+        "Un enlace punto a punto solo para tráfico de administración",
+        "Un enlace que bloquea el tráfico de datos"
+      ],
+      "answer": 2
+    },
+    {
+      "q": "Los puertos de switch son interfaces de Capa 2 que están asociadas a un puerto físico y se utilizan para:",
+      "a": [
+        "Manejar enrutamiento entre subredes",
+        "Manejar la interfaz física y los protocolos de Capa 2 asociados",
+        "Configurar direcciones IP en los dispositivos finales",
+        "Tomar decisiones de reenvío basadas en direcciones IP"
+      ],
+      "answer": 2
+    },
+    {
+      "q": "¿Qué modo de puerto VLAN asigna manualmente los puertos a una VLAN?",
+      "a": [
+        "VLAN Dinámica",
+        "VLAN de Voz",
+        "VLAN Estática",
+        "VLAN de Administración"
+      ],
+      "answer": 3
+    },
+    {
+      "q": "Una VLAN dinámica asigna puertos de switch a las VLAN de forma dinámica basándose en:",
+      "a": [
+        "El protocolo de enrutamiento utilizado",
+        "La carga de tráfico en el puerto",
+        "La dirección MAC de origen del dispositivo conectado al puerto, utilizando un servidor VMPS",
+        "La prioridad configurada en el puerto"
+      ],
+      "answer": 3
+    },
+    {
+      "q": "¿Qué tecnología se utiliza para permitir que un switch de Capa 3 enrute transmisiones entre las VLANs?",
+      "a": [
+        "Spanning Tree Protocol (STP)",
+        "Virtual Trunking Protocol (VTP)",
+        "Switch Virtual Interface (SVI)",
+        "Address Resolution Protocol (ARP)"
+      ],
+      "answer": 3
+    },
+    {
+      "q": "Una SVI (Switch Virtual Interface) es una interfaz ____ configurada para una VLAN específica.",
+      "a": [
+        "física",
+        "dedicada",
+        "lógica",
+        "deshabilitada"
+      ],
+      "answer": 3
+    },
+    {
+      "q": "¿Cuál es el propósito principal de configurar una SVI para una VLAN?",
+      "a": [
+        "Bloquear el tráfico de broadcast",
+        "Eliminar la necesidad de asignar direcciones IP",
+        "Permitir enrutar entre las VLANs o proporcionar conectividad de host IP al switch",
+        "Restringir el acceso de dispositivos a la red"
+      ],
+      "answer": 3
+    },
+    {
+      "q": "Comparado con tener un enlace individual por cada subred entre switches, ¿qué problema resuelve un enlace troncal (trunk link)?",
+      "a": [
+        "Aumenta el número de dominios de broadcast",
+        "Permite la comunicación únicamente dentro de la misma subred",
+        "Reduce la necesidad de múltiples enlaces físicos dedicados, utilizando uno o pocos para múltiples VLANs",
+        "Hace que todos los puertos pertenezcan a la misma VLAN por defecto"
+      ],
+      "answer": 3
+    },
+    {
+      "q": "¿Qué hace el etiquetado de trama 802.1Q?",
+      "a": [
+        "Encripta el tráfico de datos",
+        "Comprime la trama para ahorrar ancho de banda",
+        "Agrega una etiqueta a la trama de Ethernet original para especificar la VLAN a la que pertenece",
+        "Determina la dirección IP del siguiente salto"
+      ],
+      "answer": 3
+    },
+    {
+      "q": "¿Cuántos bits utiliza el campo ID de VLAN (VID) en la etiqueta 802.1Q, permitiendo hasta 4096 IDs de VLAN?",
+      "a": [
+        "3 bits",
+        "8 bits",
+        "12 bits",
+        "16 bits"
+      ],
+      "answer": 3
+    }
+  ]
+}

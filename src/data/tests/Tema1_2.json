@@ -1,0 +1,308 @@
+{
+  "title": "Tema1_2",
+  "career": "Ingeniería Informática",
+  "year": "Cuarto año",
+  "subject": "Redes_2",
+  "questions": [
+    {
+      "q": "¿Cuál de las siguientes NO se menciona como una tarea fundamental a realizar en la Comunicación de datos según la fuente?",
+      "a": [
+        "Generación de la señal",
+        "Seguridad",
+        "Negociación de precios",
+        "Control de flujo"
+      ],
+      "answer": 3
+    },
+    {
+      "q": "¿Qué tarea de comunicación de datos se encarga de garantizar que los emisores y receptores trabajen al mismo ritmo?",
+      "a": [
+        "Control de flujo",
+        "Sincronización",
+        "Recuperación de Errores",
+        "Formato de los mensajes"
+      ],
+      "answer": 2
+    },
+    {
+      "q": "¿Según la fuente, ¿cuál es la unidad de datos en el Nivel 1 (Capa Física) del Modelo OSI?",
+      "a": [
+        "Tramas",
+        "Paquetes",
+        "Segmentos",
+        "Bits"
+      ],
+      "answer": 4
+    },
+    {
+      "q": "¿Qué función principal se asigna a la Capa de Enlace de Datos (Nivel 2) del Modelo OSI?",
+      "a": [
+        "Especificar el enrutado de los paquetes.",
+        "Gestionar la interacción con el usuario.",
+        "Proporcionar un canal libre de Errores.",
+        "Establecer sesiones para servicios."
+      ],
+      "answer": 3
+    },
+    {
+      "q": "¿Según la fuente, ¿qué tecnología mencionada es un ejemplo de Nivel 2 (Capa de Enlace de Datos)?",
+      "a": [
+        "IP",
+        "Ethernet",
+        "TCP",
+        "Bluetooth"
+      ],
+      "answer": 2
+    },
+    {
+      "q": "¿Cuál es la unidad de datos en el Nivel 2 (Capa de Enlace de Datos) del Modelo OSI?",
+      "a": [
+        "Paquetes",
+        "Tramas",
+        "Datagramas",
+        "Bytes"
+      ],
+      "answer": 2
+    },
+    {
+      "q": "¿Qué protocolo se menciona específicamente como definido en el Nivel 3 (Nivel de Red) del modelo TCP/IP?",
+      "a": [
+        "TCP",
+        "UDP",
+        "IP",
+        "FTP"
+      ],
+      "answer": 3
+    },
+    {
+      "q": "¿Además de IP, ¿qué otro protocolo de Nivel 3 se menciona que puede coexistir en la misma red?",
+      "a": [
+        "ARP",
+        "DHCP",
+        "ICMP",
+        "IPX"
+      ],
+      "answer": 4
+    },
+    {
+      "q": "¿Cuál es la unidad de datos en el Nivel 3 (Nivel de Red) del Modelo OSI?",
+      "a": [
+        "Bits",
+        "Tramas",
+        "Paquetes",
+        "Segmentos"
+      ],
+      "answer": 3
+    },
+    {
+      "q": "¿Qué nivel del Modelo OSI se encarga de asegurar que los segmentos de datos lleguen correctamente al otro extremo?",
+      "a": [
+        "Nivel de Red",
+        "Nivel de Sesión",
+        "Nivel de Transporte",
+        "Nivel de Aplicación"
+      ],
+      "answer": 3
+    },
+    {
+      "q": "¿Según la fuente, ¿qué protocolo de Nivel de Transporte proporciona un servicio libre de errores y con datos ordenados?",
+      "a": [
+        "UDP",
+        "IP",
+        "TCP",
+        "ICMP"
+      ],
+      "answer": 3
+    },
+    {
+      "q": "¿Según la fuente, ¿qué protocolo de Nivel de Transporte permite posibles errores o pérdidas sin entrega ordenada?",
+      "a": [
+        "TCP",
+        "UDP",
+        "IPX",
+        "ATM"
+      ],
+      "answer": 2
+    },
+    {
+      "q": "¿Qué funcionalidad principal tiene el Nivel 5 (Nivel de Sesión) según la fuente?",
+      "a": [
+        "Especificar el medio de transmisión.",
+        "Establecer sesiones para servicios como control de dialogo.",
+        "Definir el formato de los paquetes.",
+        "Gestionar la sintaxis y representación de datos."
+      ],
+      "answer": 2
+    },
+    {
+      "q": "¿Según la fuente, ¿cuál de estos protocolos utiliza Nivel de Sesión?",
+      "a": [
+        "UDP",
+        "IP",
+        "TCP",
+        "ICMP"
+      ],
+      "answer": 3
+    },
+    {
+      "q": "¿Qué se menciona sobre la utilización del Nivel 6 (Nivel de Presentación) en la fuente?",
+      "a": [
+        "Es el nivel más importante para la interacción del usuario.",
+        "Se utiliza de forma extensa para la seguridad.",
+        "No se utiliza de forma extensa.",
+        "Es exclusivo para la conversión de formatos de video."
+      ],
+      "answer": 3
+    },
+    {
+      "q": "¿En qué nivel del Modelo OSI reside la funcionalidad de toda la comunicación y produce la interacción con el usuario?",
+      "a": [
+        "Nivel de Sesión",
+        "Nivel de Presentación",
+        "Nivel de Aplicación",
+        "Nivel de Transporte"
+      ],
+      "answer": 3
+    },
+    {
+      "q": "¿Cuál de los siguientes ejemplos de protocolos se asocia con el Nivel 7 (Nivel de Aplicación) en la fuente?",
+      "a": [
+        "TCP",
+        "IP",
+        "FTP",
+        "HDLC"
+      ],
+      "answer": 3
+    },
+    {
+      "q": "¿Según la fuente, ¿cuál de las siguientes es una topología LAN física/lógica mencionada?",
+      "a": [
+        "Segmento",
+        "Línea",
+        "Árbol",
+        "Cascada"
+      ],
+      "answer": 3
+    },
+    {
+      "q": "¿Cuál de las siguientes topologías NO se menciona explícitamente en la lista de Topologías LAN comunes?",
+      "a": [
+        "Bus",
+        "Anillo",
+        "Híbrida",
+        "Estrella"
+      ],
+      "answer": 3
+    },
+    {
+      "q": "¿Según la fuente, ¿qué define la Topología de una red?",
+      "a": [
+        "El ancho de banda del medio.",
+        "La extensión geográfica.",
+        "La estructura de la red.",
+        "El tipo de conmutación utilizada."
+      ],
+      "answer": 3
+    },
+    {
+      "q": "¿Qué medio de transmisión se menciona como el medio más versátil?",
+      "a": [
+        "Par Trenzado",
+        "Fibra Óptica",
+        "Cable Coaxial",
+        "Par Simple"
+      ],
+      "answer": 3
+    },
+    {
+      "q": "¿Cuántas conversaciones de voz simultáneas puede transportar un Cable Coaxial según la fuente?",
+      "a": [
+        "100",
+        "1000",
+        "10,000",
+        "100,000"
+      ],
+      "answer": 3
+    },
+    {
+      "q": "¿Qué medio de transmisión ha reemplazado al Cable Coaxial en transmisión telefónica de gran distancia?",
+      "a": [
+        "Par Trenzado Cat 6",
+        "Fibra Óptica",
+        "Wifi",
+        "Par de Cobre simple"
+      ],
+      "answer": 2
+    },
+    {
+      "q": "¿Cuál es una dificultad asociada a los empalmes en el cable de Fibra Óptica?",
+      "a": [
+        "Son inmunes a interferencias.",
+        "Requieren alineación cuidadosa.",
+        "Son fáciles y de bajo coste.",
+        "Dificultades en los empalmes."
+      ],
+      "answer": 4
+    },
+    {
+      "q": "¿Cuál de estas características es una ventaja clave del cable de Fibra Óptica?",
+      "a": [
+        "Menor coste que el cobre.",
+        "Ancho de banda limitado.",
+        "Inmunidad a interferencias electromagnéticas y diafonía.",
+        "Facilidad para compartir el medio."
+      ],
+      "answer": 3
+    },
+    {
+      "q": "¿En la transmisión inalámbrica, ¿qué tipo de transmisión emite la señal en todas direcciones?",
+      "a": [
+        "Direccional",
+        "Omnidireccional",
+        "Enfocada",
+        "Guiada"
+      ],
+      "answer": 2
+    },
+    {
+      "q": "¿Qué caracteriza la transmisión inalámbrica Direccional?",
+      "a": [
+        "Señal emitida en todas direcciones.",
+        "Recibida por múltiples antenas.",
+        "Requiere alineamiento cuidadoso de las antenas.",
+        "Utiliza un solo canal compartido."
+      ],
+      "answer": 3
+    },
+    {
+      "q": "¿Qué aspecto de un protocolo se refiere a la información de control para la coordinación y el manejo de errores?",
+      "a": [
+        "Sintaxis",
+        "Semántica",
+        "Temporización",
+        "Formato de los datos"
+      ],
+      "answer": 2
+    },
+    {
+      "q": "¿Qué aspecto de un protocolo incluye la sintonización de velocidades y el control de flujo?",
+      "a": [
+        "Sintaxis",
+        "Semántica",
+        "Temporización",
+        "Formato de los mensajes"
+      ],
+      "answer": 3
+    },
+    {
+      "q": "¿Según la fuente, ¿qué modelo sirve de referencia en las redes de área local y un buen diseño comienza en sus capas inferiores?",
+      "a": [
+        "Modelo TCP/IP",
+        "Modelo Cliente-Servidor",
+        "Modelo de Referencia OSI",
+        "Modelo Punto a Punto"
+      ],
+      "answer": 3
+    }
+  ]
+}

@@ -1,0 +1,308 @@
+{
+  "title": "Tema7_2",
+  "career": "Ingeniería Informática",
+  "year": "Cuarto año",
+  "subject": "Redes_2",
+  "questions": [
+    {
+      "q": "¿Cuál es el objetivo principal de VTP Depuración (Pruning)?",
+      "a": [
+        "Asegurar que la base de datos de VLANs esté sincronizada en todos los switches",
+        "Reducir el tráfico de difusión (broadcast), multidifusión (multicast) y unidifusión desconocido en los enlaces troncales",
+        "Permitir que los switches cliente soliciten actualizaciones de VLAN",
+        "Configurar dinámicamente los enlaces troncales"
+      ],
+      "answer": 2
+    },
+    {
+      "q": "¿En qué campo de la estructura de la trama VTP se especifica si el mensaje es una publicación de resumen, subconjunto o petición?",
+      "a": [
+        "Versión",
+        "Tipo de Mensaje",
+        "Número de Secuencia de Revisión",
+        "Dominio de Administración VTP"
+      ],
+      "answer": 2
+    },
+    {
+      "q": "¿Cuál es el valor del campo Organization Code en una trama VTP?",
+      "a": [
+        "0xAA AA 03 (SNAP)",
+        "0x00 00 0C (Cisco)",
+        "0x00 00 00",
+        "0x01 00 0C"
+      ],
+      "answer": 2
+    },
+    {
+      "q": "¿Qué incluye la parte variable de una publicación de Subconjunto VTP?",
+      "a": [
+        "El nombre del dominio VTP y el número de revisión",
+        "La información detallada de la lista de VLANs activas (ID, nombre, tipo, etc.)",
+        "El código de seguridad VTP",
+        "El checksum de la publicación"
+      ],
+      "answer": 2
+    },
+    {
+      "q": "¿Qué provoca que un switch servidor VTP envíe una publicación de Resumen?",
+      "a": [
+        "Un switch cliente solicita una actualización",
+        "Se configura un nuevo nombre de dominio VTP",
+        "Se realiza un cambio en la configuración de la base de datos de VLANs (crear/modificar/eliminar)",
+        "Todas las anteriores"
+      ],
+      "answer": 4
+    },
+    {
+      "q": "¿Qué hace un switch cliente VTP al recibir una publicación de Resumen con un número de secuencia de revisión *menor* que el suyo?",
+      "a": [
+        "Actualiza su base de datos de VLANs",
+        "Envía su propia publicación de Resumen",
+        "Descarta la publicación de Resumen",
+        "Envía una publicación de Petición"
+      ],
+      "answer": 3
+    },
+    {
+      "q": "¿Qué hace un switch cliente VTP al recibir una publicación de Resumen con un número de secuencia de revisión *mayor* que el suyo?",
+      "a": [
+        "Descarta la publicación",
+        "Envía una publicación de Petición de Subconjunto",
+        "Envía su propia configuración de VLAN al servidor",
+        "Pasa al modo Transparente"
+      ],
+      "answer": 2
+    },
+    {
+      "q": "¿Qué tipo de publicación VTP envía un switch servidor después de enviar una publicación de Resumen con un número de revisión incrementado?",
+      "a": [
+        "Otra publicación de Resumen",
+        "Una o más publicaciones de Subconjunto",
+        "Una publicación de Petición",
+        "No envía nada más hasta otro cambio"
+      ],
+      "answer": 2
+    },
+    {
+      "q": "¿Qué campo de la trama VTP se calcula utilizando campos del encabezado VTP, el código de seguridad VTP (si está configurado) y valores específicos de la publicación?",
+      "a": [
+        "Número de Secuencia de Revisión",
+        "Tipo de Mensaje",
+        "Dominio de Administración VTP",
+        "Checksum"
+      ],
+      "answer": 4
+    },
+    {
+      "q": "¿Qué sucede con las VLANs de rango extendido (IDs 1006-4094) en VTP versión 1 y 2?",
+      "a": [
+        "Se propagan correctamente",
+        "No se propagan por VTP, deben configurarse localmente en cada switch",
+        "Solo se propagan en modo servidor",
+        "Solo se propagan si VTP Pruning está habilitado"
+      ],
+      "answer": 2
+    },
+    {
+      "q": "¿Qué modo VTP es el único que permite la creación, modificación o eliminación de VLANs en ese switch?",
+      "a": [
+        "Cliente",
+        "Transparente",
+        "Servidor",
+        "Depuración"
+      ],
+      "answer": 3
+    },
+    {
+      "q": "¿En qué modo VTP un switch mantiene su propia configuración de VLAN localmente y no la comparte con otros switches, pero sí reenvía las publicaciones VTP que recibe por sus troncales?",
+      "a": [
+        "Cliente",
+        "Transparente",
+        "Servidor",
+        "Apagado (Off)"
+      ],
+      "answer": 2
+    },
+    {
+      "q": "¿Si un switch en modo Cliente VTP recibe una publicación de Subconjunto de un dominio VTP diferente al suyo, ¿qué acción toma?",
+      "a": [
+        "Actualiza su configuración de VLAN con la información recibida",
+        "Ignora la publicación",
+        "Envía su propia configuración de VLAN al remitente",
+        "Cambia su nombre de dominio al del remitente"
+      ],
+      "answer": 2
+    },
+    {
+      "q": "¿Cuál es el estado del número de secuencia de revisión VTP cuando un switch arranca por primera vez y no tiene dominio configurado?",
+      "a": [
+        "El valor más alto posible",
+        "Un valor aleatorio",
+        "0",
+        "1"
+      ],
+      "answer": 3
+    },
+    {
+      "q": "¿Qué sucede con el número de secuencia de revisión VTP de un switch cuando se configura por primera vez un nombre de dominio VTP?",
+      "a": [
+        "Se mantiene en 0",
+        "Se establece en 1",
+        "Se incrementa en 1 por cada VLAN configurada",
+        "Se sincroniza con el switch de mayor número de revisión"
+      ],
+      "answer": 2
+    },
+    {
+      "q": "¿En una red VTP, si dos switches tienen el mismo nombre de dominio pero diferentes contraseñas VTP, ¿podrán sincronizar sus bases de datos de VLAN?",
+      "a": [
+        "Sí, la contraseña solo afecta la seguridad de la configuración, no la sincronización",
+        "Sí, si el switch cliente solicita la actualización",
+        "No, la contraseña debe ser la misma para que el checksum coincida y la publicación sea aceptada",
+        "Sí, pero solo las publicaciones de resumen"
+      ],
+      "answer": 3
+    },
+    {
+      "q": "¿Qué campo en la trama VTP se utiliza para evitar que un switch aplique una configuración de VLAN más antigua que la suya?",
+      "a": [
+        "Tipo de Mensaje",
+        "Dominio de Administración VTP",
+        "Número de Secuencia de Revisión",
+        "Checksum"
+      ],
+      "answer": 3
+    },
+    {
+      "q": "¿Cuál de las siguientes acciones *no* incrementa el número de secuencia de revisión VTP en un switch servidor?",
+      "a": [
+        "Crear una nueva VLAN",
+        "Eliminar una VLAN existente",
+        "Cambiar el nombre de una VLAN",
+        "Añadir un puerto a una VLAN existente"
+      ],
+      "answer": 4
+    },
+    {
+      "q": "¿Qué información *no* se propaga mediante VTP por defecto?",
+      "a": [
+        "Configuración de VLANs (ID, nombre)",
+        "Configuración de VTP Pruning",
+        "Configuración de Spanning Tree por VLAN (PVST+)",
+        "Configuración del Dominio VTP"
+      ],
+      "answer": 3
+    },
+    {
+      "q": "¿Cuál es el propósito del campo 'Length of VTP Header' en la estructura de la trama VTP?",
+      "a": [
+        "Indicar la longitud total de la trama VTP",
+        "Indicar la longitud de la parte fija del encabezado VTP",
+        "Indicar la longitud de la parte variable de la publicación",
+        "Indicar el número de VLANs listadas en la publicación"
+      ],
+      "answer": 2
+    },
+    {
+      "q": "¿Qué sucede en un switch en modo VTP Transparente si recibe una publicación VTP con un número de secuencia de revisión más alto que el suyo?",
+      "a": [
+        "Acepta la publicación y actualiza su base de datos",
+        "Ignora la publicación y mantiene su base de datos local",
+        "Reenvía la publicación por sus puertos troncales",
+        "Tanto Ignora la publicación como la Reenvía"
+      ],
+      "answer": 4
+    },
+    {
+      "q": "¿Qué comando se utiliza para verificar el estado de la depuración VTP en una interfaz específica?",
+      "a": [
+        "show vlan brief",
+        "show vtp status",
+        "show interfaces <interfaz> trunk",
+        "show vtp pruning"
+      ],
+      "answer": 3
+    },
+    {
+      "q": "¿Para que VTP Depuración funcione correctamente en un enlace troncal, ¿qué debe ocurrir?",
+      "a": [
+        "Ambos extremos del enlace deben estar en modo servidor VTP",
+        "Al menos uno de los extremos debe tener VTP Depuración habilitado",
+        "Ambos extremos del enlace troncal deben tener VTP Depuración habilitado",
+        "El enlace troncal debe configurarse manualmente para cada VLAN"
+      ],
+      "answer": 3
+    },
+    {
+      "q": "¿Cuál es el riesgo potencial de deshabilitar VTP (modo Off) en un switch?",
+      "a": [
+        "Puede causar bucles en la red",
+        "No recibirá actualizaciones de VLAN de otros switches VTP",
+        "Perderá automáticamente todas sus configuraciones de VLAN",
+        "Incrementará el número de secuencia de revisión VTP localmente"
+      ],
+      "answer": 2
+    },
+    {
+      "q": "¿Qué comando configura un switch para que no participe en VTP, pero reenvíe las publicaciones VTP que recibe?",
+      "a": [
+        "vtp mode server",
+        "vtp mode client",
+        "vtp mode transparent",
+        "vtp mode off"
+      ],
+      "answer": 3
+    },
+    {
+      "q": "¿Cuál es el propósito principal del campo DSAP/LSAP y el campo Control en la encapsulación 802.2 de una trama VTP?",
+      "a": [
+        "Indicar el número de VLAN a la que pertenece la trama",
+        "Identificar el protocolo de capa superior (VTP) que utiliza el LLC",
+        "Especificar la dirección MAC de destino",
+        "Determinar si la trama es de difusión o unidifusión"
+      ],
+      "answer": 2
+    },
+    {
+      "q": "¿Si un switch recibe una publicación de Subconjunto VTP con un número de secuencia de revisión que no coincide con el número de revisión esperado (basado en la última publicación de Resumen), ¿qué acción toma?",
+      "a": [
+        "Acepta la publicación y actualiza esa VLAN",
+        "Envía una publicación de petición para el resumen",
+        "Descarta la publicación de Subconjunto",
+        "Ignora el número de revisión en las publicaciones de subconjunto"
+      ],
+      "answer": 3
+    },
+    {
+      "q": "¿Qué sucede si un switch cliente VTP con una base de datos de VLAN obsoleta se conecta a un switch servidor VTP con un número de revisión más alto y el mismo dominio/contraseña?",
+      "a": [
+        "El cliente enviará su configuración al servidor",
+        "El servidor le enviará una publicación de Resumen y luego las de Subconjunto para sincronizarlo",
+        "No pasará nada, deben configurarse manualmente",
+        "El cliente pasará automáticamente al modo Transparente"
+      ],
+      "answer": 2
+    },
+    {
+      "q": "¿La depuración VTP está habilitada por defecto en los switches Cisco Catalyst?",
+      "a": [
+        "Sí",
+        "No",
+        "Depende del modelo del switch",
+        "Solo en modo servidor"
+      ],
+      "answer": 2
+    },
+    {
+      "q": "¿Cuál de las siguientes afirmaciones es cierta sobre un switch en modo VTP Transparente?",
+      "a": [
+        "Puede aprender configuraciones de VLAN de otros switches",
+        "Puede enviar publicaciones VTP con su propia configuración",
+        "Su número de secuencia de revisión local siempre es 0",
+        "Ignora el nombre de dominio VTP de las publicaciones que reenvía"
+      ],
+      "answer": 4
+    }
+  ]
+}

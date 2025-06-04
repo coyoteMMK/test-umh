@@ -1,0 +1,308 @@
+{
+  "title": "Tema12_2",
+  "career": "Ingeniería Informática",
+  "year": "Cuarto año",
+  "subject": "Redes_2",
+  "questions": [
+    {
+      "q": "La norma EIA/TIA 569 se enfoca en:",
+      "a": [
+        "La administración de la infraestructura",
+        "Las rutas y espacios para cables de telecomunicaciones",
+        "El rendimiento de los componentes",
+        "La conexión a tierra y junturas"
+      ],
+      "answer": 2
+    },
+    {
+      "q": "La norma EIA/TIA 606 trata sobre:",
+      "a": [
+        "Las topologías de cableado",
+        "La conexión a tierra y junturas",
+        "La administración de la infraestructura de telecomunicaciones",
+        "Las distancias máximas de los cables"
+      ],
+      "answer": 3
+    },
+    {
+      "q": "Según la norma 568-A, ¿cuáles son los medios físicos recomendados para la red de distribución vertical o backbone?",
+      "a": [
+        "Cable Coaxial",
+        "Pares trenzados y fibras ópticas",
+        "Cable UTP Categoría 3",
+        "Solo Fibra Óptica Multimodo"
+      ],
+      "answer": 2
+    },
+    {
+      "q": "El cableado de Categoría 1 se utiliza principalmente para:",
+      "a": [
+        "Redes 100BaseT",
+        "Comunicaciones telefónicas",
+        "Redes Token Ring de 16 Mbps",
+        "Redes Ethernet de 1 Gbps"
+      ],
+      "answer": 2
+    },
+    {
+      "q": "¿Cuál es la velocidad máxima de transmisión de datos que puede alcanzar el cableado de Categoría 2 según la fuente?",
+      "a": [
+        "10 Mbps",
+        "4 Mbps",
+        "100 Mbps",
+        "1 Gbps"
+      ],
+      "answer": 2
+    },
+    {
+      "q": "¿Para qué tipo de redes y velocidad se utiliza el cableado de Categoría 3 según la fuente?",
+      "a": [
+        "Redes Token Ring de 16 Mbps",
+        "Redes Ethernet de 100 Mbps",
+        "Redes 10BaseT con hasta 10 Mbps",
+        "Redes Ethernet de 1 Gbps"
+      ],
+      "answer": 3
+    },
+    {
+      "q": "¿Qué categoría de cable UTP se utiliza en redes Token Ring y soporta hasta 16 Mbps según la fuente?",
+      "a": [
+        "Categoría 3",
+        "Categoría 4",
+        "Categoría 5",
+        "Categoría 5E"
+      ],
+      "answer": 2
+    },
+    {
+      "q": "Las categorías de cable UTP 5E y 6 son mencionadas por soportar velocidades de red como:",
+      "a": [
+        "10 Mbps Ethernet",
+        "16 Mbps Token Ring",
+        "100 Mbps Fast Ethernet",
+        "1 Gbps Ethernet y ATM"
+      ],
+      "answer": 4
+    },
+    {
+      "q": "¿Cuál es el único conector permitido por la norma para UTP de 100 ohm y 8 conductores en el cableado horizontal?",
+      "a": [
+        "Conector RJ11",
+        "Conector BNC",
+        "Jack modular de 8 posiciones (RJ45)",
+        "Conector SC"
+      ],
+      "answer": 3
+    },
+    {
+      "q": "En el jack modular de 8 posiciones para UTP de 100 ohm en el cableado horizontal, ¿cuántos conductores deben ser terminados?",
+      "a": [
+        "4 conductores",
+        "6 conductores",
+        "8 conductores",
+        "Depende de la aplicación"
+      ],
+      "answer": 3
+    },
+    {
+      "q": "¿Cómo se clasifica la categoría de un sistema de cableado (canal) que tiene componentes (cable, jack, patch panel) de distintas categorías?",
+      "a": [
+        "Como el componente de la categoría más alta",
+        "Como el componente de la categoría más baja",
+        "Como el promedio de las categorías",
+        "Según el tipo de aplicación final"
+      ],
+      "answer": 2
+    },
+    {
+      "q": "¿Qué representan T568A y T568B en el contexto del cableado estructurado?",
+      "a": [
+        "Tipos de fibra óptica monomodo y multimodo",
+        "Configuraciones de armado permitidas para cables UTP",
+        "Modelos de Patch Panel de diferentes densidades",
+        "Estándares de temperatura para cuartos de equipos"
+      ],
+      "answer": 2
+    },
+    {
+      "q": "¿Cuál es la función principal del Cableado Vertical (Backbone)?",
+      "a": [
+        "Conectar equipos directamente al área de trabajo",
+        "Interconectar los closet de telecomunicaciones, el cuarto de equipos y la acometida",
+        "Realizar las conexiones horizontales dentro de un piso",
+        "Distribuir energía eléctrica a los equipos"
+      ],
+      "answer": 2
+    },
+    {
+      "q": "¿Qué topología se mantiene en el Cableado Vertical (Backbone)?",
+      "a": [
+        "Topología en Bus",
+        "Topología en Anillo",
+        "Topología en Malla",
+        "Topología de Estrella"
+      ],
+      "answer": 4
+    },
+    {
+      "q": "¿Qué tipos de cable son aceptados para el Cableado Vertical (Backbone) según la fuente?",
+      "a": [
+        "Solo Fibra Óptica",
+        "Cable UTP y Cable Coaxial",
+        "Cable UTP, STP, y fibra óptica monomodo y multimodo",
+        "Cable STP y Cable de Cinta"
+      ],
+      "answer": 3
+    },
+    {
+      "q": "¿Cuál es la distancia máxima recomendada para UTP (voz) en el cableado vertical entre crosconexión principal y closet de telecomunicaciones?",
+      "a": [
+        "90 metros",
+        "700 metros",
+        "800 metros",
+        "2000 metros"
+      ],
+      "answer": 3
+    },
+    {
+      "q": "¿Cuál es la distancia máxima recomendada para Fibra Óptica multimodo en el cableado vertical entre crosconexión principal y closet de telecomunicaciones?",
+      "a": [
+        "800 metros",
+        "2000 metros",
+        "3000 metros",
+        "90 metros"
+      ],
+      "answer": 2
+    },
+    {
+      "q": "¿Cuál es el máximo número de niveles jerárquicos de crosconexión permitidos en el cableado vertical?",
+      "a": [
+        "Uno",
+        "Dos (principal e intermedio)",
+        "Tres",
+        "Cuatro"
+      ],
+      "answer": 2
+    },
+    {
+      "q": "¿Cuántas crosconexiones como máximo debe haber entre la crosconexión principal y un closet de telecomunicaciones en el cableado vertical?",
+      "a": [
+        "Ninguna",
+        "Una",
+        "Dos",
+        "Tres"
+      ],
+      "answer": 2
+    },
+    {
+      "q": "¿Cuál es la función principal de un Closet de Telecomunicaciones?",
+      "a": [
+        "Albergar servidores de aplicaciones críticas",
+        "Distribuir energía eléctrica a los equipos activos",
+        "Servir como punto de terminación del cableado horizontal",
+        "Gestionar la acometida del edificio"
+      ],
+      "answer": 3
+    },
+    {
+      "q": "¿Cuál es el número mínimo recomendado de Closets de Telecomunicaciones por piso?",
+      "a": [
+        "Uno",
+        "Dos",
+        "Depende del área del piso",
+        "Uno por cada 1000 mts2"
+      ],
+      "answer": 1
+    },
+    {
+      "q": "¿Cuál es el ancho mínimo recomendado para la puerta de un Closet de Telecomunicaciones?",
+      "a": [
+        "60 cm",
+        "75 cm",
+        "91 cm",
+        "120 cm"
+      ],
+      "answer": 3
+    },
+    {
+      "q": "¿Cuál es el rango de temperatura ambiente recomendado para un Cuarto de Equipos?",
+      "a": [
+        "10 - 15 °C",
+        "18 - 24 °C",
+        "25 - 30 °C",
+        "30 - 35 °C"
+      ],
+      "answer": 2
+    },
+    {
+      "q": "¿Cuál es el rango de humedad relativa recomendado para un Cuarto de Equipos?",
+      "a": [
+        "10% - 25%",
+        "30% - 55%",
+        "60% - 75%",
+        "80% - 95%"]
+      ,
+      "answer": 2
+    },
+    {
+      "q": "¿En qué consiste la Acometida en un sistema de cableado estructurado?",
+      "a": [
+        "La distribución de energía eléctrica",
+        "La entrada al edificio y la conexión al backbone entre edificios",
+        "La terminación del cableado horizontal",
+        "La interconexión de equipos activos"
+      ],
+      "answer": 2
+    },
+    {
+      "q": "¿Cuál de los siguientes es un componente de la Administración en el cableado estructurado?",
+      "a": [
+        "Servidores de aplicaciones",
+        "Equipos electrónicos de transmisión",
+        "Bloques de conexión (66, 110, etc.)",
+        "Protecciones eléctricas"
+      ],
+      "answer": 3
+    },
+    {
+      "q": "Según el método más común, ¿por dónde se debe comenzar el diseño de un sistema de cableado estructurado?",
+      "a": [
+        "Por la acometida del edificio",
+        "Por el cuarto de equipos",
+        "Por el área de trabajo",
+        "Por el cableado vertical"
+      ],
+      "answer": 3
+    },
+    {
+      "q": "¿Dónde NO debe ubicarse una Salida para Múltiples Usuarios (MUTO)?",
+      "a": [
+        "En la estructura del edificio",
+        "En mobiliario asegurado permanentemente",
+        "En el techo o en el piso",
+        "Cerca de las áreas de trabajo"
+      ],
+      "answer": 3
+    },
+    {
+      "q": "¿A cuántas áreas de trabajo como máximo debe servir un Punto de Consolidación (CP)?",
+      "a": [
+        "6",
+        "8",
+        "10",
+        "12"
+      ],
+      "answer": 4
+    },
+    {
+      "q": "Al calcular la longitud promedio del cable para el cableado horizontal, ¿qué porcentaje de holgura se debe añadir?",
+      "a": [
+        "5%",
+        "10%",
+        "15%",
+        "20%"
+      ],
+      "answer": 2
+    }
+  ]
+}

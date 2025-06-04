@@ -1,0 +1,308 @@
+{
+  "title": "Tema1_1",
+  "career": "Ingeniería Informática",
+  "year": "Cuarto año",
+  "subject": "Redes_2",
+  "questions": [
+    {
+      "q": "¿Qué característica define la Conmutación de Circuitos según la fuente?",
+      "a": [
+        "Los datos se agrupan en paquetes.",
+        "Se establece un 'Circuito dedicado' para toda la duración de la conversación.",
+        "Cada paquete se encamina de forma independiente.",
+        "Es el enfoque principal de las redes de comunicación de datos actualmente."
+      ],
+      "answer": 2
+    },
+    {
+      "q": "¿Cuál es una característica de la Conmutación de Paquetes?",
+      "a": [
+        "Requiere el establecimiento de un circuito físico continuo.",
+        "Los datos se mandan agrupados en paquetes que pasan a través de los nodos.",
+        "Cada comunicación utiliza un enlace de difusión exclusivo.",
+        "Es principalmente utilizada en las redes telefónicas antiguas."
+      ],
+      "answer": 2
+    },
+    {
+      "q": "¿Según la fuente, ¿qué tipo de red de comunicación es un ejemplo de Conmutación de Circuitos?",
+      "a": [
+        "Redes de datos IP",
+        "Redes telefónicas",
+        "Redes Ethernet",
+        "Redes ATM"
+      ],
+      "answer": 2
+    },
+    {
+      "q": "¿En cuál variante de la Conmutación de Paquetes cada paquete se encamina independientemente?",
+      "a": [
+        "Circuito Virtual",
+        "Conmutación de Circuitos",
+        "Datagrama",
+        "Punto a Punto"
+      ],
+      "answer": 3
+    },
+    {
+      "q": "¿Qué protocolo se menciona como ejemplo de Conmutación de Paquetes en modo Datagrama?",
+      "a": [
+        "ATM",
+        "TCP",
+        "IP",
+        "FDDI"
+      ],
+      "answer": 3
+    },
+    {
+      "q": "¿Cuántas etapas hay en la Conmutación de Paquetes en modo Circuito Virtual según la fuente?",
+      "a": [
+        "Una",
+        "Dos",
+        "Tres",
+        "Cuatro"
+      ],
+      "answer": 3
+    },
+    {
+      "q": "¿Qué tecnología se menciona como ejemplo de Conmutación de Paquetes en modo Circuito Virtual?",
+      "a": [
+        "IP",
+        "Ethernet",
+        "ATM",
+        "Wifi"
+      ],
+      "answer": 3
+    },
+    {
+      "q": "¿Qué característica define un Enlace de difusión?",
+      "a": [
+        "Conexiones individuales entre pares de máquinas.",
+        "Es posible que existan varias rutas entre el origen y el destino.",
+        "Un solo canal de comunicación compartido.",
+        "Se establece un circuito dedicado."
+      ],
+      "answer": 3
+    },
+    {
+      "q": "¿En un Enlace de difusión, ¿cómo recibe la máquina destino el paquete dirigido a ella?",
+      "a": [
+        "Solo recibe paquetes si se ha establecido previamente un circuito virtual.",
+        "Copia el paquete dirigido a ella del canal compartido.",
+        "Lo solicita a un router central.",
+        "Debe esperar a que el canal esté libre para transmitir una solicitud."
+      ],
+      "answer": 2
+    },
+    {
+      "q": "¿Qué tipo de enlace se caracteriza por tener conexiones individuales entre pares de máquinas?",
+      "a": [
+        "Enlace de difusión",
+        "Circuito Virtual",
+        "Punto a punto",
+        "Datagrama"
+      ],
+      "answer": 3
+    },
+    {
+      "q": "¿Según la fuente, ¿qué tipo de enlace tienden a utilizar generalmente las redes más pequeñas localizadas en una misma área geográfica?",
+      "a": [
+        "Punto a punto",
+        "Difusión",
+        "Circuito Virtual",
+        "Malla"
+      ],
+      "answer": 2
+    },
+    {
+      "q": "¿Cuál es la extensión geográfica aproximada de una Red de Área Metropolitana (MAN)?",
+      "a": [
+        "~1 metro",
+        "~100 metros",
+        "~10 km",
+        "~1000 km"
+      ],
+      "answer": 3
+    },
+    {
+      "q": "¿Cuál es la extensión geográfica aproximada de una Red de Área Amplia (WAN)?",
+      "a": [
+        "~10 km",
+        "~100 km - ~10000 km",
+        "~100 metros",
+        "~1 metro"
+      ],
+      "answer": 2
+    },
+    {
+      "q": "¿Cuál es la extensión geográfica aproximada de una Red de Área Local (LAN)?",
+      "a": [
+        "~1 metro",
+        "~10 metros - ~1 km",
+        "~10 km",
+        "~1000 km"
+      ],
+      "answer": 2
+    },
+    {
+      "q": "¿Cuál es la extensión geográfica aproximada de una Red de Área Personal (PAN)?",
+      "a": [
+        "~1 metro",
+        "~10 metros",
+        "~100 metros",
+        "~1 km"
+      ],
+      "answer": 1
+    },
+    {
+      "q": "¿Qué tecnología se menciona como ejemplo de Red de Área Personal (PAN)?",
+      "a": [
+        "Ethernet",
+        "FTTH",
+        "Bluetooth",
+        "ATM"
+      ],
+      "answer": 3
+    },
+    {
+      "q": "¿Qué tecnología se menciona como ejemplo de Red de Área Local (LAN)?",
+      "a": [
+        "Bluetooth",
+        "FDDI",
+        "SONET",
+        "Ethernet"
+      ],
+      "answer": 4
+    },
+    {
+      "q": "¿Cuál es el ejemplo más extendido actualmente de Redes de Área Metropolitana (MAN) según la fuente?",
+      "a": [
+        "Redes de TV por cable",
+        "FTTH",
+        "ATM",
+        "Redes telefónicas"
+      ],
+      "answer": 2
+    },
+    {
+      "q": "¿En qué dos componentes principales se dividen las Redes de Área Amplia (WAN) según la fuente?",
+      "a": [
+        "Concentradores y Conmutadores",
+        "Hosts y Subredes",
+        "Capas y Protocolos",
+        "Enlaces de difusión y punto a punto"
+      ],
+      "answer": 2
+    },
+    {
+      "q": "¿Cuál de las siguientes es una característica típica de las Redes Área Local (LAN)?",
+      "a": [
+        "Baja velocidad",
+        "Gran número de usuarios",
+        "Utilizan difusión (broadcast)",
+        "Son de propiedad pública"
+      ],
+      "answer": 3
+    },
+    {
+      "q": "¿Cuál de las siguientes NO se lista como una topología común de LAN en la fuente?",
+      "a": [
+        "Estrella",
+        "Malla",
+        "Segmento",
+        "Anillo"
+      ],
+      "answer": 3
+    },
+    {
+      "q": "¿En qué dos categorías principales se clasifican los medios de transmisión?",
+      "a": [
+        "Digitales y Analógicos",
+        "Rápidos y Lentos",
+        "Guiados e Inalámbricos (No-guiados)",
+        "Cobre y Fibra"
+      ],
+      "answer": 3
+    },
+    {
+      "q": "¿Según la fuente, ¿qué característica del medio de transmisión está directamente relacionada con una mayor velocidad?",
+      "a": [
+        "Menor distancia",
+        "Mayor calidad",
+        "Mayor ancho de banda",
+        "Menos ruido"
+      ],
+      "answer": 3
+    },
+    {
+      "q": "¿Qué problema se menciona asociado al medio de transmisión Par de Cobre simple?",
+      "a": [
+        "Inmunidad a las interferencias.",
+        "Diafonía (crosstalk).",
+        "Alto coste de instalación.",
+        "Dificultad en los empalmes."
+      ],
+      "answer": 2
+    },
+    {
+      "q": "¿En el Cable Par Trenzado (TP), ¿qué factor contribuye a una mayor inmunidad a las interferencias?",
+      "a": [
+        "El apantallamiento (STP) únicamente.",
+        "Una mayor calidad de los conectores.",
+        "El número de trenzados por metro.",
+        "Usar cable UTP en lugar de STP."
+      ],
+      "answer": 3
+    },
+    {
+      "q": "¿Qué categoría de cable UTP es adecuada para Gigabit Ethernet a 1 Gbps según la fuente?",
+      "a": [
+        "Categoría 3",
+        "Categoría 4",
+        "Categoría 5",
+        "Categoría 5E y 6"
+      ],
+      "answer": 4
+    },
+    {
+      "q": "¿Cuál es una ventaja clave del cable de Fibra Óptica mencionada en la fuente?",
+      "a": [
+        "Menor coste que el cobre.",
+        "Facilidad y bajo coste de empalme.",
+        "Inmunidad a interferencias electromagnéticas y diafonía.",
+        "Ancho de banda limitado."
+      ],
+      "answer": 3
+    },
+    {
+      "q": "¿Según la fuente, ¿qué requiere una alineación cuidadosa de las antenas en la transmisión inalámbrica?",
+      "a": [
+        "La transmisión Omnidireccional.",
+        "Cualquier transmisión vía antena.",
+        "La transmisión Direccional.",
+        "El medio no-guiado."
+      ],
+      "answer": 3
+    },
+    {
+      "q": "¿Según la fuente, ¿qué son los protocolos en las redes de telecomunicación?",
+      "a": [
+        "Dispositivos hardware para interconectar redes.",
+        "Las unidades de datos utilizadas en cada capa.",
+        "Un conjunto de reglas que gobiernan el intercambio de datos entre dos entidades.",
+        "Especificaciones físicas del medio de transmisión."
+      ],
+      "answer": 3
+    },
+    {
+      "q": "¿Cuántas capas tiene el Modelo de Referencia OSI?",
+      "a": [
+        "4",
+        "5",
+        "7",
+        "8"
+      ],
+      "answer": 3
+    }
+  ]
+}

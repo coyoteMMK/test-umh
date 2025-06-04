@@ -1,0 +1,308 @@
+{
+  "title": "Tema9_1",
+  "career": "Ingeniería Informática",
+  "year": "Cuarto año",
+  "subject": "Redes_2",
+  "questions": [
+    {
+      "q": "¿Qué diferencia fundamental existe entre un 'servicio' Internet estándar y una 'aplicación', según se describe en la fuente?",
+      "a": [
+      "Un servicio es una implementación de una aplicación.",
+      "No existe ninguna diferencia, son términos sinónimos.",
+      "Un servicio es lo que ofrece el protocolo, la aplicación es su implementación concreta.",
+      "Las aplicaciones solo funcionan en un único host, mientras que los servicios son distribuidos."
+      ],
+      "answer": 3
+      },
+      {
+      "q": "¿Cuál de los siguientes protocolos se menciona como el más ampliamente utilizado en la actualidad para el servicio de asignación dinámica de direcciones IP?",
+      "a": [
+      "RARP",
+      "BOOTP",
+      "DHCP",
+      "TELNET"
+      ],
+      "answer": 3
+      },
+      {
+      "q": "Según la fuente, ¿aproximadamente hasta qué año se consideró BOOTP el protocolo principal para la asignación dinámica de direcciones IP antes de la aparición de DHCP?",
+      "a": [
+      "Hasta 1985",
+      "Hasta 1993",
+      "Desde 1993",
+      "Antes de 1985"
+      ],
+      "answer": 2
+      },
+      {
+      "q": "Una de las extensiones clave que DHCP añadió sobre BOOTP, según la fuente, fue la capacidad de:",
+      "a": [
+      "Asignar direcciones IP de forma estática únicamente.",
+      "Descargar la imagen completa del sistema operativo.",
+      "Permitir la asignación temporal ('préstamo') de direcciones IP.",
+      "Utilizar únicamente la dirección de difusión limitada 255.255.255.255."
+      ],
+      "answer": 3
+      },
+      {
+      "q": "¿Qué mecanismo proporciona direcciones IP privadas aleatorias en el rango 169.254.0.0 si no se encuentra un servidor DHCP disponible en la red?",
+      "a": [
+      "BOOTP Relay",
+      "APIPA (Automatic Private IP Addressing)",
+      "NAT (Network Address Translation)",
+      "DHCPDISCOVER"
+      ],
+      "answer": 2
+      },
+      {
+      "q": "¿Cuál es la función principal del Servicio de Nombres de Dominio (DNS)?",
+      "a": [
+      "Asignar direcciones IP a los hosts de forma dinámica.",
+      "Transferir archivos entre servidores.",
+      "Traducir nombres de hosts (como www.umh.es) a direcciones IP y viceversa.",
+      "Permitir la gestión remota de dispositivos de red."
+      ],
+      "answer": 3
+      },
+      {
+      "q": "¿Cómo se describe la organización del sistema DNS actual en comparación con el método antiguo basado en un archivo centralizado (hosts.txt)?",
+      "a": [
+      "Plana y centralizada.",
+      "Lineal y estática.",
+      "Jerárquica y distribuida.",
+      "Totalmente descentralizada, sin nodos raíz."
+      ],
+      "answer": 3
+      },
+      {
+      "q": "Según la fuente, ¿en qué capa del modelo de red (niveles) se define el servicio DNS?",
+      "a": [
+      "Nivel de Transporte.",
+      "Nivel de Red.",
+      "Nivel de Enlace de Datos.",
+      "Nivel de Aplicación."
+      ],
+      "answer": 4
+      },
+      {
+      "q": "¿Qué número de puerto bien conocido utiliza un servidor DNS para escuchar las peticiones de los clientes?",
+      "a": [
+      "Puerto 21 (FTP).",
+      "Puerto 23 (TELNET).",
+      "Puerto 53 (Domain).",
+      "Puerto 80 (HTTP)."
+      ],
+      "answer": 3
+      },
+      {
+      "q": "¿Qué tipo de registro (Resource Record - RR) en DNS se utiliza para especificar el servidor o servidores de correo electrónico responsables de un dominio?",
+      "a": [
+      "Registro A.",
+      "Registro CNAME.",
+      "Registro MX.",
+      "Registro NS."
+      ],
+      "answer": 3
+      },
+      {
+      "q": "¿Cuál es el propósito fundamental del servicio TELNET?",
+      "a": [
+      "La transferencia fiable de ficheros.",
+      "Permitir el acceso a una terminal de un sistema remoto.",
+      "El envío y la recepción de correo electrónico.",
+      "La distribución de noticias en grupos temáticos."
+      ],
+      "answer": 2
+      },
+      {
+      "q": "¿Qué protocolo de transporte y puerto bien conocido utiliza el servicio TELNET?",
+      "a": [
+      "UDP, Puerto 23.",
+      "TCP, Puerto 23.",
+      "TCP, Puerto 80.",
+      "UDP, Puerto 53."
+      ],
+      "answer": 2
+      },
+      {
+      "q": "¿Cuál es la unidad básica de comunicación y su tamaño en el formato NVT (Network Virtual Terminal) utilizado por TELNET?",
+      "a": [
+      "Carácter ASCII-7, 7 bits.",
+      "Carácter de control, Variable.",
+      "Byte, 8 bits.",
+      "Línea de texto, Variable."
+      ],
+      "answer": 3
+      },
+      {
+      "q": "¿Cuál es el objetivo principal del protocolo FTP (File Transfer Protocol)?",
+      "a": [
+      "Proporcionar información sobre usuarios conectados.",
+      "Permitir el acceso remoto seguro a un sistema.",
+      "La transferencia fiable de ficheros entre dos máquinas.",
+      "La gestión de la configuración de dispositivos de red."
+      ],
+      "answer": 3
+      },
+      {
+      "q": "¿Qué protocolo de transporte y puerto bien conocido utiliza el servicio FTP para su conexión de *control*?",
+      "a": [
+      "UDP, Puerto 20.",
+      "TCP, Puerto 21.",
+      "TCP, Puerto 23.",
+      "TCP, Puerto 20."
+      ],
+      "answer": 2
+      },
+      {
+      "q": "En FTP, ¿qué tipo de conexión se establece específicamente para la *transferencia de datos* de un archivo o listado?",
+      "a": [
+      "Conexión de autenticación.",
+      "Conexión de control.",
+      "Conexión de datos.",
+      "Conexión de gestión."
+      ],
+      "answer": 3
+      },
+      {
+      "q": "¿Cómo están codificados los comandos y respuestas del protocolo de aplicación FTP, según la descripción de la fuente?",
+      "a": [
+      "En formato binario propietario.",
+      "Utilizando XML.",
+      "En formato JSON.",
+      "En formato ASCII-7 (Telnet NVT)."
+      ],
+      "answer": 4
+      },
+      {
+      "q": "Dentro de la arquitectura del correo electrónico, ¿cuál es el rol principal del Agente de Transferencia de Correo (MTA)?",
+      "a": [
+      "Actuar como el programa que usan los usuarios para leer y escribir correos (lector de correo).",
+      "Gestionar las carpetas y el contenido del buzón de un usuario.",
+      "Encargarse de llevar los mensajes desde el origen hasta el destinatario(s).",
+      "Cifrar y firmar digitalmente los mensajes para garantizar la seguridad."
+      ],
+      "answer": 3
+      },
+      {
+      "q": "Según el formato estándar RFC 822, ¿cómo se estructura un mensaje de correo electrónico?",
+      "a": [
+      "Un único campo que contiene toda la información.",
+      "Dos campos (Cabecera y Cuerpo del mensaje) separados por una línea en blanco.",
+      "Una secuencia de comandos y respuestas.",
+      "Un campo para el remitente, uno para el destinatario y uno para el contenido."
+      ],
+      "answer": 2
+      },
+      {
+      "q": "¿Qué protocolo estándar de Internet se utiliza para la *transferencia* de mensajes de correo electrónico entre servidores (MTAs) y qué puerto TCP utiliza?",
+      "a": [
+      "POP3, Puerto 110.",
+      "SMTP, Puerto 25.",
+      "IMAP, Puerto 143.",
+      "NNTP, Puerto 119."
+      ],
+      "answer": 2
+      },
+      {
+      "q": "¿Cuál es el propósito fundamental del protocolo POP3 (Post Office Protocol versión 3)?",
+      "a": [
+      "Transferir correo electrónico entre Agentes de Transferencia de Correo (MTA).",
+      "Permitir a los Agentes de Usuario (UA) acceder y manipular los buzones de correo en servidores remotos.",
+      "Enviar correo electrónico desde un cliente a un servidor.",
+      "Distribuir mensajes a múltiples destinatarios (listas de correo)."
+      ],
+      "answer": 2
+      },
+      {
+      "q": "¿Qué protocolo de transporte y puerto bien conocido utiliza el servicio POP3?",
+      "a": [
+      "TCP, Puerto 25.",
+      "UDP, Puerto 110.",
+      "TCP, Puerto 110.",
+      "TCP, Puerto 143."
+      ],
+      "answer": 3
+      },
+      {
+      "q": "¿Qué extensión de correo electrónico se menciona que permite el envío de información binaria (como imágenes o programas) dentro de un mensaje de correo electrónico, usando codificadores ASCII-7?",
+      "a": [
+      "PGP (Pretty Good Privacy).",
+      "MIME (Multipurpose Internet Mail Extensions).",
+      "SMTP (Simple Mail Transfer Protocol).",
+      "RFC 822."
+      ],
+      "answer": 2
+      },
+      {
+      "q": "¿Cuál es el propósito principal del servicio World Wide Web (WWW)?",
+      "a": [
+      "Permitir charlas interactivas multiusuario.",
+      "Acceder a información distribuida (hipertexto y multimedia) a través de Internet.",
+      "Compartir directorios y archivos entre hosts.",
+      "Gestionar y administrar elementos de red de forma remota."
+      ],
+      "answer": 2
+      },
+      {
+      "q": "¿Qué protocolo de aplicación utiliza el World Wide Web (WWW) para la transferencia de información y qué puerto TCP utiliza por defecto?",
+      "a": [
+      "FTP, Puerto 21.",
+      "HTTP, Puerto 80.",
+      "TELNET, Puerto 23.",
+      "SMTP, Puerto 25."
+      ],
+      "answer": 2
+      },
+      {
+      "q": "¿Qué característica del protocolo HTTP implica que el servidor no guarda información sobre el estado o las interacciones previas con un cliente?",
+      "a": [
+      "Utiliza conexiones persistentes.",
+      "Es un servicio 'stateless'.",
+      "Requiere autenticación en cada petición.",
+      "Se basa en el formato NVT."
+      ],
+      "answer": 2
+      },
+      {
+      "q": "En un mensaje de petición HTTP, ¿cómo se indica el final de las líneas de cabecera antes del posible cuerpo del mensaje?",
+      "a": [
+      "Con una línea que contiene solo un punto (.).",
+      "Con una línea en blanco (un CR+LF adicional).",
+      "Indicando la longitud total en un campo de cabecera.",
+      "Con el comando 'QUIT'."
+      ],
+      "answer": 2
+      },
+      {
+      "q": "¿Qué aplicación se describe como utilizada para el arranque remoto de estaciones sin disco (diskless), proporcionando información IP y el nombre del archivo de imagen del S.O. a cargar?",
+      "a": [
+      "SNMP.",
+      "BOOTP.",
+      "NFS.",
+      "APIPA."
+      ],
+      "answer": 2
+      },
+      {
+      "q": "¿Qué protocolo permite la gestión y administración remota de los elementos de una red, como hosts, routers y bridges?",
+      "a": [
+      "FTP.",
+      "TELNET.",
+      "SNMP (Simple Network Management Protocol).",
+      "HTTP."
+      ],
+      "answer": 3
+      },
+      {
+      "q": "¿Cuál de las siguientes aplicaciones se menciona como el predecesor del WWW, con una estructura similar pero basada en una interfaz de texto?",
+      "a": [
+      "GOPHER.",
+      "TALK.",
+      "IRC.",
+      "X.500."
+      ],
+      "answer": 1
+      }
+  ]
+}

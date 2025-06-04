@@ -1,0 +1,308 @@
+{
+  "title": "Tema11_1",
+  "career": "Ingeniería Informática",
+  "year": "Cuarto año",
+  "subject": "Redes_2",
+  "questions": [
+    {
+      "q": "¿Qué protocolo de transporte permite comunicaciones broadcast/multicast y tiene un tamaño de cabecera reducido?",
+      "a": [
+        "TCP",
+        "IP",
+        "UDP",
+        "ICMP"
+      ],
+      "answer": 3
+    },
+    {
+      "q": "En UDP, ¿cuál es el propósito principal de la 'pseudo-cabecera' en el cálculo del checksum?",
+      "a": [
+        "Ser transmitida junto con el mensaje UDP",
+        "Verificar que el datagrama UDP ha alcanzado el destino correcto",
+        "Indicar la longitud total del datagrama IP",
+        "Especificar el puerto origen"
+      ],
+      "answer": 2
+    },
+    {
+      "q": "¿Cuál es el servicio de transporte orientado a conexión, fiable y ordenado ofrecido en la arquitectura TCP/IP?",
+      "a": [
+        "UDP",
+        "IP",
+        "ICMP",
+        "TCP"
+      ],
+      "answer": 4
+    },
+    {
+      "q": "En TCP, la unidad de datos se denomina:",
+      "a": [
+        "Datagrama",
+        "Paquete",
+        "Trama",
+        "Segmento"
+      ],
+      "answer": 4
+    },
+    {
+      "q": "¿Qué mecanismo utiliza TCP para el control de flujo extremo a extremo?",
+      "a": [
+        "Parada y Espera",
+        "Ventana deslizante",
+        "Control de congestión",
+        "Fragmentación"
+      ],
+      "answer": 2
+    },
+    {
+      "q": "En TCP, ¿qué indica el número de reconocimiento?",
+      "a": [
+        "El número de secuencia del primer octeto del segmento actual",
+        "La longitud total del segmento",
+        "El número de secuencia del siguiente byte que se espera recibir",
+        "El tamaño de la ventana del emisor"
+      ],
+      "answer": 3
+    },
+    {
+      "q": "Según el Algoritmo de Karn en TCP, cuando se produce la pérdida de un segmento y se retransmite, ¿cómo se gestiona la estimación del temporizador de retransmisión?",
+      "a": [
+        "Se utiliza siempre el último RTT medido",
+        "Se ignora el RTT de los segmentos retransmitidos y se aplica una estrategia back-off",
+        "Se usa una media simple de todos los RTT medidos",
+        "El temporizador se mantiene constante"
+      ],
+      "answer": 2
+    },
+    {
+      "q": "En el contexto de TCP, ¿qué implica el término 'byte stream'?",
+      "a": [
+        "Que los datos son cifrados byte a byte",
+        "Que el flujo de datos se trata como una secuencia continua de bytes sin distinguir fronteras de mensaje",
+        "Que cada byte se envía en un segmento separado",
+        "Que solo se transfieren datos en formato binario"
+      ],
+      "answer": 2
+    },
+    {
+      "q": "¿Cuál es el propósito principal del campo 'ventana' en la cabecera TCP?",
+      "a": [
+        "Indicar el número de secuencia inicial",
+        "Especificar el tamaño del buffer del receptor para el control de flujo",
+        "Contener el checksum del segmento",
+        "Determinar el tipo de servicio"
+      ],
+      "answer": 2
+    },
+    {
+      "q": "¿Qué bit en la cabecera TCP se activa para iniciar el proceso de establecimiento de conexión (protocolo a tres bandas)?",
+      "a": [
+        "ACK",
+        "PSH",
+        "RST",
+        "SYN"
+      ],
+      "answer": 4
+    },
+    {
+      "q": "¿Qué bit en la cabecera TCP se utiliza para solicitar la liberación ordenada de la conexión?",
+      "a": [
+        "URG",
+        "ACK",
+        "FIN",
+        "RST"
+      ],
+      "answer": 3
+    },
+    {
+      "q": "¿Qué tipo de ataque consiste en escuchar datos que atraviesan la red para obtener información confidencial sin interferir la conexión?",
+      "a": [
+        "Spoofing",
+        "Sniffing",
+        "Denegación de servicios",
+        "Ingeniería social"
+      ],
+      "answer": 2
+    },
+    {
+      "q": "¿Qué ataque se caracteriza por la generación masiva de conexiones a un puerto determinado para bloquearlo, a menudo con dirección origen inexistente?",
+      "a": [
+        "Mail bombing",
+        "Smurf",
+        "SYN Flooding",
+        "ARP Spoofing"
+      ],
+      "answer": 3
+    },
+    {
+      "q": "¿Qué técnica de ataque aprovecha la buena voluntad de los usuarios para obtener información, como solicitar contraseñas por correo electrónico?",
+      "a": [
+        "Caballo de Troya",
+        "Barrido de puertos",
+        "Ingeniería social",
+        "Hijacking"
+      ],
+      "answer": 3
+    },
+    {
+      "q": "¿Cuál de los siguientes NO es un tipo común de Spoofing mencionado en la fuente?",
+      "a": [
+        "ARP Spoofing",
+        "IP Spoofing",
+        "DNS Spoofing",
+        "TCP Spoofing"
+      ],
+      "answer": 4
+    },
+    {
+      "q": "¿Qué mecanismo permite conectar un protocolo a través de otro, a menudo utilizado para crear Redes Privadas Virtuales (VPN)?",
+      "a": [
+        "Proxy",
+        "Cortafuegos",
+        "Túnel",
+        "Envolvente"
+      ],
+      "answer": 3
+    },
+    {
+      "q": "Según la fuente, ¿cuál de las siguientes tecnologías VPN en capa 3 es un estándar abierto que admite integridad y autenticación (AH) y cifrado (ESP)?",
+      "a": [
+        "L2TP",
+        "GRE",
+        "IPSec",
+        "PPTP"
+      ],
+      "answer": 3
+    },
+    {
+      "q": "¿Qué protocolo de IPSec garantiza que el datagrama fue enviado por el remitente y que no ha sido alterado durante su viaje?",
+      "a": [
+        "ESP",
+        "ISAKMP",
+        "AH",
+        "IKE"
+      ],
+      "answer": 3
+    },
+    {
+      "q": "¿Qué modo de funcionamiento de IPSec está diseñado para comunicación segura extremo a extremo entre hosts, requiriendo implementación en ambos?",
+      "a": [
+        "Modo Túnel",
+        "Modo Transporte",
+        "Modo Proxy",
+        "Modo Híbrido"
+      ],
+      "answer": 2
+    },
+    {
+      "q": "¿Qué protocolo de seguridad, inicialmente pensado para evitar el paso de contraseñas en conexiones Telnet, opera en la capa de aplicación y utiliza el puerto 22?",
+      "a": [
+        "SSL",
+        "IPSec",
+        "SSH",
+        "SOCKS"
+      ],
+      "answer": 3
+    },
+    {
+      "q": "¿Cuál es la idea central compartida por las líneas de investigación actuales en seguridad de redes, según la fuente?",
+      "a": [
+        "Distribuir la seguridad en múltiples puntos de la red",
+        "Cifrar todo el tráfico de red indiscriminadamente",
+        "Concentrar la seguridad en un punto (cortafuegos) por donde pase todo el tráfico",
+        "Eliminar los protocolos de red inseguros"
+      ],
+      "answer": 3
+    },
+    {
+      "q": "¿Qué dispositivo se sitúa entre la red de la empresa y la red exterior (Internet) para analizar y filtrar paquetes según un criterio preestablecido?",
+      "a": [
+        "Switch",
+        "Router",
+        "Cortafuegos (Firewall)",
+        "Servidor DNS"
+      ],
+      "answer": 3
+    },
+    {
+      "q": "¿Qué técnica de filtrado de paquetes en cortafuegos se basa en una lista de órdenes ejecutadas secuencialmente en las interfaces del router, filtrando por direcciones IP y/o puertos/tipo de conexión?",
+      "a": [
+        "Inspección de estados",
+        "Listas de acceso (Access Lists)",
+        "Filtrado a nivel de aplicación",
+        "NAT"
+      ],
+      "answer": 2
+    },
+    {
+      "q": "¿Cuál es una desventaja principal de las Listas de Acceso mencionada en la fuente?",
+      "a": [
+        "Son muy lentas de procesar",
+        "No pueden filtrar por direcciones IP",
+        "No guardan información de contexto ni analizan a nivel de aplicación",
+        "Solo pueden configurarse en hosts, no en routers"
+      ],
+      "answer": 3
+    },
+    {
+      "q": "¿Qué tipo de cortafuegos basa su filtrado en la inspección de paquetes basada en contexto, como el tipo de protocolo y puertos, manteniendo una tabla de sesiones permitidas?",
+      "a": [
+        "Cortafuegos stateless (sin estado)",
+        "Cortafuegos de filtrado de paquetes simple",
+        "Cortafuegos de inspección de estados (stateful)",
+        "Cortafuegos a nivel de aplicación"
+      ],
+      "answer": 3
+    },
+    {
+      "q": "¿Qué configuración de cortafuegos consiste en un host (bastión) con dos tarjetas de red, conectadas a redes diferentes, permitiendo filtrar hasta capa de aplicación?",
+      "a": [
+        "Screened Host Firewall",
+        "Screened Subnet",
+        "Dual-Homed Gateway",
+        "DMZ"
+      ],
+      "answer": 3
+    },
+    {
+      "q": "¿Qué área de red se sitúa entre la red interna y la externa en una configuración Screened Subnet (arquitectura con dos routers), conteniendo típicamente servidores públicos?",
+      "a": [
+        "Intranet",
+        "Red perimetral o DMZ",
+        "Red de gestión",
+        "Zona segura"
+      ],
+      "answer": 2
+    },
+    {
+      "q": "¿Cuál es el propósito principal de un IDS (Intrusion Detection System) según la fuente?",
+      "a": [
+        "Bloquear todo el tráfico no autorizado",
+        "Cifrar las comunicaciones sensibles",
+        "Detectar ataques que puedan enmascararse en tráfico permitido por el cortafuegos",
+        "Gestionar las contraseñas de los usuarios"
+      ],
+      "answer": 3
+    },
+    {
+      "q": "¿Qué tipo de IDS detecta paquetes armados maliciosamente y está ubicado en un segmento de la red (sensor), sin requerir software adicional en los servidores?",
+      "a": [
+        "HIDS (Host Intrusion Detection System)",
+        "NIDS (Network Intrusion Detection System)",
+        "IDS Pasivo",
+        "IDS Reactivo"
+      ],
+      "answer": 2
+    },
+    {
+      "q": "¿Qué herramienta de seguridad, mencionada como envolvente o proxy, se inicia por el demonio inetd y permite un alto nivel de control sobre las conexiones TCP basándose en los archivos /etc/hosts.allow y /etc/hosts.deny?",
+      "a": [
+        "IPSec",
+        "tcpwrapper",
+        "SNORT",
+        "NMAP"
+      ],
+      "answer": 2
+    }
+  ]
+}

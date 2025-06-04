@@ -1,0 +1,308 @@
+{
+  "title": "Tema5_1",
+  "career": "Ingeniería Informática",
+  "year": "Cuarto año",
+  "subject": "Redes_2",
+  "questions": [
+    {
+      "q": "Según las fuentes, limitar el ámbito de cada dominio de broadcast en la LAN mediante la segmentación de VLAN proporciona:",
+      "a": [
+        "Menor rendimiento y seguridad a través de la red",
+        "Mejor rendimiento y seguridad a través de la red",
+        "Solo mejor rendimiento, sin impacto en la seguridad",
+        "Solo mejor seguridad, sin impacto en el rendimiento"
+      ],
+      "answer": 2
+    },
+    {
+      "q": "El enrutamiento inter VLAN se utiliza para:",
+      "a": [
+        "Segmentar una red en múltiples dominios de broadcast",
+        "Compartir información de VLAN a través de múltiples switches",
+        "Permitir la comunicación entre dispositivos en VLAN separadas",
+        "Evitar bucles en la red jerárquica"
+      ],
+      "answer": 3
+    },
+    {
+      "q": "Cuando se agregan enlaces adicionales a switches y routers en una red jerárquica para implementar redundancia, se generan:",
+      "a": [
+        "Dominios de broadcast adicionales",
+        "Bucles en el tráfico que deben ser administrados dinámicamente",
+        "Problemas de enrutamiento inter VLAN",
+        "Tormentas de unicast"
+      ],
+      "answer": 2
+    },
+    {
+      "q": "La redundancia de Capa 2 mejora la disponibilidad de la red mediante:",
+      "a": [
+        "La eliminación de rutas de red alternas",
+        "La implementación de rutas de red alternas agregando equipos y cables",
+        "La segmentación estática de VLAN",
+        "La deshabilitación del protocolo spanning-tree"
+      ],
+      "answer": 2
+    },
+    {
+      "q": "Una consecuencia de tener varias rutas entre dos dispositivos en la red con STP deshabilitado es la generación de:",
+      "a": [
+        "Fragmentación de paquetes IP",
+        "Bucles de Capa 2",
+        "Errores de enrutamiento inter VLAN",
+        "Problemas de asignación de direcciones IP por DHCP"
+      ],
+      "answer": 2
+    },
+    {
+      "q": "A diferencia de los paquetes IP que viajan por los routers, las tramas de Ethernet:",
+      "a": [
+        "Poseen un campo Time to Live (TTL)",
+        "Son descartadas automáticamente después de un tiempo determinado",
+        "No poseen un campo Time to Live (TTL)",
+        "Solo se transmiten dentro de un único dominio de broadcast"
+      ],
+      "answer": 3
+    },
+    {
+      "q": "Una tormenta de broadcast se produce cuando:",
+      "a": [
+        "Un dispositivo envía una trama de unicast a un switch sin entrada MAC",
+        "Existen demasiadas tramas de broadcast atrapadas en un bucle de Capa 2 que consumen todo el ancho de banda disponible",
+        "El protocolo STP elige un puente raíz incorrecto",
+        "Un puerto de switch pasa directamente del estado de bloqueo al estado de envío"
+      ],
+      "answer": 2
+    },
+    {
+      "q": "En una red con bucles, las tormentas de broadcast pueden provocar que los dispositivos finales dejen de funcionar debido a:",
+      "a": [
+        "Problemas de enrutamiento IP",
+        "Altos requerimientos de procesamiento para sostener la carga de tráfico de broadcast",
+        "La recepción de tramas de unicast duplicadas",
+        "Configuraciones de VLAN incorrectas"
+      ],
+      "answer": 2
+    },
+    {
+      "q": "Además de las tormentas de broadcast, los bucles en la red pueden causar que las tramas de unicast enviadas lleguen al destino como:",
+      "a": [
+        "Tramas fragmentadas",
+        "Tramas de broadcast",
+        "Tramas descartadas por el switch",
+        "Tramas duplicadas"
+      ],
+      "answer": 4
+    },
+    {
+      "q": "Según las fuentes, la mayoría de los protocolos de capa superior no están diseñados para reconocer o manejar transmisiones duplicadas, lo que generalmente lleva a asumir:",
+      "a": [
+        "Que la transmisión fue exitosa pero se recibió dos veces",
+        "Que la transmisión ha fallado y el número de secuencia se ha reciclado",
+        "Que se trata de un ataque de denegación de servicio",
+        "Que el problema se resolverá en la capa de red"
+      ],
+      "answer": 2
+    },
+    {
+      "q": "El protocolo Spanning Tree (STP) fue desarrollado para:",
+      "a": [
+        "Permitir la comunicación entre VLAN separadas",
+        "Simplificar la administración de VLAN utilizando VTP",
+        "Evitar los inconvenientes relacionados con bucles en la red",
+        "Mejorar la velocidad de transmisión de datos"
+      ],
+      "answer": 3
+    },
+    {
+      "q": "Además de las conexiones duplicadas accidentales en los armarios de cableado, otra causa común de bucles mencionada en las fuentes es:",
+      "a": [
+        "Fallos en la configuración del enrutamiento inter VLAN",
+        "La interconexión accidental de hubs o switches personales por usuarios finales",
+        "Configuraciones de VTP incorrectas",
+        "Problemas de sincronización de relojes"
+      ],
+      "answer": 2
+    },
+    {
+      "q": "El algoritmo Spanning Tree (STA) se utiliza para determinar:",
+      "a": [
+        "Las direcciones IP de los dispositivos",
+        "Los puertos de switch que deben configurarse para el bloqueo y evitar bucles",
+        "La ruta más corta para paquetes IP",
+        "La asignación de VLAN a los puertos de acceso"
+      ],
+      "answer": 2
+    },
+    {
+      "q": "El STA designa un único switch como punto de referencia para todos los cálculos de rutas. Este switch se denomina:",
+      "a": [
+        "Switch de distribución",
+        "Switch de acceso",
+        "Puente raíz",
+        "Switch designado"
+      ],
+      "answer": 3
+    },
+    {
+      "q": "El proceso de elección del puente raíz en STP se basa en la comparación de:",
+      "a": [
+        "Las direcciones IP de los switches",
+        "La velocidad de los puertos de los switches",
+        "El ID de puente (BID) de los switches",
+        "La cantidad de puertos en cada switch"
+      ],
+      "answer": 3
+    },
+    {
+      "q": "La trama de mensaje que se intercambia entre los switches en STP para determinar el puente raíz y calcular las rutas se llama:",
+      "a": [
+        "ARP Reply",
+        "ICMP Echo Request",
+        "BPDU (Bridge Protocol Data Unit)",
+        "CDP Message"
+      ],
+      "answer": 3
+    },
+    {
+      "q": "El BID (Bridge ID) de un switch se compone de:",
+      "a": [
+        "Prioridad de puente, dirección IP y ID de sistema extendido",
+        "Dirección MAC, velocidad de puerto y costo de ruta",
+        "Prioridad de puente, ID de sistema extendido y dirección MAC",
+        "ID de puerto, ID de raíz y antigüedad del mensaje"
+      ],
+      "answer": 3
+    },
+    {
+      "q": "El campo 'Root ID' en una trama BPDU indica:",
+      "a": [
+        "El ID del switch que envió la BPDU",
+        "El ID del puente raíz de la red",
+        "La dirección MAC del puerto de origen",
+        "El costo de la ruta hacia el switch que envió la BPDU"
+      ],
+      "answer": 2
+    },
+    {
+      "q": "El campo 'Costo' en una trama BPDU indica:",
+      "a": [
+        "El costo de la ruta desde el switch que envía el mensaje hasta el puente raíz",
+        "La cantidad de switches en la ruta",
+        "La velocidad del puerto de envío",
+        "La prioridad del puente raíz"
+      ],
+      "answer": 1
+    },
+    {
+      "q": "Los puertos de switch más cercanos al puente raíz, según la función definida por el STA, se denominan:",
+      "a": [
+        "Puertos designados",
+        "Puertos no designados",
+        "Puertos raíz",
+        "Puertos deshabilitados"
+      ],
+      "answer": 3
+    },
+    {
+      "q": "En el puente raíz, todos los puertos de switch que participan en STP se configuran como:",
+      "a": [
+        "Puertos raíz",
+        "Puertos designados",
+        "Puertos no designados",
+        "Puertos alternativos"
+      ],
+      "answer": 2
+    },
+    {
+      "q": "Un puerto de switch configurado en estado de bloqueo por el STA para evitar bucles se denomina:",
+      "a": [
+        "Puerto raíz",
+        "Puerto designado",
+        "Puerto no designado",
+        "Puerto deshabilitado"
+      ],
+      "answer": 3
+    },
+    {
+      "q": "La prioridad de puente predeterminada para todos los switches de Cisco es:",
+      "a": [
+        "1",
+        "4096",
+        "32768",
+        "65536"
+      ],
+      "answer": 3
+    },
+    {
+      "q": "En STP, cuando se utiliza el ID de sistema extendido para incluir el ID de la VLAN, el incremento para el valor de prioridad de puente cambia de 1 a:",
+      "a": [
+        "16",
+        "128",
+        "4096",
+        "32768"
+      ],
+      "answer": 3
+    },
+    {
+      "q": "Si dos switches se configuran con la misma prioridad de puente y el mismo ID de sistema extendido, el switch con el menor BID será aquel con:",
+      "a": [
+        "La dirección IP más baja",
+        "La dirección MAC con el menor valor hexadecimal",
+        "La mayor cantidad de puertos",
+        "El puerto raíz más rápido"
+      ],
+      "answer": 2
+    },
+    {
+      "q": "Para asegurar que un switch específico sea siempre el puente raíz, se recomienda configurarlo con:",
+      "a": [
+        "La dirección MAC más alta",
+        "La mayor prioridad de puente",
+        "La menor prioridad de puente",
+        "Un mayor costo de ruta"
+      ],
+      "answer": 3
+    },
+    {
+      "q": "La cantidad de tiempo que un puente debe esperar antes de transicionar a un nuevo estado después de un cambio de topología está indicada por el temporizador BPDU:",
+      "a": [
+        "Tiempo de saludo (Hello Time)",
+        "Antigüedad máxima (Max Age)",
+        "Retraso en el envío (Forward Delay)",
+        "Tiempo de convergencia"
+      ],
+      "answer": 3
+    },
+    {
+      "q": "En los estados de puerto de STP, el estado donde el puerto recibe tramas de BPDU pero no envía tramas de datos se denomina:",
+      "a": [
+        "Escuchar (Listening)",
+        "Aprender (Learning)",
+        "Enviar (Forwarding)",
+        "Bloqueo (Blocking)"
+      ],
+      "answer": 4
+    },
+    {
+      "q": "La tecnología Cisco PortFast se utiliza en puertos de acceso para:",
+      "a": [
+        "Asegurar que el puerto permanezca en estado de bloqueo",
+        "Permitir que el puerto transicione inmediatamente del estado de bloqueo al de envío",
+        "Aumentar el costo de ruta hacia el puente raíz",
+        "Configurar el puerto como puerto raíz automáticamente"
+      ],
+      "answer": 2
+    },
+    {
+      "q": "A diferencia del STP 802.1D, RSTP (802.1w) define los estados de puerto como:",
+      "a": [
+        "Bloqueo, Escuchar, Aprender, Enviar, Deshabilitado",
+        "Descartar, Escuchar, Aprender, Enviar",
+        "Bloqueo, Aprender, Enviar",
+        "Descartar, Aprender, Enviar"
+      ],
+      "answer": 4
+    }
+  ]
+}

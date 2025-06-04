@@ -1,0 +1,308 @@
+{
+  "title": "Tema11_2",
+  "career": "Ingeniería Informática",
+  "year": "Cuarto año",
+  "subject": "Redes_2",
+  "questions": [
+    {
+      "q": "¿Cuál es el objetivo principal del ataque 'Sniffing'?",
+      "a": [
+        "Modificar datos en tránsito",
+        "Obtener información confidencial escuchando el tráfico de red",
+        "Impedir el acceso a un servicio legítimo",
+        "Suplantar la identidad de otro host"
+      ],
+      "answer": 2
+    },
+    {
+      "q": "¿Qué ataque se utiliza para detectar servicios abiertos en máquinas mediante la conexión a diferentes puertos?",
+      "a": [
+        "Denegación de servicio",
+        "Ingeniería social",
+        "Barrido de puertos",
+        "Hijacking"
+      ],
+      "answer": 3
+    },
+    {
+      "q": "¿Qué tipo de ataque aprovecha errores en el software para obtener privilegios, a menudo mediante la sobreescritura de la pila de ejecución?",
+      "a": [
+        "Bug de fragmentación IP",
+        "Ataque dirigido por datos",
+        "Explotar bugs del software (Buffer Overflow)",
+        "Confianza transitiva"
+      ],
+      "answer": 3
+    },
+    {
+      "q": "¿Un programa que se enmascara como algo que no es para conseguir acceso o ejecutar comandos con privilegios de otro usuario se conoce como:",
+      "a": [
+        "Virus",
+        "Gusano",
+        "Caballo de Troya",
+        "Spyware"
+      ],
+      "answer": 3
+    },
+    {
+      "q": "¿Qué ataque no busca obtener información, sino impedir que los usuarios legítimos utilicen un servicio?",
+      "a": [
+        "Spoofing",
+        "Sniffing",
+        "Adivinación de passwords",
+        "Denegación de servicios"
+      ],
+      "answer": 4
+    },
+    {
+      "q": "¿Cuál de los siguientes es un ejemplo de ataque de Denegación de Servicio (DoS) mencionado en la fuente?",
+      "a": [
+        "ARP Spoofing",
+        "Mail bombing",
+        "Barrido de puertos",
+        "Caballo de Troya"
+      ],
+      "answer": 2
+    },
+    {
+      "q": "¿Las técnicas de ataque Smurf y Fraggle se basan en:",
+      "a": [
+        "El envío masivo de correos electrónicos",
+        "La explotación de vulnerabilidades de buffer overflow",
+        "El envío de pings o paquetes UDP echo a direcciones broadcast con dirección origen suplantada",
+        "La suplantación de identidades en servicios web"
+      ],
+      "answer": 3
+    },
+    {
+      "q": "¿Qué ataque aprovecha la buena voluntad de los usuarios para obtener información, como solicitar contraseñas por correo electrónico?",
+      "a": [
+        "Spoofing",
+        "Ingeniería social (Phishing)",
+        "Acceso físico",
+        "Ataques dirigidos por datos"
+      ],
+      "answer": 2
+    },
+    {
+      "q": "¿Qué ataque implica el intento del atacante por ganar acceso a un sistema haciéndose pasar por otro, ya sea a nivel MAC o IP?",
+      "a": [
+        "Denegación de servicio",
+        "Hijacking",
+        "Spoofing",
+        "Sniffing"
+      ],
+      "answer": 3
+    },
+    {
+      "q": "¿El ARP Spoofing consiste en que una IP suplantada tenga asociada la MAC del atacante, lo cual se logra:",
+      "a": [
+        "Modificando la tabla de enrutamiento de los routers",
+        "Enviando paquetes ARP falsificados indicando la MAC del atacante con la IP de la máquina suplantada",
+        "Realizando un ataque de fuerza bruta sobre las direcciones MAC",
+        "Interceptando el tráfico DNS"
+      ],
+      "answer": 2
+    },
+    {
+      "q": "¿Cuál es una medida de protección sugerida contra el IP Spoofing y ARP Spoofing?",
+      "a": [
+        "Deshabilitar ICMP Redirect",
+        "Utilizar rutas estáticas",
+        "Introducir autenticación y cifrado de las conexiones",
+        "Limitar el tráfico ICMP"
+      ],
+      "answer": 3
+    },
+    {
+      "q": "¿El ataque de Confianza transitiva en sistemas Unix aprovecha:",
+      "a": [
+        "El uso de contraseñas débiles",
+        "La confianza predefinida entre hosts y usuarios que permite conexiones sin autenticación formal",
+        "Los bugs en la implementación de protocolos de red",
+        "El acceso físico a los servidores"
+      ],
+      "answer": 2
+    },
+    {
+      "q": "¿Qué ataque consiste en robar una conexión de un usuario después de que este ha superado el proceso de identificación, suplantando su identidad en la sesión establecida?",
+      "a": [
+        "Spoofing",
+        "Sniffing",
+        "Hijacking",
+        "Ingeniería social"
+      ],
+      "answer": 3
+    },
+    {
+      "q": "¿Qué mecanismo permite conectar un protocolo a través de otro, a menudo utilizado para crear Redes Privadas Virtuales (VPN)?",
+      "a": [
+        "Cortafuegos",
+        "Proxy",
+        "Túnel",
+        "IDS"
+      ],
+      "answer": 3
+    },
+    {
+      "q": "¿Según la fuente, ¿cuál de las siguientes tecnologías VPN en capa 3 es un estándar abierto que admite integridad (AH) y cifrado (ESP)?",
+      "a": [
+        "L2TP",
+        "GRE",
+        "IPSec",
+        "PPTP"
+      ],
+      "answer": 3
+    },
+    {
+      "q": "¿En IPSec, ¿qué protocolo garantiza la confidencialidad del contenido del datagrama?",
+      "a": [
+        "AH (Authentication Header)",
+        "ESP (Encapsulating Security Payload)",
+        "ISAKMP",
+        "IKE"
+      ],
+      "answer": 2
+    },
+    {
+      "q": "¿El modo de funcionamiento 'Transporte' de IPSec está diseñado principalmente para:",
+      "a": [
+        "Comunicación segura entre routers (pasarelas de seguridad)",
+        "Comunicación segura extremo a extremo entre hosts",
+        "Creación de túneles VPN para oficinas remotas",
+        "Cifrado de la cabecera IP completa"
+      ],
+      "answer": 2
+    },
+    {
+      "q": "¿Qué protocolo, inicialmente pensado para evitar el paso de contraseñas en conexiones Telnet, opera en la capa de aplicación y utiliza el puerto 22?",
+      "a": [
+        "SSL",
+        "IPSec",
+        "SSH",
+        "SOCKS"
+      ],
+      "answer": 3
+    },
+    {
+      "q": "¿Según la fuente, ¿cuál es una idea central de las tendencias actuales en seguridad de redes?",
+      "a": [
+        "Distribuir la seguridad en cada host de la red",
+        "Concentrar la seguridad en un punto (cortafuegos) por donde pase todo el tráfico",
+        "Cifrar todo el tráfico de red sin excepción",
+        "Depender únicamente de la autenticación fuerte"
+      ],
+      "answer": 2
+    },
+    {
+      "q": "¿Qué técnica de filtrado en cortafuegos se basa en una lista de órdenes ejecutadas secuencialmente que filtran por direcciones IP, puertos o tipo de conexión?",
+      "a": [
+        "Inspección de estados",
+        "Listas de acceso (Access Lists)",
+        "Filtrado a nivel de aplicación",
+        "NAT"
+      ],
+      "answer": 2
+    },
+    {
+      "q": "¿Una desventaja importante de las Listas de Acceso mencionada es que:",
+      "a": [
+        "Son muy lentas de procesar",
+        "No guardan información de contexto ni analizan a nivel de aplicación",
+        "Solo pueden configurarse en servidores web",
+        "Son demasiado sencillas de seguir en ejecución"
+      ],
+      "answer": 2
+    },
+    {
+      "q": "¿Qué tipo de cortafuegos basa su filtrado en la inspección de paquetes según el contexto (tipo de protocolo, puertos) y mantiene una tabla de sesiones permitidas?",
+      "a": [
+        "Cortafuegos de filtrado de paquetes simple",
+        "Cortafuegos de inspección de estados (stateful)",
+        "Cortafuegos a nivel de red",
+        "Cortafuegos stateless"
+      ],
+      "answer": 2
+    },
+    {
+      "q": "¿Qué configuración de cortafuegos consiste en un host con dos tarjetas de red conectadas a diferentes redes, permitiendo filtrado hasta capa de aplicación?",
+      "a": [
+        "Screened Host Firewall",
+        "Screened Subnet",
+        "Dual-Homed Gateway",
+        "DMZ"
+      ],
+      "answer": 3
+    },
+    {
+      "q": "¿La configuración de cortafuegos Screened Subnet (con dos routers) incluye una red intermedia que se conoce como:",
+      "a": [
+        "Red de gestión",
+        "Intranet",
+        "DMZ (Zona Desmilitarizada)",
+        "Zona segura"
+      ],
+      "answer": 3
+    },
+    {
+      "q": "¿Cuál es el propósito principal de un IDS (Intrusion Detection System)?",
+      "a": [
+        "Prevenir todos los ataques de red",
+        "Cifrar las comunicaciones internas",
+        "Detectar ataques que pueden enmascararse en tráfico permitido por el cortafuegos",
+        "Gestionar las políticas de seguridad del cortafuegos"
+      ],
+      "answer": 3
+    },
+    {
+      "q": "¿Qué tipo de IDS detecta paquetes maliciosos observando el tráfico en un segmento de red, sin requerir software en los servidores?",
+      "a": [
+        "HIDS (Host Intrusion Detection System)",
+        "NIDS (Network Intrusion Detection System)",
+        "IDS Reactivo",
+        "IDS de Detección de Uso Anómalo"
+      ],
+      "answer": 2
+    },
+    {
+      "q": "¿Según los modelos de detección de IDS, ¿cuál verifica secuencias o tipos ilegales de tráfico que previamente se sabe se utilizan para ataques (exploits)?",
+      "a": [
+        "Detección de uso anómalo",
+        "Detección reactiva",
+        "Detección pasiva",
+        "Detección de mal uso"
+      ],
+      "answer": 4
+    },
+    {
+      "q": "¿Qué herramienta o técnica implica ubicar servidores monitorizados intencionadamente en la red para atraer y aprender de los atacantes?",
+      "a": [
+        "IDS Pasivo",
+        "NIDS",
+        "HIDS",
+        "Jarrón de miel (Honey Pot)"
+      ],
+      "answer": 4
+    },
+    {
+      "q": "¿Qué herramienta de seguridad, descrita como envolvente o proxy, se inicia por el demonio inetd y permite un alto control sobre las conexiones TCP basándose en /etc/hosts.allow y /etc/hosts.deny?",
+      "a": [
+        "IPSec",
+        "tcpwrapper",
+        "SNORT",
+        "SSH"
+      ],
+      "answer": 2
+    },
+    {
+      "q": "¿Los 'envolventes' (wrappers o proxies) en la protección de sistemas centralizados tienen como ventaja que la lógica de seguridad:",
+      "a": [
+        "Requiere la modificación del código fuente de los servicios",
+        "Se encapsula dentro de un programa sencillo y fácil de verificar",
+        "Debe ser idéntica para todos los servicios",
+        "Se gestiona únicamente a nivel de kernel del sistema operativo"
+      ],
+      "answer": 2
+    }
+  ]
+}

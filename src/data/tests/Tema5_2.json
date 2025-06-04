@@ -1,0 +1,308 @@
+{
+  "title": "Tema5_2",
+  "career": "Ingeniería Informática",
+  "year": "Cuarto año",
+  "subject": "Redes_2",
+  "questions": [
+    {
+      "q": "Una consecuencia de los bucles de Capa 2, además de las tormentas de broadcast y las tramas duplicadas, es que los switches pueden:",
+      "a": [
+        "Fragmentar los paquetes IP",
+        "Asignar direcciones IP incorrectas",
+        "Reciclar números de secuencia de capa superior",
+        "Experimentar inestabilidad en la tabla de direcciones MAC (MAC address table thrashing)"
+      ],
+      "answer": 4
+    },
+    {
+      "q": "En una red con bucles, las tramas de unicast que llegan duplicadas al destino pueden causar que los protocolos de capa superior que usan numeración en secuencia asuman que:",
+      "a": [
+        "La transmisión fue exitosa y duplicada intencionalmente",
+        "La transmisión ha fallado y el número de secuencia se ha reciclado",
+        "Se ha producido un ataque de suplantación de identidad",
+        "Se debe solicitar una retransmisión inmediata"
+      ],
+      "answer": 2
+    },
+    {
+      "q": "Según las fuentes, una causa común de bucles de red, además de las conexiones duplicadas accidentales en armarios de cableado, es:",
+      "a": [
+        "La sobrecarga de tráfico en un enlace troncal",
+        "Fallos en la configuración de enrutamiento estático",
+        "La interconexión accidental de hubs o switches personales por usuarios finales",
+        "Problemas de sincronización de tiempo en la red"
+      ],
+      "answer": 3
+    },
+    {
+      "q": "El Algoritmo Spanning Tree (STA) calcula la ruta más corta hacia el puente raíz sumando:",
+      "a": [
+        "Las direcciones IP de los switches en la ruta",
+        "Los valores de prioridad de puente de los switches en la ruta",
+        "Los valores de costo de puerto asociados con las velocidades de los puertos que atraviesa la ruta",
+        "El número de saltos (hops) hasta el puente raíz"
+      ],
+      "answer": 3
+    },
+    {
+      "q": "El costo de los puertos predeterminados en STP se define por:",
+      "a": [
+        "La prioridad del switch",
+        "La dirección MAC del switch",
+        "La velocidad a la que funcionan los puertos",
+        "La cantidad de tramas BPDU recibidas"
+      ],
+      "answer": 3
+    },
+    {
+      "q": "Los costos de los puertos asociados a diferentes velocidades de enlace en STP, según el estándar IEEE y ajustados, son:",
+      "a": [
+        "10 Mb/s=10, 100 Mb/s=100, 1 Gb/s=1000, 10 Gb/s=10000",
+        "10 Mb/s=100, 100 Mb/s=19, 1 Gb/s=4, 10 Gb/s=2",
+        "10 Mb/s=19, 100 Mb/s=100, 1 Gb/s=2, 10 Gb/s=4",
+        "10 Mb/s=2, 100 Mb/s=4, 1 Gb/s=19, 10 Gb/s=100"
+      ],
+      "answer": 2
+    },
+    {
+      "q": "La capacidad para configurar los costos de puertos individuales en STP proporciona al administrador la flexibilidad para:",
+      "a": [
+        "Modificar la dirección MAC del switch",
+        "Controlar las rutas de spanning-tree hacia el puente raíz",
+        "Aumentar el dominio de broadcast",
+        "Deshabilitar el protocolo STP en puertos específicos"
+      ],
+      "answer": 2
+    },
+    {
+      "q": "En la trama de BPDU, los campos utilizados para identificar el puente raíz y el costo de la ruta hacia el mismo son:",
+      "a": [
+        "ID de protocolo y Tipo de mensaje",
+        "ID de raíz y Costo",
+        "ID de puente y ID de puerto",
+        "Tiempo de saludo y Retraso en el envío"
+      ],
+      "answer": 2
+    },
+    {
+      "q": "Los últimos cuatro campos en una trama de BPDU STP son campos temporizadores que determinan:",
+      "a": [
+        "El costo de la ruta y la prioridad del puente",
+        "La dirección MAC de origen y destino",
+        "La frecuencia de envío de mensajes BPDU y el tiempo de retención de la información recibida",
+        "El ID de VLAN y el ID de sistema extendido"
+      ],
+      "answer": 3
+    },
+    {
+      "q": "El temporizador BPDU 'Antigüedad máxima' (Max Age) indica:",
+      "a": [
+        "El tiempo entre mensajes de configuración del puente raíz",
+        "La cantidad de tiempo que los puentes deben esperar antes de transicionar a un nuevo estado",
+        "El momento en el que el mensaje de configuración actual debe ser eliminado si no se actualiza",
+        "El tiempo que tarda un puerto en pasar al estado de envío"
+      ],
+      "answer": 3
+    },
+    {
+      "q": "El temporizador BPDU 'Tiempo de saludo' (Hello Time) indica:",
+      "a": [
+        "El momento en que se elimina un mensaje BPDU obsoleto",
+        "La cantidad de tiempo que el puente raíz espera para enviar la BPDU de mensajes de configuración",
+        "El tiempo que tarda un puerto en el estado de aprendizaje",
+        "La cantidad de tiempo que un puerto permanece en estado de bloqueo"
+      ],
+      "answer": 2
+    },
+    {
+      "q": "El temporizador BPDU 'Retraso en el envío' (Forward Delay) indica:",
+      "a": [
+        "La frecuencia de envío de tramas de datos",
+        "La cantidad de tiempo que los puentes deben esperar antes de sufrir la transición a un nuevo estado después de un cambio de topología",
+        "El tiempo máximo que una trama puede existir en la red",
+        "El tiempo para actualizar la tabla de direcciones MAC"
+      ],
+      "answer": 2
+    },
+    {
+      "q": "Inicialmente, cada switch en el dominio de broadcast STP supone que es el puente raíz, de manera que las tramas de BPDU enviadas contienen:",
+      "a": [
+        "La dirección MAC del siguiente salto",
+        "El ID de sistema extendido de la VLAN 1",
+        "El BID del switch local como ID de raíz",
+        "Un costo de ruta predeterminado de 0"
+      ],
+      "answer": 3
+    },
+    {
+      "q": "Cuando un switch adyacente recibe una trama de BPDU, si el ID de raíz de la BPDU recibida es *menor* que el ID de raíz local, el switch receptor:",
+      "a": [
+        "Descarta la trama de BPDU recibida",
+        "Actualiza su ID de raíz local y el ID de sus mensajes de BPDU para indicar el nuevo puente raíz",
+        "Incrementa su costo de ruta en 1",
+        "Envía una trama de BPDU de acuse de recibo (TCA)"
+      ],
+      "answer": 2
+    },
+    {
+      "q": "Si un switch recibe una trama de BPDU cuyo ID de raíz es *mayor* que su propio ID de raíz local, el switch receptor:",
+      "a": [
+        "Actualiza su ID de raíz para igualar el recibido",
+        "Envía una trama de BPDU con su ID de raíz local",
+        "Descarta la trama de BPDU recibida",
+        "Reinicia el proceso de elección del puente raíz"
+      ],
+      "answer": 3
+    },
+    {
+      "q": "En el proceso de elección del puente raíz, la prioridad de puente es un valor personalizable que se utiliza para:",
+      "a": [
+        "Determinar el costo de la ruta hacia el puente raíz",
+        "Influenciar sobre qué switch debe convertirse en el puente raíz",
+        "Identificar el puerto raíz en un switch no raíz",
+        "Establecer el tiempo de vida de las tramas BPDU"
+      ],
+      "answer": 2
+    },
+    {
+      "q": "El valor de prioridad predeterminado para todos los switches de Cisco en STP es:",
+      "a": [
+        "1",
+        "4096",
+        "32768",
+        "65536"
+      ],
+      "answer": 3
+    },
+    {
+      "q": "El rango de valores para la prioridad de puente oscila entre:",
+      "a": [
+        "0 y 255",
+        "1 y 65536",
+        "0 y 4096",
+        "1 y 32768"
+      ],
+      "answer": 2
+    },
+    {
+      "q": "En STP, el campo 'ID de sistema extendido' en el BID contiene:",
+      "a": [
+        "El costo de la ruta al puente raíz",
+        "La dirección MAC del switch emisor",
+        "El ID de la VLAN con la cual está asociada la BPDU",
+        "La prioridad del puerto de envío"
+      ],
+      "answer": 3
+    },
+    {
+      "q": "Cuando se utiliza el ID de sistema extendido, el incremento para el valor de prioridad de puente cambia de 1 a:",
+      "a": [
+        "16",
+        "128",
+        "4096",
+        "32768"
+      ],
+      "answer": 3
+    },
+    {
+      "q": "Si dos switches tienen la misma prioridad de puente y el mismo ID de sistema extendido, ¿qué criterio se utiliza para desempatar en la elección del puente raíz?",
+      "a": [
+        "La mayor cantidad de puertos en estado de envío",
+        "La dirección IP más baja",
+        "La dirección MAC con el menor valor hexadecimal",
+        "El menor costo de ruta hacia cualquier destino"
+      ],
+      "answer": 3
+    },
+    {
+      "q": "El 'Puerto raíz' en un switch no raíz es:",
+      "a": [
+        "Cualquier puerto configurado manualmente por el administrador",
+        "El puerto que está bloqueado por el STA",
+        "El puerto de switch con el mejor camino hacia el puente raíz",
+        "Todos los puertos en el puente raíz"
+      ],
+      "answer": 3
+    },
+    {
+      "q": "En una topología de red STP, un switch que no es el puente raíz puede tener:",
+      "a": [
+        "Cero puertos raíz",
+        "Un único puerto raíz",
+        "Múltiples puertos raíz",
+        "Cualquier número de puertos raíz"
+      ],
+      "answer": 2
+    },
+    {
+      "q": "En el puente raíz, todos los puertos de switch que participan en STP se configuran como:",
+      "a": [
+        "Puertos raíz",
+        "Puertos designados",
+        "Puertos no designados",
+        "Puertos deshabilitados"
+      ],
+      "answer": 2
+    },
+    {
+      "q": "En STP, sólo se permite un 'Puerto designado' por:",
+      "a": [
+        "Switch",
+        "Dominio de broadcast",
+        "Segmento de red",
+        "VLAN"
+      ],
+      "answer": 3
+    },
+    {
+      "q": "El estado 'Deshabilitado' para un puerto de switch en STP se establece cuando:",
+      "a": [
+        "El puerto es un puerto no designado",
+        "El puerto no recibe tramas BPDU",
+        "El puerto se encuentra administrativamente desconectado",
+        "El costo de la ruta a través de ese puerto es infinito"
+      ],
+      "answer": 3
+    },
+    {
+      "q": "Cuando dos puertos de switch tienen el mismo costo de ruta más bajo hacia el puente raíz, el switch utiliza el valor de prioridad de puerto o el menor ID de puerto para determinar cuál será el puerto raíz. Los valores de prioridad de puerto se configuran entre:",
+      "a": [
+        "0 y 255, en incrementos de 1",
+        "1 y 65536, en incrementos de 4096",
+        "0 y 240, en incrementos de 16",
+        "1 y 100, en incrementos de 10"
+      ],
+      "answer": 3
+    },
+    {
+      "q": "La tecnología Cisco PortFast permite que un puerto de acceso configurado pase inmediatamente del estado de bloqueo al estado de envío, saltando los estados de:",
+      "a": [
+        "Aprender y Enviar",
+        "Escuchar y Aprender",
+        "Bloqueo y Escuchar",
+        "Deshabilitado y Escuchar"
+      ],
+      "answer": 2
+    },
+    {
+      "q": "La convergencia en STP es el tiempo que le toma a la red determinar el puente raíz, atravesar los estados de puerto y configurar las funciones finales para:",
+      "a": [
+        "Incrementar el ancho de banda disponible",
+        "Balancear la carga entre todos los enlaces",
+        "Eliminar todos los posibles bucles",
+        "Asignar direcciones IP a los dispositivos"
+      ],
+      "answer": 3
+    },
+    {
+      "q": "El proceso de convergencia de STP se divide en tres pasos principales: Elegir un puente raíz, Elegir los puertos raíz y:",
+      "a": [
+        "Configurar las VLAN en los enlaces troncales",
+        "Calcular las direcciones MAC de destino",
+        "Configurar los temporizadores BPDU",
+        "Elegir los puertos designados y no designados"
+      ],
+      "answer": 4
+    }
+  ]
+}

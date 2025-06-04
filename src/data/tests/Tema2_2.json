@@ -1,0 +1,308 @@
+{
+  "title": "Tema2_2",
+  "career": "Ingeniería Informática",
+  "year": "Cuarto año",
+  "subject": "Redes_2",
+  "questions": [
+    {
+      "q": "¿Quiénes diseñaron e implementaron la primera red de área local llamada Ethernet y cuándo?",
+      "a": [
+        "Vint Cerf y Bob Kahn en 1970.",
+        "Norman Abramson en Hawaii en 1970.",
+        "Bob Metcalfe con David Boggs en 1976.",
+        "Laboratorios Bell en 1960."
+      ],
+      "answer": 3
+    },
+    {
+      "q": "¿Dónde se diseñó e implementó la primera red Ethernet?",
+      "a": [
+        "En la Universidad de Hawaii.",
+        "En los Laboratorios Bell.",
+        "En Xerox Palo Alto Lab.",
+        "En el MIT."
+      ],
+      "answer": 3
+    },
+    {
+      "q": "¿Cuál era la velocidad inicial de la primera red Ethernet diseñada por Metcalfe y Boggs?",
+      "a": [
+        "1 Mbps.",
+        "10 Mbps.",
+        "3 Mbps.",
+        "100 Mbps."
+      ],
+      "answer": 3
+    },
+    {
+      "q": "¿De qué término se deriva el nombre 'Ethernet'?",
+      "a": [
+        "De la palabra 'Ether' (éter) utilizada en física.",
+        "De 'Éter luminífero'.",
+        "Es un acrónimo de 'Electronic Transfer Herald Network'.",
+        "Se basa en el nombre de su creador, Etheridge."
+      ],
+      "answer": 2
+    },
+    {
+      "q": "¿Cuándo y por qué compañías fue redactado el diseño de Ethernet como estándar con una velocidad de 10 Mbps?",
+      "a": [
+        "En 1983 por IEEE.",
+        "En 1978 por Xerox, DEC, Intel.",
+        "En 1970 por el equipo de Hawaii.",
+        "En 1990 por un consorcio de fabricantes."
+      ],
+      "answer": 2
+    },
+    {
+      "q": "¿En qué año se convirtió Ethernet en el estándar IEEE 802.3?",
+      "a": [
+        "1976.",
+        "1978.",
+        "1983.",
+        "1995."
+      ],
+      "answer": 3
+    },
+    {
+      "q": "¿Cuáles son los dos tipos de cableado de Ethernet Clásica mencionados en el texto?",
+      "a": [
+        "Cable de par trenzado y cable coaxial.",
+        "Thick Ethernet y Thin Ethernet.",
+        "Fibra óptica y cable coaxial.",
+        "Fast Ethernet y Gigabit Ethernet."
+      ],
+      "answer": 2
+    },
+    {
+      "q": "¿Cuál es la longitud máxima de segmento para Thick Ethernet según la fuente?",
+      "a": [
+        "185 m.",
+        "500 m.",
+        "100 m.",
+        "2 km."
+      ],
+      "answer": 2
+    },
+    {
+      "q": "¿Cuántas computadoras podía conectar un segmento de Thick Ethernet?",
+      "a": [
+        "Hasta 30.",
+        "Hasta 100.",
+        "Hasta 500.",
+        "Un número ilimitado con repetidores."
+      ],
+      "answer": 2
+    },
+    {
+      "q": "¿Qué tipo de conectores utilizaba Thin Ethernet?",
+      "a": [
+        "RJ-45.",
+        "SC.",
+        "BNC.",
+        "ST."
+      ],
+      "answer": 3
+    },
+    {
+      "q": "¿Cuál es la longitud máxima de segmento para Thin Ethernet?",
+      "a": [
+        "500 m.",
+        "185 m.",
+        "100 m.",
+        "200 m."
+      ],
+      "answer": 2
+    },
+    {
+      "q": "¿Cuántas computadoras podía conectar un segmento de Thin Ethernet?",
+      "a": [
+        "Hasta 100.",
+        "Hasta 30.",
+        "Hasta 10.",
+        "Hasta 185."
+      ],
+      "answer": 2
+    },
+    {
+      "q": "¿Qué dispositivo se podía utilizar para conectar cables de Ethernet Clásica para una conectividad de gran longitud?",
+      "a": [
+        "Switches.",
+        "Routers.",
+        "Gateways.",
+        "Repetidores."
+      ],
+      "answer": 4
+    },
+    {
+      "q": "¿A qué capa del modelo OSI pertenece un Repetidor?",
+      "a": [
+        "Capa de Red.",
+        "Capa de Enlace de Datos.",
+        "Capa Física.",
+        "Capa de Transporte."
+      ],
+      "answer": 3
+    },
+    {
+      "q": "¿Cuál es la función principal de un Repetidor?",
+      "a": [
+        "Encaminar paquetes.",
+        "Filtrar tramas.",
+        "Recibir, amplificar y retransmitir señales.",
+        "Conmutar circuitos."
+      ],
+      "answer": 3
+    },
+    {
+      "q": "¿Cómo cambió el cableado en Ethernet Conmutada respecto a la Ethernet Clásica?",
+      "a": [
+        "Se usaron cables más gruesos.",
+        "Se pasó de un cable largo a una arquitectura donde cada estación tiene un cable dedicado a un concentrador central.",
+        "Se eliminó el cableado físico en favor de conexiones inalámbricas.",
+        "Se implementaron anillos de cableado."
+      ],
+      "answer": 2
+    },
+    {
+      "q": "¿Cuál es uno de los beneficios de la arquitectura de cableado de Ethernet Conmutada mencionado?",
+      "a": [
+        "Mayor longitud máxima de segmento.",
+        "La detección de colisiones es más rápida.",
+        "Agregar y eliminar una estación se vuelve mucho más fácil.",
+        "Requiere menos cableado en total."
+      ],
+      "answer": 3
+    },
+    {
+      "q": "¿Cuál era la limitación de los concentradores (hubs) en Ethernet Conmutada según el texto?",
+      "a": [
+        "Eran muy caros.",
+        "No aumentaban la capacidad; eran equivalentes al cable largo único de la Ethernet clásica.",
+        "No soportaban cables de par trenzado.",
+        "Introducían latencia excesiva."
+      ],
+      "answer": 2
+    },
+    {
+      "q": "¿Qué dispositivo se menciona como la solución para las aplicaciones multimedia que requerían mayores anchos de banda en Ethernet Conmutada?",
+      "a": [
+        "Repetidores.",
+        "Bridges.",
+        "Switches.",
+        "Routers."
+      ],
+      "answer": 3
+    },
+    {
+      "q": "¿Qué beneficio clave ofrece el uso de un Switch en Ethernet Conmutada en relación con las colisiones?",
+      "a": [
+        "Las colisiones se manejan más eficientemente.",
+        "Se detectan colisiones más rápido.",
+        "Elimina las colisiones ('No hay colisión').",
+        "Aumenta el período de contienda."
+      ],
+      "answer": 3
+    },
+    {
+      "q": "¿Qué otros beneficios del Switch se mencionan además de evitar colisiones?",
+      "a": [
+        "Mayor alcance inalámbrico.",
+        "Beneficios de seguridad.",
+        "Codificación Manchester mejorada.",
+        "Compatibilidad con ALOHA."
+      ],
+      "answer": 2
+    },
+    {
+      "q": "¿Cuáles son los dos formatos de Trama mencionados para el Protocolo de Subcapa MAC de Ethernet?",
+      "a": [
+        "Ethernet (DIX) y IEEE 802.3.",
+        "Token Ring y Token Bus.",
+        "FDDI y ATM.",
+        "CSMA/CD y CSMA/CA."
+      ],
+      "answer": 1
+    },
+    {
+      "q": "¿Cuánto tiempo puede tardar la detección de colisiones en Ethernet según el texto?",
+      "a": [
+        "Tanto como el tiempo de propagación del cable.",
+        "Tanto como el doble del tiempo de propagación (2τ).",
+        "Es instantánea con CSMA/CD.",
+        "Depende del número de estaciones."
+      ],
+      "answer": 2
+    },
+    {
+      "q": "¿Cuál es la razón principal por la que el estándar Ethernet especifica la longitud máxima del cable?",
+      "a": [
+        "Para reducir el costo del cableado.",
+        "Para evitar la interferencia electromagnética.",
+        "Para limitar el retardo de propagación, ya que cuanto más largo es el cable, más largo es el intervalo de contención.",
+        "Para facilitar la instalación."
+      ],
+      "answer": 3
+    },
+    {
+      "q": "¿Qué se necesitó para que comenzara el trabajo para un estándar Ethernet aún más rápido que Fast Ethernet?",
+      "a": [
+        "La invención de la fibra óptica.",
+        "La adopción del estándar para Fast Ethernet.",
+        "La creación del modelo OSI.",
+        "La necesidad de redes inalámbricas de alta velocidad."
+      ],
+      "answer": 2
+    },
+    {
+      "q": "¿Cuál fue uno de los objetivos principales al desarrollar Gigabit Ethernet?",
+      "a": [
+        "Reducir la velocidad de Fast Ethernet para aumentar la fiabilidad.",
+        "Aumentar diez veces el rendimiento de Fast Ethernet.",
+        "Cambiar completamente el esquema de direccionamiento.",
+        "Eliminar la necesidad de cableado."
+      ],
+      "answer": 2
+    },
+    {
+      "q": "¿Qué requisito de compatibilidad tenía Gigabit Ethernet?",
+      "a": [
+        "Ser compatible solo con Fast Ethernet.",
+        "Ser compatible con Clásica y Fast Ethernet.",
+        "Ser un estándar completamente nuevo sin compatibilidad previa.",
+        "Ser compatible solo con redes inalámbricas."
+      ],
+      "answer": 2
+    },
+    {
+      "q": "¿Qué esquema de direccionamiento se mantuvo en Gigabit Ethernet para ser compatible?",
+      "a": [
+        "Direccionamiento de 32 bits.",
+        "Direccionamiento de 48 bits.",
+        "Direccionamiento IP.",
+        "Direccionamiento basado en puerto."
+      ],
+      "answer": 2
+    },
+    {
+      "q": "¿Qué tipo de formato de trama se mantuvo en Gigabit Ethernet?",
+      "a": [
+        "Se adoptó un formato de trama completamente nuevo.",
+        "El mismo formato de trama que antes, incluyendo los tamaños mínimo y máximo.",
+        "Un formato de trama que elimina el preámbulo.",
+        "Un formato de trama variable."
+      ],
+      "answer": 2
+    },
+    {
+      "q": "¿Qué servicios de datagramas se mencionan para Gigabit Ethernet?",
+      "a": [
+        "Solo con acuse de recibo (ACK).",
+        "Solo unidifusión.",
+        "Sin acuse de recibo con unidifusión y difusión.",
+        "Con acuse de recibo y solo difusión."
+      ],
+      "answer": 3
+    }
+  ]
+}

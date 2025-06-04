@@ -1,0 +1,308 @@
+{
+  "title": "Tema3_1",
+  "career": "Ingeniería Informática",
+  "year": "Cuarto año",
+  "subject": "Redes_2",
+  "questions": [
+    {
+      "q": "¿Qué es un dominio de colisión?",
+      "a": [
+        "El área de una red alcanzable por una trama de difusión.",
+        "Un segmento físico donde es posible que las tramas puedan colisionar.",
+        "Una red controlada por un único router.",
+        "El área cubierta por una red inalámbrica."
+      ],
+      "answer": 2
+    },
+    {
+      "q": "¿Qué sucede cuando varios dispositivos conectados al mismo medio físico acceden a él simultáneamente en un dominio de colisión?",
+      "a": [
+        "La red aumenta su rendimiento.",
+        "Ocurre una colisión.",
+        "Se genera automáticamente un nuevo dominio de colisión.",
+        "Se aplica control de flujo para evitar problemas."
+      ],
+      "answer": 2
+    },
+    {
+      "q": "¿Cuál es uno de los efectos negativos de un dominio de colisión grande mencionado?",
+      "a": [
+        "Mejora en la seguridad de la red.",
+        "Consumo inadecuado de recursos y ancho de banda.",
+        "Aumento en la velocidad de transmisión.",
+        "Reducción de la latencia."
+      ],
+      "answer": 2
+    },
+    {
+      "q": "¿Qué es un dominio de difusión?",
+      "a": [
+        "Un segmento de red limitado por puentes o switches.",
+        "El área de una red donde las colisiones son frecuentes.",
+        "El área de una red que se puede alcanzar enviando una trama de difusión.",
+        "Un grupo de redes interconectadas por routers."
+      ],
+      "answer": 3
+    },
+    {
+      "q": "¿Qué dispositivo de interconexión trabaja en el Nivel 1 (Físico) del Modelo OSI y el Nivel Físico de TCP/IP?",
+      "a": [
+        "Router.",
+        "Switch.",
+        "Repetidor.",
+        "Gateway."
+      ],
+      "answer": 3
+    },
+    {
+      "q": "¿Cuál es la función principal de un Repetidor?",
+      "a": [
+        "Encaminar paquetes IP.",
+        "Filtrar tramas por dirección MAC.",
+        "Amplificar, regenerar y retemporizar los bits.",
+        "Gestionar tablas ARP."
+      ],
+      "answer": 3
+    },
+    {
+      "q": "¿Un Hub se considera un repetidor multipuerto y trabaja en qué nivel?",
+      "a": [
+        "Nivel 2 (MAC).",
+        "Nivel 3 (Red).",
+        "Nivel 1 (Físico).",
+        "Nivel 4 (Transporte)."
+      ],
+      "answer": 3
+    },
+    {
+      "q": "¿Cómo afectan los Hubs y Repetidores a los dominios de colisión y difusión?",
+      "a": [
+        "Dividen ambos dominios.",
+        "Expanden ambos dominios.",
+        "Dividen el de colisión y expanden el de difusión.",
+        "Expanden el de colisión y dividen el de difusión."
+      ],
+      "answer": 2
+    },
+    {
+      "q": "¿Qué dispositivo de interconexión conecta LANs con idénticos protocolos de capa física y Capa de Acceso al Medio (MAC) y trabaja en el Nivel 2?",
+      "a": [
+        "Repetidor.",
+        "Router.",
+        "Puente (Bridge).",
+        "Hub."
+      ],
+      "answer": 3
+    },
+    {
+      "q": "¿En qué se basa el funcionamiento transparente de un Puente?",
+      "a": [
+        "En el direccionamiento IP.",
+        "En el aprendizaje de direcciones físicas MAC/Puertos.",
+        "En la encapsulación de datagramas.",
+        "En la fragmentación de tramas."
+      ],
+      "answer": 2
+    },
+    {
+      "q": "¿Qué dispositivo de interconexión, similar a un Puente pero con múltiples puertos, proporciona un ancho de banda dedicado?",
+      "a": [
+        "Hub.",
+        "Router.",
+        "Switch.",
+        "Gateway."
+      ],
+      "answer": 3
+    },
+    {
+      "q": "¿En qué nivel trabaja un Switch (Conmutador)?",
+      "a": [
+        "Nivel 1 (Físico).",
+        "Nivel 2 (MAC).",
+        "Nivel 3 (Red).",
+        "Nivel 4 (Transporte)."
+      ],
+      "answer": 2
+    },
+    {
+      "q": "Según el texto, ¿cómo afecta un Switch/Puente a los dominios de colisión?",
+      "a": [
+        "Los expande.",
+        "Los divide.",
+        "No tiene efecto sobre ellos.",
+        "Los fusiona."
+      ],
+      "answer": 2
+    },
+    {
+      "q": "Según el texto, ¿cómo afecta un Switch/Puente a los dominios de difusión?",
+      "a": [
+        "Los divide.",
+        "Los expande.",
+        "No tiene efecto sobre ellos.",
+        "Los restringe a un solo puerto."
+      ],
+      "answer": 2
+    },
+    {
+      "q": "¿Qué tipo de Switch guarda la trama completa y comprueba errores (CRC) antes de reenviar?",
+      "a": [
+        "Cut-Through.",
+        "Adaptative Cut-Through.",
+        "Fragment Free.",
+        "Store-and-Forward."
+      ],
+      "answer": 4
+    },
+    {
+      "q": "¿Qué tipo de Switch reenvía la trama inmediatamente al recibir los 6 bytes de la MAC de destino para reducir el retardo?",
+      "a": [
+        "Store-and-Forward.",
+        "Adaptative Cut-Through.",
+        "Cut-Through.",
+        "Fragment Free."
+      ],
+      "answer": 3
+    },
+    {
+      "q": "¿Qué desventaja principal tiene el Switch tipo Cut-Through?",
+      "a": [
+        "Introduce mucho retardo.",
+        "Es más lento que Store-and-Forward.",
+        "No detecta errores en CRC ni colisiones.",
+        "No puede aprender direcciones MAC."
+      ],
+      "answer": 3
+    },
+    {
+      "q": "¿Qué dispositivo permite conectar redes heterogéneas con direccionamiento IP y trabaja en el Nivel 3?",
+      "a": [
+        "Hub.",
+        "Switch.",
+        "Router.",
+        "Repetidor."
+      ],
+      "answer": 3
+    },
+    {
+      "q": "¿En qué se basa principalmente el encaminamiento realizado por un Router?",
+      "a": [
+        "En direcciones físicas MAC.",
+        "En tablas de encaminamiento IP.",
+        "En el aprendizaje de puertos.",
+        "En la amplificación de la señal."
+      ],
+      "answer": 2
+    },
+    {
+      "q": "¿Cómo afectan los Routers a los dominios de colisión y difusión?",
+      "a": [
+        "Expanden ambos dominios.",
+        "Dividen ambos dominios.",
+        "Dividen el de colisión y expanden el de difusión.",
+        "Expanden el de colisión y dividen el de difusión."
+      ],
+      "answer": 2
+    },
+    {
+      "q": "¿Qué protocolo se describe como sin conexión (datagrama) y encargado de las funciones de encaminamiento en el Nivel de Red/Internet?",
+      "a": [
+        "ARP.",
+        "Ethernet.",
+        "IP.",
+        "TCP."
+      ],
+      "answer": 3
+    },
+    {
+      "q": "¿Cuál es la unidad básica de transferencia de datos establecida por IP?",
+      "a": [
+        "Trama.",
+        "Segmento.",
+        "Datagrama.",
+        "Paquete."
+      ],
+      "answer": 3
+    },
+    {
+      "q": "¿Cuántos bits tienen las direcciones IP mencionadas en la descripción del Protocolo IP?",
+      "a": [
+        "16 bits.",
+        "32 bits.",
+        "48 bits.",
+        "64 bits."
+      ],
+      "answer": 2
+    },
+    {
+      "q": "¿Qué permite la Máscara de Red (netmask) en una dirección IP?",
+      "a": [
+        "Determinar el puerto de destino.",
+        "Establecer la velocidad de la red.",
+        "Extraer de forma sencilla el identificador de red.",
+        "Identificar el tipo de cable utilizado."
+      ],
+      "answer": 3
+    },
+    {
+      "q": "¿Cuál es el rango de direcciones IP reservadas para redes privadas de Clase C según el RFC1918 mencionado?",
+      "a": [
+        "10.0.0.0 - 10.255.255.255.",
+        "172.16.0.0 - 172.31.255.255.",
+        "192.168.0.0 - 192.168.255.255.",
+        "169.254.0.0 - 169.254.255.255."
+      ],
+      "answer": 3
+    },
+    {
+      "q": "¿Qué protocolo se utiliza para averiguar la dirección física (MAC) de un host a partir de su dirección IP, según el texto?",
+      "a": [
+        "DHCP.",
+        "RARP.",
+        "ARP.",
+        "DNS."
+      ],
+      "answer": 3
+    },
+    {
+      "q": "¿Cómo resuelve una estación la necesidad de conocer la dirección física de un destino IP en su misma red utilizando ARP?",
+      "a": [
+        "Envía una consulta unicast directamente al destino.",
+        "Envía una consulta ARP mediante una difusión.",
+        "Consulta una tabla ARP centralizada en el router.",
+        "Utiliza DNS para obtener la MAC."
+      ],
+      "answer": 2
+    },
+    {
+      "q": "¿Qué técnica se utiliza en IP para dividir datagramas excesivamente grandes para su transmisión a través de redes con MTU más pequeñas?",
+      "a": [
+        "Encapsulación.",
+        "Checksum.",
+        "Fragmentación.",
+        "Subnetting."
+      ],
+      "answer": 3
+    },
+    {
+      "q": "¿Qué campo en la cabecera IP se utiliza para identificar todos los fragmentos pertenecientes a un mismo datagrama original?",
+      "a": [
+        "Longitud total.",
+        "Tiempo de vida (TTL).",
+        "Identificación.",
+        "Desplazamiento del fragmento."
+      ],
+      "answer": 3
+    },
+    {
+      "q": "¿Cuál es la finalidad principal del campo Tiempo de Vida (TTL) en un datagrama IP?",
+      "a": [
+        "Indicar la prioridad del datagrama.",
+        "Establecer la velocidad de transmisión.",
+        "Evitar que el datagrama esté dando vueltas indefinidamente en la Internet.",
+        "Determinar el tipo de servicio requerido."
+      ],
+      "answer": 3
+    }
+  ]
+}

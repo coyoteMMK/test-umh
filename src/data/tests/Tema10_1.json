@@ -1,0 +1,308 @@
+{
+  "title": "Tema10_1",
+  "career": "Ingeniería Informática",
+  "year": "Cuarto año",
+  "subject": "Redes_2",
+  "questions": [
+    {
+      "q": "Según la fuente, una de las principales necesidades para el uso de NAT es:",
+      "a": [
+      "Mejorar la velocidad de transmisión",
+      "La escasez de direcciones IP reales",
+      "Facilitar la configuración de redes",
+      "Aumentar el ancho de banda disponible"
+      ],
+      "answer": 2
+      },
+      {
+      "q": "En cuanto a la seguridad, ¿por qué se considera útil NAT según la fuente?",
+      "a": [
+      "Permite cifrar todo el tráfico de la red interna",
+      "Los bloques RFC-1918 no son enrutados y suelen ser bloqueados por routers externos",
+      "Previene ataques de denegación de servicio (DoS)",
+      "Garantiza la confidencialidad de los datos"
+      ],
+      "answer": 2
+      },
+      {
+      "q": "Según RFC 1918, ¿cuál de los siguientes bloques de direcciones está asignado para uso interno y privado?",
+      "a": [
+      "200.10.0.0 - 200.10.255.255",
+      "172.16.0.0 - 172.31.255.255",
+      "192.169.0.0 - 192.169.255.255",
+      "11.0.0.0 - 11.255.255.255"
+      ],
+      "answer": 2
+      },
+      {
+      "q": "Según la fuente, ¿aproximadamente cuándo se pensaba que el direccionamiento IPv4 se agotaría?",
+      "a": [
+      "En la década de 1980",
+      "En la década de 1990",
+      "En la década de 2000",
+      "En la década de 2010"
+      ],
+      "answer": 2
+      },
+      {
+      "q": "En la terminología NAT, ¿qué son las 'Direcciones Interiores'?",
+      "a": [
+      "Direcciones válidas ubicadas fuera de nuestra red",
+      "Direcciones internas de nuestra red sujetas a traducción",
+      "Direcciones IP asignadas por el ISP",
+      "Direcciones públicas utilizadas en Internet"
+      ],
+      "answer": 2
+      },
+      {
+      "q": "¿Cómo se define una dirección 'Interior local' en la terminología NAT?",
+      "a": [
+      "La dirección de un host interno como aparece en el exterior",
+      "La dirección IP de un host externo como la reconoce un host interno",
+      "Direcciones asignadas y configuradas a cualquier host que pertenece a la red local",
+      "Una dirección pública asignada por el ISP"
+      ],
+      "answer": 3
+      },
+      {
+      "q": "Una dirección 'Interior global' es, según la fuente:",
+      "a": [
+      "La dirección interna de un host antes de la traducción",
+      "La dirección de un host externo vista desde la red interna",
+      "La dirección de un host interno como aparece en el exterior (la dirección traducida)",
+      "La dirección de bucle local (loopback)"
+      ],
+      "answer": 3
+      },
+      {
+      "q": "¿Qué representa una dirección 'Externa Global' en la terminología NAT?",
+      "a": [
+      "La dirección IP configurada y asignada a cualquier host de la red externa",
+      "La dirección IP de un host interno vista desde fuera",
+      "La dirección IP de un router NAT",
+      "Una dirección IP privada de la red externa"
+      ],
+      "answer": 1
+      },
+      {
+      "q": "¿Cuál de las siguientes NO es una función de NAT mencionada en la fuente?",
+      "a": [
+      "Traducción de direcciones Internas Locales",
+      "Sobrecarga de direcciones Internas Globales (PAT)",
+      "Enrutamiento dinámico entre diferentes AS",
+      "Gestión de redes superpuestas"
+      ],
+      "answer": 3
+      },
+      {
+      "q": "En la traducción estática NAT, ¿cómo se mapean las direcciones interna local e interna global?",
+      "a": [
+      "Muchos a uno",
+      "Uno a uno",
+      "Uno a muchos",
+      "Muchos a muchos"
+      ],
+      "answer": 2
+      },
+      {
+      "q": "Según la fuente, ¿qué significa que en NAT estático las direcciones se mapeen una a una?",
+      "a": [
+      "Que una sola dirección interna global sirve para múltiples direcciones internas locales",
+      "Que por cada dirección interna local se requiere una dirección interna global",
+      "Que no se necesita ninguna dirección interna global",
+      "Que se utilizan puertos diferentes para cada traducción"
+      ],
+      "answer": 2
+      },
+      {
+      "q": "¿Cuál es el propósito principal de PAT (Port Address Translation)?",
+      "a": [
+      "Proporcionar una traducción uno a uno de direcciones IP",
+      "Permitir que múltiples direcciones IP privadas compartan una sola dirección IP pública",
+      "Asignar direcciones IP privadas a hosts externos",
+      "Mejorar la seguridad mediante la ocultación de puertos"
+      ],
+      "answer": 2
+      },
+      {
+      "q": "¿Qué elementos específicos modifica PAT para permitir que múltiples hosts compartan una IP pública?",
+      "a": [
+      "Las direcciones IP de origen y destino",
+      "Los puertos origen TCP/UDP",
+      "Solo las direcciones IP de destino",
+      "Solo los puertos destino TCP/UDP"
+      ],
+      "answer": 2
+      },
+      {
+      "q": "¿Qué limitación de la traducción NAT resuelve PAT?",
+      "a": [
+      "La incapacidad de traducir direcciones externas",
+      "La necesidad de usar múltiples direcciones IP internas",
+      "La limitación de traducción del uno a uno",
+      "La dificultad para gestionar redes superpuestas"
+      ],
+      "answer": 3
+      },
+      {
+      "q": "¿Qué servicio permite acceso limitado a la LAN interna desde el exterior?",
+      "a": [
+      "PAT",
+      "NAT Dinámico",
+      "Port Forwarding",
+      "Traducción Estática"
+      ],
+      "answer": 3
+      },
+      {
+      "q": "Según la fuente, ¿cómo está creciendo Internet en tamaño?",
+      "a": [
+      "Linealmente",
+      "Exponencialmente",
+      "De forma predecible pero lenta",
+      "De forma errática"
+      ],
+      "answer": 2
+      },
+      {
+      "q": "¿Cuántos bits componen una dirección IPv6?",
+      "a": [
+      "32 bits",
+      "64 bits",
+      "128 bits",
+      "256 bits"
+      ],
+      "answer": 3
+      },
+      {
+      "q": "¿Qué característica del formato de cabecera IPv6 lo hace más flexible que IPv4 según la fuente?",
+      "a": [
+      "Un tamaño de cabecera fijo y grande",
+      "Menos campos fijos y el uso de cabeceras de extensión opcionales",
+      "La inclusión del checksum para mayor fiabilidad",
+      "Mayor número de campos obligatorios"
+      ],
+      "answer": 2
+      },
+      {
+      "q": "¿Existen clases de direcciones en IPv6 como en IPv4?",
+      "a": [
+      "Sí, son similares a las de IPv4 (A, B, C)",
+      "Sí, pero tienen un nombre diferente",
+      "No, no hay clases de direcciones en IPv6",
+      "La fuente no menciona nada al respecto"
+      ],
+      "answer": 3
+      },
+      {
+      "q": "¿Cómo se indica la separación entre el prefijo (red) y el sufijo (host) en una dirección IPv6?",
+      "a": [
+      "Se deduce de la propia dirección, como en IPv4 con clases",
+      "Siempre hay que indicar la longitud del prefijo (máscara de red)",
+      "Utilizando un delimitador especial dentro de la dirección",
+      "No se indica, ya que no existen prefijos en IPv6"
+      ],
+      "answer": 2
+      },
+      {
+      "q": "¿Qué tipo de dirección IPv6 se asigna a un grupo de computadores, pero un paquete enviado a ella solo es entregado a uno cualquiera del grupo?",
+      "a": [
+      "Unicast",
+      "Multicast",
+      "Anycast",
+      "Broadcast"
+      ],
+      "answer": 3
+      },
+      {
+      "q": "¿Qué símbolo se utiliza en la notación de direcciones IPv6 para comprimir campos consecutivos de ceros?",
+      "a": [
+      ":",
+      ".",
+      "-",
+      "::"
+      ],
+      "answer": 4
+      },
+      {
+      "q": "¿Cuántas veces puede aparecer el símbolo '::' en una única dirección IPv6?",
+      "a": [
+      "Cero veces",
+      "Solo una vez",
+      "Hasta dos veces",
+      "Depende de la cantidad de ceros a comprimir"
+      ],
+      "answer": 2
+      },
+      {
+      "q": "En comparación con IPv4, ¿qué ocurrió con el campo Checksum en la cabecera principal de IPv6?",
+      "a": [
+      "Se mantuvo sin cambios",
+      "Se hizo opcional",
+      "Fue eliminado y su función relegada al nivel de enlace",
+      "Se expandió para incluir más información"
+      ],
+      "answer": 3
+      },
+      {
+      "q": "¿Dónde es posible realizar la fragmentación de datagramas en IPv6 según la fuente?",
+      "a": [
+      "En cualquier router intermedio",
+      "Solo en el destino final",
+      "Solo en el origen",
+      "No es posible fragmentar en IPv6"
+      ],
+      "answer": 3
+      },
+      {
+      "q": "¿Qué cabecera de extensión en IPv6 está destinada a ser examinada por todos los nodos intermedios en el camino?",
+      "a": [
+      "Cabecera de encaminamiento",
+      "Cabecera de fragmentación",
+      "Cabecera de opciones salto a salto",
+      "Cabecera de opciones para destinatario"
+      ],
+      "answer": 3
+      },
+      {
+      "q": "¿Cuál es el ámbito de una dirección Unicast Local de Enlace (Link-Local) en IPv6?",
+      "a": [
+      "Global (Internet)",
+      "Local de sitio (Site-local)",
+      "Local de enlace (Link-local)",
+      "Bucle local (Loopback)"
+      ],
+      "answer": 3
+      },
+      {
+      "q": "¿Para qué son necesarias las direcciones Unicast Local de Enlace (Link-Local) en IPv6, según la fuente?",
+      "a": [
+      "Para ser enrutadas por routers",
+      "Para acceder a recursos en Internet",
+      "Para la comunicación nodo a nodo dentro del mismo enlace (Neighbor Discovery)",
+      "Para identificar routers a nivel global"
+      ],
+      "answer": 3
+      },
+      {
+      "q": "¿Qué indica la dirección especial IPv6 '::' (no especificada)?",
+      "a": [
+      "La interfaz de bucle local",
+      "La ausencia de una dirección",
+      "Un prefijo de red para multidifusión",
+      "Una dirección de sitio local"
+      ],
+      "answer": 2
+      },
+      {
+      "q": "¿Qué funcionalidades combina ICMPv6, según la fuente?",
+      "a": [
+      "TCP, UDP y IP",
+      "DNS, DHCP y ARP",
+      "ICMP, IGMP y ARP",
+      "OSPF, BGP y RIP"
+      ],
+      "answer": 3
+      }
+  ]
+}

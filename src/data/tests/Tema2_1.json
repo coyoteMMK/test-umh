@@ -1,0 +1,308 @@
+{
+  "title": "Tema2_1",
+  "career": "Ingeniería Informática",
+  "year": "Cuarto año",
+  "subject": "Redes_2",
+  "questions": [
+    {
+      "q": "Según la comparación de arquitecturas, ¿cuántas capas principales se muestran en el modelo TCP/IP en comparación con el modelo OSI?",
+      "a": [
+        "TCP/IP muestra 4 capas, OSI muestra 7.",
+        "TCP/IP muestra 5 capas, OSI muestra 7.",
+        "TCP/IP muestra 4 capas, OSI muestra 6.",
+        "TCP/IP muestra 5 capas, OSI muestra 6."
+      ],
+      "answer": 2
+    },
+    {
+      "q": "Los protocolos de acceso al medio pertenecen a una subcapa específica dentro de la capa de enlace de datos. ¿Cómo se llama esta subcapa?",
+      "a": [
+        "Subcapa de Enlace Lógico (LLC).",
+        "Subcapa de Control de Acceso al Medio (MAC).",
+        "Subcapa de Red.",
+        "Subcapa Física."
+      ],
+      "answer": 2
+    },
+    {
+      "q": "¿En qué tipo de redes es especialmente importante la subcapa MAC?",
+      "a": [
+        "WANs y enlaces punto a punto.",
+        "Redes telefónicas y por satélite.",
+        "LANs y comunicación inalámbrica.",
+        "Redes de núcleo y enlaces de fibra óptica."
+      ],
+      "answer": 3
+    },
+    {
+      "q": "Excepto por los enlaces por satélite, ¿qué tipo de enlaces utilizan típicamente las WAN?",
+      "a": [
+        "Enlaces de difusión.",
+        "Enlaces punto a punto.",
+        "Enlaces conmutados.",
+        "Enlaces compartidos."
+      ],
+      "answer": 2
+    },
+    {
+      "q": "¿Cuáles son los dos métodos principales de asignación del canal mencionados?",
+      "a": [
+        "Asignación por contención y asignación por turno.",
+        "Asignación estática y asignación dinámica.",
+        "Asignación centralizada y asignación distribuida.",
+        "Asignación por prioridad y asignación aleatoria."
+      ],
+      "answer": 2
+    },
+    {
+      "q": "Según el texto, cuando el número de emisores es grande y varía o el tráfico es de ráfagas, ¿qué problema presenta la Asignación Estática mediante FDM (Multiplexación por División de Frecuencia)?",
+      "a": [
+        "Aumenta la latencia.",
+        "Presenta problemas de eficiencia.",
+        "Requiere sincronización.",
+        "Provoca colisiones."
+      ],
+      "answer": 2
+    },
+    {
+      "q": "Respecto a la Asignación Dinámica del canal, ¿cuál de las siguientes características NO se menciona como un aspecto de este tipo de asignación?",
+      "a": [
+        "Tráfico independiente.",
+        "Múltiples canales simultáneos.",
+        "Colisiones observables.",
+        "Detección de portadora o no sentido de portadora."
+      ],
+      "answer": 2
+    },
+    {
+      "q": "¿Cuál de los siguientes NO se menciona como un Protocolo de Acceso Múltiple en el listado principal?",
+      "a": [
+        "ALOHA.",
+        "Acceso Múltiple por Detección de Portadora (CSMA).",
+        "Acceso Múltiple por División de Tiempo (TDMA).",
+        "Protocolos Libres de Colisión."
+      ],
+      "answer": 3
+    },
+    {
+      "q": "¿Dónde y cuándo se originó el protocolo ALOHA, y quiénes estuvieron involucrados?",
+      "a": [
+        "California, 1980; Vint Cerf y Bob Kahn.",
+        "Hawaii, 1970; Norman Abramson y sus colegas.",
+        "Nueva Jersey, 1960; Laboratorios Bell.",
+        "Boston, 1975; Equipos de ARPANET."
+      ],
+      "answer": 2
+    },
+    {
+      "q": "¿Cuántas versiones del protocolo ALOHA se mencionan específicamente?",
+      "a": [
+        "Una versión: ALOHA puro.",
+        "Dos versiones: Puro ALOHA y ALOHA ranurado.",
+        "Tres versiones: ALOHA puro, ALOHA ranurado y ALOHA persistente.",
+        "Cuatro versiones: Puro ALOHA, ALOHA ranurado, CSMA ALOHA y ALOHA con detección de colisión."
+      ],
+      "answer": 2
+    },
+    {
+      "q": "En el protocolo Puro ALOHA, ¿cuáles son los estados de usuario descritos?",
+      "a": [
+        "Activo, Inactivo, Enviando.",
+        "EN ESPERA, ENVIANDO.",
+        "Transmitiendo, Recibiendo.",
+        "Contendiendo, Transmitiendo, Inactivo."
+      ],
+      "answer": 2
+    },
+    {
+      "q": "Según la descripción de Puro ALOHA, ¿qué hace una estación si la transmisión de un cuadro no fue exitosa?",
+      "a": [
+        "Espera un tiempo aleatorio y lo retransmite una vez más.",
+        "Descarta el cuadro y notifica al usuario.",
+        "Espera continuamente mientras la estación retransmite el cuadro una y otra vez hasta que se envía con éxito.",
+        "Intenta enviarlo de nuevo inmediatamente."
+      ],
+      "answer": 3
+    },
+    {
+      "q": "¿Quién duplicó la capacidad de un sistema ALOHA en 1972?",
+      "a": [
+        "Norman Abramson.",
+        "Bob Metcalfe.",
+        "Vint Cerf.",
+        "Roberts."
+      ],
+      "answer": 4
+    },
+    {
+      "q": "En ALOHA Ranurado, ¿cómo se divide el tiempo?",
+      "a": [
+        "En ciclos de transmisión.",
+        "En intervalos discretos llamados ranuras.",
+        "En períodos de contención.",
+        "En unidades de tiempo variables."
+      ],
+      "answer": 2
+    },
+    {
+      "q": "¿Qué es obligatorio para que ALOHA Ranurado funcione correctamente?",
+      "a": [
+        "Detección de portadora.",
+        "Detección de colisión.",
+        "Un mecanismo de retransmisión binario exponencial.",
+        "La sincronización."
+      ],
+      "answer": 4
+    },
+    {
+      "q": "¿Cómo se llaman los protocolos en los que las estaciones \"escuchan a un portador (es decir, transmisión) y actúan en consecuencia\"?",
+      "a": [
+        "Protocolos de contención limitada.",
+        "Protocolos libres de colisión.",
+        "Protocolos de acceso múltiple con detección de portadora (CSMA).",
+        "Protocolos de paso de testigo."
+      ],
+      "answer": 3
+    },
+    {
+      "q": "¿Cuáles de las siguientes NO es una versión de los protocolos de detección de portadora que se discuten en el texto?",
+      "a": [
+        "CSMA persistente y no persistente.",
+        "CSMA con detección de colisión.",
+        "CSMA con prevención de colisión (CSMA/CA).",
+        "CSMA con retransmisión exponencial."
+      ],
+      "answer": 3
+    },
+    {
+      "q": "¿Qué significan las siglas CSMA/CD?",
+      "a": [
+        "Carrier Sense Multiple Access / Collision Avoidance.",
+        "Code Sense Multiple Access / Collision Detection.",
+        "Carrier Sense Multiple Access / Collision Detection.",
+        "Code Sense Multiple Access / Collision Avoidance."
+      ],
+      "answer": 3
+    },
+    {
+      "q": "¿De qué tecnología LAN clásica es una base el protocolo CSMA/CD?",
+      "a": [
+        "Token Ring.",
+        "FDDI.",
+        "Ethernet.",
+        "Wi-Fi."
+      ],
+      "answer": 3
+    },
+    {
+      "q": "En CSMA/CD, ¿cómo sabe una estación transmisora que ha ocurrido una colisión?",
+      "a": [
+        "Recibe un paquete NACK de la estación receptora.",
+        "No recibe un acuse de recibo (ACK) dentro de un tiempo determinado.",
+        "Al leer los datos que está transmitiendo, nota que están distorsionados.",
+        "Otra estación envía una señal de jam."
+      ],
+      "answer": 3
+    },
+    {
+      "q": "¿Cuáles son los tres estados en los que puede estar CSMA/CD?",
+      "a": [
+        "Espera, Envío, Recepción.",
+        "Contención, Transmisión, Inactivo.",
+        "Escuchando, Transmitiendo, Detectando.",
+        "Ocupado, Libre, Colisionando."
+      ],
+      "answer": 2
+    },
+    {
+      "q": "Según el texto, ¿cuándo ocurren las colisiones en CSMA/CD?",
+      "a": [
+        "Solo cuando dos estaciones intentan transmitir exactamente al mismo tiempo.",
+        "Nunca ocurren una vez que la estación ha capturado el canal.",
+        "Aún ocurren durante el período de contienda.",
+        "Solo ocurren si los cuadros son demasiado largos."
+      ],
+      "answer": 3
+    },
+    {
+      "q": "¿Cómo afectan las colisiones al rendimiento del sistema en CSMA/CD?",
+      "a": [
+        "Aumentan el rendimiento porque fuerzan retransmisiones rápidas.",
+        "No tienen un impacto significativo si el cable es corto.",
+        "Afectan negativamente al rendimiento del sistema.",
+        "Solo afectan al retardo, no al ancho de banda."
+      ],
+      "answer": 3
+    },
+    {
+      "q": "¿Por qué son los protocolos libres de colisión adecuados para el tráfico en tiempo real como VoIP o Video?",
+      "a": [
+        "Reducen el ancho de banda disponible.",
+        "Aumentan el tiempo necesario para enviar una trama.",
+        "Mal ajuste para este tipo de tráfico.",
+        "No presentan las interrupciones e incertidumbres causadas por las colisiones."
+      ],
+      "answer": 4
+    },
+    {
+      "q": "En el contexto de los protocolos libres de colisión, ¿cómo se identifican típicamente las N estaciones?",
+      "a": [
+        "Cada una con una dirección IP única.",
+        "Cada una con una dirección MAC única asignada aleatoriamente.",
+        "Cada una programada con una dirección única de 0 a (N-1).",
+        "Cada una con un número de puerto TCP/UDP."
+      ],
+      "answer": 3
+    },
+    {
+      "q": "En el Protocolo de mapa de bits, ¿en cuántos espacios consiste cada período de contención para N estaciones?",
+      "a": [
+        "Consiste en N espacios.",
+        "Consiste en 2N espacios.",
+        "Consiste en N/2 espacios.",
+        "El número de espacios varía dinámicamente."
+      ],
+      "answer": 1
+    },
+    {
+      "q": "En el Protocolo de mapa de bits, ¿cómo anuncia la estación j que tiene una trama para enviar?",
+      "a": [
+        "Enviando un paquete de control a todas las estaciones.",
+        "Transmitiendo 1 bit durante la ranura j.",
+        "Esperando su turno para transmitir la trama completa.",
+        "Enviando una señal de portadora continua."
+      ],
+      "answer": 2
+    },
+    {
+      "q": "En los protocolos de Paso de Testigo (Token Passing), ¿cómo se llama el mensaje especial que se pasa a la siguiente estación?",
+      "a": [
+        "Un paquete de control.",
+        "Una señal de sincronización.",
+        "El testigo (token).",
+        "Un cuadro de permiso."
+      ],
+      "answer": 3
+    },
+    {
+      "q": "¿Qué protocolos se mencionan que funcionan de manera similar al paso de testigo?",
+      "a": [
+        "Ethernet y Wi-Fi.",
+        "ALOHA y CSMA.",
+        "Token Ring o Token Bus.",
+        "CSMA/CD y CSMA/CA."
+      ],
+      "answer": 3
+    },
+    {
+      "q": "En un protocolo de paso de testigo, ¿quién normalmente es responsable de eliminar el testigo de la circulación para que no termine allí para siempre?",
+      "a": [
+        "La estación que inicialmente creó el testigo.",
+        "La estación receptora y/o la estación emisora.",
+        "Un coordinador central en la red.",
+        "El testigo se elimina automáticamente después de un tiempo."
+      ],
+      "answer": 2
+    }
+  ]
+}
