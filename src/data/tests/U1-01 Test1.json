@@ -1,0 +1,308 @@
+{
+  "title": "U1_01",
+  "career": "Ingeniería Informática",
+  "year": "Segundo año",
+  "subject": "Sistemas_Operativos",
+  "questions": [
+    {
+      "q": "¿Cuáles son los componentes básicos de una computadora según la fuente?",
+      "a": [
+        "Procesador, Teclado, Monitor",
+        "CPU, Memoria Principal, Módulos de E/S",
+        "Disco Duro, Tarjeta Gráfica, Placa Base",
+        "Sistema Operativo, Aplicaciones, Drivers"
+      ],
+      "answer": 2
+    },
+    {
+      "q": "¿Cuál es la función principal del procesador en una computadora?",
+      "a": [
+        "Almacenar datos de forma permanente",
+        "Controlar el funcionamiento del computador y procesar datos",
+        "Transferir datos entre el computador y su entorno externo",
+        "Gestionar la memoria secundaria"
+      ],
+      "answer": 2
+    },
+    {
+      "q": "¿Qué característica principal se menciona de la Memoria Principal?",
+      "a": [
+        "Es habitualmente no volátil",
+        "Solo almacena datos de forma permanente",
+        "Almacena el programa en ejecución en código máquina y sus resultados",
+        "Se conoce también como memoria secundaria"
+      ],
+      "answer": 3
+    },
+    {
+      "q": "¿Cómo se denomina al conjunto de instrucciones máquina que tiene por objeto que la computadora realice una determinada función?",
+      "a": [
+        "Lenguaje de alto nivel",
+        "Sistema Operativo",
+        "Programa máquina",
+        "Driver de dispositivo"
+      ],
+      "answer": 3
+    },
+    {
+      "q": "¿Cuál es una de las funciones de los registros visibles para el usuario?",
+      "a": [
+        "Gestionar las interrupciones del sistema",
+        "Reducir el acceso a la memoria principal",
+        "Controlar las operaciones de E/S",
+        "Almacenar el código fuente de los programas"
+      ],
+      "answer": 2
+    },
+    {
+      "q": "¿Quiénes utilizan los registros de control y estado para controlar la ejecución de programas?",
+      "a": [
+        "Solo los lenguajes de programación de alto nivel",
+        "Solo los dispositivos de entrada/salida",
+        "El procesador y las rutinas privilegiadas del sistema operativo",
+        "Los compiladores para optimizar el código"
+      ],
+      "answer": 3
+    },
+    {
+      "q": "¿Qué tipo de información contienen los registros de dirección?",
+      "a": [
+        "Resultados de operaciones aritméticas",
+        "Códigos de operación de instrucciones",
+        "Direcciones de datos o instrucciones",
+        "Información de estado de la CPU"
+      ],
+      "answer": 3
+    },
+    {
+      "q": "¿En qué modo se accede a las posiciones de la pila?",
+      "a": [
+        "FIFO (First-In First-Out)",
+        "LIFO (Last-In First-Out)",
+        "Aleatorio",
+        "Indexado"
+      ],
+      "answer": 2
+    },
+    {
+      "q": "¿Qué registro apunta a la dirección cima de la pila y permite usar instrucciones sin dirección?",
+      "a": [
+        "Registro índice",
+        "Puntero de segmento",
+        "Puntero de pila",
+        "Contador de programa"
+      ],
+      "answer": 3
+    },
+    {
+      "q": "¿Qué contiene el Registro de Dirección de Memoria (RDIM)?",
+      "a": [
+        "Los datos que se van a escribir en la memoria",
+        "La dirección de memoria de la siguiente lectura o escritura",
+        "La última instrucción máquina leída",
+        "La dirección de memoria asignada al dispositivo E/S"
+      ],
+      "answer": 2
+    },
+    {
+      "q": "¿Cuál es la función del Contador de Programa (PC)?",
+      "a": [
+        "Contener la última instrucción máquina leída",
+        "Almacenar los datos leídos de memoria",
+        "Contener la dirección de la próxima instrucción máquina que se leerá de memoria",
+        "Indicar el estado actual de la CPU"
+      ],
+      "answer": 3
+    },
+    {
+      "q": "¿Qué registro contiene la última instrucción máquina leída?",
+      "a": [
+        "Contador de Programa (PC)",
+        "Registro de Instrucción (RI)",
+        "Registro de Dirección de Memoria (RDIM)",
+        "Program Status Word (PSW)"
+      ],
+      "answer": 2
+    },
+    {
+      "q": "¿Qué tipo de información puede contener el registro o conjunto de registros PSW (Program Status Word)?",
+      "a": [
+        "Solo direcciones de memoria",
+        "Información de estado de la CPU, indicadores y bits de control de modo",
+        "Únicamente datos numéricos",
+        "El código de operación de la instrucción actual"
+      ],
+      "answer": 2
+    },
+    {
+      "q": "¿De qué se encarga la Unidad Aritmético-Lógica (ALU)?",
+      "a": [
+        "Leer instrucciones de memoria",
+        "Controlar el flujo de datos entre procesador y E/S",
+        "Realizar operaciones aritméticas y lógicas",
+        "Almacenar el resultado de cada instrucción"
+      ],
+      "answer": 3
+    },
+    {
+      "q": "¿Cuál de las siguientes es una tarea de la unidad de control?",
+      "a": [
+        "Realizar la división por cero",
+        "Almacenar el programa en ejecución",
+        "Interpretar cada instrucción",
+        "Gestionar la jerarquía de memoria"
+      ],
+      "answer": 3
+    },
+    {
+      "q": "¿Qué característica se menciona del ciclo de instrucción?",
+      "a": [
+        "Es interrumpible en cualquier momento",
+        "El PC se decrementa automáticamente",
+        "Es atómico",
+        "La instrucción se carga directamente en la ALU"
+      ],
+      "answer": 3
+    },
+    {
+      "q": "¿Qué mecanismo atiende las órdenes de acceso a memoria (lectura/escritura) emitidas por la CPU o el Módulo E/S?",
+      "a": [
+        "La MMU",
+        "El PC",
+        "El DMA (Direct Memory Access)",
+        "El PSW"
+      ],
+      "answer": 3
+    },
+    {
+      "q": "¿Cuál de los siguientes es un tipo de operación de E/S mencionado en la fuente?",
+      "a": [
+        "Acceso directo a la pila",
+        "Controlada por interrupciones",
+        "Mediante el registro índice",
+        "Sin dirección"
+      ],
+      "answer": 2
+    },
+    {
+      "q": "¿Cuáles son las características que definen el modelo de programación de una computadora?",
+      "a": [
+        "El tipo de pantalla, la velocidad del procesador y el tamaño del disco",
+        "Los elementos de almacenamiento, el juego de instrucciones y la secuencia de funcionamiento",
+        "La arquitectura del bus, los periféricos y el sistema de enfriamiento",
+        "El número de usuarios concurrentes, el tiempo de respuesta y la capacidad de red"
+      ],
+      "answer": 2
+    },
+    {
+      "q": "¿Cuántos niveles de ejecución presenta la mayoría de las computadoras y cómo se denominan?",
+      "a": [
+        "Un nivel, llamado nivel de sistema",
+        "Dos niveles: nivel de usuario y nivel de núcleo",
+        "Tres niveles: aplicación, sistema operativo y hardware",
+        "Un número variable de capas según la arquitectura"
+      ],
+      "answer": 2
+    },
+    {
+      "q": "¿Cuál de los siguientes es un mecanismo que permite romper la secuencia de ejecución de una computadora?",
+      "a": [
+        "Las instrucciones de copia",
+        "Las instrucciones de salto",
+        "Las operaciones de suma",
+        "La inicialización del sistema"
+      ],
+      "answer": 2
+    },
+    {
+      "q": "¿Qué permiten las interrupciones en el contexto del procesador?",
+      "a": [
+        "Disminuir la utilización del procesador",
+        "Desincronizar dispositivos con el procesador",
+        "Mejorar la utilización del procesador",
+        "Ejecutar programas en modo usuario exclusivamente"
+      ],
+      "answer": 3
+    },
+    {
+      "q": "¿Cuál de las siguientes se clasifica como una interrupción de programa?",
+      "a": [
+        "Fallo en un dispositivo de hardware",
+        "Generada por el temporizador del procesador",
+        "Una división por cero",
+        "Fin de operación de E/S"
+      ],
+      "answer": 3
+    },
+    {
+      "q": "¿Qué ocurre durante el ciclo de aceptación de una interrupción?",
+      "a": [
+        "El procesador se detiene completamente",
+        "El procesador pasa a modo usuario",
+        "Se salvan algunos registros de la computadora",
+        "El contador de programa se reinicia a cero"
+      ],
+      "answer": 3
+    },
+    {
+      "q": "¿Cuál es la solución propuesta para el compromiso entre capacidad, velocidad y coste de la memoria?",
+      "a": [
+        "Usar solo memorias de estado sólido",
+        "Estructurar la memoria como una jerarquía",
+        "Incrementar el tamaño de la memoria principal",
+        "Depender únicamente de la memoria cache"
+      ],
+      "answer": 2
+    },
+    {
+      "q": "¿Cuál es la motivación principal para el uso de la memoria Cache?",
+      "a": [
+        "Para almacenar datos de forma permanente",
+        "Para reducir el coste total de la memoria",
+        "Para que el procesador no espere al dato de memoria, aprovechando el principio de proximidad",
+        "Para sustituir completamente a la memoria principal"
+      ],
+      "answer": 3
+    },
+    {
+      "q": "¿De qué se encarga la MMU (Memory Management Unit) en el contexto de la memoria virtual?",
+      "a": [
+        "Almacenar los datos de la memoria principal",
+        "Traducir las direcciones virtuales a direcciones físicas",
+        "Gestionar las operaciones de entrada/salida",
+        "Realizar operaciones aritméticas"
+      ],
+      "answer": 2
+    },
+    {
+      "q": "En el esquema de paginación, ¿cómo se divide el espacio de direcciones y la memoria principal?",
+      "a": [
+        "El espacio de direcciones en bloques y la memoria en segmentos",
+        "El espacio de direcciones en marcos y la memoria principal en páginas",
+        "El espacio de direcciones en páginas y la memoria principal en marcos de página",
+        "Ambos en segmentos"
+      ],
+      "answer": 3
+    },
+    {
+      "q": "¿Qué almacena el MDR (Memory Data Register) en la MMU?",
+      "a": [
+        "La dirección lógica a la que se quiere acceder",
+        "El dato a enviar a o recibido de memoria",
+        "El contador de programa",
+        "El identificador del bloque de caché"
+      ],
+      "answer": 2
+    },
+    {
+      "q": "¿Cuál es la principal diferencia entre un multiprocesador y una multicomputadora según la fuente?",
+      "a": [
+        "Los multiprocesadores no tienen memoria principal",
+        "Las multicomputadoras comparten una memoria principal común",
+        "Los multiprocesadores comparten una memoria principal común, mientras que las multicomputadoras no y se comunican por red",
+        "Ambos son lo mismo, solo diferente terminología"
+      ],
+      "answer": 3
+    }
+  ]
+}

@@ -1,0 +1,308 @@
+{
+    "title": "U3_02",
+    "career": "Ingeniería Informática",
+    "year": "Segundo año",
+    "subject": "Sistemas_Operativos",
+    "questions": [
+        {
+            "q": "Según la visión del Sistema Operativo, ¿qué dos características son tratadas de manera independiente para un proceso?",
+            "a": [
+              "La unidad de ejecución y la unidad de control [1, 2]",
+              "La unidad propietaria de los recursos y la unidad de asignación [1, 2]",
+              "La unidad de almacenamiento y la unidad de procesamiento",
+              "La unidad de entrada/salida y la unidad de memoria"
+            ],
+            "answer": 2
+          },
+          {
+            "q": "En el contexto de las dos visiones de un proceso, ¿cómo se conoce a la unidad propietaria de los recursos?",
+            "a": [
+              "Hilo (Thread) [1, 2]",
+              "Proceso (Process) [1, 2]",
+              "Tarea (Task)",
+              "Programa (Program)"
+            ],
+            "answer": 2
+          },
+          {
+            "q": "¿Cómo se conoce a la unidad de asignación (aquello que se asigna al procesador) según el Sistema Operativo?",
+            "a": [
+              "Proceso (Process) [1, 2]",
+              "Función (Function)",
+              "Hilo (Thread) [1, 2]",
+              "Módulo (Module)"
+            ],
+            "answer": 3
+          },
+          {
+            "q": "¿Cuántos hilos puede haber en un proceso?",
+            "a": [
+              "Siempre uno solo",
+              "Exactamente dos",
+              "Uno o más hilos [1, 2]",
+              "Depende del sistema operativo, pero nunca más de diez"
+            ],
+            "answer": 3
+          },
+          {
+            "q": "¿Qué elemento tiene cada hilo de forma independiente del estado de ejecución del proceso?",
+            "a": [
+              "El espacio de direcciones virtuales [3, 4]",
+              "Los recursos utilizados (ficheros abiertos) [4, 5]",
+              "El estado de ejecución (Listo, Bloqueado, etc.) [1, 2]",
+              "Las variables globales del proceso [6, 7]"
+            ],
+            "answer": 3
+          },
+          {
+            "q": "¿Qué información del procesador guarda el S.O. cuando un hilo no ejecuta, y que está asociada al hilo en ejecución?",
+            "a": [
+              "La pila de llamadas del proceso principal",
+              "El contexto del procesador [6, 7]",
+              "El espacio de direcciones globales [4, 5]",
+              "Las variables globales del proceso [4, 5]"
+            ],
+            "answer": 2
+          },
+          {
+            "q": "¿Qué tiene cada hilo que es propio y separado de la del proceso?",
+            "a": [
+              "Un espacio de direcciones virtuales compartido [5, 8]",
+              "Una pila de ejecución propia [6, 7]",
+              "Acceso exclusivo a la memoria",
+              "Un conjunto único de recursos asignados"
+            ],
+            "answer": 2
+          },
+          {
+            "q": "¿Qué tipo de almacenamiento tiene cada hilo para las variables locales, independiente de la del proceso?",
+            "a": [
+              "Almacenamiento dinámico compartido",
+              "Almacenamiento en caché del procesador",
+              "Almacenamiento estático [6, 7]",
+              "Almacenamiento en disco"
+            ],
+            "answer": 3
+          },
+          {
+            "q": "¿A qué tienen acceso los hilos dentro de un proceso?",
+            "a": [
+              "Solo a sus propias variables locales [4, 5]",
+              "Únicamente a los recursos que el hilo creó",
+              "A memoria, variables y recursos asignados al proceso [6, 7]",
+              "Exclusivamente a los registros de datos [4, 5]"
+            ],
+            "answer": 3
+          },
+          {
+            "q": "¿Qué deben proteger los hilos con mecanismos de sincronización y exclusión mutua?",
+            "a": [
+              "Las variables locales de cada hilo [4, 5]",
+              "El contexto del procesador de cada hilo [6, 7]",
+              "Las variables y recursos globales del proceso [6, 7]",
+              "Las pilas de ejecución propias de cada hilo [6, 7]"
+            ],
+            "answer": 3
+          },
+          {
+            "q": "¿Cuál de los siguientes NO es información local para cada hilo?",
+            "a": [
+              "Variables locales [4, 5]",
+              "Registros de datos (AX, BX, CX, ...) [4, 5]",
+              "Código (instrucciones) [4, 5]",
+              "Pilas de llamadas [4, 5]"
+            ],
+            "answer": 3
+          },
+          {
+            "q": "¿Cuál de los siguientes es información global para cada proceso y compartida por todos los hilos?",
+            "a": [
+              "Estado de ejecución del hilo [4, 5]",
+              "Registros de control y estado del hilo [4, 5]",
+              "Pilas de llamadas del hilo [4, 5]",
+              "Espacio de direcciones global (imagen del proceso) [4, 5]"
+            ],
+            "answer": 4
+          },
+          {
+            "q": "¿Qué significa la capacidad 'Multihilo' en un Sistema Operativo?",
+            "a": [
+              "La capacidad de ejecutar múltiples procesos simultáneamente",
+              "La capacidad de soportar múltiples hilos de ejecución en un solo proceso [8]",
+              "La capacidad de asignar un solo hilo a múltiples procesadores",
+              "La capacidad de que un solo proceso ejecute un solo hilo muy rápidamente"
+            ],
+            "answer": 2
+          },
+          {
+            "q": "Si un hilo modifica una variable dentro de un proceso multihilo, ¿qué sucede con los demás hilos de ese mismo proceso?",
+            "a": [
+              "Los demás hilos no ven la modificación",
+              "Los demás hilos ven la modificación [9]",
+              "La variable se bloquea para todos los demás hilos",
+              "Solo el hilo principal ve la modificación"
+            ],
+            "answer": 2
+          },
+          {
+            "q": "¿Qué Sistema Operativo se menciona como ejemplo de un solo proceso y un solo hilo por proceso?",
+            "a": [
+              "Windows [9]",
+              "Linux [9]",
+              "MS-DOS [9]",
+              "Solaris [9]"
+            ],
+            "answer": 3
+          },
+          {
+            "q": "¿Qué Sistema Operativo se menciona como ejemplo de múltiples procesos y múltiples hilos por proceso?",
+            "a": [
+              "MS-DOS [9]",
+              "UNIX (algunas variedades) [9]",
+              "Windows [9]",
+              "Ninguno de los anteriores"
+            ],
+            "answer": 3
+          },
+          {
+            "q": "¿Cuál de las siguientes es una ventaja de rendimiento de los hilos en comparación con los procesos?",
+            "a": [
+              "Lleva más tiempo crear un hilo que crear un proceso nuevo.",
+              "Lleva menos tiempo finalizar un proceso que un hilo.",
+              "Lleva menos tiempo cambiar entre dos hilos del mismo proceso [10].",
+              "Requieren una invocación al núcleo para comunicarse entre sí."
+            ],
+            "answer": 3
+          },
+          {
+            "q": "¿Por qué los hilos de un mismo proceso pueden comunicarse entre sí sin invocar al núcleo?",
+            "a": [
+              "Porque usan un protocolo de red dedicado",
+              "Porque el núcleo siempre los ignora",
+              "Accediendo a su memoria/variables común [10]",
+              "Porque cada hilo tiene su propio espacio de direcciones [5, 8]"
+            ],
+            "answer": 3
+          },
+          {
+            "q": "¿Qué ventaja de utilidad se menciona para los hilos en sistemas mono-usuario/multiproceso, en el contexto de 'Foreground/background tasks'?",
+            "a": [
+              "Mayor seguridad de datos",
+              "Edición/Revisión Ortográfica [10]",
+              "Mayor aislamiento entre tareas",
+              "Reducción del consumo de energía"
+            ],
+            "answer": 2
+          },
+          {
+            "q": "¿A qué nivel se realiza la planificación y la activación en un sistema multihilo?",
+            "a": [
+              "A nivel de proceso",
+              "A nivel de aplicación",
+              "A nivel de usuario",
+              "A nivel de hilo [11]"
+            ],
+            "answer": 4
+          },
+          {
+            "q": "¿Cuáles son los tres principales estados de un hilo?",
+            "a": [
+              "Activo, Inactivo, Terminado",
+              "En Espera, En Ejecución, Detenido",
+              "Ejecución, Listo, Bloqueado [11]",
+              "Iniciado, Pausado, Finalizado"
+            ],
+            "answer": 3
+          },
+          {
+            "q": "¿Qué ocurre al crear un proceso con respecto a los hilos?",
+            "a": [
+              "Se crea un hilo hijo automáticamente",
+              "Se crea un hilo principal [11]",
+              "No se crea ningún hilo hasta que el programador lo solicite",
+              "Todos los hilos se bloquean hasta que el proceso finalice"
+            ],
+            "answer": 2
+          },
+          {
+            "q": "¿Qué información se pasa al crear un nuevo hilo?",
+            "a": [
+              "Solo el nombre del hilo",
+              "Puntero a su código y argumentos [11]",
+              "El espacio de direcciones del proceso completo [3, 4]",
+              "Los recursos utilizados por el proceso [4, 5]"
+            ],
+            "answer": 2
+          },
+          {
+            "q": "¿A qué estado pasa un nuevo hilo después de su creación?",
+            "a": [
+              "Ejecución",
+              "Bloqueado",
+              "Listo [11]",
+              "Terminado"
+            ],
+            "answer": 3
+          },
+          {
+            "q": "¿Qué sucede cuando un hilo se bloquea a la espera de un suceso?",
+            "a": [
+              "El proceso completo se termina",
+              "Se guardan registros, PC y punteros de pila. El hilo pasa a la cola de bloqueados [12]",
+              "El hilo pasa automáticamente a estado 'Listo'",
+              "El sistema operativo lo elimina de la memoria"
+            ],
+            "answer": 2
+          },
+          {
+            "q": "Al ocurrir el suceso que un hilo estaba esperando, ¿a qué cola pasa el hilo bloqueado?",
+            "a": [
+              "A la cola de Terminados",
+              "A la cola de Ejecución",
+              "A la cola de Suspendidos",
+              "A la cola de Listos [12]"
+            ],
+            "answer": 4
+          },
+          {
+            "q": "¿Qué se libera al finalizar un hilo?",
+            "a": [
+              "Todo el espacio de direcciones del proceso [4, 5]",
+              "Solo los recursos globales del proceso [4, 5]",
+              "El contexto y las pilas [12]",
+              "El procesador completo"
+            ],
+            "answer": 3
+          },
+          {
+            "q": "¿Quién realiza toda la gestión de hilos en los User Level Threads (ULT)?",
+            "a": [
+              "El núcleo del Sistema Operativo [13, 14]",
+              "La aplicación misma (a través de una biblioteca de hilos) [15, 16]",
+              "El hardware del procesador",
+              "Otro proceso del sistema"
+            ],
+            "answer": 2
+          },
+          {
+            "q": "¿El núcleo del Sistema Operativo es consciente de la existencia de hilos en una implementación de User Level Threads (ULT)?",
+            "a": [
+              "Sí, siempre",
+              "Solo si el programador lo notifica explícitamente",
+              "No, el núcleo desconoce su existencia y planifica el proceso como un todo [13, 14]",
+              "Depende de la versión del sistema operativo"
+            ],
+            "answer": 3
+          },
+          {
+            "q": "¿Dónde se realizan todas las operaciones de gestión de hilos (crear, destruir, sincronizar, etc.) en una implementación de User Level Threads (ULT)?",
+            "a": [
+              "En el modo kernel",
+              "En el espacio de usuario, dentro del mismo proceso [13, 14]",
+              "En un proceso separado del sistema",
+              "Directamente en el hardware"
+            ],
+            "answer": 2
+          }
+    ]
+  }

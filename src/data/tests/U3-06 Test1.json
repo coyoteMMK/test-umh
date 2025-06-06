@@ -1,0 +1,308 @@
+{
+    "title": "U3_06",
+    "career": "Ingeniería Informática",
+    "year": "Segundo año",
+    "subject": "Sistemas_Operativos",
+    "questions": [
+        {
+            "q": "¿Cuál de las siguientes es una desventaja del uso de semáforos para la exclusión mutua?",
+            "a": [
+              "Permiten una alta modularización del código.",
+              "Su uso es sencillo y directo.",
+              "Se basan en variables compartidas, dificultando la estructuración del código.",
+              "Ofrecen una depuración de problemas muy simple."
+            ],
+            "answer": 3
+          },
+          {
+            "q": "Respecto a los semáforos, ¿qué dificultad surge debido a sus dos roles (sincronización y exclusión mutua)?",
+            "a": [
+              "Facilita la comprensión del código.",
+              "Simplifica la depuración de problemas complejos.",
+              "Hace complejo el seguimiento del código.",
+              "Permite saber en tiempo de compilación si hay acceso indebido a un recurso."
+            ],
+            "answer": 3
+          },
+          {
+            "q": "¿Qué riesgo puede provocar la inclusión o eliminación de sentencias en un código basado en semáforos?",
+            "a": [
+              "Una mejora en la eficiencia.",
+              "Modularización automática.",
+              "Interbloqueos o que la solución deje de funcionar.",
+              "Detección de errores en tiempo de compilación."
+            ],
+            "answer": 3
+          },
+          {
+            "q": "¿Qué se busca en una nueva herramienta de sincronización para mejorar el uso de recursos compartidos?",
+            "a": [
+              "Que no necesite encapsular datos compartidos.",
+              "Que no tenga mecanismo de control sobre la sincronización.",
+              "Que permita estructurar y modularizar el código.",
+              "Que sea exclusiva para la exclusión mutua, sin sincronización."
+            ],
+            "answer": 3
+          },
+          {
+            "q": "¿Qué es un monitor según la definición proporcionada?",
+            "a": [
+              "Una librería de funciones para la memoria compartida.",
+              "Un tipo de proceso pasivo.",
+              "Una estructura del lenguaje de programación.",
+              "Una cola FIFO para procesos bloqueados."
+            ],
+            "answer": 3
+          },
+          {
+            "q": "¿Cuáles son los componentes principales de un monitor?",
+            "a": [
+              "Solo datos que simbolizan el recurso compartido.",
+              "Uno o más procedimientos, una secuencia de inicio y datos del recurso.",
+              "Únicamente variables de condición y la cola del monitor.",
+              "Procesos activos y procesos pasivos."
+            ],
+            "answer": 2
+          },
+          {
+            "q": "¿Cómo es posible el acceso a las variables internas de un monitor?",
+            "a": [
+              "Directamente por cualquier proceso activo.",
+              "Mediante semáforos binarios.",
+              "Solo a través de los procedimientos del monitor.",
+              "Únicamente desde la secuencia de inicio."
+            ],
+            "answer": 3
+          },
+          {
+            "q": "¿Qué tipo de procesos implementan los monitores?",
+            "a": [
+              "Procesos activos.",
+              "Procesos clientes.",
+              "Procesos pasivos.",
+              "Procesos concurrentes."
+            ],
+            "answer": 3
+          },
+          {
+            "q": "¿Qué tipo de procesos hacen uso de los procedimientos exportados del monitor?",
+            "a": [
+              "Procesos pasivos.",
+              "Procesos activos.",
+              "Procesos internos del monitor.",
+              "Procesos de inicialización."
+            ],
+            "answer": 2
+          },
+          {
+            "q": "¿Cuál es una ventaja de los monitores para los programadores de procesos activos?",
+            "a": [
+              "Deben conocer la implementación del recurso compartido.",
+              "No tienen por qué conocer la implementación del recurso compartido.",
+              "Son responsables de la gestión del recurso compartido.",
+              "No pueden interactuar con el monitor directamente."
+            ],
+            "answer": 2
+          },
+          {
+            "q": "Si se modifica la forma de gestión de un recurso compartido sin alterar la interfaz de procedimientos de un monitor, ¿qué ocurre con los procesos activos?",
+            "a": [
+              "Se ven directamente afectados y requieren cambios.",
+              "No se ven afectados.",
+              "Necesitan ser recompilados.",
+              "Requieren la implementación de nuevos semáforos."
+            ],
+            "answer": 2
+          },
+          {
+            "q": "¿De qué se ocupa principalmente el programador de un monitor?",
+            "a": [
+              "De cómo y dónde se usa el monitor.",
+              "De que funcione correctamente.",
+              "De la creación de la cola de cortesía.",
+              "De la interconexión con semáforos externos."
+            ],
+            "answer": 2
+          },
+          {
+            "q": "¿Cómo contribuyen los monitores a la estructuración del código?",
+            "a": [
+              "Impiden la división en módulos diferentes.",
+              "Permiten la ejecución solapada de procedimientos.",
+              "Se pueden implementar en módulos diferentes.",
+              "Requieren todo el código en un único archivo."
+            ],
+            "answer": 3
+          },
+          {
+            "q": "¿Qué garantiza un monitor respecto a la ejecución de sus procedimientos?",
+            "a": [
+              "Pueden ejecutarse de forma solapada si son distintos.",
+              "La ejecución de los procedimientos nunca se solapa.",
+              "Dos procesos activos pueden ejecutar simultáneamente el mismo procedimiento.",
+              "Solo un tipo de proceso puede ejecutar procedimientos del monitor."
+            ],
+            "answer": 2
+          },
+          {
+            "q": "¿Qué sucede si un proceso intenta acceder a un monitor mientras otro ya está dentro?",
+            "a": [
+              "El segundo proceso entra directamente.",
+              "El segundo proceso se bloquea en la cola del monitor.",
+              "El monitor genera un error de compilación.",
+              "El primer proceso es expulsado del monitor."
+            ],
+            "answer": 2
+          },
+          {
+            "q": "¿Quién tiene la responsabilidad de bloquear a un proceso que intenta entrar en un monitor ocupado?",
+            "a": [
+              "El propio proceso activo que intenta entrar.",
+              "El programador del monitor.",
+              "El sistema operativo directamente.",
+              "El código del monitor (generado por el compilador)."
+            ],
+            "answer": 4
+          },
+          {
+            "q": "¿Cuándo se ejecuta el código de inicialización de un monitor?",
+            "a": [
+              "Después de cada llamada a un procedimiento exportado.",
+              "Antes de la primera instrucción del programa que usa el monitor.",
+              "Solo cuando un proceso activo abandona el monitor.",
+              "Al final de la ejecución del programa."
+            ],
+            "answer": 2
+          },
+          {
+            "q": "¿Cómo ve un proceso activo a un monitor?",
+            "a": [
+              "Como una colección de semáforos.",
+              "Como un conjunto de variables de condición.",
+              "Como un conjunto de procedimientos que permiten usar un recurso compartido.",
+              "Como una memoria compartida accesible directamente."
+            ],
+            "answer": 3
+          },
+          {
+            "q": "¿Cuándo se dice que un proceso activo 'está dentro del monitor'?",
+            "a": [
+              "Cuando está en la cola del monitor.",
+              "Cuando está esperando en una cola de condición.",
+              "Cuando está ejecutando uno de los procedimientos exportados de este.",
+              "Cuando ha terminado de ejecutar un procedimiento exportado."
+            ],
+            "answer": 3
+          },
+          {
+            "q": "¿Qué tipo de variables se utilizan dentro de un monitor para la sincronización entre procesos?",
+            "a": [
+              "Variables globales del sistema.",
+              "Variables de semáforo.",
+              "Variables de condición.",
+              "Variables locales de procedimiento."
+            ],
+            "answer": 3
+          },
+          {
+            "q": "¿Son accesibles los valores de las variables de condición por el programador del monitor?",
+            "a": [
+              "Sí, siempre.",
+              "No, no son accesibles directamente.",
+              "Solo en la fase de depuración.",
+              "Depende de la versión del monitor."
+            ],
+            "answer": 2
+          },
+          {
+            "q": "¿Qué representa una variable de condición en un monitor?",
+            "a": [
+              "Un contador de procesos.",
+              "Un puntero a memoria compartida.",
+              "La representación de colas FIFO.",
+              "Un estado booleano de acceso."
+            ],
+            "answer": 3
+          },
+          {
+            "q": "¿Qué acción realiza la operación `delay(C)` o `cwait(C)` sobre un proceso?",
+            "a": [
+              "Desbloquea el proceso cabecera de la cola C.",
+              "Permite que el proceso continúe su ejecución sin interrupciones.",
+              "Bloquea al proceso que ejecuta el monitor en la cola de la condición C.",
+              "Envía una señal a otro monitor."
+            ],
+            "answer": 3
+          },
+          {
+            "q": "¿Qué sucede con la exclusión mutua del monitor cuando se ejecuta `delay(C)`?",
+            "a": [
+              "Se mantiene bloqueada para otros procesos.",
+              "Se libera para permitir la entrada de otros procesos.",
+              "Se transfiere a la cola de cortesía.",
+              "No tiene ningún efecto sobre la exclusión mutua."
+            ],
+            "answer": 2
+          },
+          {
+            "q": "¿Cuál es la acción principal de la operación `resume(C)` o `csignal(C)`?",
+            "a": [
+              "Bloquear al proceso llamante en la cola C.",
+              "Permitir que un proceso bloqueado en la cola C continúe su ejecución.",
+              "Incrementar un contador de condiciones.",
+              "Generar una nueva variable de condición."
+            ],
+            "answer": 2
+          },
+          {
+            "q": "¿Qué sucede si la cola de una condición C está vacía cuando se llama a `resume(C)`?",
+            "a": [
+              "Se produce un error.",
+              "La operación no hace nada.",
+              "Se bloquea el proceso llamante en la cola de cortesía.",
+              "Se desbloquea automáticamente el monitor."
+            ],
+            "answer": 2
+          },
+          {
+            "q": "¿Qué prioridad tiene la cola de cortesía (o de urgentes) respecto a la cola del monitor?",
+            "a": [
+              "Menor prioridad.",
+              "La misma prioridad.",
+              "Prioridad frente a la cola del monitor.",
+              "Solo se usa si la cola del monitor está vacía."
+            ],
+            "answer": 3
+          },
+          {
+            "q": "¿Cuál es el propósito de la función booleana `empty(C)`?",
+            "a": [
+              "Vaciar la cola de la condición C.",
+              "Indicar si un proceso está ejecutando el monitor.",
+              "Devolver `true` o `false` si la cola de la condición C está llena o vacía, respectivamente.",
+              "Determinar el número de procesos en la cola del monitor."
+            ],
+            "answer": 3
+          },
+          {
+            "q": "En el ejemplo del monitor 'incremento', ¿qué variable representa la variable compartida?",
+            "a": [
+              "`inc`",
+              " `valor`",
+              "`i`",
+              "Ninguna de las anteriores, es un procedimiento."
+            ],
+            "answer": 3
+          },
+          {
+            "q": "Según la versión de Hoare, ¿cuál es uno de los inconvenientes si el proceso que hace `resume` no ha terminado su proceso?",
+            "a": [
+              "El proceso se coloca en la cola del monitor, mejorando la sincronización.",
+              "El proceso se coloca en la cola de cortesía, y la sincronización puede fallar.",
+              "El proceso es inmediatamente terminado por el monitor.",
+              "No hay inconvenientes, es una característica de la versión de Hoare."
+            ],
+            "answer": 2
+          }
+    ]
+  }

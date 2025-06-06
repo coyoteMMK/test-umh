@@ -1,0 +1,367 @@
+{
+    "title": "Preguntas Examen Parte 1",
+    "career": "Ingeniería Informática",
+    "year": "Segundo año",
+    "subject": "Sistemas_Operativos",
+    "questions": [
+      {
+        "q": "En un sistema con planificación expulsiva SRTF llegan los procesos en los momentos indicados en la tabla para ejecutarse, y cada uno necesita la cantidad de tiempo indicada para ejecutarse. Proceso Momento de llegada Necesidad de CPU llegada/cpu P1 0/7 P2 4/4 P3 9/3 El tiempo de retorno de cada proceso es:",
+        "a": [
+          "T1=7 T2=7 T3=7",
+          "T1=8 T2=4 T3=7",
+          "T1=7 T2=7 T3=4 ",
+          "T1=7 T2=7 T3=5"
+        ],
+        "answer": 4
+      },
+      {
+        "q": "El repartidor (dispatcher) se encarga de:",
+        "a": [
+          "Planificar los distintos trabajos",
+          "Definir las políticas de planificación",
+          "Realizar el cambio de contexto.",
+          "Desbloquear los procesos que están esperando una E/S cuando ésta finaliza"
+        ],
+        "answer": 3
+      },
+      {
+        "q": "El planificador (scheduler) es la parte del sistema operativo encargada de:",
+        "a": [
+          "Realizar el cambio de contexto entre los procesos.",
+          "Determinar el orden de ejecución entre los procesos",
+          "Mantener la tabla de procesos",
+          "Descargar los procesos a disco cuando la memoria del sistema escasea."
+        ],
+        "answer": 2
+      },
+      {
+        "q": "El cambio de contexto:",
+        "a": [
+          "Lo realiza el scheduler.",
+          "Modifica la entrada en la tabla de procesos del proceso desalojado",
+          "Siempre se origina por una interrupción",
+          "Se produce siempre que el proceso abandona la cola de procesos en espera y pasa a la cola de procesos preparados"
+        ],
+        "answer": 3
+      },
+      {
+        "q": "En un sistema operativo basado en procesos, ¿cómo se maneja el núcleo del sistema operativo en relación con los procesos de usuario?",
+        "a": [
+          "El núcleo se ejecuta en un espacio de direcciones separado de todos los procesos de usuario y no interactúa con ellos directamente.",
+          "El núcleo se ejecuta dentro del espacio de direcciones de un proceso de usuario específico como una biblioteca compartida.",
+          "El núcleo se ejecuta como un proceso especial conocido como proceso cero o proceso del sistema, interactuando con otros procesos del sistema mediante IPC.",
+          "El núcleo se ejecuta como un módulo cargado en el espacio de direcciones de un proceso de usuario, permitiendo la personalización del sistema operativo."
+        ],
+        "answer": 3
+      },
+      {
+        "q": "¿Cuál de los siguientes componentes es comúnmente encontrado en cada entrada de la tabla de páginas en un sistema de memoria virtual?",
+        "a": [
+          "El número de página lógica y su dirección de memoria secundaria.",
+          "El número de marco de página (frame number) y bits de control.",
+          "La dirección física completa y el tamaño de la página.",
+          "La dirección lógica y el número de páginas en memoria. "
+        ],
+        "answer": 2
+      },
+      {
+        "q": "El semaforo elimina la espera activa porque:",
+        "a": [
+          "Se inicializa al número máximo de recursos que se comparten",
+          "Las operaciones de wait y signal se implementan como acciones indivisibles",
+          "El semaforo no elimina la espera activa",
+          "Se implementa con una cola de tareas a la cual se añaden los procesos que estan en espera del recurso."
+        ],
+        "answer": 4
+      },
+      {
+        "q": "Los monitores proporcionan exclusion mutua porque:",
+        "a": [
+          "Sólo un proceso puede estar activo cada vez para ejecutar un procedimiento del monitor",
+          "Para ello utilizan variables de condición",
+          "No proporcionan exclusión mútua sólo garantizan la sincronización",
+          "Se diseñan como procedimientos encapsulados en un módulo"
+        ],
+        "answer": 1
+      },
+      {
+        "q": "El algoritmo de Peterson corresponde a:",
+        "a": [
+          "Una estrategia de sincronización de procesos",
+          "Un método para mantener el grado de multiprogamación a un valor dado",
+          "Un algoritmo que evita la espera activa",
+          "Una solución al problema de la exclusión mutua"
+        ],
+        "answer": 4
+      },
+      {
+        "q": "Si se usa un semáforo para lograr la sincronización de procesos",
+        "a": [
+          "Éste debe inicilizarse al número de procesos que se desean sincronizar",
+          "Se deben incluir variables de condición, pues el semaforo sólo proporciona exclusión mutua ",
+          "Las operaciones wait y signal se utilizan dentro del mismo proceso ",
+          "Las operaciones wait y signal se utilizan en procesos separados"
+        ],
+        "answer": 4
+      },
+      {
+        "q": "La operacion wait de un semáforo y la cwait (delay) de una varialbe de condición de un monitor se diferencian en:",
+        "a": [
+          "Que en el caso de la variable de condición siempre se suspende el proceso que la invoca",
+          "Que en el caso de la variable de condición no se elimina la espera activa",
+          "No existe diferencia pues en ambos casos siempre sirve para lograr la exclusión mutua de la sección crítica",
+          "No existe diferencia pues en ambos casos siempre sirve como mecanismo de sincronización"
+        ],
+        "answer": 1
+      },
+      {
+        "q": "En un Sistema de memoria paginada con un tamaño de marco de página de 2KB",
+        "a": [
+          "El offset máximo de una página es 2^16",
+          "El offset máximo de una página es 2^12 ",
+          "El offset máximo de una página es 2^11",
+          "El offset máximo de una página es 2^10"
+        ],
+        "answer": 3
+      },
+      {
+        "q": "Señala la respuesta correcta en relación a los algoritmos de planificación de procesos apropiativos",
+        "a": [
+          "Nunca fuerzan a que el proceso en ejecución abandone la CPU si está realizando una operación de E/S ",
+          "Fuerzan a que el proceso en CPU abandone la CPU únicamente cuando se le acaba el quantum",
+          "Son más costosos en relación al tiempo que se tarda en cambiar de proceso pero dan mejor servicio al conjunto de procesos.",
+          "Son más efectivas cuanta menos memoria principal esté asignada al conjunto de procesos"
+        ],
+        "answer": 3
+      },
+      {
+        "q": "En un sistema de memoria virtual",
+        "a": [
+          "No es necesario el intercambio",
+          "El intercambio se realizará solo con las páginas que están en el estado suspendido",
+          "El sistema operativo nunca traerá a memoria una página de un proceso bloqueado",
+          "Con el intercambio parte de las páginas de un proceso pueden estar en memoria secundaria"
+        ],
+        "answer": 4
+      },
+      {
+        "q": "Si nuestro sistema operativo soporta memoria virtual, cuando tratamos de acceder a una página que no ha sido cargada, ¿cómo se detecta?",
+        "a": [
+          "Porque el bus de direcciones tiene una dirección inválida",
+          "Porque no existe el marco de página en memoria principal",
+          "Gracias a los bits de control de su entrada en la tabla de páginas.",
+          "Ninguna de las afirmaciones anteriores es correcta"
+        ],
+        "answer": 3
+      },
+      {
+        "q": "La operación wait de un semáforo y la cwait de una variable de condición de un monitor se diferencian en:",
+        "a": [
+          "Que en el caso de la variable de condición no se elimina la espera activa",
+          "Que cwait siempre se suspende el proceso que la invoca y wait no siempre",
+          "No existe diferencia pues en ambos casos siempre sirve para lograr la exclusión mutua de la sección crítica",
+          "No existe diferencia pues en ambos casos siempre sirve como mecanismo de sincronización"
+        ],
+        "answer": 2
+      },
+      {
+        "q": "En el bloque de control de procesos",
+        "a": [
+          "Existe información para la planificación de la CPU",
+          "No existe información para la planificación de la CPU, esta se almacena en el Planificador.",
+          "La única información de planificación existente son los punteros a las colas de planificación.",
+          "Ninguna de las anteriores es correcta."
+        ],
+        "answer": 1
+      },
+      {
+        "q": "Un proceso abandona el estado de ejecución y pasa directamente al de listo para ejecución",
+        "a": [
+          "Ninguna del resto de las respuestas es correcta.",
+          "Sólo cuando el proceso ha ejecutado una operación sleep.",
+          "Necesariamente se utiliza una política de planificación preemtiva.",
+          "Únicamente en políticas de planificación no preemtivas"
+        ],
+        "answer": 1
+      },
+      {
+        "q": "Cuando un proceso está en el estado “Nuevo”:",
+        "a": [
+          "Su código, datos y PCB ya están cargados en memoria.",
+          "Solo su código y datos están en memoria principal.",
+          "El PCB existe pero ni datos ni código están en memoria.",
+          "Solo el PCB y el código están cargados en memoria, los datos se cargan al entrar a listo."
+        ],
+        "answer": 3
+      },
+      {
+        "q": "Para permitir un mayor grado de multiprogramación",
+        "a": [
+          "Es preferible un sistema con un tamaño de página grande.",
+          "El tamaño de página es indiferente.",
+          "Es mejor optar por páginas de un tamaño pequeño.",
+          "Ninguna del resto de las respuestas es correcta."
+        ],
+        "answer": 3
+      },
+      {
+        "q": "El planificador a corto plazo",
+        "a": [
+          "Rebaja el grado de multiprogramación del sistema.",
+          "Elige procesos para pasarlos a ejecución.",
+          "Pasa procesos de esperando a bloqueado suspendido.",
+          "Pasa procesos de creados a ejecutando."
+        ],
+        "answer": 2
+      },
+      {
+        "q": "Las llamadas al sistema",
+        "a": [
+          "Son órdenes que tiene definidas el shell del sistema para realizar distintas funciones.",
+          "Son funciones internas del shell del sistema y sólo éste puede utilizarlas.",
+          "Se ejecutan en modo kernel si el usuario lo solicita.",
+          "Siempre se ejecutan en modo kernel."
+        ],
+        "answer": 4
+      },
+      {
+        "q": "Un hilo",
+        "a": [
+          "Es un procedimiento de un proceso que tiene asignado recursos.",
+          "Es la unidad propietaria de los recursos",
+          "Comparte la pila de ejecución con los otros hilos.",
+          "Ninguna de las anteriores es cierta."
+        ],
+        "answer": 4
+      },
+      {
+        "q": "Para la programación con hilos",
+        "a": [
+          "Se necesitan mecanismos de exclusión mutua para acceder a los recursos compartidos lectura/escritura.",
+          "Se necesitan mecanismos de exclusión mutua para acceder a todos los recursos compartidos",
+          "Se necesitan mecanismos de exclusión mutua para acceder a los recursos compartidos solo lectura.",
+          "Pueden acceder a los recursos compartidos del proceso sin ninguna restricción."
+        ],
+        "answer": 1
+      },
+      {
+        "q": "En un sistema multiprocesador",
+        "a": [
+          "Solo pueden ejecutarse hilos del mismo proceso concurrentemente.",
+          "Varios hilos de un mismo proceso se pueden ejecutar simultáneamente.",
+          "Se pueden ejecutar varios hilos pero en el procesador asignado al proceso.",
+          "Ninguna de las anteriores es correcta."
+        ],
+        "answer": 2
+      },
+      {
+        "q": "Un proceso que entra en el sistema a las 12:00 horas, empieza su ejecución a las 12:02 y termina a las 12:30.",
+        "a": [
+          "La utilización de la CPU es de 28 minutos.",
+          "El tiempo de respuesta es de 2 minutos, el tiempo de retorno es de 28 minutos.",
+          "El tiempo de espera es de 2 minutos."
+        ],
+        "answer": 2
+      },
+      {
+        "q": "En un sistema que utiliza gestión de memoria real con particiones dinámicas, en un momento determinado la lista de huecos está compuesta por huecos de tamaño 10 KB, 15 KB, 17 KB y 12 KB. ¿Qué política de asignación utiliza el sistema, si ante una solicitud de un bloque de 13 KB lo coloca en el bloque de 17 KB?",
+        "a": [
+          "Ninguna del resto de las respuestas es correcta.",
+          "Primer ajuste.",
+          "Peor ajuste.",
+          "Mejor ajuste."
+        ],
+        "answer": 3
+      },
+      {
+        "q": "La fragmentación interna",
+        "a": [
+          "Se produce con paginación y con segmentación.",
+          "Solo se produce en el último segmento de la tabla de segmentos del proceso",
+          "Se produce sólo cuando tenemos un sistema de memoria con paginación o particiones estáticas",
+          "Ninguna las anteriores es correcta."
+        ],
+        "answer": 3
+      },
+      {
+        "q": "¿Cuál de las siguientes afirmaciones NO es correcta?",
+        "a": [
+          "Los semáforos solucionan el problema de la espera activa",
+          "Los semáforos solucionan el problema de la exclusión mutua y la sincronización",
+          "Los semáforos binarios sólo pueden ser usados simultáneamente por dos procesos",
+          "Los semáforos de cuenta pueden ser usados simultáneamente por cualquier número de procesos."
+        ],
+        "answer": 3
+      },
+      {
+        "q": "Los métodos de planificación de procesos multicolas:",
+        "a": [
+          "Están especialmente indicados para entornos multiprocesadores.",
+          "Permiten aplicar políticas diferentes a distintas clases de procesos.",
+          "Evitan que los procesos largos monopolicen el uso de CPU.",
+          "Los procesos siempre pasan de una cola a otra."
+        ],
+        "answer": 2
+      },
+      {
+        "q": "En Linux, la llamada al sistema exec():",
+        "a": [
+          "Crea un nuevo proceso con la misma imagen del proceso actual y con un PID diferente.",
+          "Cambia la imagen (código) del proceso actual y le asigna un nuevo PID.",
+          "Carga una nueva imagen de código en la memoria del proceso actual.",
+          "Ejecuta el proceso hijo indicado en el parámetro de la llamada."
+        ],
+        "answer": 3
+      },
+      {
+        "q": "¿Cuál es la misión del planificador de largo plazo o planificador de alto nivel?",
+        "a": [
+          "Realizar el despacho de los procesos que están en la cola de preparados, y en particular realizar los cambios de contexto.",
+          "En los sistemas de tiempo real, realizar una planificación previa de la carga de trabajo que se va a enviar al sistema, para asegurar que se cumplen los plazos de ejecución.",
+          "Regular la admisión de nuevos procesos a la cola de preparados, para mantener el grado de multiprogramación por debajo de un límite.",
+          "Permitir la entrada de procesos en el sistema con un instante de ejecución posterior en el tiempo."
+        ],
+        "answer": 3
+      },
+      {
+        "q": "En un algoritmo de planificación Round Robin, ¿cuál de estas funciones queda a cargo del sistema de interrupciones?",
+        "a": [
+          "Recibir la señal del temporizador cuando finaliza un cuanto de tiempo.",
+          "Crear el bloque de control de proceso (BCP) de los procesos recién creados.",
+          "Actualizar las estadísticas de consumo de tiempo de cada proceso",
+          "Realizar el dispatch del proceso."
+        ],
+        "answer": 1
+      },
+      {
+        "q": "La CPU de un computador está ejecutando ahora mismo un proceso P que entró en CPU hace 3 mseg. y sabemos que le restan otros 5 mseg. para terminar su ráfaga. Sabemos que dentro de 2 mseg. llegará al sistema un nuevo proceso Q que pretende ejecutar una ráfaga de CPU de 2 mseg. Si no ocurre ninguna incidencia más, ¿qué proceso estará ejecutándose en la CPU dentro de 3 mseg.?",
+        "a": [
+          "Si el algoritmo de planificación es un SJF no expulsivo, el proceso Q.",
+          "Si el algoritmo de planificación es un SJF expulsivo, el proceso Q.",
+          "Si el algoritmo de planificación es un FCFS, el proceso Q.",
+          "Si el algoritmo de planificación es un FCFS expulsivo, el proceso Q."
+        ],
+        "answer": 2
+      },
+      {
+        "q": "Llega una interrupción procedente de un dispositivo de E/S mientras un proceso de usuario se está ejecutando. ¿Qué suele ocurrir justo a continuación?",
+        "a": [
+          "Se conmuta a modo kernel y se ejecuta la rutina de servicio de interrupción correspondiente.",
+          "Se conmuta a modo usuario para que el proceso gestione con la E/S de acuerdo con sus necesidades.",
+          "Se atiende la interrupción de forma inmediata, en el modo de operación en el que se encontraba el procesador en el momento de ocurrir la operación.",
+          "No puede llegar una interrupción de E/S si el proceso está ejecutando su quantum, sólo llega entre quantums."
+        ],
+        "answer": 1
+      },
+      {
+        "q": "Si en un algoritmo Round Robin el cuanto de tiempo Q se hace excesivamente corto:",
+        "a": [
+          "El algoritmo degenera en un SJF.",
+          "El algoritmo degenera en un FCFS.",
+          "Disminuye la productividad del procesador porque se realizan muchos cambios de contexto.",
+          "Aumenta el impacto del efecto convoy (los procesos largos se mantienen en ejecución mientras los cortos se quedan esperando) si existe una combinación de procesos de larga y de corta duración."
+        ],
+        "answer": 3
+      }
+    ]
+  }

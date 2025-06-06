@@ -1,0 +1,308 @@
+{
+    "title": "U3_07",
+    "career": "Ingeniería Informática",
+    "year": "Segundo año",
+    "subject": "Sistemas_Operativos",
+    "questions": [
+        {
+            "q": "¿Cuál es una diferencia clave entre semáforos/monitores y el paso de mensajes en sistemas operativos?",
+            "a": [
+              "Semáforos/monitores se usan solo en sistemas distribuidos",
+              "Paso de mensajes solo en un único computador",
+              "Semáforos/monitores son para memoria compartida en un único computador",
+              "Paso de mensajes solo maneja la exclusión mutua"
+            ],
+            "answer": 3
+          },
+          {
+            "q": "Las primitivas básicas para el paso de mensajes son:",
+            "a": [
+              "open y close",
+              "read y write",
+              "send y receive",
+              "create y destroy"
+            ],
+            "answer": 3
+          },
+          {
+            "q": "¿Qué aspecto de diseño del paso de mensajes es una desventaja en una misma máquina comparado con monitores o semáforos?",
+            "a": [
+              "La verificación de autenticidad",
+              "La secuenciación de mensajes",
+              "El acuse de recibo",
+              "El rendimiento"
+            ],
+            "answer": 4
+          },
+          {
+            "q": "¿Cuál de las siguientes NO es una perspectiva desde la que se analiza el paso de mensajes?",
+            "a": [
+              "Sincronización",
+              "Direccionamiento",
+              "Rendimiento",
+              "Formato"
+            ],
+            "answer": 3
+          },
+          {
+            "q": "¿Qué combinación de primitivas de envío y recepción se conoce como 'rendez-vous' y permite una sincronización estricta?",
+            "a": [
+              "Envío no bloqueante, recepción no bloqueante",
+              "Envío bloqueante, recepción no bloqueante",
+              "Envío bloqueante, recepción bloqueante",
+              "Envío no bloqueante, recepción bloqueante"
+            ],
+            "answer": 3
+          },
+          {
+            "q": "La combinación más común de primitivas de sincronización para paso de mensajes es:",
+            "a": [
+              "Envío no bloqueante, recepción bloqueante",
+              "Envío bloqueante, recepción bloqueante",
+              "Envío bloqueante, recepción no bloqueante",
+              "Envío no bloqueante, recepción no bloqueante"
+            ],
+            "answer": 1
+          },
+          {
+            "q": "Un posible problema de un envío no bloqueante es:",
+            "a": [
+              "Que el emisor se bloquee indefinidamente",
+              "La pérdida continua de mensajes",
+              "Reenvíos continuos sin bloqueo del emisor",
+              "La recepción indefinida del mensaje"
+            ],
+            "answer": 3
+          },
+          {
+            "q": "Si se utiliza una recepción bloqueante, ¿qué problema puede surgir si el mensaje del emisor se pierde?",
+            "a": [
+              "El emisor recibirá un acuse de recibo incorrecto",
+              "La recepción puede ser indefinida",
+              "El sistema operativo intentará retransmitir el mensaje",
+              "El mensaje se guardará en una cola temporal"
+            ],
+            "answer": 2
+          },
+          {
+            "q": "¿Qué solución se propone para el problema de una recepción bloqueante indefinida?",
+            "a": [
+              "Permitir que el proceso envíe un mensaje de prueba",
+              "Permitir que el proceso compruebe la existencia del mensaje antes de solicitarlo",
+              "Forzar al emisor a retransmitir continuamente",
+              "Establecer un tiempo límite para la recepción"
+            ],
+            "answer": 2
+          },
+          {
+            "q": "En el direccionamiento directo, las primitivas de comunicación:",
+            "a": [
+              "Incluyen la dirección de un buzón",
+              "Requieren el conocimiento de los procesos origen y destino",
+              "Son gestionadas exclusivamente por el Sistema Operativo",
+              "Desacoplan completamente al emisor y al receptor"
+            ],
+            "answer": 2
+          },
+          {
+            "q": "El direccionamiento indirecto utiliza _______ para intercambiar mensajes.",
+            "a": [
+              "Direcciones IP",
+              "Puertos de red",
+              "Buzones",
+              "Semáforos"
+            ],
+            "answer": 3
+          },
+          {
+            "q": "¿Cuál es una ventaja clave del direccionamiento indirecto?",
+            "a": [
+              "Permite la comunicación uno a uno exclusivamente",
+              "Asegura que los procesos origen y destino se conozcan siempre",
+              "Desacopla al emisor y al receptor",
+              "Garantiza la exclusión mutua automáticamente"
+            ],
+            "answer": 3
+          },
+          {
+            "q": "Un buzón estático es aquel que:",
+            "a": [
+              "Se crea y se destruye dinámicamente",
+              "Es propiedad exclusiva del Sistema Operativo",
+              "Se crea y se asigna a un proceso, destruyéndose al morir el proceso",
+              "Permite la asociación dinámica con primitivas de conectar/desconectar"
+            ],
+            "answer": 3
+          },
+          {
+            "q": "¿Quién puede ser el propietario de un buzón en el esquema de direccionamiento indirecto?",
+            "a": [
+              "Solo el emisor",
+              "Solo el receptor",
+              "El emisor, el receptor o el Sistema Operativo",
+              "Únicamente el Sistema Operativo"
+            ],
+            "answer": 3
+          },
+          {
+            "q": "La relación 'Uno a Muchos' en el direccionamiento indirecto es útil para:",
+            "a": [
+              "Establecer un enlace privado entre dos procesos",
+              "Ofrecer un servicio a múltiples clientes",
+              "Proporcionar un servicio concurrente por múltiples servidores",
+              "Difundir un mensaje a N procesos (broadcast)"
+            ],
+            "answer": 4
+          },
+          {
+            "q": "Cuando un buzón se denomina 'puerto' y un receptor (servidor) ofrece un servicio a varios procesos, la relación entre emisores/receptores es:",
+            "a": [
+              "Uno a Uno",
+              "Uno a Muchos",
+              "Muchos a Uno",
+              "Muchos a Muchos"
+            ],
+            "answer": 3
+          },
+          {
+            "q": "Los mensajes cortos de tamaño fijo en el paso de mensajes son ventajosos porque:",
+            "a": [
+              "Permiten incluir referencias a ficheros externos",
+              "Minimizan el almacenamiento y se pueden transmitir completos",
+              "Facilitan la división en cabecera y cuerpo",
+              "Son adecuados para el envío de grandes volúmenes de datos"
+            ],
+            "answer": 2
+          },
+          {
+            "q": "¿Cómo se manejan los mensajes largos en el paso de mensajes?",
+            "a": [
+              "Se dividen en cabecera y cuerpo",
+              "Se transmiten como un único bloque indivisible",
+              "Los datos se ubican en un fichero y se transmite su referencia",
+              "Se almacenan en una cola de mensajes temporal"
+            ],
+            "answer": 3
+          },
+          {
+            "q": "Un mensaje de longitud variable se divide típicamente en dos partes, que son:",
+            "a": [
+              "Emisor y Receptor",
+              "Origen y Destino",
+              "Cabecera y Cuerpo",
+              "Tipo y Contenido"
+            ],
+            "answer": 3
+          },
+          {
+            "q": "¿Cuál de los siguientes elementos NO es típicamente parte de la cabecera de un mensaje de longitud variable?",
+            "a": [
+              "Tipo de mensaje",
+              "Proceso destino",
+              "Contenido del mensaje",
+              "Longitud del mensaje"
+            ],
+            "answer": 3
+          },
+          {
+            "q": "La disciplina de cola FIFO (First-In, First-Out) puede no ser suficiente en el paso de mensajes si:",
+            "a": [
+              "Todos los mensajes tienen la misma prioridad",
+              "Hay mensajes más urgentes que otros",
+              "El receptor necesita examinar la cola",
+              "Los mensajes son de tamaño variable"
+            ],
+            "answer": 2
+          },
+          {
+            "q": "La asignación de prioridades en la disciplina de cola de mensajes puede depender de:",
+            "a": [
+              "El tamaño del mensaje",
+              "El color del mensaje",
+              "El tipo de mensaje, el destinatario o el emisor",
+              "La hora de envío únicamente"
+            ],
+            "answer": 3
+          },
+          {
+            "q": "Para la exclusión mutua usando mensajes, la solución de sincronización propuesta es:",
+            "a": [
+              "send bloqueante y receive bloqueante",
+              "send no bloqueante y receive no bloqueante",
+              "send no bloqueante y receive bloqueante",
+              "send bloqueante y receive no bloqueante"
+            ],
+            "answer": 3
+          },
+          {
+            "q": "En el ejemplo de exclusión mutua con mensajes, ¿qué se envía al buzón `mutex` al inicio en la función `main`?",
+            "a": [
+              "Un mensaje de datos",
+              "Un mensaje nulo (`null`)",
+              "El identificador del proceso",
+              "Un mensaje de error"
+            ],
+            "answer": 2
+          },
+          {
+            "q": "En la solución del problema del productor/consumidor con buffer ilimitado usando mensajes, las primitivas de sincronización utilizadas son:",
+            "a": [
+              "send bloqueante, receive no bloqueante",
+              "send no bloqueante, receive bloqueante",
+              "send y receive bloqueantes",
+              "send y receive no bloqueantes"
+            ],
+            "answer": 2
+          },
+          {
+            "q": "En el problema del productor/consumidor con buffer ilimitado, ¿cómo se llama el buzón principal para el intercambio de items?",
+            "a": [
+              "productor_buzon",
+              "consumidor_buzon",
+              "item_buzon",
+              "buffer"
+            ],
+            "answer": 4
+          },
+          {
+            "q": "Para resolver el problema del productor/consumidor con buffer limitado usando mensajes, ¿cuántos buzones se crean?",
+            "a": [
+              "Uno",
+              "Dos",
+              "Tres",
+              "Cuatro"
+            ],
+            "answer": 2
+          },
+          {
+            "q": "En la solución del productor/consumidor con buffer limitado, los dos buzones se utilizan para:",
+            "a": [
+              "Uno para los items producidos y otro para los items consumidos",
+              "Uno para señales de espacio disponible y otro para los items",
+              "Uno para los items y otro para las confirmaciones de recepción",
+              "Uno para los productores y otro para los consumidores"
+            ],
+            "answer": 2
+          },
+          {
+            "q": "¿Cuál de las siguientes NO es una herramienta de paso de mensajes proporcionada por Unix System V Release 4 (SVR4)?",
+            "a": [
+              "Tuberías",
+              "Semáforos",
+              "Colas de Mensajes",
+              "Sockets"
+            ],
+            "answer": 2
+          },
+          {
+            "q": "Respecto a las Colas de Mensajes en Unix, ¿cuál de las siguientes afirmaciones es correcta?",
+            "a": [
+              "Son buffers LIFO",
+              "La exclusión mutua al buffer no está garantizada por el S.O.",
+              "No permiten tipar mensajes",
+              "Son buffers FIFO mantenidos por el S.O."
+            ],
+            "answer": 4
+          }
+    ]
+  }

@@ -1,0 +1,308 @@
+{
+    "title": "U3_04",
+    "career": "Ingeniería Informática",
+    "year": "Segundo año",
+    "subject": "Sistemas_Operativos",
+    "questions": [
+        {
+            "q": "¿Cuál de las siguientes afirmaciones describe mejor el **multiprocesamiento**?",
+            "a": [
+              "Gestión de varios procesos en un sistema monoprocesador [1].",
+              "Gestión de varios procesos en un sistema multiprocesador [1].",
+              "Gestión de varios procesos ejecutándose en sistemas de computadoras múltiples o distribuidos [1].",
+              "Compartir el procesador entre varias aplicaciones activas [2]."
+            ],
+            "answer": 2
+          },
+          {
+            "q": "Una razón por la cual una aplicación puede ser estructurada como un conjunto de procesos concurrentes es:",
+            "a": [
+              "Para permitir la multiprogramación en sistemas monoprocesador [1].",
+              "Para que el Sistema Operativo pueda proteger sus datos internos [3].",
+              "Para que el resultado de la ejecución sea siempre determinista [4].",
+              "Para organizar la misma aplicación en unidades ejecutables separadas [2]."
+            ],
+            "answer": 4
+          },
+          {
+            "q": "En sistemas monoprocesador, ¿cuál es un riesgo principal al compartir recursos globales?",
+            "a": [
+              "Los resultados de distintas ejecuciones son siempre deterministas [4].",
+              "La asignación óptima de recursos se vuelve más sencilla [4].",
+              "El orden de las lecturas y escrituras de datos es crítico [4].",
+              "La depuración de programas se facilita [4]."
+            ],
+            "answer": 3
+          },
+          {
+            "q": "Un ejemplo de dificultad en la asignación óptima de recursos en concurrencia es:",
+            "a": [
+              "Múltiples aplicaciones compartiendo el procesador [2].",
+              "Un proceso que adquiere el control de un canal de E/S y se suspende antes de usarlo [4].",
+              "La estructura interna del Sistema Operativo como procesos concurrentes [2].",
+              "La necesidad de que el S.O. proteja los datos de cada proceso [3]."
+            ],
+            "answer": 2
+          },
+          {
+            "q": "Una **condición de carrera** ocurre cuando:",
+            "a": [
+              "Un proceso de alta prioridad interrumpe a uno de baja prioridad [5].",
+              "Múltiples procesos o hilos leen y escriben datos, y el resultado final depende del orden de ejecución [6].",
+              "El Sistema Operativo gestiona varios procesos en un sistema multiprocesador [1].",
+              "Dos procesos intentan acceder a recursos compartidos de forma mutuamente excluyente [7]."
+            ],
+            "answer": 2
+          },
+          {
+            "q": "Para seguir la pista de distintos procesos, el Sistema Operativo utiliza principalmente:",
+            "a": [
+              "La gestión de la memoria virtual [3].",
+              "Los PCBs (Bloques de Control de Proceso) [6].",
+              "La planificación de procesos [3].",
+              "La gestión de ficheros [3]."
+            ],
+            "answer": 2
+          },
+          {
+            "q": "Un aspecto de diseño crucial para la concurrencia es que el funcionamiento y resultado de un proceso debe ser independiente de:",
+            "a": [
+              "La cantidad de PCBs disponibles [6].",
+              "La velocidad de su ejecución en relación con otros procesos [3].",
+              "La gestión de dispositivos de E/S [3].",
+              "La protección de datos y recursos por el S.O. [3]."
+            ],
+            "answer": 2
+          },
+          {
+            "q": "En el contexto de **procesos no cooperantes**, ¿cuál es la principal forma en que entran en conflicto?",
+            "a": [
+              "No saben quiénes son los otros procesos [8].",
+              "Necesitan comunicarse para un fin común [9].",
+              "Compiten por el mismo recurso [10].",
+              "Utilizan primitivas de paso de mensajes [9]."
+            ],
+            "answer": 3
+          },
+          {
+            "q": "¿Cuál de los siguientes **no** es uno de los tres problemas a resolver cuando hay competencia entre procesos no cooperantes?",
+            "a": [
+              "Exclusión Mutua [10].",
+              "Interbloqueo [10].",
+              "Sincronización [9].",
+              "Inanición [10]."
+            ],
+            "answer": 3
+          },
+          {
+            "q": "Los procesos **cooperantes por compartición** son conscientes de:",
+            "a": [
+              "La identidad (PID) de los otros procesos con los que colaboran [9].",
+              "Que otros procesos pueden acceder a los recursos compartidos, pero no saben su PID [8].",
+              "Que no necesitan exclusión mutua ya que no comparten nada [9].",
+              "Que deben esperar activamente hasta que el recurso esté libre [11]."
+            ],
+            "answer": 2
+          },
+          {
+            "q": "En procesos cooperantes por compartición, ¿qué tipo de operación debe ser mutuamente excluyente para garantizar la integridad de los datos?",
+            "a": [
+              "Solo las operaciones de lectura [8].",
+              "Solo las operaciones de escritura [8].",
+              "Tanto las operaciones de lectura como de escritura [8].",
+              "Ninguna, ya que la coherencia de datos se mantiene automáticamente [8]."
+            ],
+            "answer": 2
+          },
+          {
+            "q": "Los procesos **cooperantes por comunicación** se caracterizan porque:",
+            "a": [
+              "No se comparte nada, por lo que no es necesaria la exclusión mutua [9].",
+              "Comparten recursos críticos y necesitan semáforos para su gestión [12].",
+              "Su principal problema es la inanición, pero no el interbloqueo [9].",
+              "Solo usan el paso de mensajes del lenguaje de programación [9]."
+            ],
+            "answer": 1
+          },
+          {
+            "q": "¿Qué tipo de primitivas se utilizan normalmente para la comunicación entre procesos cooperantes?",
+            "a": [
+              "Primitivas de espera activa [11].",
+              "Primitivas de inhabilitación de interrupciones [13].",
+              "Primitivas de paso de mensajes (ej. send, receive) [9].",
+              "Primitivas de Test & Set [14]."
+            ],
+            "answer": 3
+          },
+          {
+            "q": "¿Qué es una **sección crítica**?",
+            "a": [
+              "Cualquier zona de código donde se acceden a recursos exclusivos de un proceso [7].",
+              "Una zona de código donde se accede a recursos compartidos y que no puede ser ejecutada cuando otro proceso está en la misma sección crítica [7, 15, 16].",
+              "El requisito que garantiza que dos procesos no pueden ejecutar simultáneamente [15, 16].",
+              "Una zona de código que se ejecuta en un único ciclo de instrucción [14]."
+            ],
+            "answer": 2
+          },
+          {
+            "q": "La **Exclusión Mutua** es:",
+            "a": [
+              "Una zona de código donde se accede a recursos compartidos [7].",
+              "El acto de inhabilitar las interrupciones para un proceso [13].",
+              "El requisito que garantiza que dos procesos que comparten secciones críticas no pueden ejecutar simultáneamente dentro de ellas [15, 16].",
+              "La condición de que un proceso permanece en su sección crítica solo por un tiempo finito [11]."
+            ],
+            "answer": 3
+          },
+          {
+            "q": "Respecto a la interrupción en una sección crítica, un requisito para la exclusión mutua es:",
+            "a": [
+              "Un proceso no debe poder ser interrumpido en una sección crítica [11].",
+              "Un proceso que se interrumpe en una sección crítica debe hacerlo sin interferir con los otros procesos [11].",
+              "La interrupción de un proceso en su sección crítica siempre provoca un interbloqueo [11].",
+              "Solo los procesos de alta prioridad pueden ser interrumpidos en su sección crítica [5]."
+            ],
+            "answer": 2
+          },
+          {
+            "q": "Un requisito para la exclusión mutua es que **no se deben hacer suposiciones** sobre:",
+            "a": [
+              "El número de semáforos disponibles [12].",
+              "El tiempo finito que un proceso permanece en su sección crítica [11].",
+              "La velocidad relativa de los procesos o el número de procesadores [11].",
+              "La capacidad del S.O. para seguir la pista de los procesos [6]."
+            ],
+            "answer": 3
+          },
+          {
+            "q": "¿Cuál es un problema asociado con la **espera activa** en las soluciones software para la exclusión mutua?",
+            "a": [
+              "El proceso se suspende, liberando el procesador para otras tareas [17].",
+              "Un proceso que espera no consume tiempo de procesador [17].",
+              "Un proceso siempre está esperando a entrar en su sección crítica y no puede hacer nada productivo [17].",
+              "Garantiza la exclusión mutua sin ningún inconveniente [11, 17]."
+            ],
+            "answer": 3
+          },
+          {
+            "q": "¿Cuál es la consecuencia de la **alternancia estricta** en algunas soluciones software de espera activa (como la primera versión del ejemplo `turno`)?",
+            "a": [
+              "Se facilita la depuración de los procesos concurrentes [4].",
+              "El ritmo de ejecución lo marca el proceso más lento [18].",
+              "Evita completamente el interbloqueo y la inanición [18].",
+              "Permite que varios procesos entren simultáneamente en la sección crítica [17]."
+            ],
+            "answer": 2
+          },
+          {
+            "q": "En la primera versión del algoritmo de Dekker (donde `señal[i] := true;` va *después* del `while(señal[j])`), ¿cuál es el principal problema?",
+            "a": [
+              "Siempre garantiza la exclusión mutua [19].",
+              "Puede producirse un interbloqueo [20].",
+              "No garantiza la exclusión mutua, ya que ambos procesos pueden entrar simultáneamente [19, 21].",
+              "Conduce a un livelock [22]."
+            ],
+            "answer": 3
+          },
+          {
+            "q": "La segunda versión del algoritmo de Dekker (donde `señal[i] := true;` va *antes* del `while(señal[j])`) resuelve la exclusión mutua, pero introduce un problema:",
+            "a": [
+              "Livelock [22].",
+              "Inanición [10].",
+              "Interbloqueo [20].",
+              "Permite que el proceso falle fuera de su sección crítica sin afectar al otro [20]."
+            ],
+            "answer": 3
+          },
+          {
+            "q": "La tercera versión del algoritmo de Dekker, que desactiva y vuelve a activar la señal (`señal[i]:=false; /*esperar*/ señal[i]:=true;`), casi es correcta, pero puede producir:",
+            "a": [
+              "Exclusión mutua incorrecta [23].",
+              "Interbloqueo [23].",
+              "Livelock (bloqueo vital) [22].",
+              "Un fallo que bloquea al otro proceso si ocurre en la sección crítica [23]."
+            ],
+            "answer": 3
+          },
+          {
+            "q": "¿Cuál de las siguientes es una característica clave de la **solución correcta del Algoritmo de Dekker** para la exclusión mutua?",
+            "a": [
+              "Utiliza solo variables booleanas de señal [24].",
+              "Cada proceso tiene un `turno` para entrar en la sección crítica [22, 24].",
+              "Se basa en la inhabilitación de interrupciones [13].",
+              "Permite la alternancia estricta entre procesos [17]."
+            ],
+            "answer": 2
+          },
+          {
+            "q": "¿Cuál es un problema de la **inhabilitación de interrupciones** como solución de exclusión mutua en un sistema multiprocesador?",
+            "a": [
+              "No se limita la capacidad del procesador para intercalar programas [13].",
+              "Se garantiza la exclusión mutua al inhabilitar las interrupciones de un procesador [13].",
+              "Inhabilitar las interrupciones de un procesador no garantiza la exclusión mutua en sistemas multiprocesador [13].",
+              "Permite que un proceso con baja prioridad obtenga el procesador [5]."
+            ],
+            "answer": 3
+          },
+          {
+            "q": "Las **instrucciones especiales de máquina (Test & Set, Swap)** para la exclusión mutua se caracterizan por:",
+            "a": [
+              "Ser instrucciones que pueden ser interrumpidas por otros procesos [14].",
+              "Realizarse en un único ciclo de instrucción y no estar sujetas a injerencias [14].",
+              "Requerir semáforos para su correcta operación [12].",
+              "Ser implementaciones puramente software [16]."
+            ],
+            "answer": 2
+          },
+          {
+            "q": "En la instrucción `Test & Set (TS)`, si el valor de entrada `i` es 0, ¿qué hace la función?",
+            "a": [
+              "`i` se mantiene en 0 y retorna falso [14].",
+              "`i` se cambia a 1 y retorna falso [14].",
+              "`i` se cambia a 1 y retorna cierto [14].",
+              "`i` se mantiene en 0 y retorna cierto [14]."
+            ],
+            "answer": 3
+          },
+          {
+            "q": "En el algoritmo de exclusión mutua usando la instrucción `intercambiar` (`Swap`), ¿qué valor inicial tiene la variable `clave` en el proceso `P(i)` antes de entrar en el bucle de espera?",
+            "a": [
+              "0 [25].",
+              "1 [25].",
+              "El mismo valor que `cerrojo` [25].",
+              "El valor de la prioridad del proceso [5]."
+            ],
+            "answer": 2
+          },
+          {
+            "q": "Una ventaja de las soluciones de exclusión mutua basadas en hardware es:",
+            "a": [
+              "Que eliminan la espera activa [5].",
+              "Su complejidad y dificultad de verificación [26].",
+              "Son aplicables a cualquier número de procesos en sistemas con memoria compartida (monoprocesador o multiprocesador) [26].",
+              "Que no pueden producir inanición [5]."
+            ],
+            "answer": 3
+          },
+          {
+            "q": "¿Cuándo puede producirse **inanición** como desventaja en las soluciones de exclusión mutua basadas en hardware?",
+            "a": [
+              "Cuando un proceso entra en su sección crítica por primera vez [5].",
+              "Cuando un proceso abandona la sección crítica y hay más de un proceso esperando [5].",
+              "Cuando un proceso de alta prioridad espera por uno de baja prioridad [5].",
+              "Cuando la instrucción especial de máquina se ejecuta en un ciclo único [14]."
+            ],
+            "answer": 2
+          },
+          {
+            "q": "Una situación de **interbloqueo** puede ocurrir en soluciones hardware si:",
+            "a": [
+              "Un proceso de alta prioridad entra en su sección crítica [5].",
+              "Un proceso con baja prioridad entra en su sección crítica y existe otro proceso con mayor prioridad que obtiene el procesador para esperar a poder entrar en la sección crítica [5].",
+              "Se deshabilita una interrupción [13].",
+              "Múltiples secciones críticas son accedidas simultáneamente [26]."
+            ],
+            "answer": 2
+          }
+    ]
+  }

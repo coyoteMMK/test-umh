@@ -1,0 +1,308 @@
+{
+    "title": "U4_09",
+    "career": "Ingeniería Informática",
+    "year": "Segundo año",
+    "subject": "Sistemas_Operativos",
+    "questions": [
+        {
+            "q": "Según los requisitos para la Gestión de Memoria, la reubicación se refiere a la capacidad del sistema operativo para:",
+            "a": [
+                "Proteger los procesos contra accesos no permitidos de otros procesos [1].",
+                "Permitir el acceso de varios procesos a la misma zona de memoria [2].",
+                "Mover un proceso de memoria principal a disco y viceversa, sin que se sitúe necesariamente en la misma zona de memoria tras la recarga [3].",
+                "Organizar la memoria principal como un espacio lineal de direcciones de byte o palabras [4]."
+            ],
+            "answer": 3
+            },
+            {
+            "q": "El requisito de 'Protección' en la gestión de memoria implica que:",
+            "a": [
+                "Los programas pueden acceder a cualquier dirección de memoria en tiempo de compilación [1].",
+                "Se debe permitir que un proceso de usuario acceda al código y datos del Sistema Operativo si lo necesita [2].",
+                "Los procesos deben protegerse contra accesos intencionados o no, y no permitidos, de otros procesos a su código y datos [1].",
+                "El hardware no es necesario para verificar las referencias a memoria en tiempo de ejecución [1]."
+            ],
+            "answer": 3
+            },
+            {
+            "q": "La 'Compartición' como requisito de la gestión de memoria busca principalmente:",
+            "a": [
+                "Aumentar la fragmentación interna en la memoria principal [5].",
+                "Evitar que los procesos accedan a la memoria principal directamente [2].",
+                "Permitir que varios procesos accedan a la misma zona de memoria, compartiendo código en lugar de tener copias individuales [2].",
+                "Descargar procesos de memoria a disco para liberar espacio [3]."
+            ],
+            "answer": 3
+            },
+            {
+            "q": "Si el Sistema Operativo y el hardware gestionan el código y los datos de los programas en forma de módulos, se consiguen ventajas como:",
+            "a": [
+                "Reducir la necesidad de memoria secundaria para el almacenamiento [6].",
+                "La capacidad de que los módulos se escriban y compilen independientemente, resolviendo el sistema las referencias entre ellos [4].",
+                "Eliminar completamente la fragmentación externa de la memoria [7].",
+                "Permitir únicamente un entorno monoprogramado para mayor estabilidad [8]."
+            ],
+            "answer": 2
+            },
+            {
+            "q": "Respecto a la organización física de la memoria, ¿cuál de las siguientes afirmaciones es correcta?",
+            "a": [
+                "La memoria principal es más lenta, barata y ofrece almacenamiento permanente [6].",
+                "El programador siempre debe ser el responsable de gestionar el flujo entre memoria principal y secundaria [8].",
+                "La memoria secundaria es volátil, cara y de acceso extremadamente rápido [6].",
+                "El Sistema Operativo debe ser el responsable del traspaso de información entre la memoria principal y secundaria [9]."
+            ],
+            "answer": 4
+            },
+            {
+            "q": "En el contexto de las particiones estáticas de igual tamaño, el fenómeno de la 'fragmentación interna' se describe como:",
+            "a": [
+                "La acumulación de pequeños huecos de memoria libre entre procesos que no pueden unirse en un bloque útil [10].",
+                "El espacio desaprovechado dentro de una partición asignada a un programa porque el programa es más pequeño que la partición completa [5].",
+                "La necesidad de reorganizar la memoria para juntar bloques de memoria libre [10].",
+                "La división de la memoria principal en trozos de tamaño fijo llamados marcos [11]."
+            ],
+            "answer": 2
+            },
+            {
+            "q": "Una desventaja significativa de los modelos de particiones estáticas es:",
+            "a": [
+                "Su complejidad de implementación y la alta sobrecarga de software del S.O. [12].",
+                "Que permiten un número ilimitado de procesos activos en el sistema [12].",
+                "La ineficiencia para procesos pequeños y la limitación del número de procesos activos por el número de particiones predefinidas [12].",
+                "Que garantizan un conocimiento anticipado exacto de la necesidad de memoria de los procesos [12]."
+            ],
+            "answer": 3
+            },
+            {
+            "q": "En el particionamiento dinámico, el fenómeno de la 'fragmentación externa' ocurre cuando:",
+            "a": [
+                "Un programa es más pequeño que la partición asignada, dejando espacio sin usar dentro de ella [5].",
+                "Hay varios huecos en la memoria principal que no son contiguos, impidiendo la asignación de bloques grandes [10].",
+                "El Sistema Operativo descarga procesos de memoria a disco [3].",
+                "Las referencias a memoria en tiempo de ejecución no pueden determinarse en la compilación [1]."
+            ],
+            "answer": 2
+            },
+            {
+            "q": "La 'compactación' en el particionamiento dinámico se utiliza para:",
+            "a": [
+                "Reducir el tamaño de las particiones asignadas a los procesos [10].",
+                "Evitar la sobrecarga de software del Sistema Operativo [12].",
+                "Desplazar los procesos contiguos para juntar toda la memoria libre en un bloque, aunque consume tiempo de procesador y requiere reubicación dinámica [10].",
+                "Cargar programas en memoria principal para su ejecución sin necesidad de memoria virtual [9]."
+            ],
+            "answer": 3
+            },
+            {
+            "q": "Respecto al algoritmo 'Best Fit' para la asignación de memoria en particiones dinámicas, es cierto que:",
+            "a": [
+                "Es el más rápido y sencillo de implementar [13].",
+                "Elige el primer bloque desde el comienzo de la memoria con espacio suficiente [13].",
+                "Proporciona en general los peores resultados porque genera los fragmentos más pequeños, requiriendo compactación más frecuente [14].",
+                "Asigna frecuentemente un bloque de memoria de la última ubicación [14]."
+            ],
+            "answer": 3
+            },
+            {
+            "q": "El algoritmo 'First Fit' para la asignación de memoria en particiones dinámicas se caracteriza por:",
+            "a": [
+                "Elegir el bloque de tamaño más próximo al solicitado [13].",
+                "Ser más lento y complejo de implementar que Next Fit [13].",
+                "Elegir el primer bloque desde el comienzo de la memoria con espacio suficiente, siendo rápido y sencillo [13].",
+                "Garantizar que el fragmento de memoria que se deja es lo más pequeño posible [14]."
+            ],
+            "answer": 3
+            },
+            {
+            "q": "En un Sistema de Colegas para particiones dinámicas, si se hace una solicitud de tamaño 's' y el bloque disponible actual es de tamaño 2^U, y 2^(U-1) < s <= 2^U, entonces:",
+            "a": [
+                "El bloque se divide en dos colegas de igual tamaño hasta que el bloque sea mayor o igual que 's' [15].",
+                "La solicitud es rechazada por no haber espacio suficiente [15].",
+                "El bloque entero se asigna a la solicitud [15].",
+                "El sistema espera a que se libere un bloque de tamaño exactamente 's' [15]."
+            ],
+            "answer": 3
+            },
+            {
+            "q": "¿Cuál de las siguientes afirmaciones define correctamente una 'dirección lógica'?",
+            "a": [
+                "Una posición real de la memoria principal [16].",
+                "Una posición relativa a un punto conocido, como el comienzo del programa [17].",
+                "Una referencia a una posición de memoria independientemente de la asignación actual de datos a la memoria, que debe traducirse a dirección física [17].",
+                "La dirección de inicio de un proceso cargado en la memoria principal [18]."
+            ],
+            "answer": 3
+            },
+            {
+            "q": "El soporte hardware para la reubicación en la gestión de memoria utiliza registros como:",
+            "a": [
+                "El registro de pila y el registro de programa [18].",
+                "El registro de control y el registro de estado [18].",
+                "El registro base, que se carga con la dirección de inicio del proceso, y el registro límite, que indica la posición final del programa [18].",
+                "El registro de instrucción y el registro de datos [18]."
+            ],
+            "answer": 3
+            },
+            {
+            "q": "A diferencia del particionamiento, la paginación simple:",
+            "a": [
+                "Genera tanto fragmentación interna como externa [11].",
+                "Solo produce fragmentación en el último marco de página de un proceso y elimina la fragmentación externa [19].",
+                "Solo se utiliza en entornos monoprogramados [8].",
+                "Requiere que todas las páginas de un proceso estén consecutivas en memoria principal [20]."
+            ],
+            "answer": 2
+            },
+            {
+            "q": "En la paginación simple, el Sistema Operativo mantiene una tabla de páginas para cada proceso que:",
+            "a": [
+                "Contiene la dirección física absoluta del inicio del proceso [19].",
+                "Es una cache para mantener las entradas de páginas usadas recientemente [21].",
+                "Indica la posición del marco de cada página del proceso, permitiendo la traducción de direcciones lógicas a físicas [19, 22].",
+                "Define la longitud máxima de cada segmento de un programa [7]."
+            ],
+            "answer": 3
+            },
+            {
+            "q": "Una de las diferencias entre la paginación simple y las particiones estáticas de igual tamaño es que en la paginación simple:",
+            "a": [
+                "Los marcos de página son más grandes que las particiones estáticas [20].",
+                "Un programa solo puede ocupar un único marco de página [20].",
+                "Los marcos de página no tienen por qué estar consecutivos en memoria [20].",
+                "No se produce ningún tipo de fragmentación [19]."
+            ],
+            "answer": 3
+            },
+            {
+            "q": "En la segmentación simple, en relación con la fragmentación, es correcto afirmar que:",
+            "a": [
+                "Elimina completamente la fragmentación interna y externa [7].",
+                "Elimina la fragmentación externa pero crea fragmentación interna [7].",
+                "Elimina la fragmentación interna pero crea fragmentación externa [7].",
+                "No tiene ningún impacto en la fragmentación de la memoria [7]."
+            ],
+            "answer": 3
+            },
+            {
+            "q": "A diferencia de la paginación simple, la segmentación simple:",
+            "a": [
+                "Es transparente al programador, ya que el compilador maneja todas las divisiones [23].",
+                "No es transparente al programador ni al compilador, y el programador puede dividir el código y los datos en segmentos [23].",
+                "Requiere que todos los segmentos de un programa tengan la misma longitud [7].",
+                "No necesita una tabla de segmentos para localizar las direcciones [23]."
+            ],
+            "answer": 2
+            },
+            {
+            "q": "Con memoria virtual, cuando el S.O. trae un nuevo proceso a memoria:",
+            "a": [
+                "Carga el proceso completo en memoria principal para garantizar su ejecución sin interrupciones [24].",
+                "Carga únicamente las primeras páginas (de instrucciones y datos) del proceso, actualizando la tabla de páginas [24].",
+                "Descarga todo el conjunto residente del proceso anterior [24].",
+                "Requiere que todas las páginas o segmentos del proceso estén contiguas en memoria [25]."
+            ],
+            "answer": 2
+            },
+            {
+            "q": "Durante la ejecución de un programa en un sistema con memoria virtual, se produce un 'fallo de página' cuando:",
+            "a": [
+                "El procesador accede a una dirección lógica que se encuentra en el conjunto residente [24].",
+                "El Sistema Operativo descarga una página de la memoria principal al disco [26].",
+                "El procesador encuentra una dirección lógica que no está en la memoria principal, generando una interrupción [27].",
+                "Se actualiza la tabla de páginas con la ubicación de un nuevo marco [24]."
+            ],
+            "answer": 3
+            },
+            {
+            "q": "Dos ventajas fundamentales de la memoria virtual son:",
+            "a": [
+                "La simplificación del trabajo del programador al obligarle a gestionar los 'overlays', y la reducción del número de procesos en memoria [26, 27].",
+                "Permitir una multiprogramación muy efectiva al mantener un mayor número de procesos en memoria principal, y permitir que un proceso sea mayor que la memoria principal disponible [27].",
+                "Eliminar completamente la fragmentación externa e interna en todos los escenarios [7, 19].",
+                "Garantizar que todas las páginas de un proceso estén siempre cargadas en memoria principal [24]."
+            ],
+            "answer": 2
+            },
+            {
+            "q": "En el contexto de la memoria virtual, la tabla de páginas se complica porque:",
+            "a": [
+                "Ya no es necesario almacenar bits de control como 'Presencia' o 'Modificado' [28].",
+                "Solo algunas páginas del proceso pueden estar en memoria principal, requiriendo bits de control como 'P' (Presencia) y 'M' (Modificado) [28].",
+                "Su tamaño es fijo y depende únicamente de la dirección real [29].",
+                "Se accede a ella a través de la TLB, haciendo su estructura más simple [21]."
+            ],
+            "answer": 2
+            },
+            {
+            "q": "En una arquitectura con un bus de direcciones de 32 bits y páginas de 1KB, el tamaño de la tabla de páginas por proceso puede ser muy elevado, llegando a:",
+            "a": [
+                "4 KB [30].",
+                "2 MB [31].",
+                "16 MB [32].",
+                "96 MB [32]."
+            ],
+            "answer": 4
+            },
+            {
+            "q": "La principal razón para utilizar tablas de páginas multinivel jerárquicas es:",
+            "a": [
+                "Aumentar el número de accesos a memoria física para cada traducción de dirección [21].",
+                "Reducir el tamaño de la tabla de páginas raíz para que quepa en una sola página de memoria principal [30].",
+                "Almacenar toda la tabla de páginas de un proceso de forma contigua en memoria principal [33].",
+                "Simplificar el diseño del hardware de traducción de direcciones [34]."
+            ],
+            "answer": 2
+            },
+            {
+            "q": "La función principal del TLB (Translation Lookaside Buffer) es:",
+            "a": [
+                "Almacenar el código ejecutable del sistema operativo [21].",
+                "Mantener las entradas de páginas usadas recientemente en una caché muy rápida para reducir los accesos a memoria física [21].",
+                "Gestionar la asignación de memoria en particiones dinámicas [35].",
+                "Controlar el tamaño del conjunto residente de un proceso [36]."
+            ],
+            "answer": 2
+            },
+            {
+            "q": "En las políticas de lectura de memoria virtual, la 'paginación por demanda' implica que:",
+            "a": [
+                "Se cargan todas las páginas del proceso en memoria principal al iniciar su ejecución [37].",
+                "Se trae una página a la memoria principal solo cuando se hace referencia a una posición en dicha página, lo que puede causar muchos fallos de página iniciales [37].",
+                "Se cargan más páginas de las necesarias en previsión de futuras referencias [37].",
+                "La página se vacía de memoria principal antes de ser referenciada [38]."
+            ],
+            "answer": 2
+            },
+            {
+            "q": "La política de 'paginación previa' en la memoria virtual busca:",
+            "a": [
+                "Asegurar que solo las páginas estrictamente necesarias se carguen para minimizar el uso de memoria [37].",
+                "Ser más eficiente al traer un número de páginas adyacentes a la memoria en previsión de su uso, aprovechando los accesos por bloques [37].",
+                "Evitar completamente los fallos de página durante la ejecución de un proceso [37].",
+                "Reemplazar páginas que están en memoria por páginas supuestamente adyacentes, sin considerar su uso futuro [39]."
+            ],
+            "answer": 2
+            },
+            {
+            "q": "La política de reemplazo 'Óptima' se describe como:",
+            "a": [
+                "Aquella que reemplaza la página que no ha sido referenciada desde hace más tiempo, siendo la más fácil de implementar [40, 41].",
+                "Una política teórica que selecciona la página que tardará más en ser referenciada de nuevo, pero es imposible de implementar en la práctica [40].",
+                "La que trata los marcos asignados a un proceso como un buffer circular, eliminando páginas por turno rotatorio [41].",
+                "La que requiere un bit de uso asociado a cada marco para determinar qué página reemplazar [42]."
+            ],
+            "answer": 2
+            },
+            {
+            "q": "La política de reemplazo 'Usada Menos Recientemente (LRU)' se basa en:",
+            "a": [
+                "Reemplazar la página que ha estado más tiempo en la memoria principal [42].",
+                "Seleccionar para reemplazar la página que tiene una mayor cantidad de tiempo hasta que se produzca la referencia siguiente [40].",
+                "Reemplazar la página de memoria que no ha sido referenciada desde hace más tiempo, basándose en el principio de cercanía [40].",
+                "Asociar un bit adicional a cada marco para indicar si ha sido usado recientemente [42]."
+            ],
+            "answer": 3
+            }
+    ]
+  }

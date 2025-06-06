@@ -1,0 +1,308 @@
+{
+    "title": "U3_02",
+    "career": "Ingeniería Informática",
+    "year": "Segundo año",
+    "subject": "Sistemas_Operativos",
+    "questions": [
+        {
+            "q": "¿Cuál es la razón principal por la que una CPU debe tener al menos dos modos de operación diferentes (Privilegiado y Usuario)?",
+            "a": [
+              "Para facilitar la depuración de aplicaciones de usuario.",
+              "Para que las aplicaciones no puedan usar todas las instrucciones de la CPU, mientras que el S.O. sí.",
+              "Para optimizar la velocidad de ejecución de los programas.",
+              "Para permitir que múltiples usuarios ejecuten programas simultáneamente."
+            ],
+            "answer": 2
+          },
+          {
+            "q": "En el Modo Privilegiado (kernel space), ¿qué tipo de acceso se tiene a los recursos hardware?",
+            "a": [
+              "Acceso limitado y supervisado por el S.O.",
+              "Acceso completo y sin restricciones.",
+              "Acceso solo a la memoria y E/S básicas.",
+              "Acceso únicamente a través de llamadas al sistema."
+            ],
+            "answer": 2
+          },
+          {
+            "q": "Si el código en Modo Usuario intenta ejecutar una instrucción privilegiada, ¿qué ocurre normalmente según la fuente?",
+            "a": [
+              "La instrucción se ejecuta en Modo Privilegiado sin problemas.",
+              "El microprocesador avisa al kernel, quien normalmente mata al proceso.",
+              "El sistema operativo cambia automáticamente al Modo Privilegiado para ejecutarla.",
+              "Se produce un error de software que puede ser ignorado."
+            ],
+            "answer": 2
+          },
+          {
+            "q": "¿Cuál de las siguientes es una instrucción que normalmente solo se puede ejecutar en Modo Privilegiado?",
+            "a": [
+              "Realizar una operación aritmética.",
+              "Acceder a un fichero de usuario.",
+              "Modificar los registros de control (PSW).",
+              "Crear una nueva variable en la memoria."
+            ],
+            "answer": 3
+          },
+          {
+            "q": "¿Cómo sabe el procesador en qué modo se está ejecutando en un sistema operativo?",
+            "a": [
+              "Mediante la dirección de memoria de la instrucción actual.",
+              "Por el tipo de aplicación que se está ejecutando.",
+              "A través de un bit (o varios) del PSW (Program Status Word).",
+              "Consultando una tabla de modos predefinidos en la BIOS."
+            ],
+            "answer": 3
+          },
+          {
+            "q": "¿Cuál de los siguientes eventos puede provocar un cambio a Kernel Mode?",
+            "a": [
+              "El final de un programa de usuario.",
+              "Una interrupción o una llamada al sistema.",
+              "Una operación de cálculo intensivo.",
+              "La liberación de memoria por un proceso."
+            ],
+            "answer": 2
+          },
+          {
+            "q": "¿Cómo se suele volver a User Mode después de una rutina de tratamiento de interrupción en Kernel Mode?",
+            "a": [
+              "Reiniciando el sistema.",
+              "Automáticamente al finalizar la rutina.",
+              "Con una instrucción privilegiada de cambio de modo o restaurando el PSW del programa en ejecución.",
+              "Mediante una señal del usuario al sistema operativo."
+            ],
+            "answer": 3
+          },
+          {
+            "q": "Un error de ejecución en Modo Privilegiado (kernel) es catastrófico, ¿qué consecuencia provoca?",
+            "a": [
+              "La terminación del proceso que causó el error.",
+              "El paro completo del sistema.",
+              "Una advertencia al usuario sin interrupción del servicio.",
+              "Una ralentización temporal del sistema."
+            ],
+            "answer": 2
+          },
+          {
+            "q": "¿Cuál de las siguientes es una función principal de la Gestión de Procesos realizada por el S.O.?",
+            "a": [
+              "Gestión de buffers de E/S.",
+              "Reserva de canales de E/S.",
+              "Planificación y activación de procesos.",
+              "Gestión de páginas y segmentos de memoria."
+            ],
+            "answer": 3
+          },
+          {
+            "q": "¿Qué función típicamente realiza el S.O. dentro de la Gestión de Memoria?",
+            "a": [
+              "Auditoría de procesos.",
+              "Reserva del espacio de direcciones para los procesos.",
+              "Gestión de interrupciones.",
+              "Sincronización de procesos."
+            ],
+            "answer": 2
+          },
+          {
+            "q": "Según la fuente, ¿cuál es el primer paso que realiza el S.O. al decidir crear un proceso?",
+            "a": [
+              "Inicializar el PCB del nuevo proceso.",
+              "Reservar espacio para la imagen del proceso.",
+              "Asignar un identificador ID único y añadir la entrada en la tabla principal de procesos.",
+              "Establecer los enlaces apropiados en las colas enlazadas."
+            ],
+            "answer": 3
+          },
+          {
+            "q": "Durante la inicialización del PCB de un nuevo proceso, ¿qué entradas se suelen inicializar a cero, excepto algunas específicas?",
+            "a": [
+              "Todas las entradas del PCB se inicializan a cero.",
+              "Las entradas del PC, Punteros de pilas, PPID, PID y estado se inicializan a cero.",
+              "La mayoría de las entradas a cero, excepto PC, Punteros de pilas, PPID, PID, estado y prioridad.",
+              "Solo el PID se inicializa a cero."
+            ],
+            "answer": 3
+          },
+          {
+            "q": "¿Cuál es el propósito principal por el que el Sistema Operativo realiza un cambio de proceso?",
+            "a": [
+              "Para liberar memoria del sistema.",
+              "Para mantener la multiprogramación.",
+              "Para responder a una interacción del usuario.",
+              "Para depurar errores en las aplicaciones."
+            ],
+            "answer": 2
+          },
+          {
+            "q": "¿Cuándo se realiza un cambio de proceso según la fuente?",
+            "a": [
+              "Solo cuando un proceso termina su ejecución.",
+              "En cualquier momento en que el S.O. tome el control de ejecución.",
+              "Cuando el usuario cierra una aplicación.",
+              "Exclusivamente durante el inicio del sistema."
+            ],
+            "answer": 2
+          },
+          {
+            "q": "En el contexto de las interrupciones ordinarias, una interrupción de reloj (Quantum) implica que el proceso actual debe pasar a qué estado(s)?",
+            "a": [
+              "Bloqueado o Terminado.",
+              "Listo o Listo/Suspendido.",
+              "Ejecución o Espera.",
+              "Nuevo o Muerto."
+            ],
+            "answer": 2
+          },
+          {
+            "q": "Si se produce un 'Fallo de página', ¿qué acción debe tomar el S.O. y en qué estado pasa el proceso actual?",
+            "a": [
+              "El S.O. finaliza el proceso, que pasa a Terminado.",
+              "El S.O. carga la página en memoria principal, y el proceso actual debe pasar a Bloqueado.",
+              "El S.O. ignora el error, y el proceso continúa en Ejecución.",
+              "El S.O. solicita más memoria, y el proceso pasa a Listo."
+            ],
+            "answer": 2
+          },
+          {
+            "q": "En caso de una 'Trap' o interrupción software, si el S.O. determina que el error no es fatal, ¿qué puede hacer?",
+            "a": [
+              "Siempre termina el proceso.",
+              "Depende del diseño del S.O., pudiendo usar rutinas de recuperación o devolver un código de error al proceso.",
+              "Reinicia el sistema.",
+              "Ignora la interrupción y el proceso continúa sin interrupción."
+            ],
+            "answer": 2
+          },
+          {
+            "q": "¿Qué se establece para las interrupciones en un sistema operativo y cuál es el objetivo de esta característica?",
+            "a": [
+              "Todas las interrupciones tienen la misma prioridad para garantizar equidad.",
+              "Cada interrupción tiene un nivel de prioridad, dando mayor prioridad a ciertos eventos para una respuesta suave del sistema.",
+              "Las interrupciones solo se tratan en el orden en que llegan, sin prioridad.",
+              "La prioridad de las interrupciones es decidida por el usuario."
+            ],
+            "answer": 2
+          },
+          {
+            "q": "Respecto al ciclo de instrucción y las interrupciones, ¿cuándo se comprueba si ha habido interrupciones pendientes?",
+            "a": [
+              "Antes de iniciar cada ciclo de instrucción.",
+              "Durante la fase de ejecución de la instrucción.",
+              "Tras el ciclo de instrucción, en la fase de interrupción.",
+              "Solo cuando el procesador está inactivo."
+            ],
+            "answer": 3
+          },
+          {
+            "q": "La existencia de una interrupción provoca un cambio de modo. ¿Provoca necesariamente un cambio de proceso?",
+            "a": [
+              "Sí, siempre que hay una interrupción se cambia de proceso.",
+              "No, eso lo decide el Planificador del S.O.",
+              "Solo si la interrupción es de alta prioridad.",
+              "Solo si el proceso actual está bloqueado."
+            ],
+            "answer": 2
+          },
+          {
+            "q": "En el modelo de S.O. antiguo ('Núcleo fuera de todo proceso'), ¿cómo opera el núcleo del S.O.?",
+            "a": [
+              "Como un proceso de usuario más.",
+              "Como una entidad separada que opera en modo kernel, con su memoria protegida y pila propia.",
+              "Distribuido entre todos los procesos de usuario.",
+              "No se ejecuta en el procesador."
+            ],
+            "answer": 2
+          },
+          {
+            "q": "En el modelo de S.O. de PCs y workstations ('Ejecución dentro de los procesos de usuario'), ¿cómo se accede a las rutinas del kernel?",
+            "a": [
+              "Mediante la copia de todo el kernel en la imagen de cada proceso.",
+              "Accediendo al conjunto de rutinas situadas en memoria compartida por el kernel con los procesos que las usan.",
+              "Solo a través de hardware dedicado.",
+              "El kernel no se ejecuta en este tipo de sistemas."
+            ],
+            "answer": 2
+          },
+          {
+            "q": "En un 'Sistema Operativo basado en procesos', ¿cómo se describe el tamaño del kernel?",
+            "a": [
+              "Es un kernel monolítico y muy grande.",
+              "El kernel se reduce a lo mínimo (cambio de procesos, seguridad, intercambio, etc.).",
+              "El kernel es inexistente, todas las funciones son procesos de usuario.",
+              "El kernel solo contiene las aplicaciones de usuario."
+            ],
+            "answer": 2
+          },
+          {
+            "q": "¿Qué ventaja se menciona para un 'Sistema Operativo basado en procesos'?",
+            "a": [
+              "Reduce la complejidad del hardware.",
+              "Desfavorece la programación modular del S.O.",
+              "Permite enviar procesos del S.O. a procesadores dedicados en sistemas multiprocesador.",
+              "Elimina completamente la necesidad de un modo kernel."
+            ],
+            "answer": 3
+          },
+          {
+            "q": "En el modelo de S.O. de PCs y workstations (Ejecución dentro de los procesos de usuario), cuando las rutinas del kernel se ejecutan, ¿qué sucede con el modo y el proceso?",
+            "a": [
+              "Se pasa a modo kernel y siempre se produce un cambio de proceso.",
+              "Se pasa a modo usuario y no hay cambio de proceso.",
+              "Se pasa a modo kernel por interrupción (hw/sw) y se produce un cambio de modo, pero no de proceso.",
+              "El proceso de usuario se suspende indefinidamente."
+            ],
+            "answer": 3
+          },
+          {
+            "q": "¿Cómo se describe la relación entre el S.O. y el procesador en la ejecución?",
+            "a": [
+              "El S.O. es un hardware que controla el procesador.",
+              "El S.O. se ejecuta en el procesador, cede el control para otro software y depende del procesador para recuperarlo.",
+              "El S.O. solo se ejecuta cuando no hay procesos de usuario.",
+              "El procesador opera independientemente del S.O."
+            ],
+            "answer": 2
+          },
+          {
+            "q": "¿Cuál de las siguientes es una 'Función de Soporte' típica del kernel mencionada en la fuente?",
+            "a": [
+              "Creación y terminación de procesos.",
+              "Swapping de memoria.",
+              "Gestión de interrupciones.",
+              "Reserva de canales de E/S."
+            ],
+            "answer": 3
+          },
+          {
+            "q": "En el modelo de 'Núcleo fuera de todo proceso' (S.O. antiguos), ¿a quién se aplica el concepto de proceso?",
+            "a": [
+              "Solo a los programas de usuario.",
+              "Solo al propio núcleo del S.O.",
+              "A todos los componentes del sistema.",
+              "A ningún componente, ya que no existía el concepto de proceso."
+            ],
+            "answer": 1
+          },
+          {
+            "q": "¿Qué distinción importante se menciona que hay que hacer al hablar de cambios en el sistema?",
+            "a": [
+              "Entre la creación y la terminación de procesos.",
+              "Entre la gestión de memoria y la gestión de E/S.",
+              "Entre Process Switching y Mode Switching.",
+              "Entre las interrupciones hardware y las software."
+            ],
+            "answer": 3
+          },
+          {
+            "q": "Para la gestión de interrupciones, ¿qué información debe conocer el S.O. en el arranque (startup)?",
+            "a": [
+              "La dirección de memoria de todos los programas de usuario.",
+              "Qué IRQ (hard) va a ser atendida por qué driver.",
+              "El número total de procesos en el sistema.",
+              "Las configuraciones de red de los dispositivos."
+            ],
+            "answer": 2
+          }
+    ]
+  }

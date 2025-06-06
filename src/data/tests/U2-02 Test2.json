@@ -1,0 +1,308 @@
+{
+    "title": "U2_02",
+    "career": "Ingeniería Informática",
+    "year": "Segundo año",
+    "subject": "Sistemas_Operativos",
+    "questions": [
+        {
+            "q": "¿Qué representa el valor de retorno `= 12` en la llamada al sistema `write(1, \"hello world\\n\", 12) = 12`?",
+            "a": [
+              "El número de bytes que quedan por escribir.",
+              "El número de bytes que se intentaron escribir.",
+              "El identificador del proceso que realizó la escritura.",
+              "El número de caracteres/bytes escritos correctamente."
+            ],
+            "answer": 4
+          },
+          {
+            "q": "En la llamada al sistema `read(file, buffer, nbyte)`, ¿qué función cumple el parámetro `buffer`?",
+            "a": [
+              "Indica la cantidad máxima de bytes a leer.",
+              "Especifica el fichero desde donde se deben leer los datos.",
+              "Es la zona de memoria donde se colocarán los datos leídos.",
+              "Devuelve el número de bytes leídos correctamente."
+            ],
+            "answer": 3
+          },
+          {
+            "q": "¿Qué significa que una llamada al sistema como `read()` devuelva `-1`?",
+            "a": [
+              "La operación se completó sin errores.",
+              "Indica que no se pudo leer ningún byte.",
+              "Es una forma estándar del kernel de indicar un ERROR.",
+              "Significa que el fichero está vacío."
+            ],
+            "answer": 3
+          },
+          {
+            "q": "¿Dónde se guarda el código exacto de error, como `ENOENT`, después de que una llamada al sistema devuelve `-1`?",
+            "a": [
+              "En el registro del procesador.",
+              "En la variable global `errno`.",
+              "En el valor de retorno de la función `perror()`.",
+              "En el archivo de log del sistema."
+            ],
+            "answer": 2
+          },
+          {
+            "q": "¿Cuál es el propósito principal de la función `perror()` proporcionada por Linux?",
+            "a": [
+              "Compilar el código fuente del programa.",
+              "Obtener el PID del proceso actual.",
+              "Verificar si una llamada al sistema fue correcta y obtener una descripción del error.",
+              "Enviar una señal a otro proceso."
+            ],
+            "answer": 3
+          },
+          {
+            "q": "Si un programa intenta abrir un fichero con `open()` y este no existe en el sistema, `strace` informaría un error. ¿Qué error se asocia típicamente con que el fichero no existe?",
+            "a": [
+              "EAGAIN",
+              "EACCES",
+              "EINVAL",
+              "ENOENT"
+            ],
+            "answer": 4
+          },
+          {
+            "q": "¿Qué acción realiza la llamada al sistema `exit(status)`?",
+            "a": [
+              "Pausa la ejecución del proceso indefinidamente.",
+              "Crea un proceso hijo idéntico.",
+              "Termina la ejecución del proceso y devuelve la condición de salida.",
+              "Sustituye la imagen en memoria del proceso."
+            ],
+            "answer": 3
+          },
+          {
+            "q": "¿Cuál es la función principal de la llamada al sistema `waitpid(pid, &statloc, opts)`?",
+            "a": [
+              "Crear un nuevo proceso hijo.",
+              "Sustituir la imagen en memoria de un proceso.",
+              "Esperar a que un hijo determinado termine y coger su condición de salida.",
+              "Obtener el PID del proceso padre."
+            ],
+            "answer": 3
+          },
+          {
+            "q": "¿Qué logra la llamada al sistema `execve(name, argv, envp)`?",
+            "a": [
+              "Espera a que un proceso hijo termine.",
+              "Sustituye la imagen en memoria de un proceso.",
+              "Crea un nuevo proceso.",
+              "Asigna más memoria al proceso."
+            ],
+            "answer": 2
+          },
+          {
+            "q": "¿Qué aspecto del proceso se modifica con la llamada al sistema `brk(addr)`?",
+            "a": [
+              "El número de hilos del proceso.",
+              "El tamaño del segmento de datos.",
+              "El identificador del proceso.",
+              "La prioridad de ejecución del proceso."
+            ],
+            "answer": 2
+          },
+          {
+            "q": "¿Qué devuelve la llamada al sistema `getppid()`?",
+            "a": [
+              "El PID del proceso que la invoca.",
+              "El PID del proceso padre del solicitante.",
+              "El ID de grupo de procesos del solicitante.",
+              "El tiempo de ejecución del proceso."
+            ],
+            "answer": 2
+          },
+          {
+            "q": "¿Cuál es la información que proporciona la llamada al sistema `getpgrp()`?",
+            "a": [
+              "El identificador del proceso padre.",
+              "El identificador del proceso solicitante.",
+              "El identificador de grupo de procesos del proceso solicitante.",
+              "El identificador de usuario del proceso."
+            ],
+            "answer": 3
+          },
+          {
+            "q": "¿Qué acción se realiza mediante la llamada al sistema `setsid()`?",
+            "a": [
+              "Terminar la sesión actual del usuario.",
+              "Crear una nueva sesión y asignar el PID del invocador como identificador del grupo de procesos.",
+              "Cambiar el directorio de trabajo del proceso.",
+              "Establecer la prioridad de un proceso."
+            ],
+            "answer": 2
+          },
+          {
+            "q": "¿Para qué se utiliza la llamada al sistema `ptrace(req, pid, addr, data)`?",
+            "a": [
+              "Para copiar datos entre procesos.",
+              "Para controlar un proceso con fines de depuración.",
+              "Para enviar señales entre procesos.",
+              "Para asignar memoria a otro proceso."
+            ],
+            "answer": 2
+          },
+          {
+            "q": "¿Cuál es el propósito de la llamada al sistema `signal(sig,&función)`?",
+            "a": [
+              "Enviar una señal a un proceso específico.",
+              "Bloquear la recepción de una señal.",
+              "Definir la acción a realizar cuando se recibe una señal.",
+              "Suspender la ejecución del proceso hasta recibir una señal."
+            ],
+            "answer": 3
+          },
+          {
+            "q": "¿Qué acción permite realizar la llamada al sistema `kill(pid, sig)`?",
+            "a": [
+              "Terminar el proceso que la invoca.",
+              "Enviar una señal a un proceso.",
+              "Crear un nuevo proceso.",
+              "Depurar un proceso en ejecución."
+            ],
+            "answer": 2
+          },
+          {
+            "q": "¿Qué programa la llamada al sistema `alarm(seconds)`?",
+            "a": [
+              "La ejecución de un nuevo proceso.",
+              "La suspensión del proceso solicitante.",
+              "Una señal `SIGALRM` después de un cierto tiempo.",
+              "La liberación de memoria."
+            ],
+            "answer": 3
+          },
+          {
+            "q": "¿Qué hace la llamada al sistema `creat(name, mode)`?",
+            "a": [
+              "Cierra un fichero existente.",
+              "Lee datos de un fichero.",
+              "Crea un nuevo fichero o trunca uno existente.",
+              "Mueve el apuntador de un fichero."
+            ],
+            "answer": 3
+          },
+          {
+            "q": "¿Cuál es la función de la llamada al sistema `lseek(fd, offset, whence)`?",
+            "a": [
+              "Leer datos de un fichero.",
+              "Cerrar un descriptor de fichero.",
+              "Mover el apuntador del fichero.",
+              "Asignar un nuevo descriptor de fichero."
+            ],
+            "answer": 3
+          },
+          {
+            "q": "¿Qué acción realiza la llamada al sistema `dup(fd)`?",
+            "a": [
+              "Cierra el descriptor de fichero especificado.",
+              "Asigna otro descriptor de fichero para un fichero abierto.",
+              "Duplica el contenido de un fichero.",
+              "Elimina un fichero del sistema."
+            ],
+            "answer": 2
+          },
+          {
+            "q": "¿Qué se crea mediante la llamada al sistema `pipe(&fd)`?",
+            "a": [
+              "Una conexión de red.",
+              "Una tubería (pipe) para comunicación entre procesos.",
+              "Un nuevo directorio.",
+              "Un proceso hijo."
+            ],
+            "answer": 2
+          },
+          {
+            "q": "¿Para qué se utiliza la llamada al sistema `ioctl(fd, request, argp)`?",
+            "a": [
+              "Lectura y escritura estándar de ficheros.",
+              "Realizar operaciones especiales en ficheros especiales.",
+              "Cambiar los permisos de un fichero.",
+              "Establecer la fecha y hora del sistema."
+            ],
+            "answer": 2
+          },
+          {
+            "q": "¿Cuál es la función de la llamada al sistema `link(name1, name2)`?",
+            "a": [
+              "Eliminar un fichero existente.",
+              "Crear una nueva entrada `name2` en el directorio que apunta al fichero `name1`.",
+              "Renombrar un fichero de `name1` a `name2`.",
+              "Unir el contenido de dos ficheros."
+            ],
+            "answer": 2
+          },
+          {
+            "q": "¿Qué acción realiza la llamada al sistema `unlink(name)`?",
+            "a": [
+              "Crear un nuevo fichero o directorio.",
+              "Elimina una entrada del directorio.",
+              "Cambiar los permisos de un fichero.",
+              "Mover un fichero a otra ubicación."
+            ],
+            "answer": 2
+          },
+          {
+            "q": "¿Cuál es el propósito de la llamada al sistema `mount(special, name, rwflag)`?",
+            "a": [
+              "Desmontar un sistema de ficheros.",
+              "Cambiar el directorio de trabajo.",
+              "Montar un sistema de ficheros.",
+              "Crear un nuevo sistema de ficheros."
+            ],
+            "answer": 3
+          },
+          {
+            "q": "¿Qué permite modificar la llamada al sistema `chroot(dirname)`?",
+            "a": [
+              "El directorio de trabajo actual.",
+              "La ubicación del directorio raíz del proceso.",
+              "Los permisos de un directorio.",
+              "El propietario de un directorio."
+            ],
+            "answer": 2
+          },
+          {
+            "q": "¿Qué información determina la llamada al sistema `getuid()`?",
+            "a": [
+              "El ID de grupo del solicitante.",
+              "El ID de proceso del solicitante.",
+              "El ID de usuario (UID) del solicitante.",
+              "El ID de la sesión del solicitante."
+            ],
+            "answer": 3
+          },
+          {
+            "q": "¿Qué identifica la llamada al sistema `getgid()`?",
+            "a": [
+              "El identificador del proceso.",
+              "El identificador del usuario.",
+              "El identificador del grupo (GID) del solicitante.",
+              "El identificador de la sesión."
+            ],
+            "answer": 3
+          },
+          {
+            "q": "¿Qué es modificado por la llamada al sistema `umask(complmode)`?",
+            "a": [
+              "El propietario y grupo de un fichero.",
+              "Los bits de protección asociados con un fichero existente.",
+              "La máscara que se utiliza para fijar los bits de protección de nuevos ficheros.",
+              "La ubicación de un fichero en el sistema de ficheros."
+            ],
+            "answer": 3
+          },
+          {
+            "q": "Según las fuentes, ¿cuántas llamadas al sistema aproximadamente había en el kernel de Linux v.2.0.36?",
+            "a": [
+              "Menos de 100.",
+              "Entre 100 y 200.",
+              "Menos de 300.",
+              "Más de 500."
+            ],
+            "answer": 3
+          }
+    ]
+  }

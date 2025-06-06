@@ -1,0 +1,308 @@
+{
+    "title": "U3_05",
+    "career": "Ingeniería Informática",
+    "year": "Segundo año",
+    "subject": "Sistemas_Operativos",
+    "questions": [
+        {
+            "q": "¿Qué se entiende por Sección Crítica en el contexto de los sistemas operativos?",
+            "a": [
+              "Una zona de memoria exclusiva para un proceso [1]",
+              "La zona de código de un proceso donde se accede a recursos compartidos [1]",
+              "Un segmento de código que solo se ejecuta una vez [1]",
+              "Un área de almacenamiento de datos temporales [1]"
+            ],
+            "answer": 2
+          },
+          {
+            "q": "¿Cuál es el requisito que garantiza que dos procesos, que comparten secciones críticas, no pueden ejecutar simultáneamente dentro de ellas?",
+            "a": [
+              "Sincronización de Procesos [2]",
+              "Paralelismo de Hilos [2]",
+              "Exclusión Mutua [2]",
+              "Planificación de Tareas [2]"
+            ],
+            "answer": 3
+          },
+          {
+            "q": "¿Qué tipo de soluciones para garantizar la Exclusión Mutua son soportadas por el hardware?",
+            "a": [
+              "Semáforos y Monitores [3]",
+              "Paso de Mensajes y Barreras [3]",
+              "Instrucciones hardware atómicas (Test & Set, Exchange) e Inhabilitación de Interrupciones [3]",
+              "Colas de mensajes y Tuberías [3]"
+            ],
+            "answer": 3
+          },
+          {
+            "q": "¿Qué mecanismos son soluciones para la Exclusión Mutua soportadas por el Sistema Operativo y lenguajes de programación?",
+            "a": [
+              "Instrucciones atómicas y Test & Set [4]",
+              "Inhabilitación de interrupciones [4]",
+              "Semáforos, Monitores y Paso de Mensajes [4]",
+              "Temporizadores y Planificadores [4]"
+            ],
+            "answer": 3
+          },
+          {
+            "q": "¿Cuál es el concepto principal de un semáforo según la fuente?",
+            "a": [
+              "Un mecanismo de almacenamiento de datos exclusivo [5]",
+              "Una estructura de datos para la gestión de memoria [5]",
+              "Un mecanismo basado en señales entre procesos para poder sincronizarse [5]",
+              "Una función para la creación de hilos ligeros [5]"
+            ],
+            "answer": 3
+          },
+          {
+            "q": "¿Quién crea el semáforo y si se puede compartir?",
+            "a": [
+              "Lo crea el programador y no se puede compartir [5]",
+              "Lo crea el sistema operativo a petición de un proceso y se puede compartir [5]",
+              "Se crea automáticamente al iniciar el programa y es de uso exclusivo [5]",
+              "Lo crea el hardware y se comparte solo entre procesos del mismo tipo [5]"
+            ],
+            "answer": 2
+          },
+          {
+            "q": "¿Cuáles son las tres únicas operaciones que se pueden hacer sobre un semáforo?",
+            "a": [
+              "create, delete, modify [6]",
+              "start, stop, restart [6]",
+              "init, wait, signal [6]",
+              "lock, unlock, check [6]"
+            ],
+            "answer": 3
+          },
+          {
+            "q": "¿Por qué `init`, `wait` y `signal` son llamadas al sistema?",
+            "a": [
+              "Porque son funciones que se ejecutan directamente en el hardware [7]",
+              "Porque el semáforo lo gestiona el Sistema Operativo [7]",
+              "Porque requieren privilegios de usuario para ser ejecutadas [7]",
+              "Porque son parte de la librería estándar del lenguaje de programación [7]"
+            ],
+            "answer": 2
+          },
+          {
+            "q": "¿Qué tiene asociada todo semáforo donde se bloquean los procesos?",
+            "a": [
+              "Una tabla de procesos activos [7]",
+              "Una variable contador [7]",
+              "Una cola de procesos bloqueados [7]",
+              "Un registro de eventos [7]"
+            ],
+            "answer": 3
+          },
+          {
+            "q": "Desde el punto de vista del programador, ¿qué representa un semáforo?",
+            "a": [
+              "Una función booleana [8]",
+              "Una variable (del sistema) que contiene un valor entero [8]",
+              "Un puntero a memoria compartida [8]",
+              "Una constante predefinida del sistema [8]"
+            ],
+            "answer": 2
+          },
+          {
+            "q": "Según el punto de vista del programador, ¿qué operación decrementa el valor del semáforo S?",
+            "a": [
+              "init(S, valor) [8]",
+              "wait(S) [8]",
+              "signal(S) [8]",
+              "Ninguna de las anteriores [8]"
+            ],
+            "answer": 2
+          },
+          {
+            "q": "¿Cuándo se bloquea un proceso al ejecutar `wait(S)`?",
+            "a": [
+              "Si S queda en positivo (S > 0) [9]",
+              "Si S queda en negativo (S < 0) [9]",
+              "Si S es igual a 0 [9]",
+              "Solo si otro proceso ya está en la sección crítica [9]"
+            ],
+            "answer": 2
+          },
+          {
+            "q": "¿Cuándo la operación `signal(S)` libera a un proceso de la cola de bloqueados?",
+            "a": [
+              "Si S queda mayor que 0 [9]",
+              "Si S queda igual a 0 [9]",
+              "Si S queda menor o igual a 0 [9]",
+              "Siempre libera a un proceso, independientemente del valor de S [9]"
+            ],
+            "answer": 3
+          },
+          {
+            "q": "¿Qué sucede si se inicializa un semáforo S a 0 y el primer proceso intenta ejecutar `wait(S)`?",
+            "a": [
+              "El proceso pasa directamente [10]",
+              "El semáforo se incrementa automáticamente a 1 [10]",
+              "El proceso se bloquea inmediatamente [10]",
+              "El sistema arroja un error de inicialización [10]"
+            ],
+            "answer": 3
+          },
+          {
+            "q": "Si un semáforo se inicializa a 1, ¿cuántos procesos pueden pasar después de ejecutar `wait(S)` antes de que el siguiente se bloquee?",
+            "a": [
+              "Ninguno [10]",
+              "Solo el primero [10]",
+              "Todos los procesos al mismo tiempo [10]",
+              "Depende de la implementación del SO [10]"
+            ],
+            "answer": 2
+          },
+          {
+            "q": "¿Qué sucede si se inicializa un semáforo a 3 y cuatro procesos intentan ejecutar `wait(S)`?",
+            "a": [
+              "Los cuatro procesos pasan [10]",
+              "Solo uno pasa y los demás se bloquean [10]",
+              "Pasan los tres primeros, el cuarto se bloquea [10]",
+              "Ninguno de los procesos puede pasar [10]"
+            ],
+            "answer": 3
+          },
+          {
+            "q": "¿Cuáles son los dos tipos de semáforos principales en su primera clasificación?",
+            "a": [
+              "Semáforos de lectura y escritura [11]",
+              "Semáforos 'Generales' o 'con Contador' (Enteros) y 'Binarios' [11]",
+              "Semáforos locales y globales [11]",
+              "Semáforos de usuario y de sistema [11]"
+            ],
+            "answer": 2
+          },
+          {
+            "q": "En un semáforo binario, ¿qué valor puede tomar el semáforo?",
+            "a": [
+              "Cualquier valor entero no negativo [12]",
+              "Solo 0 o 1 [12]",
+              "Solo valores negativos [12]",
+              "Un valor fijo predefinido por el sistema [12]"
+            ],
+            "answer": 2
+          },
+          {
+            "q": "¿Cuál es una característica clave de los SEMÁFOROS FUERTES?",
+            "a": [
+              "Pueden causar Inanición [12, 13]",
+              "La planificación de su cola es mediante alguna política arbitraria [12, 13]",
+              "Son los habituales en la mayoría de los S.O. y están libres de Inanición [12, 13]",
+              "Permiten que los procesos accedan sin orden establecido [12, 13]"
+            ],
+            "answer": 3
+          },
+          {
+            "q": "¿Qué problema se presenta en sistemas multitarea cuando a un proceso o hilo se le deniega siempre el acceso a un recurso compartido?",
+            "a": [
+              "Interbloqueo (Deadlock) [13]",
+              "Condición de carrera (Race Condition) [13]",
+              "Inanición (Starvation) [13]",
+              "Fragmentación de memoria [13]"
+            ],
+            "answer": 1
+          },
+          {
+            "q": "Para garantizar la exclusión mutua con semáforos, ¿dónde se deben ejecutar las operaciones `wait(s)` y `signal(s)`?",
+            "a": [
+              "`signal(s)` antes de entrar y `wait(s)` al salir de la sección crítica [14]",
+              "`wait(s)` al principio y al final de la sección crítica [14]",
+              "`wait(s)` antes de entrar y `signal(s)` al salir de la sección crítica [14]",
+              "Solo `wait(s)` es necesario [14]"
+            ],
+            "answer": 3
+          },
+          {
+            "q": "En el problema del Productor-Consumidor con buffer ilimitado, ¿qué debe garantizar el sistema con respecto a las operaciones sobre los datos?",
+            "a": [
+              "Que el productor y el consumidor accedan simultáneamente para optimizar el rendimiento [15]",
+              "Que el consumidor siempre tenga prioridad sobre el productor [15]",
+              "Que se impida la superposición de operaciones, es decir, solo un agente (productor o consumidor) puede acceder al mismo tiempo [15]",
+              "Que el productor pueda generar datos sin restricciones de tiempo [15]"
+            ],
+            "answer": 3
+          },
+          {
+            "q": "¿Qué dos roles distintos pueden jugar los semáforos, según la analogía de 'Un juego de Rol'?",
+            "a": [
+              "Coordinador y Ejecutor [16]",
+              "Líder y Seguidor [16]",
+              "MUTEX (para garantizar exclusión mutua) y SINCRO (para sincronizar procesos) [16]",
+              "Maestro y Esclavo [16]"
+            ],
+            "answer": 3
+          },
+          {
+            "q": "En la solución del Productor-Consumidor usando semáforos binarios, ¿qué fue el problema clave detectado que llevó a un valor de `n` negativo?",
+            "a": [
+              "La ausencia de un semáforo MUTEX [17, 18]",
+              "Que la variable `n` no era local a cada proceso [17, 18]",
+              "La consulta a la variable compartida `n` fuera de la protección de la sección crítica [17, 18]",
+              "Un error en la inicialización de los semáforos [17, 18]"
+            ],
+            "answer": 3
+          },
+          {
+            "q": "¿Cuál es una de las advertencias más importantes sobre la introducción de un `wait` dentro de una sección crítica?",
+            "a": [
+              "Que puede mejorar la concurrencia [19]",
+              "Que está prohibido por los estándares de programación [19]",
+              "Que es muy peligroso y puede causar un interbloqueo (deadlock) [19]",
+              "Que solo afecta el rendimiento, no la corrección [19]"
+            ],
+            "answer": 3
+          },
+          {
+            "q": "¿Cómo se pueden resolver problemas complejos con semáforos para evitar tener que probar todas las posibles trazas?",
+            "a": [
+              "Analizar bien el problema y entender cómo se deben sincronizar los procesos [20]",
+              "Usar siempre semáforos binarios [20]",
+              "Evitar por completo el uso de semáforos [20]",
+              "Simplificar el problema hasta que no requiera sincronización [20]"
+            ],
+            "answer": 1
+          },
+          {
+            "q": "¿Cuándo se recomienda usar semáforos binarios?",
+            "a": [
+              "Cuando se permite entrar a varios procesos en la sección crítica [21]",
+              "Cuando el contador del semáforo es importante para la sincronización [21]",
+              "Como MUTEX para secciones críticas que permiten un único proceso y como SINCRO para sincronización [21]",
+              "Cuando no se necesita proteger ningún recurso [21]"
+            ],
+            "answer": 3
+          },
+          {
+            "q": "¿Cuándo se recomiendan los semáforos enteros como MUTEX?",
+            "a": [
+              "Cuando solo puede entrar un proceso a la vez en la sección crítica [21]",
+              "Cuando se permita entrar a varios procesos en la sección crítica [21]",
+              "Para sincronizar únicamente [21]",
+              "Siempre que se trabaje con contadores [21]"
+            ],
+            "answer": 2
+          },
+          {
+            "q": "En el problema del Productor-Consumidor con buffer ilimitado, ¿qué semáforo se usa como SINCRO y qué cuenta su contador en la solución con semáforos enteros?",
+            "a": [
+              "El semáforo `s` (MUTEX), cuenta los accesos al buffer [22, 23]",
+              "El semáforo `sProd` (SINCRO), cuenta los elementos producidos [22, 23]",
+              "El semáforo `sHuecos` (SINCRO), cuenta los huecos libres [24, 25]",
+              "Un semáforo binario adicional llamado `retardo` [26]"
+            ],
+            "answer": 2
+          },
+          {
+            "q": "En el problema de 'Los Canarios en su Jaula', ¿qué semáforo se utiliza para limitar el acceso al plato de alpiste a tres canarios simultáneamente?",
+            "a": [
+              "Un `BinSemaphore` [27, 28]",
+              "Un `Semaphore` inicializado a 1 [27, 28]",
+              "Un `Semaphore` inicializado a 3 [27, 28]",
+              "No se necesita semáforo para eso [27, 28]"
+            ],
+            "answer": 3
+          }
+    ]
+  }

@@ -1,0 +1,309 @@
+{
+    "title": "U2_01",
+    "career": "Ingeniería Informática",
+    "year": "Segundo año",
+    "subject": "Sistemas_Operativos",
+    "questions": [
+        {
+            "q": "¿Cuál de las siguientes afirmaciones describe mejor un Sistema Operativo (S.O.) según la fuente?",
+            "a": [
+              "Es un conjunto de aplicaciones de usuario que se ejecutan directamente sobre el hardware.",
+              "Es un programa que actúa como interfaz entre el usuario y el hardware, controlando la ejecución de programas de aplicación.",
+              "Es el hardware del computador, simplificando el manejo de programas.",
+              "Es únicamente un gestor de bases de datos para el almacenamiento eficiente."
+            ],
+            "answer": 2
+          },
+          {
+            "q": "¿Qué objetivo principal de un S.O. está asociado con la creación de una 'máquina virtual o extendida' que oculta los detalles del hardware?",
+            "a": [
+              "Eficiencia",
+              "Seguridad",
+              "Capacidad de evolución",
+              "Comodidad"
+            ],
+            "answer": 4
+          },
+          {
+            "q": "El S.O. puede ser visto como un gestor de recursos. ¿Cuáles son algunos de los recursos que, según la fuente, gestiona de la forma más eficiente posible?",
+            "a": [
+              "Únicamente los ficheros y los dispositivos de E/S.",
+              "Solamente la memoria y el procesador.",
+              "Ficheros, dispositivos de E/S, memoria y procesador.",
+              "Solo los programas de aplicación del usuario."
+            ],
+            "answer": 3
+          },
+          {
+            "q": "¿Qué concepto asocia el S.O. con un usuario para la autenticación y gestión de permisos, en lugar de una persona física?",
+            "a": [
+              "Un identificador de usuario (uid)",
+              "Un perfil de usuario",
+              "Una cuenta",
+              "Un grupo"
+            ],
+            "answer": 3
+          },
+          {
+            "q": "¿Qué característica distingue al usuario 'Administrador' o 'super usuario (root)'?",
+            "a": [
+              "Tiene un identificador de usuario (uid) especial pero las mismas restricciones que otros usuarios.",
+              "Pertenece únicamente a grupos con privilegios limitados.",
+              "No tiene restricción alguna en el sistema.",
+              "Solo puede ejecutar programas en modo usuario."
+            ],
+            "answer": 3
+          },
+          {
+            "q": "¿Cuál es la parte fundamental del sistema operativo que siempre se está ejecutando y lo hace en modo privilegiado?",
+            "a": [
+              "Las utilidades del sistema",
+              "El Kernel o Núcleo",
+              "Las aplicaciones de usuario",
+              "El intérprete de comandos"
+            ],
+            "answer": 2
+          },
+          {
+            "q": "¿Cuál es una de las responsabilidades principales del Núcleo (Kernel) de un S.O.?",
+            "a": [
+              "Permitir la mezcla de comandos de diferentes intérpretes simultáneamente.",
+              "Facilitar el acceso seguro al hardware.",
+              "Gestionar la interfaz de usuario gráfica únicamente.",
+              "Cargar programas de usuario directamente en memoria sin mediación."
+            ],
+            "answer": 2
+          },
+          {
+            "q": "¿Qué componente del S.O. es responsable de la creación, planificación y destrucción de procesos?",
+            "a": [
+              "Gestión de E/S",
+              "Tratamiento de interrupciones",
+              "Gestión del procesador",
+              "Gestión de procesos"
+            ],
+            "answer": 4
+          },
+          {
+            "q": "¿Qué son las interfaces de llamadas al sistema en el contexto de los componentes del S.O.?",
+            "a": [
+              "Programas que gestionan la seguridad y protección de los datos.",
+              "Capas de abstracción que encapsulan las llamadas al sistema junto con utilidades del sistema.",
+              "Los protocolos de comunicación entre periféricos y el S.O.",
+              "La parte del S.O. encargada de manejar archivos y directorios."
+            ],
+            "answer": 2
+          },
+          {
+            "q": "¿Qué tipo de estructura de S.O. se caracteriza por tener todas sus funciones ejecutándose en modo kernel y sin una estructura definida, evolucionando a módulos?",
+            "a": [
+              "Sistemas cliente-servidor",
+              "Sistemas por capas",
+              "Sistemas monolíticos",
+              "Sistemas de máquinas virtuales"
+            ],
+            "answer": 3
+          },
+          {
+            "q": "¿Cuál es uno de los problemas asociados a la evolución y programación de los sistemas monolíticos?",
+            "a": [
+              "La fácil depuración y el mantenimiento debido a la ocultación de información.",
+              "La capacidad de carga en caliente de sus módulos.",
+              "Los problemas con la evolución y la difícil programación y parcheado.",
+              "La excesiva modularidad que dificulta la integración."
+            ],
+            "answer": 3
+          },
+          {
+            "q": "¿Qué ventaja principal ofrece la estructura de un Sistema Operativo por capas?",
+            "a": [
+              "La inexistencia de interfaces bien definidas entre las funciones.",
+              "La dificultad de depuración debido a la interconexión de todas las capas.",
+              "La modularidad y la ocultación de la implementación, facilitando el desarrollo y mantenimiento separado por capas.",
+              "La ejecución de todas las funciones en modo privilegiado para mayor velocidad."
+            ],
+            "answer": 3
+          },
+          {
+            "q": "En un sistema Cliente/Servidor (Microkernel), ¿qué contiene el Microkernel básicamente?",
+            "a": [
+              "La gestión completa de archivos y directorios de alto nivel.",
+              "Únicamente la gestión de la interfaz de usuario y las aplicaciones.",
+              "Gestión de interrupciones, gestión de memoria básica, gestión básica de procesos y gestión de servicios de comunicación entre procesos.",
+              "Todos los servicios de E/S y la planificación a largo plazo."
+            ],
+            "answer": 3
+          },
+          {
+            "q": "¿Cuál es una desventaja de los sistemas Cliente/Servidor en comparación con otras estructuras de S.O.?",
+            "a": [
+              "Mayor flexibilidad en la gestión de servicios.",
+              "Si falla un servicio, se detiene todo el sistema.",
+              "Mayor sobrecarga y tiempos de servicio debido a la sobrecarga en el paso de mensajes (IPC).",
+              "Dificultad para adaptarse a sistemas distribuidos."
+            ],
+            "answer": 3
+          },
+          {
+            "q": "¿Qué elemento se ejecuta sobre el hardware y utiliza multiprogramación para acceder a él, sirviendo de base para la implementación de Máquinas Virtuales?",
+            "a": [
+              "Un sistema operativo de usuario",
+              "El Monitor de Máquina Virtual",
+              "Una aplicación de usuario",
+              "El cargador del S.O."
+            ],
+            "answer": 2
+          },
+          {
+            "q": "¿Cuál de las siguientes afirmaciones describe correctamente el concepto de 'proceso' en un S.O.?",
+            "a": [
+              "Un proceso es un conjunto de instrucciones máquina sin ejecutar, almacenadas en disco.",
+              "Un proceso es una instancia de un programa funcionando en un computador y la entidad que puede ser asignada al procesador y ejecutada por él.",
+              "Un proceso es únicamente el código ejecutable de un programa, sin datos asociados.",
+              "Un proceso es una estructura de datos estática que no cambia de estado durante su ciclo de vida."
+            ],
+            "answer": 2
+          },
+          {
+            "q": "Respecto a la ejecución de procesos, ¿qué significa 'ejecución batch (background)'?",
+            "a": [
+              "El proceso tiene asociado un terminal para interacción directa con el usuario.",
+              "El proceso no tiene asociado terminal y su entrada/salida (E/S) es de y hacia archivos.",
+              "El proceso requiere intervención continua del usuario para avanzar.",
+              "El proceso se ejecuta en modo privilegiado únicamente, sin interacción con el usuario."
+            ],
+            "answer": 2
+          },
+          {
+            "q": "¿Qué permite el servicio de 'Cambio de programa del proceso' proporcionado por el subsistema de procesos?",
+            "a": [
+              "Crear un nuevo proceso a partir de otro programa sin afectar al proceso original.",
+              "Sustituir el código que el proceso está ejecutando por el de otro programa almacenado en disco, sin crear un nuevo proceso.",
+              "Terminar la ejecución del proceso actual de forma forzada y liberar sus recursos.",
+              "Modificar el estado del procesador sin afectar el código del programa actualmente en ejecución."
+            ],
+            "answer": 2
+          },
+          {
+            "q": "¿Qué elemento del subsistema de procesos, junto con el planificador a corto plazo, es el encargado de llevar el proceso a ejecución?",
+            "a": [
+              "El Planificador a largo plazo",
+              "La cola de procesos listos",
+              "El Distribuidor (Dispatcher)",
+              "La cola de E/S"
+            ],
+            "answer": 3
+          },
+          {
+            "q": "¿Cuál de las siguientes es una vía de activación del S.O., es decir, una acción que inicia su ejecución?",
+            "a": [
+              "Solo por la inicialización del sistema al arrancar.",
+              "Únicamente por interrupciones de hardware.",
+              "Llamadas al sistema emitidas por procesos (TRAP), interrupciones producidas por periféricos/hardware y condiciones de excepción/error del hardware.",
+              "Exclusivamente por la finalización de un programa de usuario."
+            ],
+            "answer": 3
+          },
+          {
+            "q": "¿Qué mecanismo es el único que, según la fuente, permite la activación del sistema operativo, por lo que las llamadas al sistema deben implementarse a través de él?",
+            "a": [
+              "Una instrucción de salto directo a la función del S.O.",
+              "Una instrucción NOP (No Operation).",
+              "Una instrucción TRAP.",
+              "Directamente la lectura de los registros del procesador."
+            ],
+            "answer": 3
+          },
+          {
+            "q": "¿Qué función principal tiene el subsistema de memoria, además de asignar y liberar memoria a los procesos?",
+            "a": [
+              "Realizar la planificación de procesos a corto plazo.",
+              "Gestionar las interrupciones del sistema.",
+              "Garantizar el acceso correcto a las zonas de memoria y evitar que un proceso viole la memoria de otro.",
+              "Manejar los archivos y directorios en el almacenamiento secundario."
+            ],
+            "answer": 3
+          },
+          {
+            "q": "¿Qué característica define la memoria virtual, permitiendo a los programas direccionar más memoria de la que hay disponible?",
+            "a": [
+              "Es una porción de la memoria principal dedicada exclusivamente a la cache.",
+              "Permite direccionar más memoria de la que realmente hay disponible de manera transparente para el programador.",
+              "Es un tipo de memoria ROM utilizada para el arranque del sistema.",
+              "Asegura que todos los programas residen completamente en la memoria principal al mismo tiempo, sin paginación."
+            ],
+            "answer": 2
+          },
+          {
+            "q": "En el subsistema de E/S, ¿qué se entiende por 'ofrecer una interfaz uniforme entre dispositivos'?",
+            "a": [
+              "Que cada dispositivo requiere un controlador específico y único para su programación.",
+              "Que los programas de usuario deben interactuar directamente con los registros del hardware de cada dispositivo.",
+              "Que el S.O. abstrae los detalles de los dispositivos para que se manejen de forma similar (ej. lectura/escritura).",
+              "Que todos los dispositivos de E/S son del mismo tipo y comparten las mismas características físicas."
+            ],
+            "answer": 3
+          },
+          {
+            "q": "¿Qué proporciona la 'visión lógica' del subsistema de archivos y directorios?",
+            "a": [
+              "Los detalles de cómo están almacenados físicamente los objetos en los periféricos (discos).",
+              "Una representación abstracta de la organización de los datos, donde los objetos (archivos y directorios) son identificados por un nombre lógico.",
+              "Únicamente el tamaño físico de los archivos en el disco y su ubicación exacta.",
+              "La tabla de asignación de archivos (FAT) y los inodos."
+            ],
+            "answer": 2
+          },
+          {
+            "q": "¿Qué es un 'inodo' en el contexto de la visión física del subsistema de archivos en sistemas como Linux?",
+            "a": [
+              "Un bloque de disco donde se almacenan directamente los datos del archivo.",
+              "Una tabla que mantiene un registro de los bloques de disco asignados a cada archivo (como la FAT).",
+              "Una estructura de datos que almacena los metadatos de los archivos y directorios, incluyendo punteros a los bloques de datos.",
+              "Un tipo de archivo específico para sistemas operativos de Microsoft."
+            ],
+            "answer": 3
+          },
+          {
+            "q": "¿Cuál es la interfaz de programación de aplicaciones (API) que es un conjunto de estándares de IEEE, basada en UNIX, y que garantiza que un programa pueda ejecutarse en otros sistemas compatibles sin grandes modificaciones?",
+            "a": [
+              "Win32 API",
+              "DirectX",
+              "POSIX",
+              "SQL API"
+            ],
+            "answer": 3
+          },
+          {
+            "q": "¿Qué característica es típica de la Win32 API de Microsoft, a diferencia de POSIX?",
+            "a": [
+              "Nombres de funciones cortos y descriptores de recursos mediante valores enteros.",
+              "Un conjunto de estándares que definen una interfaz para sistemas operativos similares a Unix.",
+              "Tratar la mayoría de los recursos del sistema operativo como objetos que se referencian mediante manejadores (handlers).",
+              "Devolver 0 para éxito y -1 para error en las funciones."
+            ],
+            "answer": 3
+          },
+          {
+            "q": "¿Qué problema fundamental buscaba solucionar la 'multiprogramación' en la evolución de los S.O.?",
+            "a": [
+              "La dificultad de depuración de los programas al ejecutarse uno a la vez.",
+              "El bajo rendimiento del sistema, ya que la CPU estaba ociosa esperando operaciones de E/S.",
+              "La limitación de tener un único usuario trabajando simultáneamente en el sistema.",
+              "La imposibilidad de utilizar dispositivos de entrada/salida como tarjetas perforadas."
+            ],
+            "answer": 2
+          },
+          {
+            "q": "¿Qué tipo de sistema operativo multiprocesador se caracteriza porque cada procesador ejecuta una copia idéntica del S.O. y gestiona sus propios procesos, siendo soportado por la mayoría de los S.O. actuales?",
+            "a": [
+              "Multiproceso asimétrico",
+              "Monoprogramación",
+              "Multiproceso simétrico (SMP)",
+              "Sistema de tiempo real"
+            ],
+            "answer": 3
+          }
+    ]
+  }
+  

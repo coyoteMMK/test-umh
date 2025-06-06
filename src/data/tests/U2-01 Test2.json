@@ -1,0 +1,308 @@
+{
+    "title": "U2_01",
+    "career": "Ingeniería Informática",
+    "year": "Segundo año",
+    "subject": "Sistemas_Operativos",
+    "questions": [
+        {
+            "q": "Según las fuentes, ¿qué se entiende por un 'proceso' en el contexto de un sistema operativo?",
+            "a": [
+              "Un programa compilado y listo para ser ejecutado [14].",
+              "La entidad que puede ser asignada al procesador y ejecutada por él [14].",
+              "Un conjunto de instrucciones máquina estáticas almacenadas en disco [15].",
+              "Un archivo ejecutable esperando ser cargado en memoria [15]."
+            ],
+            "answer": 2
+          },
+          {
+            "q": "La principal diferencia entre un 'proceso' y un 'programa' es que:",
+            "a": [
+              "Un programa es simplemente un conjunto de instrucciones máquina, mientras que un proceso es un programa en ejecución [15].",
+              "Un proceso es un conjunto de instrucciones máquina, mientras que un programa es la entidad ejecutada por el procesador [14, 15].",
+              "Ambos términos son sinónimos y se utilizan indistintamente en el contexto de los sistemas operativos.",
+              "Un programa se refiere al hardware y un proceso al software."
+            ],
+            "answer": 1
+          },
+          {
+            "q": "La información que compone un proceso incluye la imagen en memoria, el estado del procesador y:",
+            "a": [
+              "El identificador de usuario (uid) [4].",
+              "El contenido del Bloque de Control de Proceso (PCB) [16].",
+              "La lista de archivos abiertos por el usuario.",
+              "El registro de eventos del sistema operativo."
+            ],
+            "answer": 2
+          },
+          {
+            "q": "Respecto a la creación de procesos, las fuentes indican que en sistemas como UNIX, un proceso hijo se crea:",
+            "a": [
+              "A partir de un archivo ejecutable separado [16].",
+              "A partir del proceso padre [16].",
+              "Al inicio del sistema operativo con una lista predefinida.",
+              "A través de una llamada al sistema de red [18]."
+            ],
+            "answer": 2
+          },
+          {
+            "q": "En la ejecución de procesos, un proceso 'batch' (background) se caracteriza por:",
+            "a": [
+              "Estar asociado a un terminal para interacción directa con el usuario [17].",
+              "No tener asociado un terminal, y sus E/S se realizan de y hacia archivos [16].",
+              "Requerir una intervención constante del operador para su progreso [53].",
+              "Tener la máxima prioridad en el planificador de la CPU [19]."
+            ],
+            "answer": 2
+          },
+          {
+            "q": "El elemento del sistema operativo que se encarga de seleccionar el proceso que se ha de ejecutar a continuación se denomina:",
+            "a": [
+              "Activador (Dispatcher) [19, 77].",
+              "Gestor de Memoria [77].",
+              "Planificador (Scheduler) [19, 76].",
+              "Servidor de Archivos [26, 78]."
+            ],
+            "answer": 3
+          },
+          {
+            "q": "La activación del sistema operativo solo puede realizarse mediante el mecanismo de las interrupciones, y las llamadas al sistema deben implementarse mediante una instrucción:",
+            "a": [
+              "CALL.",
+              "JUMP.",
+              "TRAP [21, 80].",
+              "RETURN."
+            ],
+            "answer": 3
+          },
+          {
+            "q": "Una de las funciones del gestor de memoria es garantizar que ningún otro proceso viole la memoria de otro, lo que contribuye a la:",
+            "a": [
+              "Eficiencia del procesador [2].",
+              "Protección de la memoria [22].",
+              "Gestión de E/S [25].",
+              "Comunicación entre procesos [7]."
+            ],
+            "answer": 2
+          },
+          {
+            "q": "La memoria virtual permite a los programas direccionar la memoria desde un punto de vista lógico y tiene como objetivo principal:",
+            "a": [
+              "Reducir el tiempo de acceso a los dispositivos de E/S.",
+              "Permitir direccionar más memoria de la que realmente hay disponible de manera transparente para el programador [23, 24].",
+              "Limitar el número de procesos que pueden coexistir en memoria [24].",
+              "Optimizar el uso del caché del procesador [13]."
+            ],
+            "answer": 2
+          },
+          {
+            "q": "En un sistema de paginación, la dirección virtual está formada por:",
+            "a": [
+              "Un número de segmento y un desplazamiento.",
+              "Una dirección física y un offset [25].",
+              "Un número de página y un desplazamiento dentro de la página [24].",
+              "Un identificador de proceso y un bloque de datos [14]."
+            ],
+            "answer": 3
+          },
+          {
+            "q": "El subsistema de E/S ofrece servicios orientados a carácter, como por ejemplo, para:",
+            "a": [
+              "Discos duros [26].",
+              "Unidades de estado sólido (SSD) [39].",
+              "Impresoras [26].",
+              "Memorias USB [42]."
+            ],
+            "answer": 3
+          },
+          {
+            "q": "Una de las funciones principales del gestor de E/S es:",
+            "a": [
+              "Realizar la planificación de la CPU [19].",
+              "Manejar archivos y directorios [27].",
+              "Proporcionar una interfaz uniforme entre dispositivos [26].",
+              "Gestionar la creación y destrucción de procesos [6]."
+            ],
+            "answer": 3
+          },
+          {
+            "q": "El servidor de archivos es la parte del S.O. encargada de facilitar el manejo de dispositivos periféricos, ofreciendo una visión lógica de los mismos como si fueran:",
+            "a": [
+              "Procesos [14].",
+              "Servicios de red [52].",
+              "Archivos [26].",
+              "Bloques de memoria [32]."
+            ],
+            "answer": 3
+          },
+          {
+            "q": "Desde una perspectiva lógica, los directorios se organizan en una estructura en forma de árbol y se identifican mediante:",
+            "a": [
+              "Inodos [31].",
+              "Bloques de disco [32].",
+              "Caminos (paths o rutas) [29].",
+              "Tablas de asignación de archivos (FAT) [32]."
+            ],
+            "answer": 3
+          },
+          {
+            "q": "Un archivo, desde una perspectiva lógica, se ve como una secuencia continua de:",
+            "a": [
+              "Caracteres.",
+              "Bloques [32].",
+              "Bytes [29].",
+              "Páginas [24]."
+            ],
+            "answer": 3
+          },
+          {
+            "q": "Los 'inodos' en el contexto de la visión física de los archivos y directorios son estructuras de datos que almacenan los:",
+            "a": [
+              "Datos reales del archivo [32].",
+              "Metadatos de los archivos y directorios, como el tamaño, permisos y punteros a bloques de datos [31, 38].",
+              "Nombres lógicos de los archivos [29].",
+              "Registros de actividad del sistema."
+            ],
+            "answer": 2
+          },
+          {
+            "q": "El sistema de archivos FAT se caracteriza por ser uno de los más antiguos y tener limitaciones en el tamaño de las particiones y archivos, pero su ventaja principal es que es:",
+            "a": [
+              "Muy complejo y robusto [37].",
+              "Ideal para grandes servidores de datos [40].",
+              "Simple y fácil de implementar [36].",
+              "Soporta cifrado y compresión de forma nativa [37]."
+            ],
+            "answer": 3
+          },
+          {
+            "q": "NTFS, desarrollado por Microsoft, supera las limitaciones de FAT y ofrece características avanzadas como soporte para grandes volúmenes, compresión de archivos, cifrado y:",
+            "a": [
+              "Una estructura de datos simplificada [37].",
+              "Menor rendimiento en comparación con FAT.",
+              "Journaling (registro de cambios) [37].",
+              "Una compatibilidad universal con todos los sistemas operativos."
+            ],
+            "answer": 3
+          },
+          {
+            "q": "Los inodos son una estructura de datos utilizada en muchos sistemas de archivos, como ext2, ext3 y ext4, comunes en:",
+            "a": [
+              "Windows [39].",
+              "macOS [39].",
+              "Linux [39].",
+              "MS-DOS [10]."
+            ],
+            "answer": 3
+          },
+          {
+            "q": "HDFS (Hadoop Distributed File System) es un sistema de archivos distribuido diseñado principalmente para:",
+            "a": [
+              "Compartir archivos en redes locales de forma sencilla [41].",
+              "Almacenar grandes volúmenes de datos en clústeres de computadoras y se usa en el procesamiento de big data [40].",
+              "Ser el sistema de archivos predeterminado para dispositivos USB [42].",
+              "Ofrecer una compatibilidad total con sistemas de tiempo real [71]."
+            ],
+            "answer": 2
+          },
+          {
+            "q": "Las particiones que se utilizan para crear particiones lógicas y ocupan el espacio no utilizado por las particiones primarias se denominan:",
+            "a": [
+              "Particiones de arranque [43].",
+              "Particiones swap [43].",
+              "Particiones extendidas [41].",
+              "Particiones de recuperación [43]."
+            ],
+            "answer": 3
+          },
+          {
+            "q": "GPT (GUID Partition Table) es un esquema de particionado más moderno que MBR y permite:",
+            "a": [
+              "Un número limitado de particiones primarias [41].",
+              "Solo discos de pequeño tamaño (hasta 2TB) [43].",
+              "Discos más grandes y un número mayor de particiones [43].",
+              "La eliminación de la necesidad de particiones de arranque [43]."
+            ],
+            "answer": 3
+          },
+          {
+            "q": "Una interfaz para programadores, o API (Application Programming Interface), se define como:",
+            "a": [
+              "Un dispositivo de hardware que conecta el procesador con la memoria.",
+              "Un conjunto de funciones, procedimientos y estructuras de datos que permiten a un programador interactuar con un sistema operativo o una biblioteca de software [44].",
+              "Un lenguaje de programación de bajo nivel para escribir drivers [56].",
+              "Un sistema de archivos para gestionar dispositivos de E/S [26]."
+            ],
+            "answer": 2
+          },
+          {
+            "q": "POSIX es un conjunto de estándares que define una interfaz de programación de aplicaciones para sistemas operativos similares a Unix, garantizando principalmente la:",
+            "a": [
+              "Optimización de gráficos 3D [47].",
+              "Portabilidad de programas entre sistemas compatibles [46].",
+              "Compatibilidad exclusiva con hardware de Apple [5].",
+              "Máxima seguridad en el cifrado de datos [48]."
+            ],
+            "answer": 2
+          },
+          {
+            "q": "A diferencia de POSIX, la Win32 API es una definición comercial de Microsoft y se caracteriza porque los nombres de sus funciones son generalmente:",
+            "a": [
+              "Cortos y concisos, como 'fork' o 'read' [49].",
+              "Largos y descriptivos, como 'GetFileAttributes' o 'CreateNamedPipe' [50].",
+              "Basados en un estándar IEEE [47].",
+              "Exclusivamente en mayúsculas para indicar su importancia."
+            ],
+            "answer": 2
+          },
+          {
+            "q": "En los sistemas por lotes (batch) de los años 50, se utilizaban 'tarjetas de control' (JCL, Job Control Language) para:",
+            "a": [
+              "Realizar operaciones de E/S en tiempo real [71].",
+              "Indicar al monitor si un elemento era dato, programa, o qué lenguaje se usaba, y otras directivas [55].",
+              "Cargar directamente el sistema operativo en memoria [3].",
+              "Depurar los programas después de su ejecución [56]."
+            ],
+            "answer": 2
+          },
+          {
+            "q": "La idea básica de la multiprogramación es tener varios procesos en marcha para que el S.O. cambie a otro proceso cuando el que está en ejecución:",
+            "a": [
+              "Termina completamente su ejecución [17].",
+              "Solicita una operación de E/S y debe esperar [59].",
+              "Requiere más memoria de la disponible [23].",
+              "Aumenta su prioridad de forma dinámica [19]."
+            ],
+            "answer": 2
+          },
+          {
+            "q": "Una diferencia fundamental entre los sistemas de multiprogramación por lotes y los de tiempo compartido es que el objetivo principal de los sistemas de tiempo compartido es:",
+            "a": [
+              "Maximizar la utilización del procesador [66].",
+              "Minimizar el tiempo de respuesta del usuario [66].",
+              "Procesar trabajos de forma secuencial [57].",
+              "Reducir la complejidad de la gestión de memoria [71]."
+            ],
+            "answer": 2
+          },
+          {
+            "q": "En un sistema multiprocesador simétrico (SMP), ¿qué caracteriza la ejecución de los procesadores?",
+            "a": [
+              "Un procesador actúa como maestro controlando al resto de esclavos [68].",
+              "Cada procesador ejecuta una copia idéntica del sistema operativo [67].",
+              "Los procesadores no comparten recursos como la memoria [67].",
+              "Se utilizan principalmente para aplicaciones de tiempo real muy específicas [71]."
+            ],
+            "answer": 2
+          },
+          {
+            "q": "Los sistemas en tiempo real se utilizan en aplicaciones de propósitos especiales como el control de procesos industriales o de vuelo, y se caracterizan por tener un requerimiento fuerte de tiempo sobre:",
+            "a": [
+              "La capacidad de almacenamiento de archivos [26].",
+              "Las operaciones y el flujo de datos [71].",
+              "La creación de interfaces gráficas de usuario [69].",
+              "El número de usuarios concurrentes [76]."
+            ],
+            "answer": 2
+          }
+    ]
+  }

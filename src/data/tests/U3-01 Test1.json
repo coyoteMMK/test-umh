@@ -1,0 +1,308 @@
+{
+    "title": "U3_01",
+    "career": "Ingeniería Informática",
+    "year": "Segundo año",
+    "subject": "Sistemas_Operativos",
+    "questions": [
+        {
+            "q": "¿Cuál es una de las razones por las que no es eficiente que el código de las aplicaciones se escriba para un hardware específico?",
+            "a": [
+              "Porque el hardware cambia constantemente y el código se volvería obsoleto.",
+              "Porque dificulta la compartición de código común de acceso al hardware entre aplicaciones.",
+              "Porque aumenta la complejidad de la fabricación del hardware.",
+              "Porque las aplicaciones no podrían realizar tareas determinadas."
+            ],
+            "answer": 2
+          },
+          {
+            "q": "¿Qué beneficio principal ofrece el Sistema Operativo al actuar como una capa software entre las aplicaciones y el hardware?",
+            "a": [
+              "Permite a las aplicaciones acceder directamente a los recursos de red sin restricciones.",
+              "Asegura que el procesador tenga un soporte limitado para la multiprogramación.",
+              "Proporciona una interfaz segura, consistente y completa.",
+              "Optimiza el desarrollo de código específico para cada hardware."
+            ],
+            "answer": 3
+          },
+          {
+            "q": "Según el material, ¿qué se entiende por un 'proceso' en el contexto de un sistema operativo?",
+            "a": [
+              "Un programa en su estado de diseño o desarrollo.",
+              "Un conjunto de recursos hardware sin software asociado.",
+              "Un programa en ejecución en un computador y una entidad asignable al procesador.",
+              "El código fuente de una aplicación antes de ser compilado."
+            ],
+            "answer": 3
+          },
+          {
+            "q": "¿Cuál de las siguientes opciones describe correctamente un elemento que compone la entidad de un proceso?",
+            "a": [
+              "El compilador del programa fuente.",
+              "La memoria RAM total instalada en el sistema.",
+              "El código del proceso y los datos del proceso.",
+              "El sistema de ficheros donde se almacena el programa."
+            ],
+            "answer": 3
+          },
+          {
+            "q": "¿Qué información fundamental sobre el estado actual de un proceso es representada por el Contador de Programa?",
+            "a": [
+              "El tiempo total que el proceso ha estado en ejecución.",
+              "La cantidad de memoria asignada al proceso.",
+              "El puntero a la siguiente instrucción a ejecutar.",
+              "El identificador único del proceso (PID)."
+            ],
+            "answer": 3
+          },
+          {
+            "q": "¿Qué categoría de información en el PCB incluye los registros visibles por el usuario (como AX, BX, CX) y los registros de estado (flags, interrupciones)?",
+            "a": [
+              "Información de E/S.",
+              "Información de auditoría.",
+              "Identificación del proceso.",
+              "Estado del procesador."
+            ],
+            "answer": 4
+          },
+          {
+            "q": "¿Por qué se afirma que el conjunto de PCBs define el estado del sistema?",
+            "a": [
+              "Porque cada PCB contiene la información que el hardware necesita para operar.",
+              "Porque cada PCB contiene toda la información que el S.O. necesita para gestionar su proceso correspondiente, y la suma de ellos refleja el estado global.",
+              "Porque solo los PCBs de los procesos en ejecución son relevantes para el estado del sistema.",
+              "Porque los PCBs son gestionados directamente por el hardware sin intervención del S.O."
+            ],
+            "answer": 2
+          },
+          {
+            "q": "Cuál de las siguientes afirmaciones es una razón clave para asegurar el acceso al PCB a través de una única rutina o servicio manejador?",
+            "a": [
+              "Para permitir el acceso directo por parte de cualquier aplicación de usuario.",
+              "Para que el hardware pueda modificarlo sin supervisión del S.O.",
+              "Para servir los datos, sincronizar su acceso y garantizar un gran rendimiento.",
+              "Para que el PCB pueda residir en memoria secundaria sin problemas."
+            ],
+            "answer": 3
+          },
+          {
+            "q": "¿Qué tipo de información incluyen las Tablas de Memoria del Sistema Operativo para cada entidad que gestiona?",
+            "a": [
+              "Listas de ficheros abiertos por los procesos.",
+              "Reservas de memoria principal y virtual, y atributos de protección y compartición.",
+              "El estado actual de las operaciones de E/S en curso.",
+              "Los identificadores únicos de todos los procesos."
+            ],
+            "answer": 2
+          },
+          {
+            "q": "¿Qué información se encuentra típicamente en las Tablas de Dispositivos gestionadas por el Sistema Operativo?",
+            "a": [
+              "La cantidad de CPU usada por cada proceso.",
+              "La posición de los ficheros en almacenamiento secundario.",
+              "Dispositivos/canales libres, asignaciones a procesos y estado de operaciones de E/S.",
+              "Las prioridades de planificación de cada proceso."
+            ],
+            "answer": 3
+          },
+          {
+            "q": "¿Cuál es la relación entre las tablas de gestión del Sistema Operativo (Memoria, E/S, Dispositivos, Procesos, Ficheros)?",
+            "a": [
+              "Son estructuras completamente independientes sin referencias cruzadas.",
+              "Están entrelazadas y referenciadas entre sí mediante punteros y IDs.",
+              "Solo las tablas de ficheros residen en memoria principal, las demás en disco.",
+              "Se crean y eliminan dinámicamente sin la intervención del S.O."
+            ],
+            "answer": 2
+          },
+          {
+            "q": "¿Qué área de memoria de la 'Imagen del proceso' es una pila LIFO que gestiona parámetros y retornos de llamadas a procedimientos?",
+            "a": [
+              "La zona para variables estáticas no inicializadas.",
+              "El código ejecutable del proceso.",
+              "La pila de llamada a procedimientos.",
+              "La zona de alojamiento dinámico (Heap)."
+            ],
+            "answer": 3
+          },
+          {
+            "q": "¿Cuál es la característica principal de la zona de alojamiento dinámico (Heap) dentro de la imagen del proceso?",
+            "a": [
+              "Contiene las instrucciones ejecutables del programa.",
+              "Es una zona para variables globales o estáticas inicializadas.",
+              "Crece y decrece vía llamadas a `brk` y `sbrk`, y es compartida por threads.",
+              "Almacena el Process Control Block (PCB)."
+            ],
+            "answer": 3
+          },
+          {
+            "q": "En el contexto de la ubicación del proceso y la memoria virtual, ¿qué permite un hardware de Paginación moderno?",
+            "a": [
+              "Que el proceso deba estar completo y contiguo en memoria principal.",
+              "El uso de memoria no contigua, ubicando cada página de forma independiente.",
+              "Que el S.O. no necesite conocer las ubicaciones en disco.",
+              "Que el intercambio (Swapping) sea totalmente innecesario."
+            ],
+            "answer": 2
+          },
+          {
+            "q": "¿Cuál es una de las funciones principales del Activador (Dispatcher) en el Sistema Operativo?",
+            "a": [
+              "Seleccionar el siguiente proceso de la cola de Listos.",
+              "Poner el proceso seleccionado en ejecución, utilizando la información del PCB.",
+              "Gestionar las operaciones de E/S pendientes de un proceso.",
+              "Crear y terminar procesos del sistema."
+            ],
+            "answer": 2
+          },
+          {
+            "q": "Un proceso se está ejecutando, pero sufre un 'fallo de página'. ¿Qué estado es más probable que adquiera tras este evento?",
+            "a": [
+              "Listo.",
+              "Terminado.",
+              "En ejecución (continuando).",
+              "Bloqueado."
+            ],
+            "answer": 4
+          },
+          {
+            "q": "¿Cuál es una de las razones por las que un proceso en ejecución puede pasar al estado de 'Listo'?",
+            "a": [
+              "Necesita una operación de E/S y se bloquea.",
+              "Termina su ejecución normalmente.",
+              "Se le acaba el tiempo (quantum) asignado.",
+              "Solicita un recurso que no está disponible."
+            ],
+            "answer": 3
+          },
+          {
+            "q": "En el modelo de cinco estados, ¿qué representa el estado 'Nuevo' de un proceso?",
+            "a": [
+              "El proceso ya ha terminado su ejecución.",
+              "El proceso está listo para ejecutar, solo le falta la CPU.",
+              "El proceso entra en el sistema, sus estructuras se crean e inicializan.",
+              "El proceso está bloqueado esperando un evento."
+            ],
+            "answer": 3
+          },
+          {
+            "q": "¿Cuál de las siguientes transiciones de estado es CORRECTA en el modelo de cinco estados?",
+            "a": [
+              "De Listo a Bloqueado.",
+              "De Ejecutando a Nuevo.",
+              "De Bloqueado a Ejecutando.",
+              "De Nuevo a Bloqueado."
+            ],
+            "answer": 4
+          },
+          {
+            "q": "Si un proceso que se encuentra en estado 'Bloqueado' finalmente recibe el recurso o el evento que esperaba, ¿a qué estado transita?",
+            "a": [
+              "Ejecutando.",
+              "Nuevo.",
+              "Listo.",
+              "Terminado."
+            ],
+            "answer": 3
+          },
+          {
+            "q": "¿Cuál de los siguientes eventos puede provocar la creación de un proceso por el Sistema Operativo?",
+            "a": [
+              "Un error aritmético en otro proceso.",
+              "La finalización normal de un proceso existente.",
+              "Una solicitud de un usuario interactivo que quiere ejecutar un programa.",
+              "Una violación de frontera de memoria por parte de un proceso."
+            ],
+            "answer": 3
+          },
+          {
+            "q": "¿Qué tipo de terminación de un proceso ocurre cuando el proceso le indica al S.O. que ha finalizado, por ejemplo, mediante `exit()`?",
+            "a": [
+              "Error de protección.",
+              "Intervención del operador (root).",
+              "Finalización normal.",
+              "Violación de frontera."
+            ],
+            "answer": 3
+          },
+          {
+            "q": "Si un proceso intenta acceder a una zona de memoria que está fuera de sus límites asignados, ¿qué motivo de terminación de proceso puede ocurrir?",
+            "a": [
+              "Límite de tiempo excedido.",
+              "Memoria no disponible.",
+              "Violaciones de frontera.",
+              "Fallo de E/S."
+            ],
+            "answer": 3
+          },
+          {
+            "q": "¿Qué sucede típicamente con los procesos hijos si su proceso padre termina?",
+            "a": [
+              "Continúan su ejecución de forma independiente.",
+              "El S.O. los pone en estado 'Bloqueado' permanentemente.",
+              "El S.O. los mata (termina).",
+              "Son transferidos a otro proceso padre."
+            ],
+            "answer": 3
+          },
+          {
+            "q": "¿Cuál fue la principal justificación para 'inventar el Intercambio' (Swapping) en sistemas donde se asumía que no existía memoria virtual?",
+            "a": [
+              "Para reducir el tiempo de ejecución de las operaciones de E/S.",
+              "Para permitir que el sistema multiprogramado no permaneciera ocioso cuando los procesos estaban bloqueados por E/S.",
+              "Para aumentar la cantidad de memoria principal disponible ilimitadamente.",
+              "Para eliminar la necesidad de un Process Control Block (PCB)."
+            ],
+            "answer": 2
+          },
+          {
+            "q": "¿Qué nuevo estado de proceso aparece con la introducción del Swapping?",
+            "a": [
+              "En Espera.",
+              "Nuevo.",
+              "Suspendido.",
+              "Ejecutando."
+            ],
+            "answer": 3
+          },
+          {
+            "q": "¿Cuál de las siguientes afirmaciones es una característica de un proceso 'Suspendido'?",
+            "a": [
+              "Está disponible inmediatamente para su ejecución en memoria principal.",
+              "Siempre está a la espera de un evento de desbloqueo.",
+              "No está en Memoria Principal y no puede ser recuperado hasta que un agente lo indique.",
+              "Solo puede ser suspendido por el propio proceso."
+            ],
+            "answer": 3
+          },
+          {
+            "q": "¿Cuál de las siguientes es una de las razones para la suspensión de un proceso por parte del Sistema Operativo?",
+            "a": [
+              "Para que el proceso solicite más memoria de la disponible.",
+              "Para que el usuario interactivo depure un programa.",
+              "Para liberar suficiente memoria principal para cargar un proceso que está listo para ejecutarse.",
+              "Para que el proceso padre examine a su descendiente."
+            ],
+            "answer": 3
+          },
+          {
+            "q": "En sistemas con Memoria Virtual y paginación, ¿por qué el S.O. aún puede recurrir al 'Swapping Explícito'?",
+            "a": [
+              "Porque el Swapping se vuelve innecesario con la paginación.",
+              "Para reducir la cantidad de memoria principal.",
+              "Para mantener el rendimiento cuando hay demasiados procesos parcialmente en memoria, lo que causa muchos fallos de página.",
+              "Para forzar que los procesos estén siempre completos y contiguos en memoria."
+            ],
+            "answer": 3
+          },
+          {
+            "q": "¿Quién NO es mencionado en las fuentes como un agente que puede suspender un proceso?",
+            "a": [
+              "El propio proceso.",
+              "El proceso padre.",
+              "El Sistema Operativo.",
+              "Un proceso hijo."
+            ],
+            "answer": 4
+          }
+    ]
+  }

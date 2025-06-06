@@ -1,0 +1,309 @@
+{
+    "title": "U3_05",
+    "career": "Ingeniería Informática",
+    "year": "Segundo año",
+    "subject": "Sistemas_Operativos",
+    "questions": [
+        {
+            "q": "Cuando un proceso llama a wait(S) y el valor del semáforo S se vuelve negativo (S < 0), el proceso:",
+            "a": [
+              "Continúa su ejecución sin interrupción",
+              "Es bloqueado y se añade a la cola de procesos asociados al semáforo",
+              "Genera un error de ejecución y termina",
+              "Se reinicializa el semáforo a su valor original"
+            ],
+            "answer": 2
+          },
+          {
+            "q": "Si un semáforo S se inicializa a un valor de 0, ¿qué sucede con el primer proceso que ejecuta wait(S)?",
+            "a": [
+              "Pasa inmediatamente y el valor de S se mantiene en 0",
+              "El valor de S se decrementa a -1 y el proceso se bloquea",
+              "El valor de S se incrementa a 1 y el proceso pasa",
+              "El proceso pasa y se desbloquea al siguiente proceso en la cola"
+            ],
+            "answer": 2
+          },
+          {
+            "q": "Para qué sirve inicializar un semáforo a un valor entero S > 1:",
+            "a": [
+              "Para que el semáforo se comporte como binario",
+              "Para garantizar que solo un proceso pase cada vez",
+              "Para permitir que hasta S procesos pasen antes de que el siguiente se bloquee",
+              "Es una práctica incorrecta y conduce a errores"
+            ],
+            "answer": 3
+          },
+          {
+            "q": "Las operaciones init, wait y signal sobre un semáforo son:",
+            "a": [
+              "Funciones de una librería de usuario sin privilegios",
+              "Llamadas al sistema operativo que gestiona el semáforo",
+              "Directivas de preprocesador que se expanden a código en línea",
+              "Métodos de un objeto semáforo que no interactúan con el kernel"
+            ],
+            "answer": 2
+          },
+          {
+            "q": "Un semáforo binario se distingue de un semáforo entero porque:",
+            "a": [
+              "Solo puede ser inicializado a 0 o 1",
+              "Permite valores enteros negativos",
+              "No tiene asociada una cola de procesos bloqueados",
+              "Puede representar cualquier valor entero positivo"
+            ],
+            "answer": 1
+          },
+          {
+            "q": "Si un proceso llama a signal(S) sobre un semáforo binario, y la cola de procesos bloqueados está vacía, ¿qué sucede con el valor del semáforo?",
+            "a": [
+              "Se mantiene en 0",
+              "Se pone a 1",
+              "Se decrementa a -1",
+              "No se altera, ya que no hay procesos esperando"
+            ],
+            "answer": 2
+          },
+          {
+            "q": "En el contexto de la sincronización de procesos, el rol MUTEX de un semáforo se utiliza para:",
+            "a": [
+              "Sincronizar la velocidad de ejecución de los procesos",
+              "Garantizar que no haya superposición en el acceso a los recursos compartidos dentro de una sección crítica",
+              "Actuar como un contador de eventos producidos",
+              "Despertar procesos dormidos en una cola"
+            ],
+            "answer": 2
+          },
+          {
+            "q": "El rol SINCRO de un semáforo se refiere a su uso para:",
+            "a": [
+              "Asegurar la exclusividad en el acceso a un recurso",
+              "Proteger variables compartidas de accesos concurrentes",
+              "Ajustar la velocidad relativa entre procesos y coordinar su ejecución",
+              "Evitar el interbloqueo en problemas de productores-consumidores"
+            ],
+            "answer": 3
+          },
+          {
+            "q": "En el problema del Productor-Consumidor con buffer ilimitado (usando semáforos binarios), el semáforo 's' (inicializado a 1) tiene el rol de:",
+            "a": [
+              "SINCRO, controlando la producción de elementos",
+              "MUTEX, protegiendo el acceso a la variable 'n' y las operaciones de añadir/extraer al buffer",
+              "SINCRO, retrasando al consumidor si el buffer está vacío",
+              "Contador de elementos en el buffer"
+            ],
+            "answer": 2
+          },
+          {
+            "q": "En la solución del Productor-Consumidor con buffer ilimitado usando semáforos binarios, el semáforo 'retardo' (inicializado a 0) actúa como:",
+            "a": [
+              "Un MUTEX para la sección crítica del productor",
+              "Un MUTEX para la sección crítica del consumidor",
+              "Un SINCRO para que el consumidor espere si no hay elementos",
+              "Un contador de elementos producidos"
+            ],
+            "answer": 3
+          },
+          {
+            "q": "El principal problema de la solución inicial del Productor-Consumidor (con binarios) donde el consumidor consulta 'if (n==0)' fuera de la sección crítica protegida por el MUTEX, es que:",
+            "a": [
+              "El productor se bloqueará permanentemente",
+              "La variable 'n' puede ser modificada por el productor entre la consulta y la acción, llevando a inconsistencias o bloqueos incorrectos",
+              "El consumidor consumirá elementos que no existen",
+              "El sistema operativo detendrá la ejecución por falta de sincronización"
+            ],
+            "answer": 2
+          },
+          {
+            "q": "Introducir una operación wait() dentro de una sección crítica protegida por otro semáforo es considerado una práctica peligrosa porque puede causar:",
+            "a": [
+              "Una mejora significativa en el rendimiento",
+              "Un aumento en la concurrencia",
+              "Un interbloqueo (deadlock)",
+              "Una simplificación en la lógica de control"
+            ],
+            "answer": 3
+          },
+          {
+            "q": "La solución propuesta para proteger las consultas a variables compartidas dentro de una sección crítica, sin causar interbloqueos, consiste en:",
+            "a": [
+              "Evitar el uso de variables compartidas por completo",
+              "Guardar el valor de la variable compartida en una variable local temporal dentro de la sección crítica antes de consultarla",
+              "Realizar la consulta después de salir de la sección crítica",
+              "Incrementar el número de semáforos MUTEX utilizados"
+            ],
+            "answer": 2
+          },
+          {
+            "q": "En el problema de los 'canarios en su jaula', el semáforo 'sPlato' se inicializa a 3 porque:",
+            "a": [
+              "Hay tres tipos diferentes de comida en el plato",
+              "Solo tres canarios pueden comer del plato simultáneamente",
+              "El número total de canarios es tres",
+              "Es el valor por defecto para los semáforos enteros"
+            ],
+            "answer": 2
+          },
+          {
+            "q": "En el problema de los 'canarios en su jaula', el semáforo 'sColumpio' se inicializa a 1 para asegurar que:",
+            "a": [
+              "Solo un canario puede columpiarse a la vez",
+              "Hay un único columpio en la jaula",
+              "Los canarios pueden columpiarse libremente sin restricciones",
+              "El columpio está disponible solo para el primer canario que llegue"
+            ],
+            "answer": 1
+          },
+          {
+            "q": "Una 'barrera' en la sincronización de procesos es un punto en el código donde:",
+            "a": [
+              "Se permite la entrada de un número ilimitado de procesos",
+              "Ningún proceso puede continuar hasta que todos los procesos hayan llegado a ese punto",
+              "Se ejecuta una sección crítica en exclusión mutua",
+              "Un proceso detiene a otro indefinidamente"
+            ],
+            "answer": 2
+          },
+          {
+            "q": "Para implementar una barrera para 'n' procesos, la solución propuesta en las fuentes utiliza:",
+            "a": [
+              "Un único semáforo binario compartido por todos los procesos",
+              "Un proceso coordinador que retiene a los demás y un semáforo para cada proceso",
+              "Una estructura de monitores sin semáforos",
+              "Tantos semáforos como procesos, pero sin un coordinador"
+            ],
+            "answer": 2
+          },
+          {
+            "q": "El problema de los '5 filósofos' fue planteado por Dijkstra para ilustrar:",
+            "a": [
+              "Cómo optimizar el uso de la CPU en un sistema",
+              "Problemas relacionados con la exclusión mutua, el interbloqueo y la inanición",
+              "La eficiencia de la comunicación entre procesos mediante paso de mensajes",
+              "La gestión de la memoria compartida"
+            ],
+            "answer": 2
+          },
+          {
+            "q": "La solución inicial del problema de los '5 filósofos' en la que cada filósofo intenta tomar primero su tenedor izquierdo y luego el derecho, puede llevar a interbloqueo debido a:",
+            "a": [
+              "Una configuración incorrecta de los semáforos",
+              "Una condición de carrera por la disponibilidad de los tenedores",
+              "La circularidad en la dependencia de los recursos (tenedores) y la toma simultánea",
+              "La falta de una sección crítica que proteja el acto de comer"
+            ],
+            "answer": 3
+          },
+          {
+            "q": "Una estrategia para evitar el interbloqueo en el problema de los '5 filósofos' es:",
+            "a": [
+              "Aumentar el número de tenedores disponibles",
+              "Permitir que un número limitado de filósofos (N-1) accedan a la mesa simultáneamente",
+              "Eliminar la necesidad de tenedores para comer",
+              "Hacer que todos los filósofos tomen ambos tenedores a la vez"
+            ],
+            "answer": 2
+          },
+          {
+            "q": "En el problema de Lectores-Escritores, ¿cuál de las siguientes condiciones debe cumplirse SIEMPRE?",
+            "a": [
+              "Los escritores pueden acceder concurrentemente entre sí",
+              "Cualquier número de lectores puede leer el recurso simultáneamente",
+              "Si un escritor está accediendo, cualquier lector puede entrar a leer",
+              "Solo un lector puede acceder a la vez"
+            ],
+            "answer": 2
+          },
+          {
+            "q": "En la primera solución del problema de Lectores-Escritores, el semáforo 'db' (inicializado a 1) controla:",
+            "a": [
+              "El número de lectores que están leyendo",
+              "La exclusión mutua para la base de datos o recurso compartido",
+              "La exclusión mutua para la variable 'cont_lect'",
+              "El permiso de los escritores para preparar datos"
+            ],
+            "answer": 2
+          },
+          {
+            "q": "La primera solución del problema de Lectores-Escritores tiene un problema potencial de inanición para los escritores porque:",
+            "a": [
+              "Los escritores tienen mayor prioridad y monopolizan el recurso",
+              "Un flujo continuo de lectores puede impedir que un escritor acceda al recurso",
+              "No hay suficientes semáforos para controlar el acceso",
+              "El contador de lectores no se actualiza correctamente"
+            ],
+            "answer": 2
+          },
+          {
+            "q": "En el problema del Barbero Dormilón, si un cliente llega y el número de clientes esperando es igual o mayor que el número de sillas de espera, el cliente:",
+            "a": [
+              "Se bloquea y espera una silla indefinidamente",
+              "Despierta al barbero y se le atiende inmediatamente",
+              "Se marcha del establecimiento",
+              "Crea una nueva silla de espera"
+            ],
+            "answer": 3
+          },
+          {
+            "q": "En el problema del Barbero Dormilón, el semáforo 'clientes' (inicializado a 0) representa:",
+            "a": [
+              "El número total de sillas en la peluquería",
+              "El número de clientes que están actualmente esperando ser atendidos",
+              "La disponibilidad del barbero para cortar el pelo",
+              "El número máximo de clientes permitidos en la barbería"
+            ],
+            "answer": 2
+          },
+          {
+            "q": "En el problema del Puente sobre el Amazonas, el semáforo 'puente' (inicializado a 1) se utiliza para:",
+            "a": [
+              "Contar el número de coches que ya han cruzado",
+              "Proteger el acceso a los contadores de coches en cada orilla",
+              "Sincronizar el paso de los coches de un sentido u otro por el puente",
+              "Indicar si el puente está abierto o cerrado permanentemente"
+            ],
+            "answer": 3
+          },
+          {
+            "q": "En la primera versión de la solución del Puente Colgante, la variable 'kilos' representa:",
+            "a": [
+              "El peso máximo que puede soportar el puente",
+              "El peso actual de un excursionista individual",
+              "La capacidad restante del puente (kilos disponibles)",
+              "El peso total de todos los excursionistas que han cruzado"
+            ],
+            "answer": 3
+          },
+          {
+            "q": "Si en la primera versión de la solución del Puente Colgante un excursionista no puede pasar (porque 'kilos' se vuelve negativo tras restar su peso) y se bloquea, ¿qué ocurre con los siguientes excursionistas que sí podrían pasar individualmente?",
+            "a": [
+              "Pueden pasar libremente, ya que la cola es independiente",
+              "También se bloquean, ya que el semáforo 's1' los inhabilitará hasta que se libere suficiente peso",
+              "Reciben una señal para buscar una ruta alternativa",
+              "Se les permite pasar solo si son más ligeros que el bloqueado"
+            ],
+            "answer": 2
+          },
+          {
+            "q": "En la segunda versión del problema del Puente Colgante, ¿qué proceso adicional se introduce para gestionar el paso de los excursionistas?",
+            "a": [
+              "Un proceso de 'Gestor de Excursionistas'",
+              "Un proceso 'Controler' que decide cuándo desbloquear a los excursionistas en espera",
+              "Un proceso de 'Registro de Pesos'",
+              "Un proceso de 'Monitoreo del Puente'"
+            ],
+            "answer": 2
+          },
+          {
+            "q": "Cuando un proceso llama a signal(S) y el valor del semáforo S queda menor o igual a 0 (S <= 0), ¿qué sucede con la cola de procesos asociados al semáforo?",
+            "a": [
+              "Un proceso se bloquea y se añade a la cola",
+              "Se libera un proceso de la cola",
+              "El semáforo se reinicializa a su valor inicial",
+              "La cola permanece sin cambios"
+            ],
+            "answer": 2
+          }
+    ]
+  }
+  

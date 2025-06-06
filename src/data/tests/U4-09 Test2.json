@@ -1,0 +1,388 @@
+{
+    "title": "U4_09",
+    "career": "Ingeniería Informática",
+    "year": "Segundo año",
+    "subject": "Sistemas_Operativos",
+    "questions": [
+        {
+            "q": "Cuál de los siguientes **no** es un requisito fundamental para la gestión de memoria?",
+            "a": [
+              "Reubicación",
+              "Protección",
+              "Fragmentación",
+              "Compartición"
+            ],
+            "answer": 3
+          },
+          {
+            "q": "Tras la recarga de un proceso en memoria, si este no se sitúa en la misma zona de memoria, ¿qué requisito de la gestión de memoria se aborda?",
+            "a": [
+              "Protección",
+              "Compartición",
+              "Organización lógica",
+              "Reubicación"
+            ],
+            "answer": 4
+          },
+          {
+            "q": "En el contexto de la reubicación, ¿qué tipo de dirección se expresa como una posición relativa a un punto conocido, como el comienzo del programa?",
+            "a": [
+              "Dirección lógica",
+              "Dirección absoluta",
+              "Dirección física",
+              "Dirección relativa"
+            ],
+            "answer": 4
+          },
+          {
+            "q": "Para el soporte hardware de la reubicación, ¿qué dos registros se utilizan para determinar la dirección real de un proceso en memoria principal?",
+            "a": [
+              "Registro de índice y registro de pila",
+              "Registro base y registro límite",
+              "Registro de programa y registro de datos",
+              "Registro de segmento y registro de página"
+            ],
+            "answer": 2
+          },
+          {
+            "q": "Según los requisitos de protección en la gestión de memoria, ¿cuándo se puede comprobar una referencia a memoria para garantizar la protección entre procesos?",
+            "a": [
+              "Durante la compilación",
+              "Durante el enlace",
+              "En tiempo de ejecución",
+              "En tiempo de carga"
+            ],
+            "answer": 3
+          },
+          {
+            "q": "Sin consentimiento o acuerdo, ¿qué acción no está permitida entre procesos según las políticas de protección de memoria?",
+            "a": [
+              "Acceder a código compartido",
+              "Acceder al área de datos de otro proceso",
+              "Bifurcar a una instrucción dentro del propio proceso",
+              "Acceder a código del sistema operativo (por un proceso de usuario)"
+            ],
+            "answer": 2
+          },
+          {
+            "q": "Qué mecanismo permite que varios procesos accedan a la misma zona de memoria, mejorando la eficiencia al evitar copias individuales?",
+            "a": [
+              "Protección",
+              "Reubicación",
+              "Compartición",
+              "Segmentación"
+            ],
+            "answer": 3
+          },
+          {
+            "q": "La organización lógica de la memoria en módulos, permitiendo su escritura y compilación independiente, se satisface más fácilmente mediante qué herramienta?",
+            "a": [
+              "Paginación",
+              "Particionamiento estático",
+              "Segmentación",
+              "Memoria virtual"
+            ],
+            "answer": 3
+          },
+          {
+            "q": "En la organización física de la memoria, ¿cuál de las siguientes características describe mejor la memoria principal?",
+            "a": [
+              "Más lenta, más barata, almacenamiento permanente",
+              "Volátil, cara, acceso extremadamente rápido",
+              "Utilizada para superposiciones de datos",
+              "Gestionada completamente por el programador"
+            ],
+            "answer": 2
+          },
+          {
+            "q": "Por qué el Sistema Operativo debe ser el responsable del traspaso de información entre la memoria principal y secundaria en un entorno multiprogramado?",
+            "a": [
+              "Porque el programador conoce la ubicación del espacio disponible",
+              "Para simplificar el uso de overlays",
+              "Porque el programador no conoce el espacio ni la ubicación en tiempo de codificación",
+              "Para evitar la fragmentación interna"
+            ],
+            "answer": 3
+          },
+          {
+            "q": "Cuál es el fenómeno que ocurre en el particionamiento estático de igual tamaño cuando un programa, sin importar lo pequeño que sea, ocupa una partición completa?",
+            "a": [
+              "Fragmentación externa",
+              "Desbordamiento de pila",
+              "Fragmentación interna",
+              "Intercambio de procesos"
+            ],
+            "answer": 3
+          },
+          {
+            "q": "En el particionamiento estático de distinto tamaño, si se usa una sola cola para todos los procesos, ¿qué criterio se prefiere si la partición más pequeña donde cabe el proceso está ocupada?",
+            "a": [
+              "Esperar a que la partición más pequeña se libere",
+              "Seleccionar la partición más grande disponible que lo contenga",
+              "Descargar el proceso actual de la partición más pequeña",
+              "Dividir la partición ocupada en dos"
+            ],
+            "answer": 2
+          },
+          {
+            "q": "Una de las desventajas del particionamiento estático es que el número de particiones especificado en el momento de la generación del sistema limita qué aspecto?",
+            "a": [
+              "La cantidad de memoria principal disponible",
+              "El número de procesos activos en el sistema",
+              "La velocidad de acceso a la memoria secundaria",
+              "La complejidad del software del S.O."
+            ],
+            "answer": 2
+          },
+          {
+            "q": "¿Cuál es el fenómeno característico del particionamiento dinámico que resulta en varios huecos de memoria dispersos?",
+            "a": [
+              "Fragmentación interna",
+              "Fragmentación externa",
+              "Superposición de memoria",
+              "Paginación"
+            ],
+            "answer": 2
+          },
+          {
+            "q": "¿Qué técnica se debe usar en el particionamiento dinámico para desplazar procesos contiguos y juntar toda la memoria libre en un bloque?",
+            "a": [
+              "Paginación",
+              "Segmentación",
+              "Intercambio (Swapping)",
+              "Compactación"
+            ],
+            "answer": 4
+          },
+          {
+            "q": "De los algoritmos de ubicación para particiones dinámicas, ¿cuál tiende a ser más rápido y sencillo de implementar, aunque puede dejar varios procesos cargados al inicio de la memoria que requieren ser recorridos?",
+            "a": [
+              "Best Fit",
+              "First Fit",
+              "Next Fit",
+              "Buddy System"
+            ],
+            "answer": 2
+          },
+          {
+            "q": "De los algoritmos de ubicación para particiones dinámicas, ¿cuál proporciona generalmente los peores resultados porque deja los fragmentos más pequeños y requiere compactación más frecuente?",
+            "a": [
+              "Best Fit",
+              "First Fit",
+              "Next Fit",
+              "Optimal Fit"
+            ],
+            "answer": 1
+          },
+          {
+            "q": "En el sistema de Colegas (Buddy System), los bloques de memoria disponibles son siempre de qué tamaño?",
+            "a": [
+              "Tamaño fijo arbitrario",
+              "Potencias de 2",
+              "Múltiplos de 1024 bytes",
+              "Tamaño variable según la solicitud"
+            ],
+            "answer": 2
+          },
+          {
+            "q": "¿Cuál es la principal ventaja de la paginación simple en comparación con las particiones fijas y variables en cuanto a la fragmentación?",
+            "a": [
+              "Elimina la fragmentación interna",
+              "Elimina la fragmentación externa",
+              "Reduce el número de intercambios",
+              "Permite que los procesos sean mayores que la memoria principal"
+            ],
+            "answer": 2
+          },
+          {
+            "q": "En la paginación simple, ¿cómo se denominan los trozos de un proceso y los trozos de memoria principal, respectivamente?",
+            "a": [
+              "Segmentos y marcos",
+              "Bloques y celdas",
+              "Páginas y marcos",
+              "Particiones y huecos"
+            ],
+            "answer": 3
+          },
+          {
+            "q": "¿Qué característica de la paginación simple permite que la dirección lógica relativa al inicio del programa sea la misma que la dirección lógica formada por número de página y desplazamiento?",
+            "a": [
+              "El uso de registros base y límite",
+              "El tamaño del marco de página y las páginas debe ser potencia de 2",
+              "La existencia de una tabla de páginas por proceso",
+              "La compactación de la memoria"
+            ],
+            "answer": 2
+          },
+          {
+            "q": "¿Es la paginación simple transparente para el programador?",
+            "a": [
+              "Sí, completamente transparente",
+              "No, el programador debe manejar las páginas",
+              "Solo es transparente si el tamaño de página es 1KB",
+              "Depende del sistema operativo"
+            ],
+            "answer": 1
+          },
+          {
+            "q": "A diferencia de la paginación, ¿qué tipo de fragmentación puede crear la segmentación simple?",
+            "a": [
+              "Fragmentación interna",
+              "Fragmentación externa",
+              "Ambas",
+              "Ninguna"
+            ],
+            "answer": 2
+          },
+          {
+            "q": "En la segmentación simple, ¿es transparente al programador o compilador la división del programa en segmentos?",
+            "a": [
+              "Sí, es completamente transparente",
+              "No, el compilador y el programador pueden dividir el código y los datos en segmentos",
+              "Solo es transparente para el compilador",
+              "Solo es transparente para el programador"
+            ],
+            "answer": 2
+          },
+          {
+            "q": "En la traducción de direcciones en segmentación simple, ¿qué verificación se realiza con el desplazamiento antes de sumarlo a la dirección base del segmento?",
+            "a": [
+              "Se compara con la longitud del segmento para validar la dirección",
+              "Se compara con el tamaño de la página",
+              "Se verifica si es una potencia de 2",
+              "Se compara con la dirección física del segmento"
+            ],
+            "answer": 1
+          },
+          {
+            "q": "¿Cuál es una de las principales ventajas de la memoria virtual en relación con el tamaño de los procesos?",
+            "a": [
+              "Permite que los procesos sean más pequeños que la memoria principal",
+              "Permite que los procesos sean mayores que toda la memoria principal disponible",
+              "Elimina la necesidad de tablas de páginas",
+              "Asegura que todos los segmentos estén siempre en memoria"
+            ],
+            "answer": 2
+          },
+          {
+            "q": "En un sistema con memoria virtual, ¿qué ocurre cuando el procesador encuentra una dirección lógica que no está cargada en memoria principal?",
+            "a": [
+              "Se produce un error de protección",
+              "Se genera un fallo de página",
+              "El proceso se suspende indefinidamente",
+              "La memoria se compacta automáticamente"
+            ],
+            "answer": 2
+          },
+          {
+            "q": "Además del número de marco, ¿qué bits de control son necesarios en las entradas de la tabla de páginas cuando se utiliza memoria virtual?",
+            "a": [
+              "Bits de lectura/escritura",
+              "Bit de ejecución",
+              "Bit de presencia (P) y Bit de modificado (M)",
+              "Bit de inicio y Bit de fin"
+            ],
+            "answer": 3
+          },
+          {
+            "q": "Para reducir los dos accesos a memoria física que puede requerir cada acceso a memoria virtual (uno para la tabla de páginas y otro para los datos), ¿qué caché muy rápida se utiliza?",
+            "a": [
+              "Caché L1",
+              "Caché L2",
+              "Translation Lookaside Buffer (TLB)",
+              "Registro de interrupción"
+            ],
+            "answer": 3
+          },
+          {
+            "q": "En una tabla de páginas invertida, ¿cuántas tablas de páginas existen en el sistema?",
+            "a": [
+              "Una por cada proceso",
+              "Una por cada segmento",
+              "Solo una para todo el sistema",
+              "Ninguna, se usa un algoritmo directo"
+            ],
+            "answer": 3
+          },
+          {
+            "q": "Cuál es una de las ventajas de la segmentación en memoria virtual que no se logra con la paginación pura?",
+            "a": [
+              "Elimina la fragmentación externa",
+              "Es transparente al programador",
+              "Permite programas recompilables por segmentos sin re-enlazar el programa completo",
+              "Garantiza que todas las partes del proceso estén contiguas"
+            ],
+            "answer": 3
+          },
+          {
+            "q": "En el contexto de la memoria virtual, ¿cuál es el propósito principal de combinar paginación y segmentación?",
+            "a": [
+              "Para aumentar la fragmentación interna",
+              "Para hacer la memoria virtual invisible al programador",
+              "Para obtener los beneficios de ambos (transparencia, modularidad, compartición, protección)",
+              "Para reducir la complejidad del hardware de traducción"
+            ],
+            "answer": 3
+          },
+          {
+            "q": "En las políticas de lectura de memoria virtual, ¿qué estrategia carga una página en la memoria principal solo cuando se hace referencia a una posición en dicha página?",
+            "a": [
+              "Paginación previa",
+              "Paginación por demanda",
+              "Paginación anticipada",
+              "Paginación adaptativa"
+            ],
+            "answer": 2
+          },
+          {
+            "q": "Qué política de reemplazo de páginas es imposible de implementar en la práctica porque requiere conocimiento exacto de sucesos futuros?",
+            "a": [
+              "LRU (Usada Menos Recientemente)",
+              "FIFO (Primera en Entrar Primera en Salir)",
+              "Reloj",
+              "Óptima"
+            ],
+            "answer": 4
+          },
+          {
+            "q": "En la política de reemplazo FIFO, ¿cuál es el criterio para seleccionar la página a reemplazar?",
+            "a": [
+              "La página que no ha sido referenciada desde hace más tiempo",
+              "La página que ha estado más tiempo en la memoria",
+              "La página con el bit de uso a cero",
+              "La página que tiene la menor probabilidad de ser referenciada en el futuro"
+            ],
+            "answer": 2
+          },
+          {
+            "q": "La política de reemplazo 'Reloj' requiere asociar un bit adicional a cada marco. ¿Cómo se denomina este bit?",
+            "a": [
+              "Bit de presencia",
+              "Bit de modificado",
+              "Bit de uso",
+              "Bit de bloqueo"
+            ],
+            "answer": 3
+          },
+          {
+            "q": "¿Cuál es el propósito del 'bloqueo de marcos' en las políticas de reemplazo?",
+            "a": [
+              "Asegurar que todas las páginas se reemplacen equitativamente",
+              "Impedir que ciertas páginas críticas (como el núcleo del SO) sean reemplazadas",
+              "Optimizar el rendimiento del TLB",
+              "Reducir la fragmentación externa"
+            ],
+            "answer": 2
+          },
+          {
+            "q": "Según las políticas de ubicación en memoria virtual, cuando se usa paginación, ¿la ubicación física de la página afecta la eficacia del hardware de traducción?",
+            "a": [
+              "Sí, la ubicación es crítica para la eficacia",
+              "No, la ubicación es indiferente debido al hardware de traducción",
+              "Solo si las páginas no son contiguas",
+              "Depende del algoritmo de reemplazo"
+            ],
+            "answer": 2
+          }
+    ]
+  }

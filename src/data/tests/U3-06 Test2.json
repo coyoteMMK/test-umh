@@ -1,0 +1,308 @@
+{
+    "title": "U3_06",
+    "career": "Ingeniería Informática",
+    "year": "Segundo año",
+    "subject": "Sistemas_Operativos",
+    "questions": [
+        {
+            "q": "¿Cuál de las siguientes es una desventaja de los semáforos que hace difícil la depuración de problemas complejos?",
+            "a": [
+              "Se basan en memoria compartida, lo que facilita la modularización.",
+              "Permiten soluciones eficientes, pero su uso es sencillo.",
+              "No se puede saber en tiempo de compilación si se accede de manera indebida a un recurso compartido.",
+              "El hecho de que los semáforos solo jueguen el rol de exclusión mutua."
+            ],
+            "answer": 3
+          },
+          {
+            "q": "Para superar las desventajas de los semáforos, ¿qué característica esencial debe permitir una nueva herramienta de sincronización como los monitores?",
+            "a": [
+              "La gestión manual de todas las variables compartidas por el programador.",
+              "Mantener un mecanismo de control sobre la sincronización y permitir encapsular los datos compartidos.",
+              "La posibilidad de que los semáforos jueguen dos roles simultáneamente.",
+              "La anulación de la exclusión mutua para mejorar el rendimiento."
+            ],
+            "answer": 2
+          },
+          {
+            "q": "Un monitor es una estructura del lenguaje de programación que consta de:",
+            "a": [
+              "Solo variables globales y semáforos.",
+              "Uno o más procedimientos, una secuencia de inicio y datos que simbolizan el recurso compartido.",
+              "Únicamente procesos activos y pasivos.",
+              "Una cola de procesos y un bloqueador."
+            ],
+            "answer": 2
+          },
+          {
+            "q": "¿Cómo permite un monitor representar de forma abstracta un recurso compartido?",
+            "a": [
+              "Mediante la gestión directa de la memoria.",
+              "Por medio de un conjunto de variables que definen su estado.",
+              "A través de llamadas a funciones del sistema operativo.",
+              "Usando una única variable global para todos los recursos."
+            ],
+            "answer": 2
+          },
+          {
+            "q": "¿Cuál es la única forma permitida para acceder a las variables de un monitor?",
+            "a": [
+              "Directamente desde cualquier parte del programa.",
+              "A través de los procedimientos internos del monitor.",
+              "Únicamente mediante los procedimientos exportados del monitor.",
+              "Mediante la inicialización del monitor."
+            ],
+            "answer": 3
+          },
+          {
+            "q": "¿Qué tipo de procesos son los que implementan los monitores y están a la espera de que otros hagan uso de sus procedimientos exportados?",
+            "a": [
+              "Procesos activos.",
+              "Procesos de usuario.",
+              "Procesos pasivos.",
+              "Procesos de sistema."
+            ],
+            "answer": 3
+          },
+          {
+            "q": "Una de las ventajas de los monitores es que los programadores de los procesos activos no tienen por qué conocer:",
+            "a": [
+              "El nombre del monitor.",
+              "La interfaz de los procedimientos.",
+              "La implementación del recurso compartido.",
+              "Las variables de condición utilizadas."
+            ],
+            "answer": 3
+          },
+          {
+            "q": "¿Cómo contribuyen los monitores a mejorar la estructuración del código?",
+            "a": [
+              "Al requerir el uso de variables globales.",
+              "Al centralizar todo el código en un único archivo.",
+              "Al permitir su implementación en módulos diferentes.",
+              "Al dificultar la modificación de la interfaz de procedimientos."
+            ],
+            "answer": 3
+          },
+          {
+            "q": "¿Qué garantía ofrece un monitor con respecto a la ejecución de sus procedimientos?",
+            "a": [
+              "Que solo un procedimiento interno se puede ejecutar a la vez.",
+              "Que dos procesos activos pueden ejecutar simultáneamente el mismo procedimiento.",
+              "Que la ejecución de los procedimientos del monitor nunca se solapa.",
+              "Que se permite el solapamiento de procedimientos internos y externos."
+            ],
+            "answer": 3
+          },
+          {
+            "q": "Las variables locales de un monitor almacenan el estado interno. ¿Qué característica principal tienen estas variables respecto a las llamadas sucesivas a los procedimientos exportados?",
+            "a": [
+              "Deben ser inicializadas en cada llamada.",
+              "Pueden variar libremente entre llamadas sucesivas.",
+              "No pueden variar entre llamadas sucesivas al monitor.",
+              "Son de acceso público desde el exterior."
+            ],
+            "answer": 3
+          },
+          {
+            "q": "¿En qué momento se ejecuta el código de inicialización de un monitor?",
+            "a": [
+              "Al final de cada procedimiento exportado.",
+              "Antes de la primera instrucción del programa que usa el monitor.",
+              "Cada vez que un proceso activo entra al monitor.",
+              "Durante la compilación del programa."
+            ],
+            "answer": 2
+          },
+          {
+            "q": "¿Cuál es la sintaxis correcta para invocar un procedimiento de un monitor?",
+            "a": [
+              "nombre_procedimiento.nombre_monitor(parametros)",
+              "nombre_monitor(nombre_procedimiento, parametros)",
+              "nombre_monitor.nombre_procedimiento(parametros)",
+              "procedimiento(nombre_monitor, parametros)"
+            ],
+            "answer": 3
+          },
+          {
+            "q": "¿Qué ocurre si un proceso intenta acceder a un monitor cuando otro proceso ya está dentro de él?",
+            "a": [
+              "El monitor genera un error de concurrencia.",
+              "El proceso entrante es bloqueado en la cola del monitor por el código generado por el compilador.",
+              "El proceso activo actual es desalojado del monitor.",
+              "Se permite el acceso simultáneo para optimizar el rendimiento."
+            ],
+            "answer": 2
+          },
+          {
+            "q": "¿Quién es el responsable de bloquear a un proceso cuando no puede acceder al monitor?",
+            "a": [
+              "El proceso activo que intenta acceder.",
+              "El programador del monitor.",
+              "El propio monitor.",
+              "El sistema operativo."
+            ],
+            "answer": 3
+          },
+          {
+            "q": "Las variables de condición en un monitor se utilizan para:",
+            "a": [
+              "Almacenar el estado global del sistema.",
+              "Representar recursos compartidos.",
+              "Proporcionar el mecanismo de sincronización entre procesos, permitiendo bloquear/desbloquear un proceso dentro del monitor.",
+              "Determinar la prioridad de ejecución de los procesos."
+            ],
+            "answer": 3
+          },
+          {
+            "q": "¿Los valores de las variables de condición son accesibles por el programador del monitor?",
+            "a": [
+              "Sí, son variables públicas.",
+              "Solo si se declaran como exportadas.",
+              "No son accesibles por el programador del monitor.",
+              "Únicamente durante la fase de depuración."
+            ],
+            "answer": 3
+          },
+          {
+            "q": "¿Cómo se inicializan las colas representadas por las variables de condición al declararlas?",
+            "a": [
+              "Con el último proceso que usó el monitor.",
+              "Llenas con procesos vacíos.",
+              "Vacías.",
+              "Con un proceso predeterminado."
+            ],
+            "answer": 3
+          },
+          {
+            "q": "Cuando un proceso ejecuta delay(C) dentro de un procedimiento de monitor, ¿qué sucede con la exclusión mutua y el proceso llamante?",
+            "a": [
+              "La exclusión mutua se mantiene y el proceso llamante se bloquea en la cola del monitor.",
+              "La exclusión mutua se libera y el proceso llamante se bloquea en la cola C.",
+              "La exclusión mutua se libera y el proceso llamante continúa su ejecución.",
+              "La exclusión mutua se adquiere y el proceso llamante entra en la cola de cortesía."
+            ],
+            "answer": 2
+          },
+          {
+            "q": "Después de ejecutar resume(C) y liberar la exclusión mutua, ¿dónde se bloquea el proceso llamante que ejecutó resume?",
+            "a": [
+              "En la cola de la condición C.",
+              "En la cola del monitor.",
+              "En la cola de cortesía (o de urgentes).",
+              "Continúa su ejecución sin bloquearse."
+            ],
+            "answer": 3
+          },
+          {
+            "q": "¿Cuál es la prioridad de la cola de cortesía (o de urgentes) con respecto a la cola del monitor?",
+            "a": [
+              "Es inferior a la cola del monitor.",
+              "Es igual a la cola del monitor.",
+              "Tiene prioridad frente a la cola del monitor.",
+              "Solo se usa si la cola del monitor está vacía."
+            ],
+            "answer": 3
+          },
+          {
+            "q": "¿Para qué se utiliza la función booleana empty(C)?",
+            "a": [
+              "Para vaciar la cola de una condición C.",
+              "Para verificar si la cola de una condición C está llena o vacía.",
+              "Para desbloquear un proceso de la cola de una condición C.",
+              "Para indicar si una condición se ha cumplido."
+            ],
+            "answer": 2
+          },
+          {
+            "q": "En la implementación de un semáforo binario con monitores, ¿qué representa la variable booleana sem?",
+            "a": [
+              "La cola de la condición del semáforo.",
+              "El estado de apertura o cierre del semáforo.",
+              "El número de procesos esperando el semáforo.",
+              "La exclusión mutua del monitor."
+            ],
+            "answer": 2
+          },
+          {
+            "q": "¿Con qué valor se inicializa la variable sem en la implementación del semáforo binario usando un monitor, indicando que el semáforo está abierto?",
+            "a": [
+              "true",
+              "1",
+              "false",
+              "0"
+            ],
+            "answer": 3
+          },
+          {
+            "q": "Una desventaja de la versión de Hoare (monitores con señalización) es que, si el proceso que hace resume no ha terminado su ejecución y debe ejecutar un delay después, la sincronización puede fallar. ¿Por qué se coloca en la cola de cortesía?",
+            "a": [
+              "Para que sea el último en ejecutarse.",
+              "Para ceder el monitor al proceso desbloqueado por resume y esperar su turno de alta prioridad.",
+              "Para indicar que ha terminado su tarea.",
+              "Para que sea suspendido indefinidamente."
+            ],
+            "answer": 2
+          },
+          {
+            "q": "¿Qué primitiva se utiliza en la versión de Lampson y Redell para sustituir a resume?",
+            "a": [
+              "cwait",
+              "csignal",
+              "cnotify",
+              "cbroadcast"
+            ],
+            "answer": 3
+          },
+          {
+            "q": "Cuando un proceso ejecuta cnotify sobre una condición en la versión de Lampson y Redell, ¿qué acción realiza y cuándo continúa su ejecución el proceso que notificó?",
+            "a": [
+              "Provoca la notificación de la cola y el proceso notificador se bloquea inmediatamente.",
+              "Provoca la notificación de la cola, pero el proceso notificador continúa su ejecución hasta salir del monitor o esperar en una condición.",
+              "Desbloquea directamente al proceso de la cola de la condición y cede la CPU.",
+              "Cede el monitor al proceso notificado instantáneamente."
+            ],
+            "answer": 2
+          },
+          {
+            "q": "Si la cola de Listos no es Round Robin (FIFO) en la versión de Lampson y Redell, ¿por qué el proceso notificado debe volver a comprobar la condición (pasando de if a while)?",
+            "a": [
+              "Para asegurar que otro proceso no robe la condición.",
+              "Porque no hay garantía de que no se cuele en el monitor otro proceso que altere la condición.",
+              "Para evitar interbloqueos.",
+              "Para optimizar la velocidad de ejecución."
+            ],
+            "answer": 2
+          },
+          {
+            "q": "¿Cómo se pueden mejorar los monitores con notificación para garantizar que no habrá inanición si falla un proceso antes de notificar la condición?",
+            "a": [
+              "Mediante una cola FIFO estricta para todos los procesos.",
+              "Estableciendo temporizadores asociados a cada cola de condición.",
+              "Utilizando exclusivamente la primitiva cbroadcast.",
+              "Eliminando la necesidad de variables de condición."
+            ],
+            "answer": 2
+          },
+          {
+            "q": "¿Cuál es la funcionalidad principal de la primitiva cbroadcast(C) en la versión de Lampson y Redell?",
+            "a": [
+              "Bloquear a un único proceso en la cola de la condición C.",
+              "Desbloquear al proceso en la cabeza de la cola C.",
+              "Permitir la salida de todos los procesos de una condición.",
+              "Establecer una notificación temporizada."
+            ],
+            "answer": 3
+          },
+          {
+            "q": "En la implementación del problema del Barquero, si se compara la versión de Hoare con la de Lampson, ¿qué cambio notable se observa en la gestión de la cola de bajada de pasajeros al llegar a la orilla derecha?",
+            "a": [
+              "Hoare usa resume(cColaDeBajada) para desbloquear un pasajero, mientras Lampson usa cbroadcast(cColaDeBajada) para desbloquear a todos.",
+              "Ambas versiones usan delay(cColaDeBajada) sin diferencias.",
+              "Lampson elimina la cola de bajada por completo.",
+              "Hoare usa cbroadcast y Lampson usa resume."
+            ],
+            "answer": 1
+          }
+    ]
+  }

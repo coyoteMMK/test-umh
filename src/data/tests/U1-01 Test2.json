@@ -1,0 +1,308 @@
+{
+  "title": "U1_01",
+  "career": "Ingeniería Informática",
+  "year": "Segundo año",
+  "subject": "Sistemas_Operativos",
+  "questions": [
+    {
+      "q": "¿Qué tipo de registros visibles para el usuario pueden existir dedicados a operaciones específicas?",
+      "a": [
+        "Registros de interrupción",
+        "Registros de coma flotante o específicos de operaciones enteras",
+        "Registros de control de E/S",
+        "Registros de estado del sistema"
+      ],
+      "answer": 2
+    },
+    {
+      "q": "¿Qué se almacena en la memoria principal y cómo se accede a sus posiciones si se organiza como una pila?",
+      "a": [
+        "Un conjunto de elementos ordenados y se accede en modo FIFO",
+        "Un conjunto secuencial de posiciones y se accede en modo LIFO",
+        "Datos y programas, y se accede de forma aleatoria",
+        "Variables locales y se accede por puntero de segmento"
+      ],
+      "answer": 2
+    },
+    {
+      "q": "Además del Puntero de Pila, ¿cuáles son los otros dos registros necesarios en el procesador para la implementación de la pila?",
+      "a": [
+        "Puntero de Segmento y Registro Índice",
+        "RDIM y RDAM",
+        "Base de Pila y Límite de Pila",
+        "Contador de Programa y Registro de Instrucción"
+      ],
+      "answer": 3
+    },
+    {
+      "q": "¿Qué sucede con el Puntero de Pila cuando se realiza una operación 'push'?",
+      "a": [
+        "Se incrementa",
+        "Se decrementa",
+        "Se mantiene igual",
+        "Se resetea a cero"
+      ],
+      "answer": 2
+    },
+    {
+      "q": "¿Qué indica el registro 'Base de Pila'?",
+      "a": [
+        "La dirección cima de la pila actual",
+        "La dirección de la primera posición de una pila vacía",
+        "La dirección límite de la pila",
+        "La dirección de la próxima instrucción"
+      ],
+      "answer": 2
+    },
+    {
+      "q": "¿Qué tipo de error se produce si se intenta realizar una operación 'push' más allá de la dirección indicada por el 'Límite de Pila'?",
+      "a": [
+        "Error de desbordamiento (overflow)",
+        "Error de subdesbordamiento (underflow)",
+        "Error de acceso ilegal a memoria",
+        "Error aritmético"
+      ],
+      "answer": 1
+    },
+    {
+      "q": "¿Cuál es una de las funciones de la Unidad de Control?",
+      "a": [
+        "Realizar operaciones lógicas complejas",
+        "Almacenar el resultado de cada instrucción",
+        "Gestionar la jerarquía de memoria",
+        "Traducir direcciones virtuales a físicas"
+      ],
+      "answer": 2
+    },
+    {
+      "q": "¿Qué categorías de instrucciones se mencionan en la fuente?",
+      "a": [
+        "Aritméticas, Lógicas, Flujo de control, E/S",
+        "Procesador-Memoria, Procesador-E/S, Procesamiento de Datos, Control",
+        "De salto, De interrupción, De Trap",
+        "De lectura, De escritura, De cálculo, De almacenamiento"
+      ],
+      "answer": 2
+    },
+    {
+      "q": "En el ejemplo de un ordenador de 16 bits, ¿cuántos bits se dedican al código de operación (opcode)?",
+      "a": [
+        "8 bits",
+        "12 bits",
+        "4 bits",
+        "16 bits"
+      ],
+      "answer": 3
+    },
+    {
+      "q": "Según el ejemplo de ordenador de 16 bits, ¿cuántas palabras se pueden direccionar con 12 bits de dirección?",
+      "a": [
+        "2^16 palabras",
+        "2^12 = 4096 palabras",
+        "2^4 palabras",
+        "2^8 palabras"
+      ],
+      "answer": 2
+    },
+    {
+      "q": "¿Cómo se describe que un módulo de E/S puede estar mapeado en memoria?",
+      "a": [
+        "Sus instrucciones hacen referencia a la memoria principal",
+        "El procesador accede directamente a leer/escribir de él identificando el dispositivo fijando el RDI/ES",
+        "Requiere una interrupción para cada operación",
+        "Solo puede acceder a la memoria secundaria"
+      ],
+      "answer": 2
+    },
+    {
+      "q": "¿Cuál de los siguientes NO es uno de los tipos de operaciones de E/S mencionados?",
+      "a": [
+        "Programada",
+        "Controlada por Interrupciones",
+        "Mediante DMA",
+        "Por Memoria Cache"
+      ],
+      "answer": 4
+    },
+    {
+      "q": "En el 'Nivel de usuario' de ejecución, ¿qué instrucciones máquina se pueden ejecutar?",
+      "a": [
+        "Todas las instrucciones sin ninguna restricción",
+        "Solo un subconjunto de las instrucciones máquina",
+        "Solo las instrucciones de E/S",
+        "Únicamente las instrucciones de salto"
+      ],
+      "answer": 2
+    },
+    {
+      "q": "¿Además de las instrucciones de salto y las interrupciones, ¿qué otro mecanismo permite romper la secuencia de ejecución de una computadora?",
+      "a": [
+        "La instrucción NOP (No Operation)",
+        "La inicialización del sistema",
+        "La instrucción TRAP",
+        "Las operaciones aritméticas"
+      ],
+      "answer": 3
+    },
+    {
+      "q": "¿Qué tipo de interrupción es generada por el temporizador del procesador?",
+      "a": [
+        "De programa",
+        "De E/S",
+        "Por fallo de Hardware",
+        "Por temporizador"
+      ],
+      "answer": 4
+    },
+    {
+      "q": "¿Qué ocurre con el procesador durante el ciclo de aceptación de una interrupción, además de salvar algunos registros?",
+      "a": [
+        "Se detiene la ejecución por completo",
+        "Pasa a modo usuario",
+        "Pasa a modo núcleo",
+        "El contador de programa se reinicia a cero"
+      ],
+      "answer": 3
+    },
+    {
+      "q": "¿Cuál es uno de los parámetros característicos de una jerarquía de memoria?",
+      "a": [
+        "La capacidad total de almacenamiento",
+        "El tiempo de acceso a disco duro",
+        "La tasa de aciertos",
+        "El coste de la memoria principal"
+      ],
+      "answer": 3
+    },
+    {
+      "q": "¿Cuál es el propósito del principio de proximidad en relación con la memoria Cache?",
+      "a": [
+        "Permitir el acceso aleatorio a la memoria",
+        "Aprovechar que el procesador no necesita esperar al dato de memoria al usar una memoria más rápida",
+        "Aumentar el tamaño de la memoria principal",
+        "Reducir la complejidad de la MMU"
+      ],
+      "answer": 2
+    },
+    {
+      "q": "Si la memoria principal tiene 2^n palabras en bloques de longitud fija K, ¿cuántos bloques (M) hay en memoria?",
+      "a": [
+        "M = n/K",
+        "M = 2^n * K",
+        "M = 2^n / K",
+        "M = 2^K / n"
+      ],
+      "answer": 3
+    },
+    {
+      "q": "¿Qué almacena cada línea de la memoria Cache?",
+      "a": [
+        "El tiempo de acceso al dato",
+        "El identificador de bloque",
+        "El algoritmo de reemplazo",
+        "La dirección virtual completa"
+      ],
+      "answer": 2
+    },
+    {
+      "q": "¿Qué política de escritura se menciona para una línea de cache escrita?",
+      "a": [
+        "Solo al final del programa",
+        "Cuando se llena la cache",
+        "En el acto o al reemplazo",
+        "Cada cierto número de ciclos"
+      ],
+      "answer": 3
+    },
+    {
+      "q": "¿Qué gestiona automáticamente la memoria virtual?",
+      "a": [
+        "La parte de la jerarquía de memoria formada por la memoria principal y el disco",
+        "La comunicación entre multiprocesadores",
+        "La ejecución de programas en modo núcleo",
+        "Las operaciones aritméticas y lógicas del procesador"
+      ],
+      "answer": 1
+    },
+    {
+      "q": "¿Qué almacena el MAR (Memory Address Register) en la MMU?",
+      "a": [
+        "El dato a enviar a o recibir de memoria",
+        "La dirección lógica a la que se quiere acceder",
+        "La dirección física resultante",
+        "El identificador de página"
+      ],
+      "answer": 2
+    },
+    {
+      "q": "¿Qué es la tabla de páginas?",
+      "a": [
+        "Una estructura de datos para la memoria cache",
+        "Una estructura de información que almacena dónde residen las páginas de un programa en ejecución",
+        "Un registro de la MMU para traducir direcciones",
+        "Un algoritmo de reemplazo de páginas"
+      ],
+      "answer": 2
+    },
+    {
+      "q": "¿Qué puede almacenar la tabla de páginas sobre las páginas de un programa en ejecución?",
+      "a": [
+        "Solo si están en disco",
+        "Si están en marcos de página de la memoria principal o en disco",
+        "Solo si están en la memoria cache",
+        "Su contenido en código máquina"
+      ],
+      "answer": 2
+    },
+    {
+      "q": "¿Cuál es la función principal de la pila en el contexto de la arquitectura de computadores?",
+      "a": [
+        "Almacenar datos de forma permanente",
+        "Controlar la ejecución de llamadas a procedimientos y retornos de los mismos",
+        "Gestionar las interrupciones del sistema",
+        "Realizar operaciones de E/S"
+      ],
+      "answer": 2
+    },
+    {
+      "q": "¿Cómo se comporta la longitud de la pila?",
+      "a": [
+        "Es fija y predefinida",
+        "Es variable",
+        "Solo puede crecer",
+        "Solo puede decrecer"
+      ],
+      "answer": 2
+    },
+    {
+      "q": "Cuando se realiza una llamada a una función, ¿qué se almacena (apila) en la pila inicialmente?",
+      "a": [
+        "Los parámetros de la función",
+        "La dirección de retorno",
+        "Las variables locales de la función",
+        "El nombre de la función"
+      ],
+      "answer": 2
+    },
+    {
+      "q": "¿Cómo se denomina el conjunto de parámetros con la dirección de retorno en el contexto de las llamadas a procedimientos?",
+      "a": [
+        "Bloque de control de proceso",
+        "Segmento de datos",
+        "Marco de pila",
+        "Registro de activación"
+      ],
+      "answer": 3
+    },
+    {
+      "q": "¿Qué permite la apilación de variables locales en la pila?",
+      "a": [
+        "Reducir el consumo de memoria principal",
+        "Acelerar las operaciones de E/S",
+        "Permitir la reentrada de procedimientos",
+        "Evitar el uso de registros"
+      ],
+      "answer": 3
+    }
+  ]
+}

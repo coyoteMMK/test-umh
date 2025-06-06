@@ -1,0 +1,308 @@
+{
+    "title": "U3_01",
+    "career": "Ingeniería Informática",
+    "year": "Segundo año",
+    "subject": "Sistemas_Operativos",
+    "questions": [
+        {
+            "q": "¿Cuál es uno de los propósitos principales del Sistema Operativo en relación con el hardware y las aplicaciones?",
+            "a": [
+              "Diseñar hardware específico para cada aplicación.",
+              "Proporcionar una interfaz segura, consistente y completa entre las aplicaciones y el hardware.",
+              "Ejecutar todas las aplicaciones directamente sobre el hardware sin intermediarios.",
+              "Limitar el acceso de las aplicaciones a los recursos hardware."
+            ],
+            "answer": 2
+          },
+          {
+            "q": "Un proceso es una entidad que se puede asignar al procesador y se caracteriza por:",
+            "a": [
+              "La compilación de un programa fuente.",
+              "Estar únicamente en estado de espera.",
+              "La ejecución de una secuencia de instrucciones, un estado actual y un conjunto de recursos asociados.",
+              "Ser un programa estático en el disco duro."
+            ],
+            "answer": 3
+          },
+          {
+            "q": "¿Qué es el PCB (Process Control Block)?",
+            "a": [
+              "Un bloque de código del proceso.",
+              "Un archivo de configuración del sistema operativo.",
+              "Una estructura de datos que almacena toda la meta-información de un proceso.",
+              "Un componente de hardware del procesador."
+            ],
+            "answer": 3
+          },
+          {
+            "q": "¿Cuál de los siguientes NO es un elemento típico que forma parte de un proceso?",
+            "a": [
+              "El código del proceso.",
+              "Los datos del proceso.",
+              "La impresora predeterminada.",
+              "La pila asociada al proceso."
+            ],
+            "answer": 3
+          },
+          {
+            "q": "¿Qué información de contexto de un proceso incluye los datos de los registros del microprocesador?",
+            "a": [
+              "Identificador.",
+              "Información de E/S.",
+              "Datos de contexto.",
+              "Información de auditoría."
+            ],
+            "answer": 3
+          },
+          {
+            "q": "¿Qué estructura de control del Sistema Operativo se encarga de mantener un registro de la memoria principal y virtual, incluyendo reservas, atributos de protección y compartición?",
+            "a": [
+              "Tablas de Ficheros.",
+              "Tablas de Dispositivos.",
+              "Tablas de Memoria.",
+              "Tablas de Procesos."
+            ],
+            "answer": 3
+          },
+          {
+            "q": "Si el S.O. delega la gestión de ficheros, ¿quién asume la responsabilidad de todo lo relativo a ellos?",
+            "a": [
+              "El procesador.",
+              "El sistema de ficheros.",
+              "Las tablas de dispositivos.",
+              "El PCB del proceso."
+            ],
+            "answer": 2
+          },
+          {
+            "q": "¿Cuál de las siguientes afirmaciones es correcta sobre las tablas de gestión del S.O.?",
+            "a": [
+              "Son totalmente independientes y no se referencian entre sí.",
+              "Residen únicamente en memoria secundaria.",
+              "Se encuentran entrelazadas y referenciadas entre sí mediante referencias cruzadas.",
+              "Son creadas únicamente por el hardware."
+            ],
+            "answer": 3
+          },
+          {
+            "q": "¿Qué información recopila el S.O. durante el proceso de arranque del computador para poder crear sus tablas de gestión?",
+            "a": [
+              "El nombre de usuario.",
+              "La cantidad de memoria física instalada, dispositivos y canales existentes, y capacidad de almacenamiento.",
+              "El historial de navegación del usuario.",
+              "La fecha y hora actuales."
+            ],
+            "answer": 2
+          },
+          {
+            "q": "¿Cuál es el rol principal del PCB en el Sistema Operativo?",
+            "a": [
+              "Almacenar solo el código ejecutable del proceso.",
+              "Definir el estado del sistema en conjunto con otros PCBs.",
+              "Gestionar únicamente las operaciones de E/S.",
+              "Ser accesible y modificable directamente por cualquier aplicación de usuario."
+            ],
+            "answer": 2
+          },
+          {
+            "q": "¿Por qué es necesaria la protección del PCB?",
+            "a": [
+              "Para evitar que el proceso lo modifique directamente.",
+              "Porque un fallo en una rutina del S.O. puede dañarlo y afectar a otros elementos.",
+              "Para reducir su tamaño.",
+              "No es necesaria, ya que solo contiene información trivial."
+            ],
+            "answer": 2
+          },
+          {
+            "q": "El S.O. planifica la ejecución de los procesos. ¿Quién selecciona a uno de la cola de listos?",
+            "a": [
+              "El Activador (Dispatcher).",
+              "El Programador de tareas (Task Scheduler).",
+              "El Planificador (Scheduler).",
+              "El Monitor de rendimiento."
+            ],
+            "answer": 3
+          },
+          {
+            "q": "Un proceso se ejecuta hasta que, entre otras cosas, se le acaba el tiempo (quantum). ¿Qué sucede entonces?",
+            "a": [
+              "Termina completamente.",
+              "Se bloquea y espera un evento.",
+              "Se pone a la cola de los que están Listos.",
+              "Se suspende automáticamente."
+            ],
+            "answer": 3
+          },
+          {
+            "q": "¿Cuál de los siguientes NO es un evento que provoca la creación de un proceso?",
+            "a": [
+              "Emisión de un nuevo proceso por lotes.",
+              "Una sesión interactiva donde un usuario ejecuta un programa.",
+              "Una solicitud del proceso en ejecución para crear un proceso hijo.",
+              "Un error de protección de memoria."
+            ],
+            "answer": 4
+          },
+          {
+            "q": "¿Qué sucede en el estado 'En Ejecución' de un proceso en el modelo de 5 estados?",
+            "a": [
+              "No puede ejecutar hasta que ocurra un evento.",
+              "El proceso tiene la CPU y está en ejecución (suponiendo un único procesador).",
+              "Está a la espera de recursos necesarios o por limitación de recursos.",
+              "Su información está disponible, pero ya no podrá ejecutar."
+            ],
+            "answer": 2
+          },
+          {
+            "q": "En el modelo de 5 estados, ¿cuándo pasa un proceso del estado 'Bloqueado' al estado 'Listo'?",
+            "a": [
+              "Cuando se le acaba el quantum.",
+              "Cuando el planificador lo selecciona para ejecución.",
+              "Cuando se produce el suceso o se libera el recurso por el que estaba bloqueado y se le asigna.",
+              "Cuando finaliza normalmente."
+            ],
+            "answer": 3
+          },
+          {
+            "q": "¿Qué es el 'Swapping' o 'Intercambio' según las fuentes?",
+            "a": [
+              "Un proceso de optimización de la CPU.",
+              "La acción de llevar un proceso bloqueado desde la memoria principal al disco (Swap File) para liberar espacio.",
+              "Un método para aumentar la velocidad de un procesador.",
+              "La asignación de memoria contigua a todos los procesos."
+            ],
+            "answer": 2
+          },
+          {
+            "q": "Cuando se inventó el Intercambio (Swapping), ¿qué se estaba asumiendo sobre la memoria?",
+            "a": [
+              "Que existía memoria virtual ilimitada.",
+              "Que el proceso debía estar completo en memoria principal y no existía memoria virtual.",
+              "Que las operaciones de E/S eran más rápidas que el procesador.",
+              "Que el sistema siempre tenía suficiente memoria."
+            ],
+            "answer": 2
+          },
+          {
+            "q": "¿Tiene sentido el Intercambio (Swapping) en un sistema con Memoria Virtual?",
+            "a": [
+              "No, la memoria virtual elimina por completo la necesidad de swapping.",
+              "Sí, porque aunque la paginación libera espacio, con demasiados procesos con trozos pequeños en memoria, el rendimiento puede caer drásticamente por muchos fallos de página, requiriendo swapping explícito.",
+              "Solo si el disco duro es extremadamente lento.",
+              "Solo para procesos del sistema operativo."
+            ],
+            "answer": 2
+          },
+          {
+            "q": "¿Cuál de las siguientes afirmaciones describe una característica de un proceso suspendido?",
+            "a": [
+              "Está disponible inmediatamente para su ejecución.",
+              "Siempre está a la espera de un evento de desbloqueo.",
+              "No está en Memoria Principal.",
+              "Siempre es suspendido por el propio proceso."
+            ],
+            "answer": 3
+          },
+          {
+            "q": "¿Quién puede suspender un proceso?",
+            "a": [
+              "Solamente el propio proceso.",
+              "El proceso padre, el propio proceso o el Sistema Operativo.",
+              "Únicamente el usuario interactivo.",
+              "Solo el procesador."
+            ],
+            "answer": 2
+          },
+          {
+            "q": "¿Cuál es una razón del Sistema Operativo para suspender un proceso?",
+            "a": [
+              "Para que el usuario juegue.",
+              "Necesita liberar suficiente memoria principal para cargar un proceso listo para ejecutarse.",
+              "Porque el proceso ha finalizado normalmente.",
+              "Para aumentar el tiempo de ejecución del proceso."
+            ],
+            "answer": 2
+          },
+          {
+            "q": "Si un proceso excede el límite de tiempo de ejecución establecido, ¿qué evento de terminación podría ocurrir?",
+            "a": [
+              "Finalización normal.",
+              "Error de protección.",
+              "Límite de tiempo excedido.",
+              "Solicitud del proceso padre."
+            ],
+            "answer": 3
+          },
+          {
+            "q": "¿Qué tipo de error de terminación ocurre si un proceso intenta acceder a una zona de memoria fuera de sus límites?",
+            "a": [
+              "Error aritmético.",
+              "Fallo de E/S.",
+              "Violaciones de frontera.",
+              "Instrucción no válida."
+            ],
+            "answer": 3
+          },
+          {
+            "q": "¿Cuál de los siguientes es un evento que puede provocar la terminación de un proceso por parte del sistema operativo?",
+            "a": [
+              "El proceso indica al S.O. que ha terminado (finalización normal).",
+              "El usuario root decide matar un proceso.",
+              "El proceso necesita más memoria y se le asigna.",
+              "El proceso cede la CPU por iniciativa propia."
+            ],
+            "answer": 2
+          },
+          {
+            "q": "¿Qué se entiende por 'Imagen del proceso' en memoria?",
+            "a": [
+              "Una captura de pantalla de la ejecución del proceso.",
+              "El código ejecutable del proceso, zonas de variables y la pila de llamadas.",
+              "Solo el PCB del proceso.",
+              "La representación gráfica del proceso en el monitor."
+            ],
+            "answer": 2
+          },
+          {
+            "q": "¿Qué problema principal surge si un sistema multiprogramado no tiene memoria virtual y la mayoría de sus procesos están bloqueados?",
+            "a": [
+              "El procesador se sobrecalienta.",
+              "El sistema se vuelve ocioso debido a la lentitud de las operaciones de E/S.",
+              "Los programas se compilan más lentamente.",
+              "Se generan más fallos de página."
+            ],
+            "answer": 2
+          },
+          {
+            "q": "Según las fuentes, ¿cuál de los siguientes es un registro de estado y control típico en el PCB?",
+            "a": [
+              "Registros de usuario (AX, BX, CX...).",
+              "Registros de condición (signo, zero, acarreo...).",
+              "Punteros a memoria.",
+              "Identificador del padre."
+            ],
+            "answer": 2
+          },
+          {
+            "q": "¿Qué tipo de información se incluye en la sección 'Información de auditoría' del PCB?",
+            "a": [
+              "Punteros a memoria.",
+              "Peticiones de E/S pendientes.",
+              "Cantidad de CPU usada, tiempo de uso, cantidad de información manejada (memoria, E/S, comunicaciones).",
+              "Estado del procesador (Listo, Bloqueado...)."
+            ],
+            "answer": 3
+          },
+          {
+            "q": "¿Cuál es la entidad de asignación a la que se pueden asignar los recursos (incluyendo el procesador)?",
+            "a": [
+              "El hardware.",
+              "El Sistema Operativo.",
+              "El proceso.",
+              "La aplicación."
+            ],
+            "answer": 3
+          }
+    ]
+  }

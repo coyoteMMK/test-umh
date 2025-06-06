@@ -1,0 +1,308 @@
+{
+    "title": "U3_04",
+    "career": "Ingeniería Informática",
+    "year": "Segundo año",
+    "subject": "Sistemas_Operativos",
+    "questions": [
+        {
+            "q": "¿Qué término describe la gestión de varios procesos en un sistema monoprocesador?",
+            "a": [
+              "Multiprocesamiento",
+              "Procesamiento distribuido",
+              "Multiprogramación",
+              "Concurrencia"
+            ],
+            "answer": 3
+          },
+          {
+            "q": "¿Cuál de los siguientes NO es un contexto concurrente según la fuente?",
+            "a": [
+              "Múltiples Aplicaciones",
+              "Aplicaciones Estructuradas",
+              "Estructura del Sistema Operativo",
+              "Sistemas Monoprocesador"
+            ],
+            "answer": 4
+          },
+          {
+            "q": "Una de las principales dificultades en sistemas monoprocesador al gestionar la concurrencia es:",
+            "a": [
+              "La facilidad de depuración de resultados",
+              "El orden de las lecturas y escrituras no es crítico",
+              "Compartir recursos globales está lleno de riesgos",
+              "La asignación óptima de recursos es sencilla"
+            ],
+            "answer": 3
+          },
+          {
+            "q": "Una 'condición de carrera' ocurre cuando:",
+            "a": [
+              "Solo un proceso lee datos de manera simultánea",
+              "Múltiples procesos leen y escriben datos, y el resultado final depende del orden de ejecución",
+              "Los procesos acceden a recursos no compartidos",
+              "La depuración de los resultados es siempre determinista"
+            ],
+            "answer": 2
+          },
+          {
+            "q": "Uno de los aspectos de diseño del S.O. para la concurrencia es:",
+            "a": [
+              "Ignorar la pista de los distintos procesos",
+              "Proteger los datos y recursos de cada proceso",
+              "Permitir que el funcionamiento de un proceso dependa de la velocidad de otros",
+              "No gestionar la memoria virtual"
+            ],
+            "answer": 2
+          },
+          {
+            "q": "¿Qué tipo de interacción entre procesos se caracteriza por competir por el mismo recurso y plantear problemas como la exclusión mutua, interbloqueo e inanición?",
+            "a": [
+              "Procesos Cooperantes por Comunicación",
+              "Procesos Cooperantes por Compartición",
+              "Procesos No Cooperantes (Competidores)",
+              "Procesos Sincronizados"
+            ],
+            "answer": 3
+          },
+          {
+            "q": "En los procesos cooperantes por compartición, ¿qué tipo de operación debe ser mutuamente excluyente para garantizar la integridad de los datos compartidos?",
+            "a": [
+              "Solo las operaciones de lectura",
+              "Solo las operaciones de escritura",
+              "Todas las operaciones de lectura y escritura",
+              "Ninguna operación, la coherencia no es un problema"
+            ],
+            "answer": 2
+          },
+          {
+            "q": "Una característica de los procesos cooperantes por comunicación es:",
+            "a": [
+              "Comparten recursos y necesitan exclusión mutua",
+              "No son conscientes de la identidad de otros procesos",
+              "No se comparte nada, por lo que no es necesaria la exclusión mutua",
+              "No requieren sincronización ni coordinación"
+            ],
+            "answer": 3
+          },
+          {
+            "q": "La 'Sección Crítica' se define como:",
+            "a": [
+              "Cualquier zona de código de un proceso",
+              "La zona de código donde se accede a recursos compartidos y que no puede ser ejecutada cuando otro proceso esté en la misma sección crítica",
+              "Una zona de código exclusiva para un solo proceso",
+              "Un mecanismo de depuración de errores"
+            ],
+            "answer": 2
+          },
+          {
+            "q": "El requisito que garantiza que dos procesos que comparten secciones críticas no pueden ejecutar simultáneamente dentro de ellas se conoce como:",
+            "a": [
+              "Condición de Carrera",
+              "Sincronización de Procesos",
+              "Exclusión Mutua",
+              "Interbloqueo"
+            ],
+            "answer": 3
+          },
+          {
+            "q": "¿Cuál de los siguientes es un requisito para la exclusión mutua?",
+            "a": [
+              "Pueden hacerse suposiciones sobre la velocidad relativa de los procesos",
+              "Un proceso puede permanecer en su sección crítica por un tiempo indefinido",
+              "No puede permitirse el interbloqueo o la inanición",
+              "Un proceso que se interrumpe en una sección crítica debe interferir con otros procesos"
+            ],
+            "answer": 3
+          },
+          {
+            "q": "Las soluciones para garantizar la exclusión mutua se clasifican en:",
+            "a": [
+              "Algoritmos de Planificación y Gestión de Memoria",
+              "Soluciones Software, Soluciones Hardware y Soluciones soportadas por el S.O. y lenguajes de programación",
+              "Mecanismos de Interbloqueo y de Inanición",
+              "Protocolos de Red y Sistemas Distribuidos"
+            ],
+            "answer": 2
+          },
+          {
+            "q": "¿Qué problema principal presenta la 'Espera Activa' como solución software para la exclusión mutua?",
+            "a": [
+              "Permite el acceso simultáneo a la sección crítica",
+              "No consume tiempo del procesador",
+              "Un proceso no puede hacer nada productivo hasta que obtiene permiso para entrar en su sección crítica",
+              "Garantiza la alternancia estricta sin problemas"
+            ],
+            "answer": 3
+          },
+          {
+            "q": "Según la fuente, ¿las 'Corrutinas' son una técnica apropiada para dar soporte al procesamiento concurrente?",
+            "a": [
+              "Sí, son ideales para el procesamiento concurrente",
+              "No, no es una técnica apropiada para dar soporte al procesamiento concurrente",
+              "Solo en sistemas multiprocesador",
+              "Solo si se combinan con semáforos"
+            ],
+            "answer": 2
+          },
+          {
+            "q": "Un problema del algoritmo simple de exclusión mutua basado en un turno (ej. `while (turno != 0 )`), es que:",
+            "a": [
+              "No garantiza la exclusión mutua",
+              "El ritmo de ejecución lo marca el proceso más rápido",
+              "Un fallo en un proceso puede provocar un interbloqueo",
+              "Permite que varios procesos entren simultáneamente"
+            ],
+            "answer": 3
+          },
+          {
+            "q": "En la primera versión del algoritmo de Dekker presentada, donde se comprueba `señal[1]` antes de `señal := true;`, ¿qué problema se destaca?",
+            "a": [
+              "Garantiza la exclusión mutua correctamente",
+              "Se produce inanición",
+              "No garantiza la exclusión mutua, ya que puede comprobarse la señal y entrar al mismo tiempo",
+              "Provoca un interbloqueo de forma segura"
+            ],
+            "answer": 3
+          },
+          {
+            "q": "La segunda versión del algoritmo de Dekker (`señal := true; while (señal[1] )`) soluciona el problema de la exclusión mutua, pero introduce:",
+            "a": [
+              "Inanición",
+              "Un bloqueo vital (livelock)",
+              "Un interbloqueo cuando dos procesos activan sus señales antes de entrar en la sección crítica",
+              "Una mayor eficiencia en la espera activa"
+            ],
+            "answer": 3
+          },
+          {
+            "q": "La versión del algoritmo de Dekker donde un proceso desactiva y vuelve a activar su señal (`señal:=false; /*esperar*/ señal:=true;`) se describe como:",
+            "a": [
+              "La solución correcta para la exclusión mutua",
+              "Casi correcta, pero se produce un livelock (bloqueo vital)",
+              "Un algoritmo propenso a la inanición",
+              "Un método que garantiza la ausencia de interbloqueos"
+            ],
+            "answer": 2
+          },
+          {
+            "q": "¿Qué elementos utiliza la solución correcta del algoritmo de Dekker para la exclusión mutua?",
+            "a": [
+              "Solo una variable de turno",
+              "Solo señales booleanas",
+              "Señales booleanas y una variable de turno",
+              "Inhabilitación de interrupciones"
+            ],
+            "answer": 3
+          },
+          {
+            "q": "Una desventaja de la inhabilitación de interrupciones como solución hardware para la exclusión mutua es:",
+            "a": [
+              "Aumenta la capacidad del procesador para intercalar programas",
+              "No garantiza la exclusión mutua en sistemas multiprocesador",
+              "No es aplicable a sistemas monoprocesador",
+              "Es una solución de software"
+            ],
+            "answer": 2
+          },
+          {
+            "q": "¿Qué característica principal tienen las 'Instrucciones especiales de máquina' (como Test & Set o Swap) para la exclusión mutua?",
+            "a": [
+              "Son programas complejos que requieren múltiples ciclos de instrucción",
+              "No están sujetas a injerencias por parte de otras instrucciones y se realizan en un único ciclo",
+              "Solo son útiles en sistemas distribuidos",
+              "Son implementaciones de software que dependen del Sistema Operativo"
+            ],
+            "answer": 2
+          },
+          {
+            "q": "La instrucción 'Comparar y Fijar' (Test and Set) retorna `cierto` si el valor de entrada es:",
+            "a": [
+              "1 y lo cambia a 0",
+              "0 y lo cambia a 1",
+              "Cualquier valor y lo mantiene",
+              "Solo si el proceso está en la sección crítica"
+            ],
+            "answer": 2
+          },
+          {
+            "q": "¿Cuál es la función principal de la instrucción 'Intercambiar' (Swap) en el contexto de la exclusión mutua?",
+            "a": [
+              "Comparar dos valores sin modificarlos",
+              "Intercambiar el contenido de una variable de registro con una de memoria",
+              "Incrementar un contador de forma atómica",
+              "Definir el turno de los procesos"
+            ],
+            "answer": 2
+          },
+          {
+            "q": "Una ventaja de las soluciones hardware para la exclusión mutua (Test & Set, Swap) es:",
+            "a": [
+              "Provocan espera activa que no consume tiempo del procesador",
+              "No pueden usarse para disponer de varias secciones críticas",
+              "Son aplicables a cualquier número de procesos en sistemas con memoria compartida (monoprocesador y multiprocesador)",
+              "Siempre evitan la inanición y el interbloqueo"
+            ],
+            "answer": 3
+          },
+          {
+            "q": "Una desventaja de las soluciones hardware para la exclusión mutua es que:",
+            "a": [
+              "La espera activa no consume tiempo del procesador",
+              "No pueden producirse situaciones de inanición",
+              "No pueden producirse interbloqueos bajo ninguna circunstancia",
+              "Puede producirse inanición cuando un proceso abandona la sección crítica y hay más de un proceso esperando"
+            ],
+            "answer": 4
+          },
+          {
+            "q": "¿Por qué la depuración es difícil en sistemas concurrentes?",
+            "a": [
+              "Los resultados de distintas ejecuciones son siempre deterministas",
+              "Los resultados de distintas ejecuciones no son ni deterministas, ni reproducibles",
+              "Solo se puede depurar en sistemas multiprocesador",
+              "Los errores son fáciles de localizar y corregir"
+            ],
+            "answer": 2
+          },
+          {
+            "q": "¿Qué mecanismo utiliza el Sistema Operativo para seguir la pista de distintos procesos?",
+            "a": [
+              "Ficheros de registro",
+              "Gestión de la memoria virtual",
+              "PCBs (Bloques de Control de Proceso)",
+              "Dispositivos de E/S"
+            ],
+            "answer": 3
+          },
+          {
+            "q": "¿Cuál de los siguientes problemas persiste tanto en procesos cooperantes por compartición como por comunicación?",
+            "a": [
+              "Solo la exclusión mutua",
+              "Solo la coherencia de datos",
+              "Interbloqueo e Inanición",
+              "Ninguno, se resuelven completamente"
+            ],
+            "answer": 3
+          },
+          {
+            "q": "Si un proceso que adquiere el control de un canal de E/S se suspende antes de usarlo, ¿qué dificultad de la concurrencia ilustra este escenario?",
+            "a": [
+              "La facilidad de depuración",
+              "La asignación óptima de recursos es difícil",
+              "La ausencia de condiciones de carrera",
+              "La coherencia de los datos"
+            ],
+            "answer": 2
+          },
+          {
+            "q": "¿Qué tipo de soluciones para la exclusión mutua son Semáforos y Monitores?",
+            "a": [
+              "Soluciones Software (Espera Activa)",
+              "Soluciones Hardware",
+              "Soluciones soportadas por el Sistema Operativo y lenguajes de programación",
+              "Corrutinas"
+            ],
+            "answer": 3
+          }
+    ]
+  }

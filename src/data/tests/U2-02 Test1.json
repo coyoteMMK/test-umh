@@ -1,0 +1,309 @@
+{
+    "title": "U2_02",
+    "career": "Ingeniería Informática",
+    "year": "Segundo año",
+    "subject": "Sistemas_Operativos",
+    "questions": [
+        {
+            "q": "¿Qué es una llamada al sistema?",
+            "a": [
+              "Una función de librería para programadores [1].",
+              "Una solicitud de un proceso al núcleo para un servicio específico [2].",
+              "Un tipo de interrupción de hardware [3].",
+              "Un comando ejecutado directamente por el usuario [2]."
+            ],
+            "answer": 2
+          },
+          {
+            "q": "¿Entre qué dos componentes principales interactúa una llamada al sistema?",
+            "a": [
+              "Aplicación de usuario y compilador.",
+              "Proceso en modo usuario y núcleo del sistema operativo [2].",
+              "Hardware y controlador de dispositivo.",
+              "Servidor y cliente de red."
+            ],
+            "answer": 2
+          },
+          {
+            "q": "¿Por qué un proceso requiere una llamada al sistema para ciertas acciones?",
+            "a": [
+              "Para optimizar el rendimiento del CPU.",
+              "Porque solo el núcleo posee los privilegios necesarios para esas acciones [2].",
+              "Para acceder a funciones de librería estándar [1].",
+              "Para interactuar con otros procesos de usuario."
+            ],
+            "answer": 2
+          },
+          {
+            "q": "¿Cuál es el primer paso en el ciclo de una llamada al sistema?",
+            "a": [
+              "Manejo de la interrupción por parte del núcleo [3, 4].",
+              "Retorno del control al proceso original [3, 4].",
+              "Emisión de una solicitud por parte del proceso en ejecución [3, 4].",
+              "Generación de una interrupción del procesador [3, 4]."
+            ],
+            "answer": 3
+          },
+          {
+            "q": "¿Qué evento ocurre inmediatamente después de que un proceso emite una llamada al sistema?",
+            "a": [
+              "El núcleo devuelve el control al proceso [3, 4].",
+              "El núcleo ejecuta el código correspondiente a la operación solicitada [3, 4].",
+              "Se genera una interrupción del procesador [3, 4].",
+              "El proceso entra en modo privilegiado [5]."
+            ],
+            "answer": 3
+          },
+          {
+            "q": "¿En qué modo de ejecución se ejecuta el código de una llamada al sistema?",
+            "a": [
+              "Modo Usuario [5].",
+              "Modo Depuración.",
+              "Modo Privilegiado [5].",
+              "Modo Limitado."
+            ],
+            "answer": 3
+          },
+          {
+            "q": "¿Qué característica distingue al Modo Privilegiado (kernel space) en un sistema operativo?",
+            "a": [
+              "Acceso limitado a los recursos hardware [5].",
+              "Capacidad de matar procesos de usuario [5].",
+              "Acceso completo a los recursos hardware [5].",
+              "Ejecución de código de aplicación de usuario [5]."
+            ],
+            "answer": 3
+          },
+          {
+            "q": "¿Qué sucede si el código en Modo Usuario intenta ejecutar una instrucción privilegiada?",
+            "a": [
+              "La instrucción se ejecuta normalmente.",
+              "El microprocesador avisa al kernel, quien normalmente mata al proceso [5].",
+              "Se le concede temporalmente acceso privilegiado.",
+              "La operación se pone en cola para ser ejecutada por el núcleo más tarde."
+            ],
+            "answer": 2
+          },
+          {
+            "q": "¿Para qué tipo de operaciones un programa en Modo Usuario necesita pedirle al kernel que ejecute una operación?",
+            "a": [
+              "Realizar cálculos complejos [6].",
+              "Acceso a ficheros y a la red [1].",
+              "Manejo de variables locales.",
+              "Interacción con la interfaz gráfica de usuario."
+            ],
+            "answer": 2
+          },
+          {
+            "q": "¿Qué es cierto acerca de las llamadas al sistema en sistemas operativos Unix-Like?",
+            "a": [
+              "Tienen mecanismos de implementación radicalmente diferentes entre sí [1].",
+              "Casi todos tienen las mismas llamadas al sistema aunque varíen detalles [1].",
+              "No ofrecen funciones C (de librería) para encapsular su implementación [1].",
+              "Están estandarizadas únicamente por la máquina y se realizan en C [1]."
+            ],
+            "answer": 2
+          },
+          {
+            "q": "¿Cuál es una de las importancias clave de las llamadas al sistema en cuanto a la complejidad del hardware?",
+            "a": [
+              "Aumentar la complejidad para mayor seguridad.",
+              "Ocultar la complejidad del hardware y del sistema operativo [7].",
+              "Permitir el acceso directo al hardware a los programadores [7].",
+              "Hacer el sistema menos eficiente [8]."
+            ],
+            "answer": 2
+          },
+          {
+            "q": "¿Cómo contribuyen las llamadas al sistema a la seguridad del sistema?",
+            "a": [
+              "Permitiendo acceso ilimitado a los recursos críticos [7].",
+              "Protegiendo el sistema al limitar el acceso directo del software de usuario a recursos críticos [7].",
+              "Eliminando la necesidad de un núcleo de sistema operativo.",
+              "Exponiendo todos los detalles del hardware al usuario [7]."
+            ],
+            "answer": 2
+          },
+          {
+            "q": "¿Qué tipo de operación se clasifica bajo 'Control y gestión de procesos' en las llamadas al sistema?",
+            "a": [
+              "Leer un archivo [8, 9].",
+              "Obtener y establecer atributos de un proceso [8, 9].",
+              "Conectar y desconectar dispositivos [8, 10].",
+              "Enviar y recibir mensajes [9, 10]."
+            ],
+            "answer": 2
+          },
+          {
+            "q": "¿Cuál de las siguientes es una llamada al sistema para 'Manipulación de archivos'?",
+            "a": [
+              "Crear un proceso [8, 9].",
+              "Solicitar y liberar un dispositivo [8, 10].",
+              "Crear y eliminar archivo [8, 9].",
+              "Obtener la hora del sistema [9, 10]."
+            ],
+            "answer": 3
+          },
+          {
+            "q": "¿Qué operación está asociada a 'Manipulación de dispositivos'?",
+            "a": [
+              "Asignar y liberar memoria [8, 9].",
+              "Crear una conexión [9, 10].",
+              "Leer o escribir en un dispositivo [8, 10].",
+              "Obtener el PID de un proceso [11]."
+            ],
+            "answer": 3
+          },
+          {
+            "q": "¿Cuál es la función equivalente a `fork()` en sistemas Unix/Linux para el control de procesos en Windows?",
+            "a": [
+              "ExitProcess() [10].",
+              "WaitForSingleObject() [10].",
+              "CreateProcess() [10].",
+              "CloseHandle() [12]."
+            ],
+            "answer": 3
+          },
+          {
+            "q": "¿La llamada al sistema `open()` en Unix/Linux tiene su equivalente en Windows como?",
+            "a": [
+              "ReadFile() [12].",
+              "WriteFile() [12].",
+              "CloseHandle() [12].",
+              "CreateFile() [12]."
+            ],
+            "answer": 4
+          },
+          {
+            "q": "¿Cómo se describe simplificadamente la ejecución de cualquier programa Linux según las llamadas al sistema?",
+            "a": [
+              "Un bucle que solo realiza cálculos [6].",
+              "Un bucle que alterna entre cálculos y llamadas al sistema [6].",
+              "Un proceso que solo espera entradas del usuario.",
+              "Una secuencia continua de llamadas al sistema sin cálculos [6]."
+            ],
+            "answer": 2
+          },
+          {
+            "q": "¿Para qué se utiliza principalmente la herramienta `strace` en sistemas Unix-like?",
+            "a": [
+              "Para compilar código fuente.",
+              "Para depurar programas mostrando las llamadas al sistema que realizan [13, 14].",
+              "Para gestionar la memoria RAM.",
+              "Para monitorear el uso de la red."
+            ],
+            "answer": 2
+          },
+          {
+            "q": "En el ejemplo `strace echo hello world`, ¿qué indica la llamada `execve`?",
+            "a": [
+              "Que se está leyendo datos de una librería [15].",
+              "Que el proceso termina correctamente [16].",
+              "Que el programa `echo` se inicia y su código se carga [14].",
+              "Que se escribe 'hello world' en la salida estándar [17]."
+            ],
+            "answer": 3
+          },
+          {
+            "q": "¿Qué información busca obtener un programa mediante la llamada al sistema `uname` como se ve con `strace`?",
+            "a": [
+              "La dirección de memoria de un fichero.",
+              "Información sobre el sistema operativo [18].",
+              "La versión de la librería C [15].",
+              "El identificador del proceso padre [11]."
+            ],
+            "answer": 2
+          },
+          {
+            "q": "¿Qué acción se realiza con la llamada `write` en el ejemplo `strace echo hello world`?",
+            "a": [
+              "Se leen datos de la biblioteca compartida [15].",
+              "Se obtiene información del sistema operativo [18].",
+              "Se escribe la cadena 'hello world' en la salida estándar [17].",
+              "Se termina el proceso [16]."
+            ],
+            "answer": 3
+          },
+          {
+            "q": "En la llamada al sistema `write(1, \"hello world\\n\", 12) = 12`, ¿qué representa el número `1`?",
+            "a": [
+              "El número de bytes escritos [19].",
+              "Un puntero a la cadena de caracteres [16].",
+              "La salida estándar (stdout) [16].",
+              "El valor de retorno de la llamada [16]."
+            ],
+            "answer": 3
+          },
+          {
+            "q": "¿Qué valor de retorno es una forma estándar del kernel de indicar un ERROR en una llamada al sistema?",
+            "a": [
+              "0 [16].",
+              "Cualquier número positivo.",
+              "-1 [20].",
+              "El PID del proceso [11]."
+            ],
+            "answer": 3
+          },
+          {
+            "q": "¿Dónde se guarda el código exacto de error después de que una llamada al sistema devuelve -1?",
+            "a": [
+              "En el registro del procesador.",
+              "En la variable global `errno` [20].",
+              "En el valor de retorno de la función `perror()` [21].",
+              "En un archivo de log temporal."
+            ],
+            "answer": 2
+          },
+          {
+            "q": "¿Qué función proporciona Linux para que los programas puedan verificar si una llamada al sistema fue correcta y obtener una descripción del error?",
+            "a": [
+              "`printf()`.",
+              "`scanf()`.",
+              "`perror()` [20, 21].",
+              "`getpid()` [21]."
+            ],
+            "answer": 3
+          },
+          {
+            "q": "¿Cuál es el propósito de la llamada al sistema `fork()`?",
+            "a": [
+              "Terminar el proceso que la invoca [11].",
+              "Crear un proceso hijo idéntico al proceso padre [22].",
+              "Sustituir la imagen en memoria de un proceso [11].",
+              "Esperar a que un hijo determinado termine [22]."
+            ],
+            "answer": 2
+          },
+          {
+            "q": "¿Qué devuelve la llamada al sistema `getpid()`?",
+            "a": [
+              "El PID del proceso padre del solicitante [11].",
+              "El ID de grupo de procesos del solicitante [11].",
+              "El ID del proceso solicitante [11, 21].",
+              "El tiempo de ejecución del proceso."
+            ],
+            "answer": 3
+          },
+          {
+            "q": "¿Qué hace la llamada al sistema `open()`?",
+            "a": [
+              "Cierra un fichero abierto [23].",
+              "Lee datos de un fichero [23].",
+              "Abre un fichero para lectura, escritura o ambos [24].",
+              "Mueve el apuntador del fichero [23]."
+            ],
+            "answer": 3
+          },
+          {
+            "q": "¿Qué permite modificar la llamada al sistema `chmod()`?",
+            "a": [
+              "El propietario y grupo de un fichero [25].",
+              "El tamaño del segmento de datos [11].",
+              "Los bits de protección asociados con un fichero [26].",
+              "La ubicación en el sistema de ficheros [26, 27]."
+            ],
+            "answer": 3
+          }
+    ]
+  }
+  

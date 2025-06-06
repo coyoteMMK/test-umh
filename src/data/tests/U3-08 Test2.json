@@ -1,0 +1,309 @@
+{
+    "title": "U3_08",
+    "career": "Ingeniería Informática",
+    "year": "Segundo año",
+    "subject": "Sistemas_Operativos",
+    "questions": [
+        {
+            "q": "¿Qué elemento del núcleo del Sistema Operativo es responsable de cargar el contexto de un proceso en la CPU, cambiando el estado de ejecución?",
+            "a": [
+              "El CPU Scheduler [1]",
+              "El Dispatcher [1]",
+              "El Interrupt Handler [1]",
+              "El Administrador de Memoria"
+            ],
+            "answer": 2
+          },
+          {
+            "q": "El planificador a medio plazo es una parte fundamental de una función específica del sistema. ¿Cuál es esta función?",
+            "a": [
+              "La gestión de procesos en cola de Listo en memoria [2]",
+              "La función de intercambio (swapping function) [2, 3]",
+              "La asignación inicial de recursos a nuevos programas [2]",
+              "El manejo de interrupciones de E/S [4]"
+            ],
+            "answer": 2
+          },
+          {
+            "q": "Uno de los objetivos principales de la planificación a largo plazo es controlar el grado de multiprogramación. ¿Cómo se logra esto en relación con la memoria?",
+            "a": [
+              "Expulsando procesos de la memoria a disco [2]",
+              "Mediante la admisión de nuevos programas en 'Listo' (memoria) o 'Listo Suspendido' (zona de intercambio) [2]",
+              "Reorganizando los procesos en la memoria [2]",
+              "Reduciendo la cantidad de memoria asignada a procesos en ejecución [2]"
+            ],
+            "answer": 2
+          },
+          {
+            "q": "En los sistemas de proceso por lotes, los procesos se incorporan inicialmente a:",
+            "a": [
+              "Una cola de Listo en memoria directamente [2]",
+              "La cola de procesos por lotes en disco [2]",
+              "Una cola de procesos con prioridad alta [2]",
+              "La cola de procesos en espera por E/S [4]"
+            ],
+            "answer": 2
+          },
+          {
+            "q": "Cuando el planificador a largo plazo toma la decisión de qué proceso de la cola de lotes se incorporará a 'Listo', ¿qué considera para el control del grado de multiprogramación?",
+            "a": [
+              "El tiempo de ejecución restante de los procesos [5]",
+              "Si el Sistema Operativo puede acoger a más procesos en la cola de Listo [6]",
+              "La prioridad de los procesos ya en ejecución [7]",
+              "El número de interrupciones de reloj recibidas [4]"
+            ],
+            "answer": 2
+          },
+          {
+            "q": "En los Sistemas Interactivos, si se admiten demasiados trabajos, ¿cuál es la principal consecuencia?",
+            "a": [
+              "Se mejora la utilización de la CPU [8]",
+              "Se reduce el tiempo de servicio y los procesos compiten por el tiempo [6]",
+              "Se asegura un tiempo de respuesta óptimo para todos los usuarios [4]",
+              "Se optimiza el equilibrado de recursos [8]"
+            ],
+            "answer": 2
+          },
+          {
+            "q": "¿Cuándo se llama al planificador a largo plazo en un sistema interactivo si el procesador está ocioso?",
+            "a": [
+              "Cuando un proceso finaliza su ejecución [9]",
+              "Si el procesador está mucho tiempo ocioso [3]",
+              "Solo cuando hay una nueva solicitud de conexión de un usuario [6]",
+              "Después de cada interrupción de E/S [4]"
+            ],
+            "answer": 2
+          },
+          {
+            "q": "¿Qué objetivo de la Planificación a Corto Plazo se refiere a mantener la predictibilidad de los tiempos de ejecución de un proceso, independientemente de la carga del sistema?",
+            "a": [
+              "Justicia (Equidad) [3]",
+              "Previsibilidad [10]",
+              "Optimizar el uso de recursos [3]",
+              "Minimizar el tiempo de respuesta [11]"
+            ],
+            "answer": 2
+          },
+          {
+            "q": "¿Cuál de las siguientes es una de las razones por las que el planificador a corto plazo se ejecuta, además de las interrupciones de reloj y E/S?",
+            "a": [
+              "Cuando se detecta un error de memoria [4]",
+              "Cuando se realizan llamadas al Sistema Operativo [4]",
+              "Únicamente cuando se inicia un nuevo proceso [4]",
+              "Cuando el disco duro alcanza su capacidad máxima [4]"
+            ],
+            "answer": 2
+          },
+          {
+            "q": "El criterio de 'Fecha Tope' en la planificación a corto plazo implica:",
+            "a": [
+              "Maximizar el tiempo total de ejecución del proceso [4]",
+              "Maximizar el porcentaje de 'deadlines' conseguidos si se especifica una fecha [4]",
+              "Minimizar la cantidad de recursos utilizados por el proceso [8]",
+              "Asegurar que todos los procesos comiencen al mismo tiempo [4]"
+            ],
+            "answer": 2
+          },
+          {
+            "q": "El criterio de 'Utilización del procesador' como medida de planificación a corto plazo busca:",
+            "a": [
+              "Minimizar el porcentaje de tiempo que el procesador está ocupado [8]",
+              "Maximizar el porcentaje de tiempo que el procesador está ocupado [8]",
+              "Mantener el procesador en estado ocioso la mayor parte del tiempo [8]",
+              "Reducir la velocidad del procesador para ahorrar energía [8]"
+            ],
+            "answer": 2
+          },
+          {
+            "q": "Para comparar los distintos algoritmos de planificación a corto plazo, además de la media, se utiliza la:",
+            "a": [
+              "La moda [11]",
+              "La varianza [11]",
+              "La mediana [11]",
+              "La desviación estándar únicamente [12]"
+            ],
+            "answer": 2
+          },
+          {
+            "q": "¿Qué tipo de sistema de planificación se enfoca principalmente en minimizar el 'Tiempo de retorno'?",
+            "a": [
+              "Sistemas interactivos [11]",
+              "Sistemas por lotes (batch) [11]",
+              "Sistemas de tiempo real [11]",
+              "Sistemas distribuidos [11]"
+            ],
+            "answer": 2
+          },
+          {
+            "q": "Cuando un algoritmo de planificación es 'sin reciclaje de procesos' (no preemtiva), significa que el abandono de la CPU es:",
+            "a": [
+              "Siempre forzoso por una interrupción [9]",
+              "No forzoso [9]",
+              "Por decisión del sistema operativo sin intervención del proceso [9]",
+              "Únicamente cuando el proceso es de alta prioridad [9]"
+            ],
+            "answer": 2
+          },
+          {
+            "q": "Según los criterios de planificación, ¿cuál es el objetivo de 'Rendimiento (throughput)'?",
+            "a": [
+              "Medir el tiempo que un proceso tarda en completarse [8]",
+              "Medir el número de procesos completados por unidad de tiempo [8]",
+              "Evaluar la eficiencia del uso de la memoria [8]",
+              "Calcular el tiempo de espera promedio de los procesos [11]"
+            ],
+            "answer": 2
+          },
+          {
+            "q": "En el algoritmo FCFS (First Come, First Served), ¿cuál es un inconveniente relacionado con los procesos con carga de E/S?",
+            "a": [
+              "Los procesos con carga de E/S se ejecutan más rápidamente [12]",
+              "Los procesos con carga de E/S tienen que esperar a que se completen los procesos con carga de CPU [12]",
+              "Este algoritmo optimiza el uso de dispositivos de E/S [12]",
+              "FCFS prioriza automáticamente los procesos de E/S [12]"
+            ],
+            "answer": 2
+          },
+          {
+            "q": "¿Para qué tipo de sistemas NO es válido el algoritmo FCFS (First Come, First Served)?",
+            "a": [
+              "Sistemas por lotes (batch) [12]",
+              "Sistemas de tiempo compartido (multiusuario) [12]",
+              "Sistemas con procesos de corta duración [12]",
+              "Sistemas con un único proceso [12]"
+            ],
+            "answer": 2
+          },
+          {
+            "q": "El algoritmo SPN (Shortest Process Next) garantiza el mínimo tiempo medio de respuesta. ¿Cuál es su principal desventaja práctica?",
+            "a": [
+              "Favorece excesivamente a los procesos largos [13]",
+              "Casi nunca es posible conocer de antemano el tiempo de ejecución de cada proceso [7]",
+              "Causa inanición para los procesos cortos [13]",
+              "No puede usarse en sistemas no preemtivos [13]"
+            ],
+            "answer": 2
+          },
+          {
+            "q": "En la planificación por 'Uso de prioridades' (no preemtiva), ¿qué mecanismo se puede utilizar para evitar la inanición de los procesos de prioridad más baja?",
+            "a": [
+              "Aumentar su tiempo de servicio [14]",
+              "Permitir que un proceso cambie su prioridad en función de su edad o su historial de ejecución [14]",
+              "Asignarles un quantum de tiempo fijo [15]",
+              "Moverlos a una cola de mayor prioridad de forma aleatoria [14]"
+            ],
+            "answer": 2
+          },
+          {
+            "q": "En el algoritmo Round Robin (RR) o turno rotatorio, la cola de preparados se gestiona como:",
+            "a": [
+              "Una cola de prioridades [14]",
+              "Una cola FIFO circular [14]",
+              "Una cola LIFO [14]",
+              "Una pila [14]"
+            ],
+            "answer": 2
+          },
+          {
+            "q": "Con 'n' procesos en un sistema Round Robin (RR) y un quantum 'q', ¿cuánto tiempo como máximo esperará un proceso para ejecutar?",
+            "a": [
+              "q unidades de tiempo [15]",
+              "(n)q unidades de tiempo [15]",
+              "(n-1)q unidades de tiempo [15]",
+              "n+q unidades de tiempo [15]"
+            ],
+            "answer": 3
+          },
+          {
+            "q": "¿Puede el quantum en Round Robin (RR) ser fijo o variable durante la vida de un proceso?",
+            "a": [
+              "Siempre es fijo [15]",
+              "Siempre es variable [15]",
+              "Puede ser fijo o variable durante la vida de un proceso [15]",
+              "El quantum solo se ajusta al inicio del sistema [15]"
+            ],
+            "answer": 3
+          },
+          {
+            "q": "Un inconveniente del algoritmo RR (Round Robin) es su pobre rendimiento para procesos que realizan muchas operaciones de E/S. ¿Cuál es la consecuencia directa de esto?",
+            "a": [
+              "Se mejora la productividad del sistema [15]",
+              "Se produce un consiguiente desaprovechamiento de los dispositivos de E/S [15]",
+              "Los procesos de CPU-bound se ven más beneficiados [15]",
+              "Se reduce el número total de interrupciones [15]"
+            ],
+            "answer": 2
+          },
+          {
+            "q": "SRTN (Shortest Remaining Time Next) es una versión apropiativa de:",
+            "a": [
+              "FCFS (First Come, First Served) [16]",
+              "SPN (Shortest Process Next) [5]",
+              "Round Robin (RR) [14]",
+              "Uso de prioridades [7]"
+            ],
+            "answer": 2
+          },
+          {
+            "q": "Para que SRTN (Shortest Remaining Time Next) funcione, ¿qué debe ser capaz de hacer el sistema?",
+            "a": [
+              "Asignar prioridades fijas a los procesos [5]",
+              "Estimación el tiempo de proceso (tiempo de ejecución restante) [5]",
+              "Determinar el tamaño de la cola de preparados [5]",
+              "Ignorar las interrupciones de E/S [5]"
+            ],
+            "answer": 2
+          },
+          {
+            "q": "En la planificación por 'Uso de prioridades' apropiativa, ¿qué ocurre si llega un proceso con mayor prioridad que el que está en ejecución?",
+            "a": [
+              "El proceso actual continúa hasta terminar su quantum [17]",
+              "El procesador se asigna directamente al nuevo proceso de mayor prioridad [17]",
+              "El proceso actual pasa a una cola de espera [17]",
+              "El sistema espera a que el proceso actual realice una llamada al sistema [17]"
+            ],
+            "answer": 2
+          },
+          {
+            "q": "El algoritmo MLQ (Multiple Level Queues) es apropiado cuando los procesos se pueden clasificar fácilmente en grupos, como:",
+            "a": [
+              "Procesos grandes y procesos pequeños [17]",
+              "Foreground (interactivos) y Background (por lotes) [17]",
+              "Procesos de usuario y procesos de sistema [17]",
+              "Procesos con y sin E/S [17]"
+            ],
+            "answer": 2
+          },
+          {
+            "q": "Cuál es el principal inconveniente del algoritmo MLQ (Multiple Level Queues) sin realimentación?",
+            "a": [
+              "La complejidad de su implementación [18]",
+              "Puede haber inanición para los procesos de menor prioridad si continuamente están llegando procesos de mayor prioridad [18]",
+              "No es apropiativo [18]",
+              "No permite múltiples colas de preparado [18]"
+            ],
+            "answer": 2
+          },
+          {
+            "q": "El algoritmo MLQ con realimentación soluciona el problema de inanición del algoritmo MLQ, ¿cómo lo hace?",
+            "a": [
+              "Aumentando la prioridad de los procesos más antiguos [18]",
+              "Penalizando a los trabajos que han estado ejecutándose durante más tiempo, moviéndolos a colas de menor prioridad [18, 19]",
+              "Asignando un quantum de tiempo ilimitado a los procesos de menor prioridad [18]",
+              "Eliminando los procesos de menor prioridad después de un tiempo [18]"
+            ],
+            "answer": 2
+          },
+          {
+            "q": "¿Cuál es la principal ventaja del algoritmo MLQ con realimentación?",
+            "a": [
+              "Es el más sencillo de implementar [19]",
+              "Siempre conoce el tiempo de ejecución restante de los procesos [19]",
+              "Es el más general, ya que permite simular cualquier otro algoritmo estableciendo los parámetros correctos [19]",
+              "Garantiza que ningún proceso sufrirá de inanición [18]"
+            ],
+            "answer": 3
+          }
+    ]
+
+}

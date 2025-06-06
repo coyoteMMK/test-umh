@@ -1,0 +1,308 @@
+{
+    "title": "U3_02",
+    "career": "Ingeniería Informática",
+    "year": "Segundo año",
+    "subject": "Sistemas_Operativos",
+    "questions": [
+        {
+            "q": "¿Qué componente o entidad se encarga de toda la gestión de hilos en una implementación de User Level Threads (ULT)?",
+            "a": [
+              "El núcleo del Sistema Operativo",
+              "El hardware del procesador",
+              "La aplicación misma, a través de una biblioteca de hilos",
+              "Un demonio de sistema independiente"
+            ],
+            "answer": 3
+          },
+          {
+            "q": "¿Qué ofrece la biblioteca de hilos en una implementación de User Level Threads (ULT) a los programadores?",
+            "a": [
+              "Funciones para gestionar el espacio de direcciones virtuales del kernel",
+              "Funciones para crear, destruir, sincronizar y planificar hilos",
+              "Acceso directo a los registros de control del procesador",
+              "Una interfaz para interactuar con otros procesos de forma remota"
+            ],
+            "answer": 2
+          },
+          {
+            "q": "En el contexto de los User Level Threads (ULT), ¿cómo arranca una aplicación inicialmente?",
+            "a": [
+              "Con un hilo principal que luego crea el proceso",
+              "Con múltiples hilos listos para ser ejecutados",
+              "Con un único hilo principal",
+              "Esperando a que el sistema operativo le asigne hilos"
+            ],
+            "answer": 3
+          },
+          {
+            "q": "¿Qué sucede cuando la biblioteca de hilos en una implementación ULT toma el control de la ejecución?",
+            "a": [
+              "Se realiza un cambio a modo kernel para acceder a los recursos del sistema",
+              "Reserva espacio y crea las estructuras de datos necesarias para los hilos",
+              "Devuelve el control de ejecución al hilo que estaba esperando una E/S",
+              "Bloquea el proceso completo para evitar interferencias"
+            ],
+            "answer": 2
+          },
+          {
+            "q": "¿Dónde se realizan todas las operaciones de gestión de hilos (salvar y restaurar contexto, planificación) en una implementación ULT?",
+            "a": [
+              "En el modo kernel del Sistema Operativo",
+              "En un hardware dedicado fuera del procesador principal",
+              "En el espacio de usuario, dentro del mismo proceso",
+              "En un espacio de direcciones separado para cada hilo"
+            ],
+            "answer": 3
+          },
+          {
+            "q": "¿Cuál es una ventaja clave de usar User Level Threads (ULT) en lugar de Kernel Level Threads (KLT) en términos de rendimiento?",
+            "a": [
+              "Pueden aprovechar las ventajas de un sistema multiprocesador",
+              "El cambio de hilo no necesita privilegios de kernel, evitando la sobrecarga de cambio de modo",
+              "Si un hilo hace una llamada bloqueante, solo ese hilo se bloquea",
+              "Todas las rutinas del kernel son multihilo"
+            ],
+            "answer": 2
+          },
+          {
+            "q": "Una ventaja de los User Level Threads (ULT) es que permiten realizar planificaciones específicas y a medida. ¿En función de qué se puede realizar esta planificación?",
+            "a": [
+              "Las prioridades del sistema operativo",
+              "La política de asignación de CPU del kernel",
+              "La aplicación, con políticas como round-robin o prioridades propias",
+              "El estado de los demás procesos en el sistema"
+            ],
+            "answer": 3
+          },
+          {
+            "q": "¿Cuál de las siguientes es una desventaja importante de los User Level Threads (ULT)?",
+            "a": [
+              "Requieren un núcleo especial del S.O. para ejecutarse",
+              "La biblioteca de hilos no es compartida por todas las aplicaciones",
+              "El cambio de hilo siempre necesita privilegios de kernel",
+              "Si un hilo hace una llamada al sistema bloqueante, el S.O. bloquea todo el proceso"
+            ],
+            "answer": 4
+          },
+          {
+            "q": "¿Por qué una estrategia ULT no puede aprovechar las ventajas de un sistema multiprocesador?",
+            "a": [
+              "Porque el kernel asigna el proceso completo a un único procesador",
+              "Porque los hilos de usuario no pueden ejecutarse en paralelo",
+              "Porque la gestión de hilos a nivel de usuario consume todos los recursos del procesador",
+              "Porque la comunicación entre hilos de usuario es demasiado lenta en multiprocesadores"
+            ],
+            "answer": 1
+          },
+          {
+            "q": "¿Qué técnica se puede usar para superar la desventaja de que las llamadas bloqueantes paralizan todo el proceso en ULT, si no se quiere diseñar la aplicación con múltiples procesos?",
+            "a": [
+              "Implementar un algoritmo de round-robin en el kernel",
+              "Usar un sistema de interrupciones para liberar el bloqueo",
+              "Mediante recubrimiento (jacketing), creando rutinas que comprueban la disponibilidad de E/S",
+              "Delegar la gestión de hilos a un proceso separado"
+            ],
+            "answer": 3
+          },
+          {
+            "q": "En el contexto de la técnica de 'jacketing' para ULT, ¿qué hace una rutina si el dispositivo de E/S no está disponible?",
+            "a": [
+              "Realiza la llamada bloqueante de todos modos",
+              "Termina el hilo inmediatamente",
+              "No realiza la llamada, pone el hilo en 'Listo' y cede el control",
+              "Informa al núcleo para que gestione el bloqueo"
+            ],
+            "answer": 3
+          },
+          {
+            "q": "¿Quién realiza todo el trabajo de gestión de los hilos en una implementación de Kernel Level Threads (KLT)?",
+            "a": [
+              "Una biblioteca de hilos en el espacio de usuario",
+              "El programador de la aplicación",
+              "El núcleo del Sistema Operativo",
+              "El hardware del procesador directamente"
+            ],
+            "answer": 3
+          },
+          {
+            "q": "¿Qué tipo de código de gestión de hilos contiene la aplicación en una implementación de Kernel Level Threads (KLT)?",
+            "a": [
+              "Código explícito para crear y planificar hilos",
+              "Solo llamadas a la API del núcleo para la gestión de hilos",
+              "No contiene ningún código relacionado con hilos",
+              "Bibliotecas de hilos que se comunican directamente con el hardware"
+            ],
+            "answer": 2
+          },
+          {
+            "q": "¿Qué sistemas operativos se mencionan como ejemplos que utilizan Kernel Level Threads (KLT)?",
+            "a": [
+              "MS-DOS y UNIX",
+              "Windows 2000, Linux y OS/2",
+              "Solo Solaris",
+              "Cualquier sistema operativo basado en microkernel"
+            ],
+            "answer": 2
+          },
+          {
+            "q": "¿Qué información mantiene el kernel en un sistema con Kernel Level Threads (KLT)?",
+            "a": [
+              "Solo la información de los procesos, desconociendo los hilos",
+              "La información de la aplicación, pero no de los hilos individuales",
+              "La información del proceso como un todo y de todos los hilos del proceso",
+              "Únicamente la información de los hilos, sin considerar los procesos"
+            ],
+            "answer": 3
+          },
+          {
+            "q": "¿Cómo realiza el kernel la planificación en un sistema KLT y cuáles son sus implicaciones?",
+            "a": [
+              "A nivel de proceso, bloqueando el proceso completo si un hilo se bloquea",
+              "A nivel de hilo, incluso en múltiples procesadores, y sin penalizar al resto de hilos si uno se bloquea",
+              "De forma manual, requiriendo intervención del programador para cada cambio de hilo",
+              "De forma pasiva, solo cuando un hilo solicita explícitamente un cambio"
+            ],
+            "answer": 2
+          },
+          {
+            "q": "¿Cuál es una ventaja clave de usar Kernel Level Threads (KLT) en comparación con User Level Threads (ULT)?",
+            "a": [
+              "El cambio de hilo no necesita privilegios de kernel",
+              "No se bloquean todos los hilos de un proceso si uno se bloquea",
+              "Las operaciones de gestión de hilos se realizan en el espacio de usuario",
+              "Permiten planificaciones específicas y a medida para cada aplicación"
+            ],
+            "answer": 2
+          },
+          {
+            "q": "¿Qué desventaja principal presentan los Kernel Level Threads (KLT) en comparación con los ULT?",
+            "a": [
+              "No pueden usar múltiples procesadores",
+              "Para cambiar de un hilo a otro dentro del mismo proceso se necesita un cambio a modo kernel",
+              "Las rutinas del kernel rara vez son multihilo",
+              "La aplicación debe programar explícitamente toda la gestión de hilos"
+            ],
+            "answer": 2
+          },
+          {
+            "q": "¿Qué sistema operativo se menciona como ejemplo de una aproximación combinada de KLT y ULT?",
+            "a": [
+              "Windows",
+              "Linux",
+              "Solaris",
+              "MS-DOS"
+            ],
+            "answer": 3
+          },
+          {
+            "q": "En el modelo combinado de KLT y ULT, ¿qué permiten los Sistemas Operativos para asociar los hilos?",
+            "a": [
+              "Solo asociaciones M:1 (muchos hilos de usuario a un hilo de kernel)",
+              "Asociar a uno o varios ULT un KLT",
+              "Solo asociaciones 1:1 (un hilo de usuario a un hilo de kernel)",
+              "Unicamente asociaciones donde los hilos de usuario gestionan los hilos de kernel"
+            ],
+            "answer": 2
+          },
+          {
+            "q": "En un modelo combinado (KLT & ULT), ¿qué sucede si un User Level Thread (ULT) realiza una llamada bloqueante?",
+            "a": [
+              "El proceso completo se bloquea, incluyendo todos los hilos de kernel asociados",
+              "Solo los ULT asociados al mismo KLT se bloquean",
+              "El sistema operativo ignora la llamada y el hilo continúa ejecutándose",
+              "Todos los hilos del proceso, incluyendo los de kernel, se terminan"
+            ],
+            "answer": 2
+          },
+          {
+            "q": "¿Cuáles son los modelos de asociación que se pueden generar en una implementación combinada de hilos?",
+            "a": [
+              "0:1, 1:0, 1:1",
+              "1:1, M:1 y M:M",
+              "N:1, N:M, M:N",
+              "S:S, M:S, S:M"
+            ],
+            "answer": 2
+          },
+          {
+            "q": "En el modelo combinado, ¿quién tiene la capacidad de ajustar el número de Kernel Level Threads (KLT) para cada aplicación?",
+            "a": [
+              "El núcleo del sistema operativo de forma automática",
+              "El programador de la aplicación",
+              "El usuario final a través de la interfaz gráfica",
+              "La biblioteca de hilos interna"
+            ],
+            "answer": 2
+          },
+          {
+            "q": "¿Qué permite una aplicación correctamente diseñada al combinar las ventajas de los modelos ULT y KLT?",
+            "a": [
+              "Solo ejecutar en sistemas mono-procesador",
+              "Evitar por completo la necesidad de sincronización entre hilos",
+              "Aumentar la complejidad de la programación sin beneficios",
+              "Combinar las ventajas de ambos modelos de implementación"
+            ],
+            "answer": 4
+          },
+          {
+            "q": "¿Cuál es la relación 'normal' o más común que se suele considerar entre las unidades de Activación (hilos) y las Unidades de Asignación (procesos)?",
+            "a": [
+              "Uno a uno (un hilo por proceso)",
+              "Muchos a uno (muchos hilos en un único proceso)",
+              "Muchos a muchos (varios hilos en varios procesos)",
+              "Uno a muchos (un proceso contiene muchos hilos)"
+            ],
+            "answer": 2
+          },
+          {
+            "q": "En un sistema multihilo, ¿qué sucede si un hilo abre un fichero para lectura?",
+            "a": [
+              "El fichero se bloquea para todos los demás hilos del mismo proceso",
+              "Los demás hilos del mismo proceso también podrán leer ese fichero",
+              "Solo el hilo que abrió el fichero puede leerlo",
+              "El sistema operativo cierra el fichero automáticamente"
+            ],
+            "answer": 2
+          },
+          {
+            "q": "¿Qué implicación tiene que la planificación y la activación se realice a nivel de hilo?",
+            "a": [
+              "El sistema operativo solo puede ejecutar un proceso a la vez",
+              "El procesador puede cambiar entre hilos de un mismo proceso o de diferentes procesos",
+              "Cada hilo necesita su propio espacio de direcciones separado",
+              "Los hilos no pueden compartir recursos del proceso"
+            ],
+            "answer": 2
+          },
+          {
+            "q": "¿En qué se diferencia el contexto del procesador que guarda el S.O. para un hilo del espacio de direcciones virtual de un proceso?",
+            "a": [
+              "El contexto del procesador es una copia completa del espacio de direcciones",
+              "El contexto del procesador incluye registros y punteros de pila, mientras que el espacio de direcciones es la imagen del proceso",
+              "Son exactamente lo mismo, solo con nombres diferentes",
+              "El contexto del procesador es compartido por todos los hilos, el espacio de direcciones no"
+            ],
+            "answer": 2
+          },
+          {
+            "q": "¿Cómo contribuyen los hilos a la 'Velocidad de ejecución' en un escenario de procesamiento asíncrono?",
+            "a": [
+              "Minimizando el uso de la memoria RAM",
+              "Permitiendo que el proceso no se bloquee por la lectura de datos, mientras otros hilos computan",
+              "Reduciendo la necesidad de múltiples procesadores",
+              "Forzando que todas las operaciones se realicen en modo síncrono"
+            ],
+            "answer": 2
+          },
+          {
+            "q": "¿Qué ocurre con la suspensión y finalización de los hilos en un sistema multihilo?",
+            "a": [
+              "Se realizan a nivel de hilo, individualmente para cada uno",
+              "Se realizan a nivel de proceso, afectando a todos los hilos del proceso",
+              "La suspensión se realiza a nivel de hilo, la finalización a nivel de proceso",
+              "Ambas operaciones las gestiona la aplicación directamente"
+            ],
+            "answer": 2
+          }
+    ]
+  }

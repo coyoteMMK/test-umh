@@ -1,0 +1,308 @@
+{
+    "title": "U3_07",
+    "career": "Ingeniería Informática",
+    "year": "Segundo año",
+    "subject": "Sistemas_Operativos",
+    "questions": [
+        {
+            "q": "La exclusión mutua mediante semáforos y monitores es adecuada para un sistema con:",
+            "a": [
+              "Múltiples computadores conectados en red.",
+              "Un único computador (mono o multiprocesador) compartiendo memoria.",
+              "Procesos sin ninguna relación de parentesco.",
+              "Un sistema distribuido con paso de mensajes asíncrono."
+            ],
+            "answer": 2
+          },
+          {
+            "q": "El paso de mensajes es una solución de exclusión mutua que es especialmente relevante para:",
+            "a": [
+              "Sistemas de un solo procesador.",
+              "Sistemas operativos monolíticos.",
+              "Sistemas distribuidos (conectados en red).",
+              "Aplicaciones que usan hilos de ejecución ligeros sin comunicación."
+            ],
+            "answer": 3
+          },
+          {
+            "q": "Entre los aspectos de diseño del paso de mensajes, ¿cuál se refiere a la confirmación de la recepción de un mensaje?",
+            "a": [
+              "Verificación de autenticidad.",
+              "Rendimiento.",
+              "Secuenciación de mensajes.",
+              "Acuse de recibo."
+            ],
+            "answer": 4
+          },
+          {
+            "q": "Un posible problema de rendimiento del mecanismo de mensajes es que puede ser más lento que monitores o semáforos:",
+            "a": [
+              "Únicamente en sistemas distribuidos.",
+              "En la misma máquina.",
+              "Cuando se usa direccionamiento indirecto.",
+              "Si los mensajes son de longitud fija."
+            ],
+            "answer": 2
+          },
+          {
+            "q": "El análisis del paso de mensajes se realiza desde las perspectivas de Sincronización, Direccionamiento, Formato y:",
+            "a": [
+              "Autenticación.",
+              "Rendimiento.",
+              "Disciplina de cola.",
+              "Encriptación."
+            ],
+            "answer": 3
+          },
+          {
+            "q": "La combinación de envío bloqueante y recepción bloqueante se conoce como 'rendez-vous' y permite:",
+            "a": [
+              "Una sincronización flexible entre procesos.",
+              "Una sincronización estricta entre varios procesos.",
+              "La comunicación asíncrona por defecto.",
+              "Evitar la necesidad de acuses de recibo."
+            ],
+            "answer": 2
+          },
+          {
+            "q": "Si se utiliza la combinación de envío no bloqueante y recepción bloqueante, ¿qué es necesario si se quiere verificar la recepción?",
+            "a": [
+              "Un mecanismo de sondeo continuo.",
+              "La sincronización de reloj entre los sistemas.",
+              "Mensajes de respuesta (ACK).",
+              "Un bloqueo mutuo de ambos procesos."
+            ],
+            "answer": 3
+          },
+          {
+            "q": "Un envío no bloqueante presenta el peligro de:",
+            "a": [
+              "Un bloqueo indefinido del emisor.",
+              "Reenvíos continuos sin bloqueo del emisor.",
+              "Pérdida de la autenticidad del mensaje.",
+              "Una recepción bloqueante indefinida del receptor."
+            ],
+            "answer": 2
+          },
+          {
+            "q": "Para una recepción bloqueante, si el mensaje del emisor se pierde, un posible problema es:",
+            "a": [
+              "El emisor se bloquea esperando un ACK.",
+              "El proceso emisor puede reenviar el mensaje repetidamente.",
+              "La recepción puede ser indefinida.",
+              "El sistema operativo detendrá la comunicación."
+            ],
+            "answer": 3
+          },
+          {
+            "q": "Si hay varios emisores, una solución útil para evitar una recepción bloqueante indefinida es:",
+            "a": [
+              "Incrementar la prioridad de los mensajes.",
+              "Permitir que un proceso compruebe la existencia del mensaje por el que espera antes de solicitarlo.",
+              "Forzar a todos los emisores a usar envíos bloqueantes.",
+              "Reducir el tamaño de los mensajes."
+            ],
+            "answer": 2
+          },
+          {
+            "q": "El Direccionamiento Directo en el paso de mensajes implica que las primitivas incluyen:",
+            "a": [
+              "La dirección del buzón.",
+              "Un identificador abstracto de servicio.",
+              "El identificador del proceso con el que comunicar.",
+              "Un puntero a la cola de mensajes del sistema."
+            ],
+            "answer": 3
+          },
+          {
+            "q": "El uso de buzones para intercambiar mensajes es característico del esquema de direccionamiento:",
+            "a": [
+              "Directo.",
+              "Indirecto.",
+              "Unidireccional.",
+              "De difusión."
+            ],
+            "answer": 2
+          },
+          {
+            "q": "Los buzones dinámicos se diferencian de los estáticos en que la asociación del proceso al buzón se hace de manera dinámica con primitivas de:",
+            "a": [
+              "Creación y destrucción.",
+              "Envío y recepción.",
+              "Conectar y desconectar.",
+              "Abrir y cerrar."
+            ],
+            "answer": 3
+          },
+          {
+            "q": "Cuando el Sistema Operativo es el propietario del buzón en el direccionamiento indirecto, se necesitan primitivas específicas para:",
+            "a": [
+              "Modificar el formato del mensaje.",
+              "Gestionar las prioridades de los mensajes.",
+              "La creación y destrucción del buzón.",
+              "La verificación de autenticidad del emisor."
+            ],
+            "answer": 3
+          },
+          {
+            "q": "Un enlace privado de comunicaciones entre dos procesos se logra con la relación de emisores/receptores de tipo:",
+            "a": [
+              "Uno a Muchos.",
+              "Muchos a Uno.",
+              "Uno a Uno.",
+              "Muchos a Muchos."
+            ],
+            "answer": 3
+          },
+          {
+            "q": "La relación 'Uno a Muchos' en el direccionamiento indirecto es útil para aplicaciones que requieren:",
+            "a": [
+              "Un servicio exclusivo a un único cliente.",
+              "Ofrecer un servicio a múltiples procesos clientes.",
+              "Difundir un mensaje a N procesos (broadcast).",
+              "Sincronización estricta entre un emisor y un receptor."
+            ],
+            "answer": 3
+          },
+          {
+            "q": "Cuando el buzón se denomina 'puerto' y el receptor (servidor) ofrece un servicio a varios procesos (clientes), esto describe la relación:",
+            "a": [
+              "Uno a Uno.",
+              "Uno a Muchos.",
+              "Muchos a Uno.",
+              "Muchos a Muchos."
+            ],
+            "answer": 3
+          },
+          {
+            "q": "El formato de mensaje donde los datos se ubican en un fichero y se transmite solo su referencia es típico para:",
+            "a": [
+              "Mensajes cortos de tamaño fijo.",
+              "Mensajes de longitud variable.",
+              "Mensajes largos.",
+              "Cualquier tipo de mensaje para mejorar el rendimiento."
+            ],
+            "answer": 3
+          },
+          {
+            "q": "En un mensaje de longitud variable, ¿qué parte contiene el 'Tipo de mensaje', 'Proceso destino' y 'Longitud del mensaje'?",
+            "a": [
+              "El cuerpo del mensaje.",
+              "La cabecera del mensaje.",
+              "Un metadato externo.",
+              "La cola de mensajes."
+            ],
+            "answer": 2
+          },
+          {
+            "q": "La disciplina de cola FIFO (First-In, First-Out) para los mensajes puede no ser suficiente si:",
+            "a": [
+              "Se requiere una verificación de autenticidad.",
+              "Hay mensajes más urgentes que otros.",
+              "El emisor usa envío no bloqueante.",
+              "El receptor consume mensajes de forma asíncrona."
+            ],
+            "answer": 2
+          },
+          {
+            "q": "La disciplina de cola basada en PRIORIDADES permite ordenar los mensajes en función de:",
+            "a": [
+              "Su tiempo de llegada.",
+              "La hora del día.",
+              "El tipo de mensaje, del destinatario o del emisor.",
+              "La capacidad del buffer."
+            ],
+            "answer": 3
+          },
+          {
+            "q": "La disciplina de cola de 'SELECCIÓN' permite que el receptor:",
+            "a": [
+              "Rechace mensajes que no son de su interés.",
+              "Examine la cola en busca del mensaje que quiere recibir a continuación.",
+              "Establezca un temporizador para la recepción de mensajes.",
+              "Reordene la cola para su conveniencia."
+            ],
+            "answer": 2
+          },
+          {
+            "q": "En el ejemplo de exclusión mutua con mensajes, se utiliza un buzón llamado 'mutex' y una llamada 'send(mutex, null)' para:",
+            "a": [
+              "Enviar un mensaje vacío al buzón de mutex.",
+              "Indicar que el buzón mutex está libre.",
+              "Destruir el buzón mutex.",
+              "Configurar el buzón para un solo proceso."
+            ],
+            "answer": 2
+          },
+          {
+            "q": "Para resolver el problema del productor/consumidor con buffer ilimitado usando mensajes, la solución propuesta utiliza:",
+            "a": [
+              "Un buzón para los ítems producidos y otro para los ítems consumidos.",
+              "Un único buzón llamado 'buffer' para los ítems.",
+              "Semáforos para controlar el acceso al buffer.",
+              "Tuberías con nombre para la comunicación."
+            ],
+            "answer": 2
+          },
+          {
+            "q": "En la solución del problema del productor/consumidor con buffer limitado, se utilizan dos buzones denominados:",
+            "a": [
+              "item_producido y item_consumido.",
+              "buffer_entrada y buffer_salida.",
+              "buffer_producir y buffer_consumir.",
+              "productor_queue y consumidor_queue."
+            ],
+            "answer": 3
+          },
+          {
+            "q": "El código del `main` para el productor/consumidor con buffer limitado inicializa `buffer_producir` con `capacidad` mensajes `null` para:",
+            "a": [
+              "Representar la capacidad inicial del buffer como espacios disponibles.",
+              "Indicar que el buffer está vacío al inicio.",
+              "Sincronizar el inicio de ambos procesos.",
+              "Forzar al productor a esperar antes de producir."
+            ],
+            "answer": 1
+          },
+          {
+            "q": "¿Cuál de las siguientes es una herramienta para el paso de mensajes proporcionada por Unix System V Release 4 (SVR4)?",
+            "a": [
+              "Memoria compartida.",
+              "Eventos del sistema.",
+              "Sockets.",
+              "Variables de condición."
+            ],
+            "answer": 3
+          },
+          {
+            "q": "Las 'Tuberías con nombre' en Unix SVR4 se utilizan para comunicar procesos que tienen:",
+            "a": [
+              "Una relación de parentesco.",
+              "Ninguna relación de parentesco.",
+              "Una relación uno a uno exclusivamente.",
+              "Una conexión de red remota."
+            ],
+            "answer": 2
+          },
+          {
+            "q": "En las Colas de Mensajes de Unix SVR4, ¿qué puede suceder si se tipan los mensajes y se dotan de primitivas de selección de mensaje por tipo?",
+            "a": [
+              "Se garantiza una estricta disciplina FIFO para todos los mensajes.",
+              "La exclusión mutua al buffer deja de ser garantizada por el SO.",
+              "Rompe la disciplina FIFO, aunque se mantiene FIFO para el mismo tipo de mensaje.",
+              "Solo se pueden enviar mensajes de longitud fija."
+            ],
+            "answer": 3
+          },
+          {
+            "q": "La primitiva `msgget` en Unix SVR4 se utiliza para:",
+            "a": [
+              "Escribir (send) un mensaje en la cola.",
+              "Leer (receive) un mensaje de la cola.",
+              "Controlar las colas de mensajes.",
+              "Crear una cola o habilitar acceso a una cola ya creada."
+            ],
+            "answer": 4
+          }
+    ]
+  }

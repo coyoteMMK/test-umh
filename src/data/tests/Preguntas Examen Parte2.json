@@ -1,0 +1,358 @@
+{
+    "title": "Preguntas Examen Parte 2",
+    "career": "Ingeniería Informática",
+    "year": "Segundo año",
+    "subject": "Sistemas_Operativos",
+    "questions": [
+      {
+        "q": "¿Qué ocurre si le asignamos a un proceso menos páginas de las que forman su conjunto de trabajo (working set)?",
+        "a": [
+          "Aumentará el número de cambios de contexto en el sistema.",
+          "Disminuirá el tamaño de su tabla de páginas.",
+          "Que el proceso no podrá ejecutarse",
+          "El proceso generará fallos de página continuamente."
+        ],
+        "answer": 4
+      },
+      {
+        "q": "¿Cuál de estos algoritmos de reemplazo de páginas se apoya en el bit de referencia?",
+        "a": [
+          "FIFO.",
+          "OPT.",
+          "SJF.",
+          "Algoritmo del reloj / segunda oportunidad."
+        ],
+        "answer": 4
+      },
+      {
+        "q": "Tenemos un sistema de gestión de memoria con segmentación, con direcciones lógicas de 32 bits. Si cada proceso es capaz de manejar hasta 64 segmentos, ¿cuál es el tamaño máximo que puede llegar a tener un segmento?",
+        "a": [
+          "16 MB.",
+          "64 MB.",
+          "1 MB.",
+          "8 MB."
+        ],
+        "answer": 2
+      },
+      {
+        "q": "¿Qué es la MMU?",
+        "a": [
+          "Es el módulo del hardware encargado de la traducción de direcciones lógicas a direcciones físicas.",
+          "Es el módulo del sistema operativo encargado de detectar accesos a posiciones de memoria indebidas.",
+          "Es el módulo del sistema informático encargado de resolver los fallos de página y recuperar las páginas de la memoria secundaria.",
+          "Es el módulo hardware encargado de gestionar el intercambio de memoria y swap área."
+        ],
+        "answer": 1
+      },
+      {
+        "q": "La TLB es una estructura usada para:",
+        "a": [
+          "Reducir el tiempo de la traducción de direcciones de memoria.",
+          "Almacenar el estado de un proceso cuando ocurre un cambio de contexto.",
+          "Almacenar el estado de las páginas no válidas de un proceso.",
+          "Almacenar los punteros a las pilas de los procesos"
+        ],
+        "answer": 1
+      },
+      {
+        "q": "En un sistema que usa gestión de memoria paginada simple, cierto proceso necesita ocupar 2000 bytes de memoria principal. Si el tamaño de página utilizado es 512 bytes, ¿cuánta fragmentación provoca el proceso?",
+        "a": [
+          "Al menos 464 bytes de fragmentación externa.",
+          "Al menos 48 bytes de fragmentación externa.",
+          "Al menos 48 bytes de fragmentación interna.",
+          "Al menos 64 bytes de fragmentación interna."
+        ],
+        "answer": 3
+      },
+      {
+        "q": "Tenemos un sistema de gestión de memoria paginada simple. Las direcciones lógicas son de 32 bits y las direcciones físicas son de 48 bits. Si el tamaño de página es de 16 KB, ¿cuántas páginas distintas es capaz de manejar un proceso al mismo tiempo?",
+        "a": [
+          "218 páginas.",
+          "224 páginas.",
+          "216 páginas.",
+          "212 páginas."
+        ],
+        "answer": 1
+      },
+      {
+        "q": "En un sistema de memoria paginada se ejecutan varios procesos pesados (procesos) e hilos. ¿Cuántas tablas de páginas diferentes existen en un momento dado?",
+        "a": [
+          "Sólo una multientrada gestionada por la MMU.",
+          "Tantas como procesos pesados hay.",
+          "Tantas como hilos hay.",
+          "Tantas como la suma de procesos pesados e hilos."
+        ],
+        "answer": 2
+      },
+      {
+        "q": "¿Qué característica peculiar tiene la instrucción test-and-set?",
+        "a": [
+          "Se ejecuta de forma atómica.",
+          "Sólo funciona en multiprocesadores.",
+          "Ejecuta dos acciones de forma simultánea (paralela).",
+          "Ejecuta el test y espera interrupción para el set."
+        ],
+        "answer": 1
+      },
+      {
+        "q": "Tenemos una variable entera x que actualmente vale 1. Dos hilos acceden simultáneamente a x. Uno de ellos ejecuta la sentencia x=x+1 y el otro la sentencia x=x-1. Una vez que se ejecuten esas sentencias, ¿cuál será el valor de x?",
+        "a": [
+          "1.",
+          "0, 1 o 2.",
+          "0 o 2.",
+          "0"
+        ],
+        "answer": 2
+      },
+      {
+        "q": "¿Cuál es el problema de utilizar espera activa para resolver la sincronización entre procesos?",
+        "a": [
+          "Se utiliza improductivamente tiempo del procesador.",
+          "No se resuelve del todo la sincronización, por ejemplo, si varios hilos ejecutan justo al mismo tiempo la espera activa.",
+          "No funciona en sistemas multiprocesadores de memoria compartida.",
+          "Que hay que esperar la activación por parte del S.O. para continuar la ejecución."
+        ],
+        "answer": 1
+      },
+      {
+        "q": "Tenemos tres procesos en la cola de preparados. El primero quiere ejecutarse durante 3 mseg., otro durante 2 mseg. y el último 5 mseg. Sabemos que dentro de 3 mseg. llegará un proceso que pretende ejecutarse durante 1 mseg. Si la CPU actualmente está libre, ¿qué algoritmo de planificación producirá más cambios de contexto para esta carga de trabajo?",
+        "a": [
+          "FCFS.",
+          "Round-Robin con Q=2mseg.",
+          "SJF expulsivo.",
+          "Round-Robin con Q=8mseg."
+        ],
+        "answer": 2
+      },
+      {
+        "q": "¿Cuál es la diferencia entre un proceso «pesado» y un hilo (thread)?",
+        "a": [
+          "Un proceso pesado es una aplicación en ejecución, mientras que un hilo es una actividad concurrente dentro de una aplicación.",
+          "Un proceso pesado puede contener un hilo o ninguno, mientras que un hilo puede contener uno o más procesos pesados.",
+          "Un proceso pesado corre siempre en modo usuario, mientras que un hilo puede correr en modo usuario o modo supervisor/modo núcleo.",
+          "Un hilo puede pertenecer a varios procesos pero un proceso a un único hilo."
+        ],
+        "answer": 1
+      },
+      {
+        "q": "Para implementar de forma eficaz un esquema de protección de memoria basado en la pareja de registros base y límite, ¿cuál de estas características debe estar presente en el hardware?",
+        "a": [
+          "Un temporizador controlable por software.",
+          "Un procesador con dos modos de operación (user/kernel).",
+          "Una jerarquía de memorias de al menos dos niveles.",
+          "El controlador de interrupciones"
+        ],
+        "answer": 2
+      },
+      {
+        "q": "El núcleo del sistema operativo:",
+        "a": [
+          "Está cargado en memoria principal de forma permanente.",
+          "Contiene los programas del sistema.",
+          "Su tamaño depende del número de procesos a gestionar.",
+          "Virtualiza las distintas interfaces que puede ofrecer el sistema operativo."
+        ],
+        "answer": 1
+      },
+      {
+        "q": "¿El hardware puede activar directamente al sistema operativo?",
+        "a": [
+          "Sí, por ejemplo, mediante una interrupción.",
+          "No, el sistema operativo sólo se activa mediante software.",
+          "No, se requiere una instrucción TRAP.",
+          "No, todos los eventos del hardware deben pasar por el núcleo."
+        ],
+        "answer": 1
+      },
+      {
+        "q": "Si dispusiéramos de memoria infinita, ¿qué servicio dejaría de tener sentido?",
+        "a": [
+          "La gestión de zonas de la memoria libres y ocupadas.",
+          "La protección del área de memoria de los procesos.",
+          "La protección del área de memoria ocupada por el sistema operativo.",
+          "La memoria virtual paginada."
+        ],
+        "answer": 4
+      },
+      {
+        "q": "¿Cuál de estos algoritmos de planificación de CPU por definición no puede ser expulsivo?",
+        "a": [
+          "FCFS.",
+          "Round Robin.",
+          "SJF.",
+          "SJF con prioridades."
+        ],
+        "answer": 1
+      },
+      {
+        "q": "Se tienen dos procesos: P1 y P2, de tiempos de ejecución 25 y 30 ms, respectivamente. El planificador a corto plazo actúa según el algoritmo Round Robin con quantum de 10 ms. ¿Cuál será el tiempo de retorno o regreso de P2?",
+        "a": [
+          "45 ms.",
+          "55 ms.",
+          "60 ms.",
+          "70 ms."
+        ],
+        "answer": 1
+      },
+      {
+        "q": "El controlador de E/S y la memoria intercambian datos directamente, sin la intervención de la CPU, cuando se tiene:",
+        "a": [
+          "E/S controlada por programa",
+          "E/S por interrupciones",
+          "DMA",
+          "Ninguna de las anteriores"
+        ],
+        "answer": 3
+      },
+      {
+        "q": "La sincronización mediante monitor:",
+        "a": [
+          "Esta implícita, basta con invocar al procedimiento correspondiente del monitor",
+          "Se consigue porque existe una cola asociada a cada procedimiento del monitor",
+          "Se consigue porque existe una única cola asociada a todos los procedimientos del monitor",
+          "Se consigue mediante la utilización de variables de condición"
+        ],
+        "answer": 4
+      },
+      {
+        "q": "En el enfoque Núcleo Fuera de Todo Proceso, ¿cómo interactúan los procesos de usuario con el núcleo del sistema operativo?",
+        "a": [
+          "A través de comunicación interprocesos (IPC).",
+          "Comparten el espacio de direcciones con el núcleo.",
+          "Por medio de llamadas al sistema y solicitudes de servicios.",
+          "Ejecutando el núcleo como una biblioteca compartida."
+        ],
+        "answer": 3
+      },
+      {
+        "q": "¿Qué representa el valor del contador en la implementación interna de un semáforo en un sistema operativo?",
+        "a": [
+          "El número total de hilos en espera.",
+          "La cantidad de recursos gestionados por el semáforo.",
+          "El tiempo transcurrido desde la última operación V (Despertar).",
+          "La prioridad asignada a los procesos en la cola de espera."
+        ],
+        "answer": 2
+      },
+      {
+        "q": "¿Cuál de las siguientes métricas es especialmente relevante en sistemas interactivos y afecta la percepción de la velocidad del sistema por parte del usuario?",
+        "a": [
+          "Throughput (Rendimiento)",
+          "Tiempo de Respuesta Promedio",
+          "Inanición (Starvation)",
+          "Criterios de Justicia (Fairness)"
+        ],
+        "answer": 2
+      },
+      {
+        "q": "En el esquema de segmentación, ¿qué información contiene la tabla de descriptores de segmento?",
+        "a": [
+          "Dirección física completa de cada segmento.",
+          "Tamaño y dirección base de cada segmento.",
+          "Nombres y tamaños de los segmentos.",
+          "Números de página y desplazamientos."
+        ],
+        "answer": 2
+      },
+      {
+        "q": "¿Cuál es una ventaja del paso de mensajes en comparación con los semáforos y monitores?",
+        "a": [
+          "Mayor eficiencia en sistemas de memoria compartida.",
+          "Comunicación explícita entre procesos.",
+          "Menor complejidad de implementación.",
+          "Flexibilidad en la sincronización."
+        ],
+        "answer": 2
+      },
+      {
+        "q": "¿Qué función cumple el número de marco de página en una entrada típica de la tabla de páginas en un sistema de memoria virtual?",
+        "a": [
+          "Indica la dirección lógica de la página.",
+          "Representa el desplazamiento dentro de la página.",
+          "Es un índice directo a la ubicación física de la página.",
+          "Define los permisos de acceso a la página."
+        ],
+        "answer": 3
+      },
+      {
+        "q": "¿Qué implica el concepto de reubicación en la gestión de memoria?",
+        "a": [
+          "La capacidad de cargar varios procesos en la memoria principal simultáneamente.",
+          "Ajustar las direcciones de memoria de un programa para ejecutarse en diferentes ubicaciones de memoria.",
+          "La asignación de espacio de direcciones fijo para cada proceso.",
+          "La carga dinámica de programas en tiempo de ejecución."
+        ],
+        "answer": 2
+      },
+      {
+        "q": "¿Cuál de las siguientes afirmaciones describe mejor la relación entre OpenMP y los hilos a nivel de usuario (ULT)?",
+        "a": [
+          "OpenMP utiliza hilos a nivel de kernel (KLT) para la paralelización en sistemas distribuidos.",
+          "OpenMP no utiliza hilos, sino procesos separados en sistemas distribuidos.",
+          "OpenMP utiliza hilos a nivel de usuario (ULT) para la paralelización en sistemas de memoria compartida.",
+          "OpenMP se enfoca en la comunicación entre procesos en sistemas de memoria distribuida."
+        ],
+        "answer": 3
+      },
+      {
+        "q": "¿Cuál de las siguientes afirmaciones describe correctamente el proceso de traducción de direcciones en un sistema de paginación simple sin memoria virtual?",
+        "a": [
+          "Las direcciones lógicas se traducen directamente en direcciones físicas sin necesidad de una tabla de páginas.",
+          "Las direcciones lógicas se dividen en segmentos y se traducen a direcciones físicas mediante una tabla de segmentos.",
+          "Las direcciones lógicas se dividen en páginas, que se asignan a marcos de página en la memoria física utilizando una tabla de páginas.",
+          "Las direcciones lógicas se traducen a direcciones físicas utilizando un algoritmo de reemplazo de páginas."
+        ],
+        "answer": 3
+      },
+      {
+        "q": "¿Cuál es una característica clave del direccionamiento uno a muchos (broadcast) en el paso de mensajes?",
+        "a": [
+          "Solo un proceso puede recibir el mensaje enviado.",
+          "El mensaje se envía a un proceso receptor específico y único.",
+          "Varios procesos pueden recibir el mismo mensaje desde un canal compartido.",
+          "El mensaje se envía a múltiples destinatarios, pero cada uno recibe una copia única del mensaje."
+        ],
+        "answer": 3
+      },
+      {
+        "q": "¿Cuál de las siguientes es una ventaja de los monitores sobre los semáforos?",
+        "a": [
+          "Los monitores requieren manejo manual de la exclusión mutua.",
+          "Los monitores permiten la exclusión mutua implícita, simplificando la programación concurrente.",
+          "Los monitores son menos seguros y propensos a errores comparados con los semáforos.",
+          "Los monitores son más flexibles que los semáforos para cualquier problema de sincronización."
+        ],
+        "answer": 2
+      },
+      {
+        "q": "¿Cuál es una ventaja de utilizar la función intercambiar() o swap() para la exclusión mutua en sistemas multiprocesador?",
+        "a": [
+          "Requiere intervención manual para cada operación.",
+          "Asegura que las operaciones se realicen de forma indivisible y eficiente en un entorno concurrente.",
+          "No garantiza la exclusión mutua y depende del programador manejar las condiciones de carrera.",
+          "Es más sencilla de implementar que cualquier otra técnica de sincronización."
+        ],
+        "answer": 2
+      },
+      {
+        "q": "¿Cuándo es más recomendable utilizar procesos en lugar de hilos en una aplicación?",
+        "a": [
+          "Cuando se requiere un alto grado de aislamiento y seguridad entre unidades de ejecución.",
+          "Cuando las tareas son altamente dependientes y requieren comunicación constante.",
+          "Cuando la aplicación necesita maximizar la velocidad de cambio de contexto.",
+          "Cuando se necesita acceso compartido a la misma memoria por todos los hilos."
+        ],
+        "answer": 1
+      },
+      {
+        "q": "¿Cuándo puede un proceso entrar en un monitor?",
+        "a": [
+          "Sólo cuando tiene definidas variables de condición.",
+          "Sólo es necesario que el monitor se encuentre “vacío”.",
+          "Hace falta que el monitor esté vacío y no haya procesos esperando en ninguna cola de condición.",
+          "Ninguna del resto de las contestaciones es correcta."
+        ],
+        "answer": 3
+      }
+    ]
+  }
