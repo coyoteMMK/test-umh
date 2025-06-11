@@ -1,4 +1,3 @@
-
 ---
 interface Question {
   q: string;
@@ -6,30 +5,7 @@ interface Question {
   answer: number; // 1-based
 }
 
-function shuffle<T>(array: T[]): T[] {
-  let arr = [...array];
-  for (let i = arr.length - 1; i > 0; i--) {
-    const j = Math.floor(Math.random() * (i + 1));
-    [arr[i], arr[j]] = [arr[j], arr[i]];
-  }
-  return arr;
-}
-
 const originalQuestions = Astro.props.questions;
-
-// Mezclar preguntas y respuestas en el servidor
-const shuffledQuestions = shuffle(originalQuestions).map((q) => {
-  const shuffledAnswers = shuffle(q.a);
-  // Encuentra el texto de la respuesta correcta original
-  const correctText = q.a[q.answer - 1];
-  // Busca el nuevo índice de la respuesta correcta
-  const newCorrectIndex = shuffledAnswers.indexOf(correctText);
-  return {
-    q: q.q,
-    a: shuffledAnswers,
-    answer: newCorrectIndex, // 0-based
-  };
-});
 ---
 
 <!-- Contador de aciertos y errores -->
@@ -52,33 +28,13 @@ const shuffledQuestions = shuffle(originalQuestions).map((q) => {
   </div>
 </div>
 
-<!-- Contenedor de todas las preguntas -->
-<div id="test-root" class="flex flex-col items-center mt-2 px-4 md:px-0">
-  {
-    shuffledQuestions.map((item, i) => (
-      <section
-        class="w-full max-w-2xl mb-6 px-4 py-3 bg-white shadow-xl border-4 border-black rounded-lg text-sm sm:text-base"
-        data-correct={item.answer}
-      >
-        <h2 class="text-lg sm:text-2xl font-bold text-center mb-3">{item.q}</h2>
-        <ul class="flex flex-col gap-4 list-none p-0">
-          {item.a.map((ans, j) => {
-            const emojis = ["😎", "👾", "👽", "👹"];
-            return (
-              <li
-                class="option mx-4 p-3 sm:p-4 rounded-md bg-gray-100 hover:bg-gray-300 cursor-pointer transition-colors flex items-start gap-2"
-                data-index={j}
-              >
-                <span>{emojis[j % emojis.length]}</span>
-                <span>{ans}</span>
-              </li>
-            );
-          })}
-        </ul>
-      </section>
-    ))
-  }
-</div>
+<!-- Contenedor de todas las preguntas (se llenará con JS) -->
+<div id="test-root" class="flex flex-col items-center mt-2 px-4 md:px-0"></div>
+
+<!-- Pasar preguntas originales al navegador -->
+<script type="application/json" id="questions-data">
+  {JSON.stringify(originalQuestions)}
+</script>
 
 <script type="module">
   // Inyectar estilos para .correct y .wrong si no existen
@@ -95,6 +51,56 @@ const shuffledQuestions = shuffle(originalQuestions).map((q) => {
     `;
     document.head.appendChild(style);
   }
+
+  // Función para mezclar arrays
+  function shuffle(array) {
+    let arr = [...array];
+    for (let i = arr.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      [arr[i], arr[j]] = [arr[j], arr[i]];
+    }
+    return arr;
+  }
+
+  // Obtener preguntas originales
+  const questions = JSON.parse(document.getElementById('questions-data').textContent);
+
+  // Mezclar preguntas y respuestas, manteniendo la correcta
+  const shuffledQuestions = shuffle(questions).map(q => {
+    const shuffledAnswers = shuffle(q.a);
+    const correctText = q.a[q.answer - 1];
+    const newCorrectIndex = shuffledAnswers.indexOf(correctText);
+    return {
+      q: q.q,
+      a: shuffledAnswers,
+      answer: newCorrectIndex, // 0-based
+    };
+  });
+
+  // Renderizar preguntas mezcladas
+  const root = document.getElementById('test-root');
+  root.innerHTML = shuffledQuestions.map((item, i) => `
+    <section
+      class="w-full max-w-2xl mb-6 px-4 py-3 bg-white shadow-xl border-4 border-black rounded-lg text-sm sm:text-base"
+      data-correct="${item.answer}"
+    >
+      <h2 class="text-lg sm:text-2xl font-bold text-center mb-3">${item.q}</h2>
+      <ul class="flex flex-col gap-4 list-none p-0">
+        ${item.a.map((ans, j) => {
+          const emojis = ["😎", "👾", "👽", "👹"];
+          return `
+            <li
+              class="option mx-4 p-3 sm:p-4 rounded-md bg-gray-100 hover:bg-gray-300 cursor-pointer transition-colors flex items-start gap-2"
+              data-index="${j}"
+            >
+              <span>${emojis[j % emojis.length]}</span>
+              <span>${ans}</span>
+            </li>
+          `;
+        }).join("")}
+      </ul>
+    </section>
+  `).join("");
 
   // Lógica de interacción
   let correctCount = 0;
