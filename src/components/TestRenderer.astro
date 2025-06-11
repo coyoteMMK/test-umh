@@ -31,7 +31,7 @@ const originalQuestions = Astro.props.questions;
 <!-- Contenedor de todas las preguntas (se llenará con JS) -->
 <div id="test-root" class="flex flex-col items-center mt-2 px-4 md:px-0"></div>
 
-<!-- Pasar preguntas originales al navegador -->
+<!-- Pasa las preguntas originales al navegador como JSON válido -->
 <script type="application/json" id="questions-data">
   {JSON.stringify(originalQuestions)}
 </script>
@@ -62,7 +62,7 @@ const originalQuestions = Astro.props.questions;
     return arr;
   }
 
-  // Obtener preguntas originales
+  // Obtener preguntas originales desde el JSON
   const questions = JSON.parse(document.getElementById('questions-data').textContent);
 
   // Mezclar preguntas y respuestas, manteniendo la correcta
