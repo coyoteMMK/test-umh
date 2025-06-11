@@ -63,7 +63,8 @@ const originalQuestions = Astro.props.questions;
   }
 
   // Obtener preguntas originales desde el JSON
-  const questions = JSON.parse(document.getElementById('questions-data').textContent);
+  const data = JSON.parse(document.getElementById('questions-data').textContent);
+  const questions = data.questions;
 
   // Mezclar preguntas y respuestas, manteniendo la correcta
   const shuffledQuestions = shuffle(questions).map(q => {
