@@ -5,7 +5,7 @@ interface Question {
   answer: number; // 1-based
 }
 
-const originalQuestions = Astro.props.questions;
+const originalData = Astro.props;
 ---
 
 <!-- Contador de aciertos y errores -->
@@ -31,9 +31,9 @@ const originalQuestions = Astro.props.questions;
 <!-- Contenedor de todas las preguntas (se llenará con JS) -->
 <div id="test-root" class="flex flex-col items-center mt-2 px-4 md:px-0"></div>
 
-<!-- Pasa las preguntas originales al navegador como JSON válido -->
+<!-- Pasa el objeto completo al navegador como JSON válido -->
 <script type="application/json" id="questions-data">
-  {JSON.stringify(originalQuestions)}
+  {JSON.stringify(originalData)}
 </script>
 
 <script type="module">
