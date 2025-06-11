@@ -1,17 +1,37 @@
+
 ---
-// src/components/TestRenderer.astro
 interface Question {
   q: string;
   a: string[];
   answer: number; // 1-based
 }
 
-interface Props {
-  questions: Question[];
+function shuffle<T>(array: T[]): T[] {
+  let arr = [...array];
+  for (let i = arr.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [arr[i], arr[j]] = [arr[j], arr[i]];
+  }
+  return arr;
 }
 
-const questions = Astro.props.questions;
+const originalQuestions = Astro.props.questions;
+
+// Mezclar preguntas y respuestas en el servidor
+const shuffledQuestions = shuffle(originalQuestions).map((q) => {
+  const shuffledAnswers = shuffle(q.a);
+  // Encuentra el texto de la respuesta correcta original
+  const correctText = q.a[q.answer - 1];
+  // Busca el nuevo índice de la respuesta correcta
+  const newCorrectIndex = shuffledAnswers.indexOf(correctText);
+  return {
+    q: q.q,
+    a: shuffledAnswers,
+    answer: newCorrectIndex, // 0-based
+  };
+});
 ---
+
 <!-- Contador de aciertos y errores -->
 <div
   id="counter"
@@ -35,20 +55,19 @@ const questions = Astro.props.questions;
 <!-- Contenedor de todas las preguntas -->
 <div id="test-root" class="flex flex-col items-center mt-2 px-4 md:px-0">
   {
-    questions.map((item, i) => (
+    shuffledQuestions.map((item, i) => (
       <section
-        class=" w-full max-w-2xl mb-6 px-4 py-3 bg-white shadow-xl border-4 border-black rounded-lg text-sm sm:text-base "
-        data-question-index={i}
+        class="w-full max-w-2xl mb-6 px-4 py-3 bg-white shadow-xl border-4 border-black rounded-lg text-sm sm:text-base"
+        data-correct={item.answer}
       >
         <h2 class="text-lg sm:text-2xl font-bold text-center mb-3">{item.q}</h2>
-
         <ul class="flex flex-col gap-4 list-none p-0">
           {item.a.map((ans, j) => {
             const emojis = ["😎", "👾", "👽", "👹"];
             return (
               <li
                 class="option mx-4 p-3 sm:p-4 rounded-md bg-gray-100 hover:bg-gray-300 cursor-pointer transition-colors flex items-start gap-2"
-                data-index={j.toString()}
+                data-index={j}
               >
                 <span>{emojis[j % emojis.length]}</span>
                 <span>{ans}</span>
@@ -62,58 +81,22 @@ const questions = Astro.props.questions;
 </div>
 
 <script type="module">
-  function shuffle(array) {
-    let arr = [...array];
-    for (let i = arr.length - 1; i > 0; i--) {
-      const j = Math.floor(Math.random() * (i + 1));
-      [arr[i], arr[j]] = [arr[j], arr[i]];
-    }
-    return arr;
+  // Inyectar estilos para .correct y .wrong si no existen
+  if (!document.getElementById('dynamic-quiz-styles')) {
+    const style = document.createElement('style');
+    style.id = 'dynamic-quiz-styles';
+    style.textContent = `
+      .correct {
+        background-color: #3eff4e !important;
+      }
+      .wrong {
+        background-color: #fd5b5b !important;
+      }
+    `;
+    document.head.appendChild(style);
   }
 
-  // Usar las preguntas originales de Astro.props
-  const astroQuestions = JSON.parse(document.getElementById('astro-questions').textContent);
-
-  // Mezclar preguntas y respuestas, manteniendo la correcta
-  let questions = shuffle(astroQuestions).map(q => {
-    const shuffledAnswers = shuffle(q.a);
-    const correctText = q.a[q.answer - 1];
-    const newIndex = shuffledAnswers.indexOf(correctText);
-    return {
-      ...q,
-      a: shuffledAnswers,
-      answer: newIndex + 1,
-    };
-  });
-
-  // Renderizar preguntas mezcladas
-  const root = document.querySelector("#test-root");
-  if (root) {
-    root.innerHTML = questions.map((item, i) =>
-      `<section
-        class="w-full max-w-2xl mb-6 px-4 py-3 bg-white shadow-xl border-4 border-black rounded-lg text-sm sm:text-base"
-        data-correct="${item.answer - 1}"
-      >
-        <h2 class="text-lg sm:text-2xl font-bold text-center mb-3">${item.q}</h2>
-        <ul class="flex flex-col gap-4 list-none p-0">
-          ${item.a.map((ans, j) => {
-            const emojis = ["😎", "👾", "👽", "👹"];
-            return `
-              <li
-                class="option mx-4 p-3 sm:p-4 rounded-md bg-gray-100 hover:bg-gray-300 cursor-pointer transition-colors flex items-start gap-2"
-                data-index="${j}"
-              >
-                <span>${emojis[j % emojis.length]}</span>
-                <span>${ans}</span>
-              </li>
-            `;
-          }).join("")}
-        </ul>
-      </section>`
-    ).join("");
-  }
-
-  // Lógica de interacción (igual que antes)
+  // Lógica de interacción
   let correctCount = 0;
   let wrongCount = 0;
   const correctEl = document.querySelector("#correct-num");
@@ -137,14 +120,11 @@ const questions = Astro.props.questions;
           wrongCount++;
           wrongEl.textContent = String(wrongCount);
           const correctLi = section.querySelector(
-            li[data-index="${correctIdx}"],
+            `li[data-index="${correctIdx}"]`
           );
           correctLi?.classList.add("correct");
         }
       });
     });
   });
-</script>
-<script type="application/json" id="astro-questions">
-  {JSON.stringify(questions)}
 </script>
