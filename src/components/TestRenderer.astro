@@ -1,11 +1,7 @@
 ---
-interface Question {
-  q: string;
-  a: string[];
-  answer: number; // 1-based
-}
+import preguntas from './preguntas.json'; // Ajusta la ruta si es necesario
 
-const originalData = Astro.props;
+const originalData = preguntas; // El objeto completo, con .questions
 ---
 
 <!-- Contador de aciertos y errores -->
@@ -32,9 +28,7 @@ const originalData = Astro.props;
 <div id="test-root" class="flex flex-col items-center mt-2 px-4 md:px-0"></div>
 
 <!-- Pasa el objeto completo al navegador como JSON válido -->
-<script type="application/json" id="questions-data">
-  {JSON.stringify(originalData)}
-</script>
+<script type="application/json" id="questions-data">{JSON.stringify(originalData)}</script>
 
 <script type="module">
   // Inyectar estilos para .correct y .wrong si no existen
