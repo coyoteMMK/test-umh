@@ -31,9 +31,7 @@ const originalQuestions = Astro.props.questions;
 <div id="test-root" class="flex flex-col items-center mt-2 px-4 md:px-0"></div>
 
 <!-- Pasar preguntas al cliente -->
-<script id="questions-data" type="application/json">
-  JSON.stringify(originalQuestions)
-</script>
+<script id="questions-data" type="application/json">{JSON.stringify(originalQuestions).replace(/</g, '\\u003c')}</script>
 
 <script type="module">
   // Función para mezclar arrays
