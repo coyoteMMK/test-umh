@@ -5,12 +5,12 @@ interface Question {
   answer: number; // 1-based
 }
 
-const originalQuestions = Astro.props.questions;
+const originalQuestions = Array.isArray(Astro.props.questions) ? Astro.props.questions : [];
 ---
 <!-- Contador de aciertos y errores -->
 <div
   id="counter"
-  class="fixed top-10 left-4 z-50
+  class="fixed top-20 left-4 z-50
     text-sm sm:text-base
     bg-white/80 shadow-md px-2 py-1 rounded-lg font-sans
     flex flex-col items-center gap-1"
@@ -30,10 +30,10 @@ const originalQuestions = Astro.props.questions;
 <!-- Contenedor de todas las preguntas -->
 <div id="test-root" class="flex flex-col items-center mt-2 px-4 md:px-0"></div>
 
-<!-- Pasar preguntas al cliente -->
-<script id="questions-data" type="application/json">{JSON.stringify(originalQuestions).replace(/</g, '\\u003c')}</script>
+<div id="questions-data" data-questions={JSON.stringify(originalQuestions).replace(/"/g, '&quot;')} style="display:none"></div>
 
 <script type="module">
+
   // Función para mezclar arrays
   function shuffle(array) {
     let arr = [...array];
@@ -45,7 +45,7 @@ const originalQuestions = Astro.props.questions;
   }
 
   // Obtener preguntas del script JSON
-  const questions = JSON.parse(document.getElementById('questions-data').textContent);
+  const questions = JSON.parse(document.getElementById('questions-data').dataset.questions.replace(/&quot;/g, '"'));
 
   // Mezclar preguntas y respuestas en el cliente
   const shuffledQuestions = shuffle(questions).map(q => {
