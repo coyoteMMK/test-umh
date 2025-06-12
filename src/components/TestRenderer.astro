@@ -5,81 +5,63 @@ interface Question {
   answer: number; // 1-based
 }
 
-function shuffle<T>(array: T[]): T[] {
-  let arr = [...array];
-  for (let i = arr.length - 1; i > 0; i--) {
-    const j = Math.floor(Math.random() * (i + 1));
-    [arr[i], arr[j]] = [arr[j], arr[i]];
-  }
-  return arr;
-}
-
 const originalQuestions = Astro.props.questions;
-
-// Mezclar preguntas y respuestas en el servidor
-const shuffledQuestions = shuffle(originalQuestions).map((q) => {
-  const shuffledAnswers = shuffle(q.a);
-  // Encuentra el texto de la respuesta correcta original
-  const correctText = q.a[q.answer - 1];
-  // Busca el nuevo índice de la respuesta correcta
-  const newCorrectIndex = shuffledAnswers.indexOf(correctText);
-  return {
-    q: q.q,
-    a: shuffledAnswers,
-    answer: newCorrectIndex, // 0-based
-  };
-});
 ---
-
-<!-- Contador de aciertos y errores -->
-<div
-  id="counter"
-  class="fixed top-10 left-4 z-50
-    text-sm sm:text-base
-    bg-white/80 shadow-md px-2 py-1 rounded-lg font-sans
-    flex flex-col items-center gap-1"
->
-  <div class="text-green-700">
-    ✔️ <span id="correct-count" class="hidden sm:inline">Correctas: </span><span
-      id="correct-num">0</span
-    >
-  </div>
-  <div class="text-red-700">
-    ❌ <span id="wrong-count" class="hidden sm:inline">Incorrectas: </span><span
-      id="wrong-num">0</span
-    >
-  </div>
-</div>
+<!-- ...contador... -->
 
 <!-- Contenedor de todas las preguntas -->
-<div id="test-root" class="flex flex-col items-center mt-2 px-4 md:px-0">
-  {
-    shuffledQuestions.map((item, i) => (
-      <section
-        class="w-full max-w-2xl mb-6 px-4 py-3 bg-white shadow-xl border-4 border-black rounded-lg text-sm sm:text-base"
-        data-correct={item.answer}
-      >
-        <h2 class="text-lg sm:text-2xl font-bold text-center mb-3">{item.q}</h2>
-        <ul class="flex flex-col gap-4 list-none p-0">
-          {item.a.map((ans, j) => {
-            const emojis = ["😎", "👾", "👽", "👹"];
-            return (
-              <li
-                class="option mx-4 p-3 sm:p-4 rounded-md bg-gray-100 hover:bg-gray-300 cursor-pointer transition-colors flex items-start gap-2"
-                data-index={j}
-              >
-                <span>{emojis[j % emojis.length]}</span>
-                <span>{ans}</span>
-              </li>
-            );
-          })}
-        </ul>
-      </section>
-    ))
-  }
-</div>
+<div id="test-root" class="flex flex-col items-center mt-2 px-4 md:px-0"></div>
 
 <script type="module">
+  // Mezcla en el cliente
+  function shuffle(array) {
+    let arr = [...array];
+    for (let i = arr.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      [arr[i], arr[j]] = [arr[j], arr[i]];
+    }
+    return arr;
+  }
+
+  // Recibe las preguntas desde el servidor
+  const questions = JSON.parse(`{JSON.stringify(originalQuestions)}`);
+
+  // Mezcla preguntas y respuestas
+  const shuffledQuestions = shuffle(questions).map(q => {
+    const shuffledAnswers = shuffle(q.a);
+    const correctText = q.a[q.answer - 1];
+    const newCorrectIndex = shuffledAnswers.indexOf(correctText);
+    return {
+      q: q.q,
+      a: shuffledAnswers,
+      answer: newCorrectIndex, // 0-based
+    };
+  });
+
+  // Renderiza las preguntas en el DOM
+  const emojis = ["😎", "👾", "👽", "👹"];
+  const testRoot = document.getElementById("test-root");
+  testRoot.innerHTML = shuffledQuestions.map((item, i) => `
+    <section
+      class="w-full max-w-2xl mb-6 px-4 py-3 bg-white shadow-xl border-4 border-black rounded-lg text-sm sm:text-base"
+      data-correct="${item.answer}"
+    >
+      <h2 class="text-lg sm:text-2xl font-bold text-center mb-3">${item.q}</h2>
+      <ul class="flex flex-col gap-4 list-none p-0">
+        ${item.a.map((ans, j) => `
+          <li
+            class="option mx-4 p-3 sm:p-4 rounded-md bg-gray-100 hover:bg-gray-300 cursor-pointer transition-colors flex items-start gap-2"
+            data-index="${j}"
+          >
+            <span>${emojis[j % emojis.length]}</span>
+            <span>${ans}</span>
+          </li>
+        `).join("")}
+      </ul>
+    </section>
+  `).join("");
+
+  // ...lógica de interacción igual que antes...
   // Inyectar estilos para .correct y .wrong si no existen
   if (!document.getElementById('dynamic-quiz-styles')) {
     const style = document.createElement('style');
@@ -95,7 +77,6 @@ const shuffledQuestions = shuffle(originalQuestions).map((q) => {
     document.head.appendChild(style);
   }
 
-  // Lógica de interacción
   let correctCount = 0;
   let wrongCount = 0;
   const correctEl = document.querySelector("#correct-num");
