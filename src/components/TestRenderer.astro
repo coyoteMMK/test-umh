@@ -7,13 +7,36 @@ interface Question {
 
 const originalQuestions = Astro.props.questions;
 ---
-<!-- ...contador... -->
+<!-- Contador de aciertos y errores -->
+<div
+  id="counter"
+  class="fixed top-10 left-4 z-50
+    text-sm sm:text-base
+    bg-white/80 shadow-md px-2 py-1 rounded-lg font-sans
+    flex flex-col items-center gap-1"
+>
+  <div class="text-green-700">
+    ✔️ <span id="correct-count" class="hidden sm:inline">Correctas: </span><span
+      id="correct-num">0</span
+    >
+  </div>
+  <div class="text-red-700">
+    ❌ <span id="wrong-count" class="hidden sm:inline">Incorrectas: </span><span
+      id="wrong-num">0</span
+    >
+  </div>
+</div>
 
 <!-- Contenedor de todas las preguntas -->
 <div id="test-root" class="flex flex-col items-center mt-2 px-4 md:px-0"></div>
 
+<!-- Pasar preguntas al cliente -->
+<script id="questions-data" type="application/json">
+  {JSON.stringify(originalQuestions)}
+</script>
+
 <script type="module">
-  // Mezcla en el cliente
+  // Función para mezclar arrays
   function shuffle(array) {
     let arr = [...array];
     for (let i = arr.length - 1; i > 0; i--) {
@@ -23,10 +46,10 @@ const originalQuestions = Astro.props.questions;
     return arr;
   }
 
-  // Recibe las preguntas desde el servidor
-  const questions = JSON.parse(`{JSON.stringify(originalQuestions)}`);
+  // Obtener preguntas del script JSON
+  const questions = JSON.parse(document.getElementById('questions-data').textContent);
 
-  // Mezcla preguntas y respuestas
+  // Mezclar preguntas y respuestas en el cliente
   const shuffledQuestions = shuffle(questions).map(q => {
     const shuffledAnswers = shuffle(q.a);
     const correctText = q.a[q.answer - 1];
@@ -38,7 +61,7 @@ const originalQuestions = Astro.props.questions;
     };
   });
 
-  // Renderiza las preguntas en el DOM
+  // Renderizar preguntas
   const emojis = ["😎", "👾", "👽", "👹"];
   const testRoot = document.getElementById("test-root");
   testRoot.innerHTML = shuffledQuestions.map((item, i) => `
@@ -61,7 +84,6 @@ const originalQuestions = Astro.props.questions;
     </section>
   `).join("");
 
-  // ...lógica de interacción igual que antes...
   // Inyectar estilos para .correct y .wrong si no existen
   if (!document.getElementById('dynamic-quiz-styles')) {
     const style = document.createElement('style');
@@ -77,6 +99,7 @@ const originalQuestions = Astro.props.questions;
     document.head.appendChild(style);
   }
 
+  // Lógica de interacción
   let correctCount = 0;
   let wrongCount = 0;
   const correctEl = document.querySelector("#correct-num");
