@@ -32,7 +32,7 @@ const originalQuestions = Astro.props.questions;
 
 <!-- Pasar preguntas al cliente -->
 <script id="questions-data" type="application/json">
-  {JSON.stringify(originalQuestions)}
+  JSON.stringify(originalQuestions)
 </script>
 
 <script type="module">
