@@ -1,0 +1,330 @@
+{
+    "title": "Preguntas Examen 2025",
+    "career": "Ingeniería Informática",
+    "year": "Segundo año",
+    "subject": "Sistemas_Operativos",
+    "questions": [ 
+    
+    {
+      "q": "¿Cuál es la función principal de un semáforo?",
+      "a": [
+        "Permitir la comunicación entre procesos mediante el envío de mensajes.",
+        "Controlar el acceso a recursos compartidos por varios hilos.",
+        "Implementar la exclusión mutua y la sincronización entre procesos.",
+        "Gestionar la memoria virtual del sistema."
+      ],
+      "answer": 3
+    },
+    {
+      "q": "En la implementación de semáforos, ¿qué ocurre cuando un proceso ejecuta la operación wait y el valor del semáforo es 0?",
+      "a": [
+        "El proceso continúa su ejecución sin esperar.",
+        "El proceso incrementa el valor del semáforo y continúa su ejecución.",
+        "El proceso se bloquea y se añade a la cola de espera del semáforo.",
+        "El proceso envía una señal al semáforo para que otros procesos puedan esperar."
+      ],
+      "answer": 3
+    },
+    {
+      "q": "¿Cuál de las siguientes opciones describe mejor la paginación simple?",
+      "a": [
+        "La memoria se divide en particiones de tamaño variable para los procesos.",
+        "La memoria se divide en bloques de tamaño fijo y cada proceso se asigna a un bloque.",
+        "La memoria se divide en marcos de tamaño fijo y los procesos se dividen en páginas del mismo tamaño.",
+        "La memoria se asigna a los procesos en segmentos de tamaño variable."
+      ],
+      "answer": 3
+    },
+    {
+      "q": "¿Qué función tiene la tabla de páginas en la paginación?",
+      "a": [
+        "Almacena el código fuente de los programas.",
+        "Asigna las páginas lógicas de un proceso a los marcos físicos de la memoria.",
+        "Contiene información sobre el estado de los dispositivos de E/S.",
+        "Gestiona la cola de procesos listos para ejecutarse."
+      ],
+      "answer": 2
+    },
+    {
+      "q": "¿Cuál es el principal beneficio de la memoria virtual?",
+      "a": [
+        "Permite ejecutar procesos más grandes que la memoria física disponible.",
+        "Mejora la velocidad de acceso a la memoria principal.",
+        "Reduce la fragmentación de la memoria.",
+        "Todas las anteriores."
+      ],
+      "answer": 4
+    },
+    {
+      "q": "¿Cuál es la función del Contador del Programa (PC) en un procesador?",
+      "a": [
+        "Almacenar los datos que se están procesando.",
+        "Almacenar la dirección de la próxima instrucción a ejecutar.",
+        "Controlar el acceso a los dispositivos de E/S.",
+        "Gestionar las interrupciones del sistema."
+      ],
+      "answer": 2
+    },
+    {
+      "q": "¿Cuál de las siguientes afirmaciones sobre las interrupciones es FALSA?",
+      "a": [
+        "Las interrupciones permiten que el procesador atienda eventos asíncronos.",
+        "Las interrupciones pueden ser generadas por dispositivos de E/S.",
+        "Las interrupciones no afectan al flujo de ejecución de un programa.",
+        "El procesador guarda el estado actual antes de atender una interrupción."
+      ],
+      "answer": 3
+    },
+    {
+      "q": "¿Qué característica define un sistema multiprogramado?",
+      "a": [
+        "Ejecución de varios programas en diferentes procesadores.",
+        "Mantenimiento de varios procesos en la memoria principal simultáneamente.",
+        "Asignación de tiempo de CPU a los procesos en función de su prioridad.",
+        "Uso de memoria virtual para ampliar la memoria principal disponible."
+      ],
+      "answer": 2
+    },
+    {
+      "q": "¿Qué información se encuentra en un Bloque de Control de Proceso (BCP o PCB)?",
+      "a": [
+        "El código fuente del proceso.",
+        "El nombre del usuario que ejecuta el proceso.",
+        "El estado actual del proceso y la ubicación en memoria.",
+        "Los datos de entrada y salida del proceso."
+      ],
+      "answer": 3
+    },
+    {
+      "q": "¿Cuál es la diferencia entre un proceso y un hilo?",
+      "a": [
+        "Un proceso puede tener varios hilos, mientras que un hilo solo puede pertenecer a un proceso.",
+        "Los hilos comparten el mismo espacio de direcciones, mientras que los procesos tienen espacios de direcciones separados.",
+        "Los hilos son más ligeros que los procesos y su cambio de contexto es más rápido.",
+        "Todas las anteriores."
+      ],
+      "answer": 4
+    },
+        {
+          "q": "¿Qué tipo de hilo depende de la biblioteca de hilos del lenguaje de programación?",
+          "a": [
+            "Hilo a nivel de kernel (KLT)",
+            "Hilo a nivel de usuario (ULT)",
+            "Hilo de demonio",
+            "Hilo zombie"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "¿Qué es una condición de carrera?",
+          "a": [
+            "Un estado en el que un proceso se bloquea esperando un recurso.",
+            "Un error que ocurre cuando un hilo intenta acceder a una variable no inicializada.",
+            "Una situación en la que el resultado de la ejecución de varios hilos depende del orden en que se ejecutan.",
+            "Un problema que se produce cuando un hilo se ejecuta de forma infinita."
+          ],
+          "answer": 3
+        },
+        {
+          "q": "¿Cuál de las siguientes opciones NO es una preocupación del sistema operativo en un entorno concurrente?",
+          "a": [
+            "Seguimiento del estado de los procesos.",
+            "Asignación y liberación de recursos para cada proceso.",
+            "Sincronización de la ejecución de procesos para evitar condiciones de carrera.",
+            "Compilación de código fuente en lenguaje máquina."
+          ],
+          "answer": 4
+        },
+        {
+          "q": "¿Cuál es la diferencia entre un semáforo binario y un semáforo general?",
+          "a": [
+            "Un semáforo binario solo puede tener valores 0 o 1, mientras que un semáforo general puede tener cualquier valor entero.",
+            "Un semáforo binario se utiliza para la exclusión mutua, mientras que un semáforo general se utiliza para la sincronización.",
+            "Un semáforo binario es más eficiente que un semáforo general.",
+            "No hay diferencia entre un semáforo binario y un semáforo general."
+          ],
+          "answer": 1
+        },
+        {
+          "q": "¿Cuál de las siguientes opciones describe mejor un monitor?",
+          "a": [
+            "Una variable global que se utiliza para sincronizar procesos.",
+            "Una cola de mensajes que permite la comunicación entre procesos.",
+            "Un módulo de código que encapsula datos compartidos y métodos para acceder a ellos de forma segura.",
+            "Una técnica de planificación del procesador que asigna tiempo de CPU a los procesos en función de su prioridad."
+          ],
+          "answer": 3
+        },
+        {
+          "q": "¿Cuál es la diferencia entre paginación y segmentación?",
+          "a": [
+            "La paginación divide la memoria en marcos de tamaño fijo, mientras que la segmentación divide la memoria en segmentos de tamaño variable.",
+            "La paginación se utiliza para la gestión de la memoria virtual, mientras que la segmentación se utiliza para la protección de la memoria.",
+            "La paginación es más eficiente que la segmentación.",
+            "No hay diferencia entre paginación y segmentación."
+          ],
+          "answer": 1
+        },
+        {
+          "q": "¿Qué es la fragmentación interna?",
+          "a": [
+            "Espacio desperdiciado en el disco debido a la asignación de bloques no contiguos.",
+            "Espacio desperdiciado dentro de un marco de página porque el tamaño del proceso no es un múltiplo del tamaño de página.",
+            "Espacio desperdiciado en la memoria principal debido a la segmentación.",
+            "Espacio desperdiciado en la memoria caché debido a la proximidad de referencias."
+          ],
+          "answer": 2
+        },
+        {
+          "q": "¿Qué ocurre cuando un proceso intenta acceder a una página que no está en la memoria principal?",
+          "a": [
+            "El proceso se bloquea y espera a que la página se cargue en memoria.",
+            "Se produce un error de segmentación y el proceso se termina.",
+            "El sistema operativo busca la página en el disco y la copia en la memoria caché.",
+            "El proceso continúa su ejecución ignorando la falta de la página."
+          ],
+          "answer": 1
+        },
+        {
+          "q": "¿Qué estructura de datos se utiliza para acelerar la traducción de direcciones virtuales a físicas en la memoria virtual?",
+          "a": [
+            "Tabla de páginas",
+            "TLB (Translation Lookaside Buffer)",
+            "Caché de datos",
+            "Pila del sistema"
+          ],
+          "answer": 2
+        },
+        {
+          "q": "¿Qué tipo de planificador decide qué proceso obtiene la CPU después de cada cambio de contexto?",
+          "a": [
+            "Planificador de corto plazo",
+            "Planificador de largo plazo",
+            "Planificador de medio plazo",
+            "Planificador de entrada/salida"
+          ],
+          "answer": 1
+        },
+            {
+              "q": "En la administración de memoria, el principio de localización espacial implica:",
+              "a": [
+                "Acceso frecuente a datos cercanos en memoria.",
+                "Acceso frecuente a datos temporalmente próximos.",
+                "Acceso aleatorio a bloques de memoria.",
+                "Acceso secuencial a bloques de memoria."
+              ],
+              "answer": 1
+            },
+            {
+              "q": "¿Cuál es una característica de la política de reemplazo de páginas de LRU?",
+              "a": [
+                "Remueve la página menos recientemente usada.",
+                "Utiliza un bit de referencia.",
+                "Elige una página aleatoria para reemplazar.",
+                "Remueve la página más recientemente usada."
+              ],
+              "answer": 1
+            },
+            {
+              "q": "¿Cuál es una característica clave del direccionamiento uno a muchos (broadcast) en el paso de mensajes?",
+              "a": [
+                "Solo un proceso puede recibir el mensaje enviado.",
+                "El mensaje se envía a un proceso receptor específico y único.",
+                "Varios procesos pueden recibir el mismo mensaje desde un canal compartido.",
+                "El mensaje se envía a múltiples destinatarios, pero cada uno recibe una copia única del mensaje."
+              ],
+              "answer": 3
+            },
+            {
+              "q": "¿Cuál es una característica de la E/S asincrónica?",
+              "a": [
+                "El CPU espera a que finalice cada operación.",
+                "La operación de E/S no bloquea el proceso.",
+                "Se utiliza en sistemas sin multitarea.",
+                "Permite la ejecución secuencial de operaciones de E/S."
+              ],
+              "answer": 2
+            },
+            {
+              "q": "En un sistema multiprocesador",
+              "a": [
+                "Solo pueden ejecutarse hilos del mismo proceso concurrentemente.",
+                "Varios hilos de un mismo proceso se pueden ejecutar simultáneamente.",
+                "Se pueden ejecutar varios hilos pero en el procesador asignado al proceso.",
+                "Ninguna de las anteriores es correcta."
+              ],
+              "answer": 2
+            },
+            {
+              "q": "¿Cuál es una ventaja del paso de mensajes en comparación con los semáforos y monitores?",
+              "a": [
+                "Mayor eficiencia en sistemas de memoria compartida.",
+                "Comunicación explícita entre procesos.",
+                "Menor complejidad de implementación.",
+                "Flexibilidad en la sincronización."
+              ],
+              "answer": 2
+            },
+            {
+              "q": "Cuando quiero eliminar líneas duplicadas en un fichero de texto en Linux, ¿por qué es importante ordenar las líneas del archivo temporal antes de utilizar el comando uniq?",
+              "a": [
+                "Para optimizar el rendimiento del script y reducir el tiempo de ejecución.",
+                "Para asegurar que el archivo de salida tenga el mismo orden que los archivos de entrada.",
+                "Para que el comando uniq pueda detectar y eliminar todas las líneas duplicadas, incluso si no son consecutivas.",
+                "Para evitar errores de sintaxis en el script."
+              ],
+              "answer": 3
+            },
+            {
+              "q": "¿Cuál es la función del comando RANDOM % 100 en un script Bash?",
+              "a": [
+                "Generar un número aleatorio entre 0 y 100, incluyendo ambos extremos.",
+                "Calcular el resto de la división del valor de la variable RANDOM entre 100.",
+                "Asignar un valor aleatorio a la variable RANDOM, comprendido entre 0 y 99.",
+                "Generar un número aleatorio entre 0 y 99."
+              ],
+              "answer": 4
+            },
+            {
+              "q": "¿Cuál es la función de la función pthread_join en el contexto del siguiente código?",
+              "a": [
+                "Crear un nuevo hilo para procesar un archivo.",
+                "Esperar a que un hilo específico termine su ejecución.",
+                "Asignar un nombre de archivo a un hilo.",
+                "Unir todos los hilos de ejecución en uno solo."
+              ],
+              "answer": 2
+            },
+            {
+              "q": "¿Cuál de las siguientes opciones describe correctamente la función principal de un pipe en Linux?",
+              "a": [
+                "Permite la comunicación entre procesos mediante la creación de un archivo temporal.",
+                "Es un mecanismo de sincronización entre hilos de un mismo proceso.",
+                "Proporciona una conexión unidireccional para transmitir datos entre procesos.",
+                "Sirve para redirigir la salida estándar de un comando a un archivo."
+              ],
+              "answer": 3
+            },
+            {
+              "q": "Respecto al código: ¿Cuál sería el principal inconveniente de utilizar la función strtok en un contexto multihilo?",
+              "a": [
+                "strtok no es una función reentrante, lo que puede llevar a resultados inesperados en un entorno multihilo.",
+                "strtok es demasiado lenta para ser utilizada en aplicaciones multihilo.",
+                "strtok solo puede ser utilizada con cadenas de caracteres ASCII, lo que limita su uso en entornos multibyte.",
+                "strtok modifica la cadena original, lo que puede causar problemas si se accede a la cadena desde múltiples hilos simultáneamente."
+              ],
+              "answer": 1
+            },
+            {
+              "q": "La variable de condición (pthread_cond_t) condPlato en el código, realmente ¿qué efecto tiene en el bucle while?",
+              "a": [
+                "Si el mutex está bloqueado pone la variable condPlato a false.",
+                "Si no se cumple la condición del while y mutex está bloqueado se pone a true la variable condPlato.",
+                "Si entra en el while el hilo se bloquea en la variable de condición, liberando el mutex simultáneamente y hasta que otro proceso haga un pthread_cond_signal sobre la variable de condición.",
+                "Si entra en el while el hilo se bloquea en la variable de condición gracias a que el mutex está bloqueado, hasta que otro proceso haga un pthread_mutex_unlock(&mutex)."
+              ],
+              "answer": 3
+            }      
+  ]
+}
+  
