@@ -2,6 +2,8 @@
 import '../styles/global.css';
 // Supports weights 400-700
 import '@fontsource-variable/dynapuff';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
 
 interface Props {
   title: string;
@@ -10,32 +12,42 @@ interface Props {
 
 //Se cogen las del index.astro
 const { description, title } = Astro.props;
+const siteTitle = "Repositorio de Tests UMH"; // Or dynamically set if needed elsewhere
 ---
 
 <!doctype html>
 <html lang="en">
 	<head>
 		<meta charset="UTF-8" />
- <meta name="description" content={description} />
+		<meta name="description" content={description} />
 		<meta name="viewport" content="width=device-width" />
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="generator" content={Astro.generator} />
-		<title>{title}</title>
+		<title>{title} | {siteTitle}</title>
 	</head>
-	<body class="bg-gray-100 text-gray-900">
-		<slot />
+	<!-- The body tag itself will get the background pattern from global.css -->
+	<body>
+		<Header title={siteTitle} />
+		<main id="main-content">
+			<slot />
+		</main>
+		<Footer />
 	</body>
 </html>
 
-<style>
-	 html {
-        font-family: 'DynaPuff Variable', system-ui !important;
-        scroll-behavior: smooth;
-      }
-	body {
-		margin: 0;
-		width: 100%;
-		height: 100%;	
-		font-family: 'DynaPuff Variable', system-ui !important;	
+<style is:global>
+	/* Ensure html and body take full height for sticky footer, and DynaPuff font is applied */
+	html, body {
+		height: 100%;
 	}
+	html {
+		font-family: 'DynaPuff Variable', system-ui, sans-serif !important; /* Added sans-serif fallback */
+		scroll-behavior: smooth;
+	}
+	body {
+		margin: 0; /* Already in global.css but good to ensure */
+		/* font-family is set in global.css body, this ensures DynaPuff is prioritized if needed here */
+		/* but ideally, body font-family is primarily managed in one place (global.css) */
+	}
+	/* Tailwind's bg-gray-100 and text-gray-900 are removed from body tag as global.css now handles background and text color */
 </style>
