@@ -1,39 +1,26 @@
 ---
+import ScoreCounter from './ScoreCounter.astro';
+
 interface Question {
   q: string;
   a: string[];
-  answer: number; // 1-based
+  answer: number; // 1-based in original data
 }
 
 const originalQuestions = Array.isArray(Astro.props.questions) ? Astro.props.questions : [];
+const totalQuestions = originalQuestions.length;
 ---
-<!-- Contador de aciertos y errores -->
-<div
-  id="counter"
-  class="fixed top-20 left-4 z-50
-    text-sm sm:text-base
-    bg-white/80 shadow-md px-2 py-1 rounded-lg font-sans
-    flex flex-col items-center gap-1"
->
-  <div class="text-green-700">
-    ✔️ <span id="correct-count" class="hidden sm:inline">Correctas: </span><span
-      id="correct-num">0</span
-    >
-  </div>
-  <div class="text-red-700">
-    ❌ <span id="wrong-count" class="hidden sm:inline">Incorrectas: </span><span
-      id="wrong-num">0</span
-    >
-  </div>
-</div>
+
+<!-- Nuevo contador de aciertos -->
+<ScoreCounter correctAnswers={0} totalQuestions={totalQuestions} isTestFinished={false} />
 
 <!-- Contenedor de todas las preguntas -->
 <div id="test-root" class="flex flex-col items-center mt-2 px-4 md:px-0"></div>
 
+<!-- Datos de las preguntas (oculto) -->
 <div id="questions-data" data-questions={JSON.stringify(originalQuestions).replace(/"/g, '&quot;')} style="display:none"></div>
 
 <script type="module">
-
   // Función para mezclar arrays
   function shuffle(array) {
     let arr = [...array];
@@ -45,42 +32,50 @@ const originalQuestions = Array.isArray(Astro.props.questions) ? Astro.props.que
   }
 
   // Obtener preguntas del script JSON
-  const questions = JSON.parse(document.getElementById('questions-data').dataset.questions.replace(/&quot;/g, '"'));
+  const questionsDataElement = document.getElementById('questions-data');
+  const questions = questionsDataElement ? JSON.parse(questionsDataElement.dataset.questions.replace(/&quot;/g, '"')) : [];
+  const totalQuestions = questions.length;
 
   // Mezclar preguntas y respuestas en el cliente
   const shuffledQuestions = shuffle(questions).map(q => {
     const shuffledAnswers = shuffle(q.a);
+    // q.answer is 1-based index for original q.a
+    // We need to find the text of the correct answer first
     const correctText = q.a[q.answer - 1];
+    // Then find the new index of this correct answer text in shuffledAnswers
     const newCorrectIndex = shuffledAnswers.indexOf(correctText);
     return {
       q: q.q,
       a: shuffledAnswers,
-      answer: newCorrectIndex, // 0-based
+      answer: newCorrectIndex, // 0-based for shuffledAnswers
     };
   });
 
   // Renderizar preguntas
   const emojis = ["😎", "👾", "👽", "👹"];
   const testRoot = document.getElementById("test-root");
-  testRoot.innerHTML = shuffledQuestions.map((item, i) => `
-    <section
-      class="w-full max-w-2xl mb-6 px-4 py-3 bg-white shadow-xl border-4 border-black rounded-lg text-sm sm:text-base"
-      data-correct="${item.answer}"
-    >
-      <h2 class="text-lg sm:text-2xl font-bold text-center mb-3">${item.q}</h2>
-      <ul class="flex flex-col gap-4 list-none p-0">
-        ${item.a.map((ans, j) => `
-          <li
-            class="option mx-4 p-3 sm:p-4 rounded-md bg-gray-100 hover:bg-gray-300 cursor-pointer transition-colors flex items-start gap-2"
-            data-index="${j}"
-          >
-            <span>${emojis[j % emojis.length]}</span>
-            <span>${ans}</span>
-          </li>
-        `).join("")}
-      </ul>
-    </section>
-  `).join("");
+  if (testRoot) {
+    testRoot.innerHTML = shuffledQuestions.map((item, i) => `
+      <section
+        class="w-full max-w-2xl mb-6 px-4 py-3 bg-white shadow-xl border-4 border-black rounded-lg text-sm sm:text-base"
+        data-correct="${item.answer}"
+        data-question-id="${i}"
+      >
+        <h2 class="text-lg sm:text-2xl font-bold text-center mb-3">${item.q}</h2>
+        <ul class="flex flex-col gap-4 list-none p-0">
+          ${item.a.map((ans, j) => `
+            <li
+              class="option mx-4 p-3 sm:p-4 rounded-md bg-gray-100 hover:bg-gray-300 cursor-pointer transition-colors flex items-start gap-2"
+              data-index="${j}"
+            >
+              <span>${emojis[j % emojis.length]}</span>
+              <span>${ans}</span>
+            </li>
+          `).join("")}
+        </ul>
+      </section>
+    `).join("");
+  }
 
   // Inyectar estilos para .correct y .wrong si no existen
   if (!document.getElementById('dynamic-quiz-styles')) {
@@ -88,43 +83,56 @@ const originalQuestions = Array.isArray(Astro.props.questions) ? Astro.props.que
     style.id = 'dynamic-quiz-styles';
     style.textContent = `
       .correct {
-        background-color: #3eff4e !important;
+        background-color: #3eff4e !important; /* Tailwind: bg-green-400 */
       }
       .wrong {
-        background-color: #fd5b5b !important;
+        background-color: #fd5b5b !important; /* Tailwind: bg-red-400 */
       }
     `;
     document.head.appendChild(style);
   }
 
-  // Lógica de interacción
+  // Lógica de interacción y actualización del contador
   let correctCount = 0;
-  let wrongCount = 0;
-  const correctEl = document.querySelector("#correct-num");
-  const wrongEl = document.querySelector("#wrong-num");
+  let questionsAnswered = 0;
+  const scoreCounterElement = document.querySelector(".score-counter p"); // Target the <p> inside ScoreCounter
+
+  function updateScoreDisplay() {
+    if (!scoreCounterElement) return;
+
+    if (questionsAnswered === totalQuestions) {
+      const percentage = totalQuestions > 0 ? Math.round((correctCount / totalQuestions) * 100) : 0;
+      scoreCounterElement.textContent = `Resultado Final: ${correctCount} / ${totalQuestions} (${percentage}%)`;
+    } else {
+      scoreCounterElement.textContent = `Aciertos: ${correctCount} / ${totalQuestions}`;
+    }
+  }
+
+  // Initial display update in case totalQuestions is 0 or for consistency
+  updateScoreDisplay();
 
   document.querySelectorAll("#test-root > section").forEach((section) => {
     const correctIdx = Number(section.dataset.correct);
-    let answered = false;
+    let answeredThisSection = false;
 
     section.querySelectorAll("li").forEach((li) => {
       li.addEventListener("click", () => {
-        if (answered) return;
-        answered = true;
+        if (answeredThisSection) return;
+        answeredThisSection = true;
+        questionsAnswered++;
+
         const choice = Number(li.dataset.index);
         if (choice === correctIdx) {
           li.classList.add("correct");
           correctCount++;
-          correctEl.textContent = String(correctCount);
         } else {
           li.classList.add("wrong");
-          wrongCount++;
-          wrongEl.textContent = String(wrongCount);
           const correctLi = section.querySelector(
             `li[data-index="${correctIdx}"]`
           );
-          correctLi?.classList.add("correct");
+          correctLi?.classList.add("correct"); // Highlight correct answer even if wrong one chosen
         }
+        updateScoreDisplay(); // Update score after each answer
       });
     });
   });
