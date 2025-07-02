@@ -1,0 +1,38 @@
+---
+// src/components/ScoreCounter.astro
+interface Props {
+  correctAnswers: number;
+  totalQuestions: number;
+  isTestFinished: boolean;
+}
+
+const { correctAnswers, totalQuestions, isTestFinished } = Astro.props;
+
+let scoreMessage = `Aciertos: ${correctAnswers} / ${totalQuestions}`;
+if (isTestFinished) {
+  const percentage = totalQuestions > 0 ? Math.round((correctAnswers / totalQuestions) * 100) : 0;
+  scoreMessage = `Resultado Final: ${correctAnswers} / ${totalQuestions} (${percentage}%)`;
+}
+---
+
+<div class="score-counter">
+  <p>{scoreMessage}</p>
+</div>
+
+<style>
+  .score-counter {
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: var(--text-color, #333);
+    background-color: var(--page-bg-color, #fdfdfd);
+    padding: 0.5rem 1rem;
+    border-radius: 6px;
+    border: 1px solid var(--accent-color-light, #f1c40f);
+    margin-bottom: 1rem; /* Add some space below the counter */
+    text-align: center;
+  }
+
+  .score-counter p {
+    margin: 0;
+  }
+</style>

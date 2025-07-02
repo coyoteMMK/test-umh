@@ -4,20 +4,22 @@ const { title } = Astro.props;
 ---
 <header>
   <div class="container">
-    <h1>🧪 {title}</h1>
+    <a href="/" class="site-title-link">
+      <h1>🧪 {title}</h1>
+    </a>
     <nav>
-      <a href="/">Inicio</a>
-      <!-- Add other navigation links here if needed -->
+      <!-- Navigation links can be added here if needed in the future -->
+      <!-- Example: <a href="/about">About</a> -->
     </nav>
   </div>
 </header>
 
 <style>
   header {
-    background-color: var(--header-bg-color, #2c3e50); /* Dark blue-gray, fallback */
-    color: var(--header-text-color, #ecf0f1); /* Light gray, fallback */
+    background-color: var(--header-bg-color, #2c3e50);
+    color: var(--header-text-color, #ecf0f1);
     padding: 1.5rem 0;
-    border-bottom: 3px solid var(--accent-color, #f39c12); /* Orange accent, fallback */
+    border-bottom: 3px solid var(--accent-color, #f39c12);
   }
 
   .container {
@@ -25,14 +27,29 @@ const { title } = Astro.props;
     margin: 0 auto;
     padding: 0 1rem;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-between; /* Adjust if nav is empty or has items */
     align-items: center;
+  }
+
+  .site-title-link {
+    text-decoration: none;
+    color: inherit; /* Inherit color from header */
+  }
+
+  .site-title-link:hover,
+  .site-title-link:focus {
+    /* Optional: add hover effect if desired, e.g., subtle underline or color change */
+    /* color: var(--accent-color); */
   }
 
   h1 {
     margin: 0;
     font-size: 1.8rem;
     font-weight: bold;
+  }
+
+  nav {
+    /* Styles for nav if/when links are added */
   }
 
   nav a {
@@ -52,18 +69,16 @@ const { title } = Astro.props;
   /* Mobile adjustments */
   @media (max-width: 600px) {
     .container {
-      flex-direction: column;
-      align-items: flex-start;
+      /* If nav is empty, center title or keep it left-aligned based on preference */
+      justify-content: center; /* Or flex-start */
+      text-align: center; /* If centered */
     }
-    h1 {
-      margin-bottom: 0.5rem;
+     .site-title-link h1 { /* Ensure h1 itself doesn't cause layout issues */
+        margin-bottom: 0; /* Reset margin if any was added for mobile */
     }
     nav {
-      margin-top: 0.5rem;
-    }
-    nav a {
-      margin-left: 0;
-      margin-right: 1rem; /* Spacing for mobile nav links */
+      display: none; /* Hide nav if empty, or adjust layout if it has items */
     }
   }
+</style>
 </style>
