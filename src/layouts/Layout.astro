@@ -29,9 +29,7 @@ const siteTitle = "Repositorio de Tests UMH";
 		<main class="flex-grow container mx-auto px-4 py-8"> {/* Tailwind for main content area & sticky footer */}
 			{/* Adding some top margin to main content if ScoreCounter is fixed and could overlap */}
 			{/* This might need adjustment based on ScoreCounter's final height & position */}
-			<div class="pt-16 md:pt-12"> {/* Adjust padding if ScoreCounter overlaps content */}
-				<slot />
-			</div>
+			<slot />
 		</main>
 		<Footer />
 	</body>
