@@ -2,83 +2,16 @@
 // src/components/Header.astro
 const { title } = Astro.props;
 ---
-<header>
-  <div class="container">
-    <a href="/test-umh/" class="site-title-link">
-      <h1>🧪 {title}</h1>
+<header class="bg-slate-800 text-slate-100 py-6 border-b-4 border-amber-500 shadow-md">
+  <div class="container mx-auto px-4 flex flex-col sm:flex-row justify-between items-center">
+    <a href="/test-umh" class="text-slate-100 hover:text-amber-400 transition-colors">
+      <h1 class="text-2xl sm:text-3xl font-bold m-0 text-center sm:text-left">🧪 {title}</h1>
     </a>
-    <nav>
+    <nav class="mt-4 sm:mt-0">
       <!-- Navigation links can be added here if needed in the future -->
-      <!-- Example: <a href="/about">About</a> -->
+      <!-- Example: <a href="/about" class="ml-0 sm:ml-6 text-lg text-slate-100 hover:text-amber-400 transition-colors">About</a> -->
     </nav>
   </div>
 </header>
 
-<style>
-  header {
-    background-color: var(--header-bg-color, #2c3e50);
-    color: var(--header-text-color, #ecf0f1);
-    padding: 1.5rem 0;
-    border-bottom: 3px solid var(--accent-color, #f39c12);
-  }
-
-  .container {
-    max-width: 960px;
-    margin: 0 auto;
-    padding: 0 1rem;
-    display: flex;
-    justify-content: space-between; /* Adjust if nav is empty or has items */
-    align-items: center;
-  }
-
-  .site-title-link {
-    text-decoration: none;
-    color: inherit; /* Inherit color from header */
-  }
-
-  .site-title-link:hover,
-  .site-title-link:focus {
-    /* Optional: add hover effect if desired, e.g., subtle underline or color change */
-    /* color: var(--accent-color); */
-  }
-
-  h1 {
-    margin: 0;
-    font-size: 1.8rem;
-    font-weight: bold;
-  }
-
-  nav {
-    /* Styles for nav if/when links are added */
-  }
-
-  nav a {
-    color: var(--header-text-color, #ecf0f1);
-    text-decoration: none;
-    margin-left: 1.5rem;
-    font-size: 1.1rem;
-    transition: color 0.3s ease;
-  }
-
-  nav a:hover,
-  nav a:focus {
-    color: var(--accent-color, #f39c12);
-    text-decoration: underline;
-  }
-
-  /* Mobile adjustments */
-  @media (max-width: 600px) {
-    .container {
-      /* If nav is empty, center title or keep it left-aligned based on preference */
-      justify-content: center; /* Or flex-start */
-      text-align: center; /* If centered */
-    }
-     .site-title-link h1 { /* Ensure h1 itself doesn't cause layout issues */
-        margin-bottom: 0; /* Reset margin if any was added for mobile */
-    }
-    nav {
-      display: none; /* Hide nav if empty, or adjust layout if it has items */
-    }
-  }
-</style>
-</style>
+<!-- No <style> tag needed as all styling is done via Tailwind CSS classes -->

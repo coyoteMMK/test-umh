@@ -1,56 +1,16 @@
 @import "tailwindcss";
 
-:root {
-  --header-bg-color: #2c3e50; /* Dark Blue-Gray */
-  --header-text-color: #ecf0f1; /* Light Gray */
-  --footer-bg-color: #34495e; /* Slightly Lighter Dark Blue-Gray */
-  --footer-text-color: #bdc3c7; /* Medium Gray */
-  --accent-color: #f39c12; /* Orange */
-  --accent-color-light: #f1c40f; /* Lighter Orange */
-  --page-bg-color: #fdfdfd; /* Very light gray for page background */
-  --text-color: #333; /* Standard text color */
-}
+/*
+  All custom CSS properties and most global styles have been removed.
+  Styling will be primarily handled by Tailwind CSS utility classes
+  applied directly in components or Layout.astro.
 
-body {
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-  margin: 0;
-  padding: 0;
-  background-color: var(--page-bg-color);
-  color: var(--text-color);
-  /* Subtle diagonal lines pattern */
-  background-image: repeating-linear-gradient(
-    45deg,
-    #e0e0e0 0,
-    #e0e0e0 1px,
-    transparent 1px,
-    transparent 10px
-  );
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh;
-}
+  The body background, text color, and font-family will be set in Layout.astro
+  or through Tailwind's default base styles.
+  The DynaPuff font import and application is handled in Layout.astro.
+  Sticky footer is managed via flex utilities in Layout.astro.
+*/
 
-/* Ensure content pushes footer down */
-#main-content {
-  flex-grow: 1;
-}
-
-/* General container adjustments if needed, though Tailwind's container might be preferred */
-.container {
-  /* You might already have a .container from Tailwind, adjust as needed or use Tailwind's mx-auto px-4 etc. */
-  /* max-width: 960px; */
-  /* margin-left: auto; */
-  /* margin-right: auto; */
-  /* padding-left: 1rem; */
-  /* padding-right: 1rem; */
-}
-
-/* Styling for links if not covered by Tailwind or component styles */
-a {
-  /* color: var(--accent-color); */ /* Consider if you want global link styling */
-  /* text-decoration: none; */
-}
-
-a:hover {
-  /* text-decoration: underline; */
-}
+/* Minimal global styles can remain if absolutely necessary, but prefer Tailwind. */
+/* For example, if there's a very specific global reset or adjustment needed
+   that Tailwind's preflight doesn't cover or that you want to override. */
