@@ -16,48 +16,35 @@ const {
   isTestFinished = false,
 } = Astro.props;
 
-// This initial message will be quickly replaced by client-side script logic.
-// However, it's good to have a sensible default structure.
+// These initial values are primarily for SSR before client script takes over.
 let initialCorrect = correctAnswers;
 let initialWrong = wrongAnswers;
 let initialTotal = totalQuestions;
-let initialMessageCorrect = `${initialCorrect}`;
-let initialMessageWrong = `${initialWrong}`;
-let initialMessageTotal = `${initialTotal}`;
 
-if (isTestFinished) {
-  const percentage = totalQuestions > 0 ? Math.round((initialCorrect / totalQuestions) * 100) : 0;
-  // This specific message structure for "finished" will be handled by TestRenderer.astro's script
-  // For now, just ensure the base elements are there.
-}
+// The actual display logic (including "Resultado Final") is handled by TestRenderer.astro's script
 ---
 
-<div id="score-counter-container" class="fixed top-24 left-0 z-40 p-1 md:p-2">
-  <div class="score-card bg-slate-700/80 backdrop-blur-sm text-white shadow-lg rounded-lg p-3 md:p-4 space-y-2 w-auto">
+<div id="score-counter-container" class="fixed top-20 sm:top-24 left-0 z-40 p-1 md:p-2">
+  <div class="score-card bg-slate-700/80 backdrop-blur-sm text-white shadow-lg rounded-lg p-2 sm:p-3 md:p-4 space-y-1 sm:space-y-2 w-auto">
     <div id="score-correct" class="flex items-center">
-      <span class="text-green-400 mr-2">✔️</span>
-      <span class="hidden md:inline mr-1">Correctas:</span>
-      <span class="font-bold">{initialMessageCorrect}</span>
+      <span class="text-green-400 mr-1 sm:mr-2 text-base sm:text-lg">✔️</span>
+      <span class="hidden md:inline mr-1 text-sm sm:text-base">Correctas:</span>
+      <span class="font-bold text-sm sm:text-base">{initialCorrect}</span>
     </div>
     <div id="score-wrong" class="flex items-center">
-      <span class="text-red-400 mr-2">❌</span>
-      <span class="hidden md:inline mr-1">Fallos:</span>
-      <span class="font-bold">{initialMessageWrong}</span>
+      <span class="text-red-400 mr-1 sm:mr-2 text-base sm:text-lg">❌</span>
+      <span class="hidden md:inline mr-1 text-sm sm:text-base">Fallos:</span>
+      <span class="font-bold text-sm sm:text-base">{initialWrong}</span>
     </div>
     <div id="score-total" class="flex items-center">
-      <span class="text-sky-400 mr-2">🎯</span>
-      <span class="hidden md:inline mr-1">Total:</span>
-      <span class="font-bold">{initialMessageTotal}</span>
+      <span class="text-sky-400 mr-1 sm:mr-2 text-base sm:text-lg">🎯</span>
+      <span class="hidden md:inline mr-1 text-sm sm:text-base">Total:</span>
+      <span class="font-bold text-sm sm:text-base">{initialTotal}</span>
     </div>
-    <div id="score-final-percentage" class="text-center font-bold text-amber-400 hidden pt-1">
+    <div id="score-final-percentage" class="text-center font-bold text-amber-400 hidden pt-1 text-sm sm:text-base">
       {/* This will be populated by TestRenderer.astro script when test is finished */}
-      {/* Example: "Resultado: 60%" */}
     </div>
   </div>
 </div>
 
 <!-- No <style> tag needed as all styling is done via Tailwind CSS classes -->
-<!-- Note: The actual dynamic updating of numbers and the final percentage
-     will be handled by the client-side script in TestRenderer.astro.
-     This component primarily sets up the Tailwind structure and initial (server-rendered) values.
--->

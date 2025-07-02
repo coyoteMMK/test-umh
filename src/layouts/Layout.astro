@@ -27,9 +27,13 @@ const siteTitle = "Repositorio de Tests UMH";
 	<body class="flex flex-col h-full bg-slate-100 text-slate-800 antialiased"> {/* Tailwind classes for body styling & sticky footer */}
 		<Header title={siteTitle} />
 		<main class="flex-grow container mx-auto px-4 py-8"> {/* Tailwind for main content area & sticky footer */}
-			{/* Adding some top margin to main content if ScoreCounter is fixed and could overlap */}
-			{/* This might need adjustment based on ScoreCounter's final height & position */}
-			<div class="pt-16 md:pt-12"> {/* Adjust padding if ScoreCounter overlaps content */}
+			{/*
+			  Adjusting top padding to account for ScoreCounter's new responsive top positioning.
+			  ScoreCounter is top-20 (5rem) on smallest, top-24 (6rem) on sm+.
+			  Padding here is slightly more to give breathing room.
+			  pt-24 (6rem) for smallest, pt-28 (7rem) for sm+.
+			*/}
+			<div class="pt-24 sm:pt-28"> {/* Adjust padding if ScoreCounter overlaps content */}
 				<slot />
 			</div>
 		</main>
