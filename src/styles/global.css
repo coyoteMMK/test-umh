@@ -5,11 +5,20 @@
   Styling will be primarily handled by Tailwind CSS utility classes
   applied directly in components or Layout.astro.
 
-  The body background, text color, and font-family will be set in Layout.astro
-  or through Tailwind's default base styles.
   The DynaPuff font import and application is handled in Layout.astro.
   Sticky footer is managed via flex utilities in Layout.astro.
 */
+
+/* Applying the SVG background to the body */
+body {
+  background-image: url('/background.svg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  background-attachment: fixed;
+  /* The bg-slate-100 class in Layout.astro will serve as the base color
+     visible through the SVG's opacity and if the image doesn't load. */
+}
 
 /* Minimal global styles can remain if absolutely necessary, but prefer Tailwind. */
 /* For example, if there's a very specific global reset or adjustment needed
