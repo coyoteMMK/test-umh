@@ -39,8 +39,8 @@ const allTests = Object.entries(modules)
   .filter((test) => test.subject === slug);
 ---
 
-<Layout>
-  <h1 class="text-3xl sm:text-4xl font-bold text-center py-10 ">
+<Layout title={`Tests de ${slug}`} description={`Listado de tests para la asignatura ${slug}.`}>
+  <h1 class="text-3xl sm:text-4xl font-bold text-center py-5 sm:py-10 ">
     📚 Tests de {slug}
   </h1>
 
@@ -50,7 +50,7 @@ const allTests = Object.entries(modules)
         No hay tests disponibles para esta asignatura.
       </p>
     ) : (
-      <ul class="container mx-auto max-w-5xl px-4 sm:px-6 lg:px-8 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 ">
+      <ul class="container mx-auto max-w-5xl px-4 sm:px-6 lg:px-8 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 sm:p-4">
         {allTests.map(({ slug, title }) => (
           <li>
             <a
