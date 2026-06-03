@@ -2,6 +2,7 @@
 
 Aplicación web construida con Astro para centralizar y consultar tests de la UMH de forma ordenada y rápida. El contenido se organiza por titulación, curso y asignatura, y cada prueba se renderiza desde ficheros JSON almacenados en el propio proyecto.
 
+<img width="1920" height="1536" alt="image" src="https://github.com/user-attachments/assets/67aa6754-23f4-4462-8b59-d8c39fca5cd6" />
 
 
 ## Características
