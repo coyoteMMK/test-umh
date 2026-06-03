@@ -43,6 +43,11 @@ import Layout from '../layouts/Layout.astro';
         </div>
 
         <div>
+          <label class="block font-semibold mb-2" for="theme">Tema o bloque</label>
+          <input id="theme" class="w-full rounded-lg border-2 border-slate-900 px-3 py-2" placeholder="Ej. Álgebra lineal" />
+        </div>
+
+        <div>
           <label class="block font-semibold mb-2" for="career">Carrera</label>
           <input id="career" class="w-full rounded-lg border-2 border-slate-900 px-3 py-2" placeholder="Ej. Ingeniería Informática" />
         </div>
@@ -50,6 +55,26 @@ import Layout from '../layouts/Layout.astro';
         <div>
           <label class="block font-semibold mb-2" for="year">Curso</label>
           <input id="year" class="w-full rounded-lg border-2 border-slate-900 px-3 py-2" placeholder="Ej. Primer año" />
+        </div>
+
+        <div>
+          <label class="block font-semibold mb-2" for="difficulty">Nivel de dificultad</label>
+          <select id="difficulty" class="w-full rounded-lg border-2 border-slate-900 px-3 py-2 bg-white">
+            <option value="">Sin especificar</option>
+            <option value="baja">Baja</option>
+            <option value="media" selected>Media</option>
+            <option value="alta">Alta</option>
+          </select>
+        </div>
+
+        <div>
+          <label class="block font-semibold mb-2" for="questionType">Tipo de preguntas</label>
+          <select id="questionType" class="w-full rounded-lg border-2 border-slate-900 px-3 py-2 bg-white">
+            <option value="mezcla" selected>Mezcla</option>
+            <option value="definiciones">Definiciones</option>
+            <option value="conceptual">Conceptuales</option>
+            <option value="practica">Prácticas</option>
+          </select>
         </div>
 
         <div>
@@ -108,8 +133,11 @@ import Layout from '../layouts/Layout.astro';
     const modelEl = document.getElementById('model');
     const titleEl = document.getElementById('title');
     const subjectEl = document.getElementById('subject');
+    const themeEl = document.getElementById('theme');
     const careerEl = document.getElementById('career');
     const yearEl = document.getElementById('year');
+    const difficultyEl = document.getElementById('difficulty');
+    const questionTypeEl = document.getElementById('questionType');
     const numEl = document.getElementById('num');
     const fileEl = document.getElementById('file');
     const contentEl = document.getElementById('content');
@@ -198,6 +226,9 @@ import Layout from '../layouts/Layout.astro';
       result.career = result.career || fallbackMeta.career || '';
       result.year = result.year || fallbackMeta.year || '';
       result.subject = result.subject || fallbackMeta.subject || '';
+      result.theme = result.theme || fallbackMeta.theme || '';
+      result.difficulty = result.difficulty || fallbackMeta.difficulty || '';
+      result.questionType = result.questionType || fallbackMeta.questionType || '';
       result.questions = Array.isArray(result.questions) ? result.questions : [];
       return result;
     }
@@ -244,6 +275,9 @@ import Layout from '../layouts/Layout.astro';
         career: careerEl.value.trim(),
         year: yearEl.value.trim(),
         subject: subjectEl.value.trim(),
+        theme: themeEl.value.trim(),
+        difficulty: difficultyEl.value.trim(),
+        questionType: questionTypeEl.value.trim(),
       };
 
       if (!token) {
@@ -256,6 +290,14 @@ import Layout from '../layouts/Layout.astro';
         return;
       }
 
+      if (text.length < 300) {
+        showToast('El documento es corto; la IA puede tener poco contexto para generar preguntas.', 'info');
+      }
+
+      if (!meta.subject && !meta.theme) {
+        showToast('Añade asignatura o tema para mejorar la precisión.', 'info');
+      }
+
       setGenerating(true);
       outputEl.textContent = 'Procesando...';
       downloadBtn.disabled = true;
@@ -264,8 +306,16 @@ import Layout from '../layouts/Layout.astro';
       const inputText = text.length > 7000 ? text.slice(0, 7000) : text;
       const prompt = [
         `Genera ${numQuestions} preguntas tipo test a partir del texto siguiente.`,
+        'Contexto adicional del test:',
+        `- Título: ${meta.title || 'No especificado'}`,
+        `- Asignatura: ${meta.subject || 'No especificada'}`,
+        `- Tema o bloque: ${meta.theme || 'No especificado'}`,
+        `- Carrera: ${meta.career || 'No especificada'}`,
+        `- Curso: ${meta.year || 'No especificado'}`,
+        `- Dificultad: ${meta.difficulty || 'No especificada'}`,
+        `- Tipo de preguntas: ${meta.questionType || 'Mezcla'}`,
         'Devuelve únicamente JSON válido con esta estructura:',
-        '{"title":"","career":"","year":"","subject":"","questions":[{"q":"","a":["","",""],"answer":0}]}',
+        '{"title":"","career":"","year":"","subject":"","theme":"","difficulty":"","questionType":"","questions":[{"q":"","a":["","",""],"answer":0}]}',
         'Reglas:',
         '- Cada pregunta debe tener 3 o 4 respuestas.',
         '- answer debe ser el índice correcto empezando en 0.',
