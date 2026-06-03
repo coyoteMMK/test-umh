@@ -91,3 +91,31 @@ El proyecto está configurado para publicarse en GitHub Pages con base en `/test
 ## Licencia
 
 Añade aquí la licencia que corresponda si vas a publicar o compartir el proyecto de forma abierta.
+
+## Generador automático de preguntas (Hugging Face)
+
+El proyecto incluye una página de prueba `generador` que permite pegar o subir texto y generar preguntas usando la API de Hugging Face.
+
+Pasos para usarlo:
+
+1. Crea un fichero `.env` en la raíz del proyecto con tu token de Hugging Face:
+
+```bash
+HF_API_TOKEN=tu_token_aqui
+# Opcional: modelo (por defecto se usa google/flan-t5-small)
+HF_MODEL=google/flan-t5-small
+```
+
+2. Instala dependencias y arranca la app:
+
+```bash
+npm install
+npm run dev
+```
+
+3. Abre `http://localhost:3000/generador` y pega o sube el texto. El generador enviará la solicitud al endpoint interno `/api/generate` y mostrará/descargará el JSON resultante.
+
+Notas:
+- La calidad de las preguntas depende del modelo que uses en `HF_MODEL` y de los límites de tu cuenta Hugging Face.
+- Si deseas procesar `pdf` en el cliente, instala `pdfjs-dist` y extiende el componente para extraer texto antes de enviarlo al endpoint.
+

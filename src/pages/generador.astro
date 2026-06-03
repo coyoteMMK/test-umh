@@ -1,0 +1,83 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout title="Generador de preguntas" description="Genera preguntas usando Hugging Face">
+  <h1 class="text-3xl font-bold text-center py-6">Generador de preguntas (Hugging Face)</h1>
+
+  <div class="container mx-auto max-w-3xl p-6 bg-white border-4 border-black rounded-lg">
+    <label class="block font-semibold mb-2">Título del test (opcional)</label>
+    <input id="title" class="w-full mb-4 p-2 border-2" placeholder="Ej. Test Tema 1" />
+
+    <label class="block font-semibold mb-2">Asignatura (opcional)</label>
+    <input id="subject" class="w-full mb-4 p-2 border-2" placeholder="Ej. Matemáticas" />
+
+    <label class="block font-semibold mb-2">Número de preguntas</label>
+    <input id="num" type="number" min="1" value="10" class="w-24 mb-4 p-2 border-2" />
+
+    <label class="block font-semibold mb-2">Pega el texto o sube un archivo .txt/.md</label>
+    <textarea id="content" rows="10" class="w-full p-2 mb-4 border-2" placeholder="Pega aquí el contenido del documento..."></textarea>
+
+    <input id="file" type="file" accept=".txt,.md" class="mb-4" />
+
+    <div class="flex gap-3">
+      <button id="generate" class="px-4 py-2 bg-amber-500 text-white font-semibold rounded">Generar</button>
+      <button id="download" class="px-4 py-2 bg-slate-700 text-white font-semibold rounded" disabled>Descargar JSON</button>
+    </div>
+
+    <h2 class="mt-6 font-semibold">Salida</h2>
+    <pre id="output" class="whitespace-pre-wrap bg-slate-100 p-4 mt-2 border-2 max-h-80 overflow-auto"></pre>
+  </div>
+
+  <script>
+    const fileInput = document.getElementById('file');
+    const contentEl = document.getElementById('content');
+    const generateBtn = document.getElementById('generate');
+    const outputEl = document.getElementById('output');
+    const downloadBtn = document.getElementById('download');
+
+    fileInput.addEventListener('change', async (e) => {
+      const f = e.target.files && e.target.files[0];
+      if (!f) return;
+      const text = await f.text();
+      contentEl.value = text;
+    });
+
+    generateBtn.addEventListener('click', async () => {
+      const text = contentEl.value.trim();
+      if (!text) {
+        alert('Introduce texto o sube un fichero.');
+        return;
+      }
+      const num = Number(document.getElementById('num').value) || 10;
+      const title = document.getElementById('title').value || '';
+      const subject = document.getElementById('subject').value || '';
+
+      outputEl.textContent = 'Generando...';
+
+      try {
+        const res = await fetch('/api/generate', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ text, numQuestions: num, title, subject }),
+        });
+
+        const data = await res.json();
+        outputEl.textContent = JSON.stringify(data, null, 2);
+
+        downloadBtn.disabled = false;
+        downloadBtn.onclick = () => {
+          const blob = new Blob([JSON.stringify(data, null, 2)], { type: 'application/json' });
+          const url = URL.createObjectURL(blob);
+          const a = document.createElement('a');
+          a.href = url;
+          a.download = (title || 'generated') + '.json';
+          a.click();
+          URL.revokeObjectURL(url);
+        };
+      } catch (err) {
+        outputEl.textContent = String(err);
+      }
+    });
+  </script>
+</Layout>
