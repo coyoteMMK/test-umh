@@ -95,28 +95,22 @@ Añade aquí la licencia que corresponda si vas a publicar o compartir el proyec
 
 ## Generador automático de preguntas (Hugging Face)
 
-El proyecto incluye una página de prueba `generador` que permite pegar o subir texto y generar preguntas usando la API de Hugging Face.
+El proyecto incluye una página de generación en [src/pages/generador.astro](src/pages/generador.astro) para que cualquier usuario pueda crear un tipo test desde la propia web.
 
-Pasos para usarlo:
+Cómo funciona:
 
-1. Crea un fichero `.env` en la raíz del proyecto con tu token de Hugging Face:
-
-```bash
-HF_API_TOKEN=tu_token_aqui
-# Opcional: modelo (por defecto se usa google/flan-t5-small)
-HF_MODEL=google/flan-t5-small
-```
-
-2. Instala dependencias y arranca la app:
-
-```bash
-npm install
-npm run dev
-```
-
-3. Abre `http://localhost:3000/generador` y pega o sube el texto. El generador enviará la solicitud al endpoint interno `/api/generate` y mostrará/descargará el JSON resultante.
+1. El usuario abre la página `Generar tests con IA`.
+2. Pega su token gratuito de Hugging Face directamente en el formulario.
+3. Sube un archivo `txt`, `md` o `pdf`, o pega el texto manualmente.
+4. El navegador extrae el contenido y llama a la API de Hugging Face para devolver un JSON listo para descargar.
 
 Notas:
-- La calidad de las preguntas depende del modelo que uses en `HF_MODEL` y de los límites de tu cuenta Hugging Face.
-- Si deseas procesar `pdf` en el cliente, instala `pdfjs-dist` y extiende el componente para extraer texto antes de enviarlo al endpoint.
+- El token no se guarda en el repositorio ni se envía a tu backend porque la generación se hace desde el navegador.
+- La calidad de las preguntas depende del modelo elegido y del texto de entrada. El modelo por defecto es `google/flan-t5-small`.
+- La salida se puede descargar como JSON para copiarla luego en [src/data/tests](src/data/tests).
+
+Rutas útiles:
+
+- [Generador de preguntas](src/pages/generador.astro)
+- [Página principal](src/pages/index.astro)
 

@@ -1,15 +1,20 @@
 ---
 // src/components/Header.astro
 const { title } = Astro.props;
+const baseUrl = import.meta.env.BASE_URL;
 ---
 <header class="bg-slate-800 text-slate-100 py-6 border-b-4 border-amber-500 shadow-md">
   <div class="container mx-auto px-4 flex flex-col sm:flex-row justify-between items-center">
-    <a href="/test-umh/" class="text-slate-100 hover:text-amber-400 transition-colors">
+    <a href={baseUrl} class="text-slate-100 hover:text-amber-400 transition-colors">
       <h1 class="text-2xl sm:text-3xl font-bold m-0 text-center sm:text-left">🧪 {title}</h1>
     </a>
-    <nav class="mt-4 sm:mt-0">
-      <!-- Navigation links can be added here if needed in the future -->
-      <!-- Example: <a href="/about" class="ml-0 sm:ml-6 text-lg text-slate-100 hover:text-amber-400 transition-colors">About</a> -->
+    <nav class="mt-4 sm:mt-0 flex items-center gap-4">
+      <a
+        href={`${baseUrl}generador/`}
+        class="text-sm sm:text-base font-semibold text-slate-100 hover:text-amber-400 transition-colors"
+      >
+        Generar tests con IA
+      </a>
     </nav>
   </div>
 </header>
