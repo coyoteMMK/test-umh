@@ -73,16 +73,26 @@ import Layout from '../layouts/Layout.astro';
         ></textarea>
       </div>
 
-      <div class="mt-5 flex flex-wrap gap-3">
-        <button id="generate" class="rounded-full bg-amber-500 px-5 py-3 font-bold text-slate-900 shadow-md transition hover:bg-amber-400">
-          Generar preguntas
+      <div class="mt-5 flex flex-wrap gap-3 items-center">
+        <button id="generate" class="rounded-full bg-amber-500 px-5 py-3 font-bold text-slate-900 shadow-md transition hover:bg-amber-400 flex items-center" aria-live="polite">
+          <svg id="spinner" class="w-5 h-5 mr-3 hidden animate-spin" viewBox="0 0 24 24">
+            <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4" fill="none"></circle>
+            <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8v4a4 4 0 00-4 4H4z"></path>
+          </svg>
+          <span id="generate-text">Generar preguntas</span>
         </button>
         <button id="download" class="rounded-full bg-slate-900 px-5 py-3 font-bold text-white shadow-md transition hover:bg-slate-700" disabled>
           Descargar JSON
         </button>
       </div>
 
-      <p id="status" class="mt-4 text-sm font-medium text-slate-700"></p>
+      <p id="status" class="mt-4 text-sm font-medium text-slate-700" aria-live="polite"></p>
+
+      <div id="progress" class="mt-3 h-3 w-full rounded-full bg-slate-200 overflow-hidden hidden" aria-hidden="true">
+        <div id="progress-fill" class="h-full bg-amber-500 w-0 transition-all"></div>
+      </div>
+
+      <div id="toast-container" class="fixed bottom-6 right-6 flex flex-col gap-3 z-50"></div>
 
       <h2 class="mt-8 text-xl font-bold">Resultado</h2>
       <pre id="output" class="mt-3 max-h-[32rem] overflow-auto rounded-2xl border-2 border-slate-900 bg-slate-100 p-4 text-sm whitespace-pre-wrap"></pre>
@@ -109,9 +119,63 @@ import Layout from '../layouts/Layout.astro';
     const statusEl = document.getElementById('status');
 
     let lastResult = null;
+    let generating = false;
+    let progressInterval = null;
+    let progressValue = 0;
 
     function setStatus(message) {
       statusEl.textContent = message;
+    }
+
+    function setGenerating(on) {
+      generating = on;
+      generateBtn.disabled = on;
+      const genText = document.getElementById('generate-text');
+      const progressEl = document.getElementById('progress');
+      const progressFill = document.getElementById('progress-fill');
+      if (on) {
+        spinner.classList.remove('hidden');
+        genText.textContent = 'Generando...';
+        setStatus('Generando preguntas — esto puede tardar unos segundos');
+        // show progress bar and start fake progress
+        progressValue = 0;
+        progressFill.style.width = '0%';
+        progressEl.classList.remove('hidden');
+        progressInterval = setInterval(() => {
+          // increment with diminishing steps until 90%
+          const step = Math.random() * 6 + 2; // 2-8%
+          progressValue = Math.min(90, progressValue + step);
+          progressFill.style.width = progressValue + '%';
+        }, 500);
+      } else {
+        spinner.classList.add('hidden');
+        genText.textContent = 'Generar preguntas';
+        // finish progress
+        const progressFill = document.getElementById('progress-fill');
+        if (progressInterval) clearInterval(progressInterval);
+        progressValue = 100;
+        progressFill.style.width = '100%';
+        setTimeout(() => {
+          const progressEl = document.getElementById('progress');
+          progressEl.classList.add('hidden');
+          progressFill.style.width = '0%';
+        }, 700);
+      }
+    }
+
+    function showToast(message, type = 'info', timeout = 5000) {
+      const container = document.getElementById('toast-container');
+      if (!container) return;
+      const toast = document.createElement('div');
+      toast.className = `max-w-sm px-4 py-3 rounded-lg shadow-md text-sm font-medium ${
+        type === 'error' ? 'bg-red-600 text-white' : type === 'success' ? 'bg-emerald-600 text-white' : 'bg-slate-800 text-white'
+      }`;
+      toast.textContent = message;
+      container.appendChild(toast);
+      setTimeout(() => {
+        toast.classList.add('opacity-0');
+        setTimeout(() => toast.remove(), 400);
+      }, timeout);
     }
 
     function extractJson(text) {
@@ -191,7 +255,7 @@ import Layout from '../layouts/Layout.astro';
         return;
       }
 
-      setStatus('Generando preguntas...');
+      setGenerating(true);
       outputEl.textContent = 'Procesando...';
       downloadBtn.disabled = true;
       lastResult = null;
@@ -238,10 +302,14 @@ import Layout from '../layouts/Layout.astro';
         outputEl.textContent = JSON.stringify(finalResult, null, 2);
         setStatus(parsed ? 'Preguntas generadas correctamente.' : 'El modelo respondió, pero no devolvió JSON limpio. Revisa la salida.');
         downloadBtn.disabled = false;
+        showToast(parsed ? 'Preguntas generadas correctamente.' : 'Generado (revisa JSON)', parsed ? 'success' : 'info');
       } catch (error) {
         console.error(error);
         outputEl.textContent = String(error);
         setStatus('Hubo un error al generar el test.');
+        showToast('Error al generar el test. Comprueba el token y el modelo.', 'error');
+      } finally {
+        setGenerating(false);
       }
     });
 
